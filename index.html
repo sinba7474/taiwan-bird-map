@@ -65,10 +65,9 @@
         
         .mobile-search-close { display: none; background: #eee; border: none; padding: 10px; text-align: center; font-weight: bold; color: #555; cursor: pointer; border-bottom: 1px solid #ddd; }
 
-        /* 🌟 電腦版切換按鈕 (手機版已隱藏) */
+        /* 電腦版切換按鈕 (手機版已隱藏) */
         .toggle-btn-circle {
             display: none; 
-            /* 原本的樣式保留給電腦版未來擴充，但在這次修改中手機版會強制隱藏 */
         }
 
         /* 內容樣式 */
@@ -162,33 +161,33 @@
         }
         .potential-badge { background: #fff3e0; color: #e65100; padding: 10px; border-radius: 5px; margin-bottom: 10px; border-left: 4px solid #ff9800; font-size: 0.9em; line-height: 1.5; }
 
-        /* --- 🌟 RWD 響應式 App 模式：上下分割佈局 --- */
+        /* --- 🌟 RWD 響應式 App 模式：上下分割佈局 (30% / 70%) --- */
         @media (max-width: 768px) {
-            .container { flex-direction: column; } /* 垂直排列 */
+            .container { flex-direction: column; } 
             
-            /* 1. 地圖在上方，固定高度 40% */
+            /* 1. 地圖在上方，固定高度 30% */
             #map { 
                 width: 100%; 
-                height: 40vh; /* 佔據螢幕 40% */
-                order: 1; /* 排在第一順位 */
+                height: 30vh; /* 🌟 調整為 30% */
+                order: 1; 
                 flex-shrink: 0;
             }
             
-            /* 2. 側邊欄變成下方列表，佔據剩餘空間 (60%) */
+            /* 2. 下方列表，佔據剩餘空間 (70%) */
             .sidebar-left { 
                 width: 100%; 
-                height: 60vh; /* 佔據螢幕 60% */
-                order: 2; /* 排在第二順位 */
+                height: 70vh; /* 🌟 調整為 70% */
+                order: 2; 
                 border-right: none; 
-                border-top: 1px solid #ddd; /* 上方加分隔線 */
+                border-top: 1px solid #ddd; 
                 box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
-                border-radius: 0; /* 移除圓角 */
-                margin-top: 0; /* 移除負邊距，讓它緊貼地圖下方 */
-                position: relative; /* 回歸正常排版 */
+                border-radius: 0; 
+                margin-top: 0; 
+                position: relative; 
                 z-index: 10;
             }
             
-            /* 3. 隱藏切換按鈕 (因為已經是固定分割了) */
+            /* 3. 隱藏切換按鈕 */
             .toggle-btn-circle { display: none !important; }
 
             .mobile-search-toggle { display: flex; } 
@@ -327,8 +326,6 @@
         });
         infoWindow = new google.maps.InfoWindow();
         
-        // 🌟 移除了 initTouchSwipe() 因為我們改用上下固定佈局
-        
         fetchBirds();
         document.getElementById('weather-slider').addEventListener('input', function() {
             updateWeatherDisplay(this.value);
@@ -341,9 +338,7 @@
         });
     }
 
-    // 🌟 移除了 initTouchSwipe 和 toggleSidebarHeight (手機版不再需要)
     function toggleSidebarHeight() {
-        // 電腦版如果需要可以保留，但目前手機版已隱藏按鈕
         const sidebar = document.getElementById('sidebar-left-panel');
         const icon = document.getElementById('toggle-icon');
         
@@ -405,8 +400,6 @@
             renderHotSpotMapMarkers();
         }
         document.getElementById('location-detail-panel').style.display = 'none';
-        
-        // 🌟 移除高度調整邏輯，因為現在是固定高度
     }
 
     function renderHotSpotMapMarkers() {
@@ -496,8 +489,6 @@
         infoWindow.setContent(`<div style="padding:5px;"><div style="font-weight:bold; font-size:1.1em; margin-bottom:5px;">${name}</div><a href="https://www.google.com/maps/search/?api=1&query=${lat},${lng}" target="_blank" style="color:#3498db; text-decoration:none;">📍 在 Google Maps 開啟</a></div>`);
         infoWindow.open(map, window.selectedMarker);
         openLocationDetail(name, lat, lng, true, potentialBirds);
-        
-        // 🌟 移除側邊欄展開邏輯
     }
 
     function renderMarkers(birds, isHighlight = false) {
@@ -795,10 +786,6 @@
                 if (window.innerWidth <= 768) {
                     toggleMobileSearch(false); 
                     const sidebar = document.getElementById('sidebar-left-panel');
-                    // 🌟 移除側邊欄高度控制
-                    // sidebar.style.height = '50vh';
-                    // isSidebarExpanded = false;
-                    // document.getElementById('toggle-icon').innerText = '⬆';
                 }
             };
             container.appendChild(div);
