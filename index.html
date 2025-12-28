@@ -125,7 +125,17 @@
         .bird-detail-content { display: none; padding: 10px; background: #f8f9fa; border-top: 1px solid #eee; }
         .bird-detail-content.show { display: block; animation: slideDown 0.3s ease-out; }
         .intro-text { font-size: 0.9em; color: #555; line-height: 1.5; margin-top: 10px; max-height: 150px; overflow-y: auto;}
-        .large-bird-img { width: 100%; border-radius: 8px; margin-top: 5px; object-fit: cover; max-height: 200px;}
+        
+        /* 🌟 修改：詳細頁大圖改為 contain (完整顯示不裁切) */
+        .large-bird-img { 
+            width: 100%; 
+            height: auto;
+            max-height: 300px; /* 🌟 增加高度限制，避免直式圖太小 */
+            border-radius: 8px; 
+            margin-top: 5px; 
+            object-fit: contain; /* 🌟 關鍵：完整顯示 */
+            background: #f0f0f0; /* 🌟 淺灰背景 */
+        }
         @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
 
         .search-header { background: #ffc107; padding: 15px; text-align: center; font-weight: bold; color: #333; flex-shrink: 0;}
