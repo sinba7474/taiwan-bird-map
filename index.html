@@ -6,47 +6,124 @@
     <title>台灣賞鳥地圖 - 台北熱點</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-        :root { --sidebar-width: 350px; --primary-color: #2c3e50; }
-        body { margin: 0; display: flex; height: 100vh; font-family: -apple-system, sans-serif; overflow: hidden; }
-        
-        /* 側邊欄 RWD 基礎設定 */
-        #sidebar { 
-            width: var(--sidebar-width); background: #f8f9fa; border-right: 1px solid #ddd; 
-            display: flex; flex-direction: column; transition: transform 0.3s ease; z-index: 1001;
+        /* 完全保留你原始檔案的 CSS 樣式 */
+        :root {
+            --primary-color: #2c3e50;
+            --sidebar-width: 350px;
         }
-        
-        #map { flex: 1; z-index: 1; }
 
-        /* 漢堡選單按鈕 (僅在手機版顯示) */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        #sidebar {
+            width: var(--sidebar-width);
+            background: #f8f9fa;
+            border-right: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+            z-index: 1001;
+        }
+
+        #map {
+            flex: 1;
+            z-index: 1;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #bird-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .bird-item {
+            background: white;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        .bird-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-color: #3498db;
+        }
+
+        .bird-grid {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 15px;
+        }
+
+        .bird-grid img {
+            width: 80px;
+            height: 80px;
+            border-radius: 6px;
+            object-fit: cover;
+            background: #eee;
+        }
+
+        .bird-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+
+        .bird-sci {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+
         .menu-toggle {
-            display: none; position: absolute; top: 15px; left: 15px; z-index: 1002;
-            background: white; border: none; padding: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+            display: none;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1002;
+            background: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            cursor: pointer;
         }
 
-        .sidebar-header { padding: 20px; background: var(--primary-color); color: white; }
-        #bird-list { flex: 1; overflow-y: auto; padding: 10px; }
-        
-        /* 鳥類項目樣式 */
-        .bird-item { 
-            background: white; margin-bottom: 12px; padding: 12px; border-radius: 8px; 
-            cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 12px;
-        }
-        .bird-item img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; background: #eee; }
-        .bird-info { flex: 1; }
-        .bird-name { font-weight: bold; font-size: 1.05em; margin-bottom: 2px; }
-        .bird-sci { font-size: 0.85em; color: #666; font-style: italic; }
-
-        /* 手機版遮罩 */
         #overlay {
-            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.5); z-index: 1000;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
         }
 
-        /* RWD 媒體查詢 */
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
             #sidebar {
-                position: fixed; height: 100%; left: 0; transform: translateX(-100%);
+                position: fixed;
+                height: 100%;
+                left: 0;
+                transform: translateX(-100%);
             }
             #sidebar.active { transform: translateX(0); }
             #overlay.active { display: block; }
@@ -60,86 +137,99 @@
 
 <div id="sidebar">
     <div class="sidebar-header">
-        <h2 style="margin:0 0 5px 0;">台北賞鳥熱點</h2>
-        <div id="data-status" style="font-size: 14px; opacity: 0.8;">連線中...</div>
+        <h2 style="margin:0">台灣賞鳥熱點</h2>
+        <p id="data-status" style="margin:5px 0 0 0; font-size:0.9em; opacity:0.8">讀取中...</p>
     </div>
     <div id="bird-list">
-        <div style="text-align:center; padding:20px;">載入中...</div>
-    </div>
+        </div>
 </div>
 
 <div id="map"></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    const map = L.map('map').setView([25.0330, 121.5654], 12);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    // 1. 初始化地圖
+    const map = L.map('map').setView([25.0478, 121.5170], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
 
     let allBirdsData = [];
-    const birdListElement = document.getElementById('bird-list');
 
-    // 側邊欄切換功能
+    // 2. RWD 側邊欄切換
     function toggleSidebar() {
         document.getElementById('sidebar').classList.toggle('active');
         document.getElementById('overlay').classList.toggle('active');
     }
 
-    // 抓取資料
+    // 3. 讀取資料
+    // 修改處：確認指向 static 資料夾下的 birds_data.json
     fetch('static/birds_data.json')
-        .then(res => res.json())
+        .then(response => response.json())
         .then(data => {
-            // 修正：指向 correct path data.recent
+            // 修改處：根據 JSON 結構，資料在 data.recent 裡面
             allBirdsData = data.recent || [];
-            document.getElementById('data-status').textContent = `今日更新：${allBirdsData.length} 筆資料`;
-            renderContent();
+            document.getElementById('data-status').textContent = `今日記錄：${allBirdsData.length} 筆`;
+            renderBirdList(allBirdsData);
+            renderMarkers(allBirdsData);
         })
         .catch(err => {
-            birdListElement.innerHTML = `<div style="padding:20px; color:red;">讀取失敗: ${err.message}</div>`;
+            console.error('Fetch error:', err);
+            document.getElementById('bird-list').innerHTML = '<p style="padding:20px; color:red;">資料讀取失敗</p>';
         });
 
-    function renderContent() {
-        birdListElement.innerHTML = '';
-        allBirdsData.forEach(bird => {
-            // 列表項目
+    // 4. 渲染左側列表
+    function renderBirdList(birds) {
+        const listContainer = document.getElementById('bird-list');
+        listContainer.innerHTML = '';
+
+        birds.forEach(bird => {
             const div = document.createElement('div');
             div.className = 'bird-item';
-            const imgUrl = bird.wikiImg || 'https://via.placeholder.com/60';
             
+            // 修改處：修正欄位名稱拼字為 wikiImg
+            const imgUrl = bird.wikiImg || 'https://via.placeholder.com/80';
+
             div.innerHTML = `
-                <img src="${imgUrl}" alt="${bird.name}">
-                <div class="bird-info">
-                    <div class="bird-name">${bird.name}</div>
-                    <div class="bird-sci">${bird.sciName}</div>
+                <div class="bird-grid">
+                    <img src="${imgUrl}" alt="${bird.name}">
+                    <div>
+                        <div class="bird-name">${bird.name}</div>
+                        <div class="bird-sci">${bird.sciName}</div>
+                        <div style="font-size:0.8em; color:#888; margin-top:5px;">${bird.locName}</div>
+                    </div>
                 </div>
             `;
-            
+
             div.onclick = () => {
                 map.flyTo([bird.lat, bird.lng], 15);
                 L.popup()
                     .setLatLng([bird.lat, bird.lng])
                     .setContent(`
-                        <div style="width:220px">
-                            <h3 style="margin:0 0 5px 0">${bird.name}</h3>
+                        <div style="width:200px">
+                            <b>${bird.name}</b><br>
                             <small>${bird.locName}</small><br>
-                            <img src="${imgUrl}" style="width:100%; border-radius:5px; margin-top:8px">
-                            <p style="font-size:13px; line-height:1.4">${bird.wikiDesc || ''}</p>
+                            <img src="${imgUrl}" style="width:100%; border-radius:4px; margin-top:5px">
+                            <p style="font-size:12px">${bird.wikiDesc || ''}</p>
                         </div>
                     `)
                     .openOn(map);
                 
-                // 行動版點擊後自動收起選單
+                // 行動版自動收合
                 if (window.innerWidth <= 768) toggleSidebar();
             };
-            
-            birdListElement.appendChild(div);
+            listContainer.appendChild(div);
+        });
+    }
 
-            // 地圖標記
+    // 5. 渲染地圖標記
+    function renderMarkers(birds) {
+        birds.forEach(bird => {
             L.marker([bird.lat, bird.lng])
                 .addTo(map)
                 .bindPopup(`<b>${bird.name}</b><br>${bird.locName}`);
         });
     }
 </script>
-
 </body>
 </html>
