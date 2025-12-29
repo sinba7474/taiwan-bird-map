@@ -124,8 +124,8 @@
         .bird-info .sci { font-size: 12px; color: #888; font-style: italic; }
         .bird-info .loc { font-size: 11px; color: #999; margin-top: 4px; }
 
-        /* --- 修正：手機版介面優化 --- */
-        .mobile-ui-group {
+        /* 手機版選單按鈕 (根據需求修改為房子與放大鏡) */
+        .mobile-btn-group {
             display: none;
             position: absolute;
             z-index: 30;
@@ -133,86 +133,48 @@
             pointer-events: none;
         }
 
-        /* 左上角按鈕組 */
-        .mobile-left-btns {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            display: flex;
-            gap: 10px;
-            pointer-events: auto;
+        .mobile-left-controls {
+            position: absolute; top: 15px; left: 15px; display: flex; gap: 10px; pointer-events: auto;
         }
 
-        .icon-btn {
-            background: white;
-            border: none;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
+        .mobile-right-controls {
+            position: absolute; top: 15px; right: 15px; pointer-events: auto;
         }
 
-        /* 右上角搜尋鈕 */
-        .mobile-right-btns {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            pointer-events: auto;
+        .btn-circle {
+            background: white; border: none; width: 44px; height: 44px; border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+            display: flex; align-items: center; justify-content: center; font-size: 20px;
         }
 
-        .mini-search-btn {
-            background: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 20px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        /* 遮罩 */
-        #sidebar-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.4);
-            z-index: 15;
+        .btn-search-mini {
+            background: white; border: none; padding: 8px 15px; border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer;
+            font-size: 14px; font-weight: bold; display: flex; align-items: center; gap: 5px;
         }
 
         @media (max-width: 768px) {
-            .mobile-ui-group { display: block; }
+            .mobile-btn-group { display: block; }
             .sidebar-left {
                 position: absolute;
                 left: -340px;
                 transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             }
             .sidebar-left.active { transform: translateX(340px); }
-            #sidebar-overlay.active { display: block; }
         }
     </style>
 </head>
 <body>
 
-<div class="mobile-ui-group">
-    <div class="mobile-left-btns">
-        <button class="icon-btn" onclick="resetMapView()" title="回全覽">🏠</button>
-        <button class="icon-btn" onclick="locateNearbyBirds()" title="附近鳥況">🎯</button>
+<div class="mobile-btn-group">
+    <div class="mobile-left-controls">
+        <button class="btn-circle" onclick="resetView()" title="回全覽">🏠</button>
+        <button class="btn-circle" onclick="getNearbyRecords()" title="附近鳥況">🎯</button>
     </div>
-    <div class="mobile-right-btns">
-        <button class="mini-search-btn" onclick="toggleMobileSidebar()">🔍 鳥種</button>
+    <div class="mobile-right-controls">
+        <button class="btn-search-mini" onclick="toggleMobileSidebar()">🔍 鳥種</button>
     </div>
 </div>
-
-<div id="sidebar-overlay" onclick="toggleMobileSidebar()"></div>
 
 <div class="container">
     <div class="sidebar-left" id="sidebar-left-panel">
@@ -251,8 +213,7 @@
             zoom: 12,
             mapTypeControl: false,
             fullscreenControl: false,
-            streetViewControl: false,
-            styles: [{ featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] }]
+            streetViewControl: false
         });
         loadBirdData();
     }
@@ -265,59 +226,44 @@
                 document.getElementById('data-count').textContent = `本日全台觀測：${allBirdsData.length} 筆`;
                 renderBirdList(true);
             })
-            .catch(err => {
-                console.error("載入失敗", err);
-            });
+            .catch(err => console.error("載入失敗", err));
     }
 
-    // --- 功能 1：回首頁 (全覽模式) ---
-    function resetMapView() {
+    // 1. 回首頁 (全覽模式)
+    function resetView() {
         map.setCenter({ lat: 25.0330, lng: 121.5654 });
         map.setZoom(12);
     }
 
-    // --- 功能 2：定位並檢索方圓10km ---
-    function locateNearbyBirds() {
+    // 2. 檢索附近鳥況
+    function getNearbyRecords() {
         if (!navigator.geolocation) {
-            alert("您的設備不支持定位功能");
+            alert("您的瀏覽器不支持定位");
             return;
         }
-
         navigator.geolocation.getCurrentPosition(position => {
-            const userLat = position.coords.latitude;
-            const userLng = position.coords.longitude;
-            
-            map.setCenter({ lat: userLat, lng: userLng });
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            map.setCenter({ lat, lng });
             map.setZoom(13);
 
-            // 計算距離並過濾
+            // 過濾方圓10km
             const nearby = allBirdsData.filter(bird => {
-                const distance = calculateDistance(userLat, userLng, bird.lat, bird.lng);
-                return distance <= 10;
+                const ky = 40000 / 360;
+                const kx = Math.cos(Math.PI * lat / 180.0) * ky;
+                const dx = Math.abs(lng - bird.lng) * kx;
+                const dy = Math.abs(lat - bird.lat) * ky;
+                return Math.sqrt(dx * dx + dy * dy) <= 10;
             });
 
-            // 更新清單
+            // 更新清單區
             const container = document.getElementById('bird-list-container');
-            container.innerHTML = `<div style="padding:10px; font-weight:bold; color:#27ae60;">📍 附近 10 公里觀測紀錄：</div>`;
-            
+            container.innerHTML = `<div style="padding:10px; font-weight:bold; color:#27ae60;">附近 10km 的觀測記錄：</div>`;
             nearby.forEach(bird => {
-                const div = createBirdItem(bird);
-                container.appendChild(div);
+                const item = createBirdItem(bird);
+                container.appendChild(item);
             });
-
-            alert(`定位成功！方圓 10km 內共有 ${nearby.length} 筆紀錄`);
-        }, () => {
-            alert("無法獲取位置，請確認定位權限已開啟");
         });
-    }
-
-    function calculateDistance(lat1, lon1, lat2, lon2) {
-        const R = 6371;
-        const dLat = (lat2 - lat1) * Math.PI / 180;
-        const dLon = (lon2 - lon1) * Math.PI / 180;
-        const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLon/2) * Math.sin(dLon/2);
-        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
     }
 
     function createBirdItem(bird) {
@@ -335,7 +281,6 @@
         div.onclick = () => {
             map.setCenter({ lat: bird.lat, lng: bird.lng });
             map.setZoom(15);
-            // ... InfoWindow 邏輯同原版 ...
         };
         return div;
     }
@@ -350,7 +295,6 @@
 
     function toggleMobileSidebar() {
         document.getElementById('sidebar-left-panel').classList.toggle('active');
-        document.getElementById('sidebar-overlay').classList.toggle('active');
     }
 
     document.getElementById('bird-list-container').onscroll = function() {
