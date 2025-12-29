@@ -6,7 +6,6 @@
     <title>台灣賞鳥地圖 - 台北熱點</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-        /* 完全保留你原始檔案的 CSS 樣式 */
         :root {
             --primary-color: #2c3e50;
             --sidebar-width: 350px;
@@ -40,6 +39,21 @@
             background: var(--primary-color);
             color: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .search-container {
+            padding: 10px 15px;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-sizing: border-box;
+            outline: none;
         }
 
         #bird-list {
@@ -138,56 +152,60 @@
 <div id="sidebar">
     <div class="sidebar-header">
         <h2 style="margin:0">台灣賞鳥熱點</h2>
-        <p id="data-status" style="margin:5px 0 0 0; font-size:0.9em; opacity:0.8">讀取中...</p>
+        <p id="data-status" style="margin:5px 0 0 0; font-size:0.9em; opacity:0.8">載入中...</p>
     </div>
-    <div id="bird-list">
-        </div>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="搜尋鳥類或地點...">
+    </div>
+    <div id="bird-list"></div>
 </div>
 
 <div id="map"></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    // 1. 初始化地圖
     const map = L.map('map').setView([25.0478, 121.5170], 12);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
     let allBirdsData = [];
+    let currentDisplayCount = 0;
+    const batchSize = 15;
+    const birdListElement = document.getElementById('bird-list');
 
-    // 2. RWD 側邊欄切換
     function toggleSidebar() {
         document.getElementById('sidebar').classList.toggle('active');
         document.getElementById('overlay').classList.toggle('active');
     }
 
-    // 3. 讀取資料
-    // 修改處：確認指向 static 資料夾下的 birds_data.json
+    // 數據載入修正
     fetch('static/birds_data.json')
         .then(response => response.json())
         .then(data => {
-            // 修改處：根據 JSON 結構，資料在 data.recent 裡面
-            allBirdsData = data.recent || [];
+            // 關鍵點：指向 data.recent
+            allBirdsData = data.recent || []; 
             document.getElementById('data-status').textContent = `今日記錄：${allBirdsData.length} 筆`;
-            renderBirdList(allBirdsData);
+            renderBirdList();
             renderMarkers(allBirdsData);
         })
         .catch(err => {
-            console.error('Fetch error:', err);
-            document.getElementById('bird-list').innerHTML = '<p style="padding:20px; color:red;">資料讀取失敗</p>';
+            console.error('Error:', err);
+            birdListElement.innerHTML = '<p style="padding:20px; color:red;">無法載入資料</p>';
         });
 
-    // 4. 渲染左側列表
-    function renderBirdList(birds) {
-        const listContainer = document.getElementById('bird-list');
-        listContainer.innerHTML = '';
+    function renderBirdList(filterText = '') {
+        if (filterText === '') birdListElement.innerHTML = '';
+        
+        const filteredData = allBirdsData.filter(bird => 
+            bird.name.includes(filterText) || bird.locName.includes(filterText)
+        );
 
-        birds.forEach(bird => {
+        const displayData = filterText ? filteredData : filteredData.slice(currentDisplayCount, currentDisplayCount + batchSize);
+
+        displayData.forEach(bird => {
             const div = document.createElement('div');
             div.className = 'bird-item';
             
-            // 修改處：修正欄位名稱拼字為 wikiImg
+            // 關鍵點：修正拼字 wikiImg
             const imgUrl = bird.wikiImg || 'https://via.placeholder.com/80';
 
             div.innerHTML = `
@@ -196,7 +214,7 @@
                     <div>
                         <div class="bird-name">${bird.name}</div>
                         <div class="bird-sci">${bird.sciName}</div>
-                        <div style="font-size:0.8em; color:#888; margin-top:5px;">${bird.locName}</div>
+                        <div style="font-size:0.85em; color:#666; margin-top:5px;">${bird.locName}</div>
                     </div>
                 </div>
             `;
@@ -209,20 +227,19 @@
                         <div style="width:200px">
                             <b>${bird.name}</b><br>
                             <small>${bird.locName}</small><br>
-                            <img src="${imgUrl}" style="width:100%; border-radius:4px; margin-top:5px">
-                            <p style="font-size:12px">${bird.wikiDesc || ''}</p>
+                            <img src="${imgUrl}" style="width:100%; margin-top:8px; border-radius:4px;">
+                            <p style="font-size:12px; margin-top:8px;">${bird.wikiDesc || ''}</p>
                         </div>
                     `)
                     .openOn(map);
-                
-                // 行動版自動收合
                 if (window.innerWidth <= 768) toggleSidebar();
             };
-            listContainer.appendChild(div);
+            birdListElement.appendChild(div);
         });
+
+        if (!filterText) currentDisplayCount += displayData.length;
     }
 
-    // 5. 渲染地圖標記
     function renderMarkers(birds) {
         birds.forEach(bird => {
             L.marker([bird.lat, bird.lng])
@@ -230,6 +247,23 @@
                 .bindPopup(`<b>${bird.name}</b><br>${bird.locName}`);
         });
     }
+
+    // 搜尋功能
+    document.getElementById('search-input').addEventListener('input', (e) => {
+        const text = e.target.value;
+        birdListElement.innerHTML = '';
+        currentDisplayCount = 0;
+        renderBirdList(text);
+    });
+
+    // 滾動加載
+    birdListElement.addEventListener('scroll', () => {
+        if (birdListElement.scrollTop + birdListElement.clientHeight >= birdListElement.scrollHeight - 50) {
+            if (currentDisplayCount < allBirdsData.length) {
+                renderBirdList();
+            }
+        }
+    });
 </script>
 </body>
 </html>
