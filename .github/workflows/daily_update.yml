@@ -2,13 +2,9 @@ name: Daily Bird Data Update
 
 on:
   schedule:
-    # 每天 UTC 16:00 執行 (等於台灣時間 00:00)
     - cron: '0 16 * * *'
-  
-  # 允許手動按按鈕觸發測試
   workflow_dispatch:
 
-# 設定權限，允許寫入儲存庫 (重要！)
 permissions:
   contents: write
 
@@ -17,36 +13,25 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    # 1. 下載你的程式碼
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    # 2. 設定 Python 環境
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
 
-    # 3. 安裝爬蟲必要的套件
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        # 這裡只安裝 requests, beautifulsoup4, pandas, lxml，避免安裝你原本那堆巨大的 AI 套件
-        pip install requests beautifulsoup4 pandas lxml
+        pip install requests
 
-    # 4. 執行你的爬蟲程式
     - name: Run scraper script
-      # ⚠️ 請確認你的爬蟲檔名真的是 update_data.py 且已上傳到儲存庫
       run: python update_data.py
 
-    # 5. 將更新後的 JSON 推送回 GitHub
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        
-        # 強制加入 static 資料夾下的 json 檔
         git add static/birds_data.json
-        
-        # 檢查是否有變動，有變動才 Commit
         git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update bird data [skip ci]" && git push)
