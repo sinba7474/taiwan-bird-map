@@ -221,13 +221,15 @@
         markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
     }
 
-    function renderHotSpotsList() {
+        function renderHotSpotsList() {
         const container = document.getElementById('hotspot-list-container');
         container.innerHTML = '';
         for (const [city, spots] of Object.entries(hotspotsDB)) {
             const t = document.createElement('div'); t.className = 'hotspot-group-title'; t.style.borderLeft = `5px solid ${COUNTY_COLORS[city]}`; t.innerText = city; container.appendChild(t);
             spots.forEach(s => {
-                const d = document.createElement('div'); d.className = 'loc-card'; d.innerHTML = `<div class="loc-name">${s.name}</div><div style="font-size:0.85em;color:#666;">${s.desc}</div>`;
+                // 修正：移除列表中的描述，只保留地名
+                const d = document.createElement('div'); d.className = 'loc-card'; 
+                d.innerHTML = `<div class="loc-name">${s.name}</div>`;
                 d.onclick = () => { map.setCenter({lat:s.lat, lng:s.lng}); map.setZoom(16); openLocationDetail(s.name, s.lat, s.lng, true); };
                 container.appendChild(d);
             });
@@ -459,3 +461,4 @@
 </script>
 </body>
 </html>
+
