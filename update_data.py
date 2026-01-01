@@ -8,7 +8,7 @@ import traceback
 # ==========================================
 # 1. 基本設定
 # ==========================================
-EBIRD_API_KEY = '1mpok1sjosl5'  # 建議未來可改用 GitHub Secrets 隱藏
+EBIRD_API_KEY = '1mpok1sjosl5'
 WIKI_CACHE = {}
 START_TIME = time.time()
 
@@ -19,7 +19,7 @@ TAIWAN_COUNTIES = [
     'TW-KHH', 'TW-PIF', 'TW-ILA', 'TW-HUA', 'TW-TTT', 'TW-PEN', 'TW-KIN', 'TW-LIE'
 ]
 
-# ⚠️ [修改點 1] 改用相對路徑，讓它在 GitHub 或本地都能找到 static 資料夾
+# 設定相對路徑 (相容 GitHub Actions)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TARGET_DIR = os.path.join(BASE_DIR, 'static')
 FILE_PATH = os.path.join(TARGET_DIR, 'birds_data.json')
@@ -171,7 +171,7 @@ def get_wiki_data(sci_name, common_name):
     """ 從維基百科獲取圖片與簡介，優先使用快取 """
     if sci_name in WIKI_CACHE: return WIKI_CACHE[sci_name], True
     
-    # 嘗試用中文俗名搜尋 (命中率較高)
+    # 嘗試用中文俗名搜尋
     params = {
         "action": "query", "format": "json", "prop": "pageimages|extracts",
         "titles": common_name, "pithumbsize": 400, "exintro": True, "explaintext": True, "redirects": 1
@@ -195,22 +195,10 @@ def get_wiki_data(sci_name, common_name):
     return empty, False
 
 def main():
-    # 確保 static 資料夾存在
     if not os.path.exists(TARGET_DIR): os.makedirs(TARGET_DIR)
-    
-    # 1. 載入舊資料快取 (加速 wiki 查詢，非必要但可優化)
-    if os.path.exists(FILE_PATH):
-        try:
-            with open(FILE_PATH, 'r', encoding='utf-8') as f:
-                # 這裡單純為了 cache wiki，若無需求可略過
-                pass
-        except: pass
 
     print(f"\n🚀 [1/3] 啟動全台鳥況更新...")
-    
-    # ⚠️ [修改點 2] 改為 List 結構，以符合 index.html 的 .filter() 需求
     all_recent_birds = [] 
-    
     total_obs = 0
     start_time = time.time()
 
@@ -221,17 +209,17 @@ def main():
             sys.stdout.write(f"\r   正在掃描: {code} ... ")
             sys.stdout.flush()
             
-            url = f"https://api.ebird.org/v2/data/obs/{code}/recent?back=14&detail=full"
+            # ⚠️ 關鍵修正：加入 &locale=zh 參數，強制取得中文鳥名
+            url = f"https://api.ebird.org/v2/data/obs/{code}/recent?back=14&detail=full&locale=zh"
             r = requests.get(url, headers={'X-eBirdApiToken': EBIRD_API_KEY}, timeout=15)
             
             if r.status_code == 200:
                 obs_list = r.json()
                 
                 for obs in obs_list:
-                    # 抓取百科 (同步)
+                    # 抓取百科 (現在 common_name 是中文了，所以 wiki 應該搜得到了！)
                     wiki, _ = get_wiki_data(obs.get('sciName'), obs.get('comName'))
                     
-                    # 每個鳥資料都直接加入大 List
                     all_recent_birds.append({
                         'id': obs.get('subId'),
                         'name': obs.get('comName'),
@@ -239,7 +227,7 @@ def main():
                         'locName': obs.get('locName'),
                         'lat': obs.get('lat'),
                         'lng': obs.get('lng'),
-                        'date': obs.get('obsDt'), # YYYY-MM-DD HH:MM
+                        'date': obs.get('obsDt'), 
                         'speciesCode': obs.get('speciesCode'),
                         'county': code,
                         'wikiImg': wiki['img'],
@@ -269,7 +257,7 @@ def main():
     # 3. 存檔
     final_json = {
         "update_at": time.strftime("%Y-%m-%d %H:%M:%S"),
-        "recent": all_recent_birds, # ⚠️ 這裡現在是 List，地圖才能正常讀取
+        "recent": all_recent_birds, 
         "hotspots": HOT_SPOTS_DATA
     }
     
@@ -281,13 +269,9 @@ def main():
     print(f"   - 總耗時: {total_time:.1f} 秒")
     print(f"   - 總筆數: {total_obs} 筆新紀錄")
     print(f"   - 檔案位置: {FILE_PATH}")
-    
-    # ⚠️ [修改點 3] 移除 input()，避免 GitHub Action 卡住
-    # input("\n按 Enter 鍵結束視窗...")
 
 if __name__ == "__main__":
     try:
         main()
     except:
         traceback.print_exc()
-        # input("發生錯誤，按 Enter 結束...")
