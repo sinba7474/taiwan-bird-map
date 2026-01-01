@@ -200,7 +200,10 @@
     }
 
     function renderHotSpotMapMarkers() {
-        if (markerCluster) markerCluster.clearMarkers();
+        if (markerCluster) {
+            markerCluster.clearMarkers();
+            markerCluster = null;
+        }
         markers.forEach(m => m.setMap(null)); markers = [];
         for (const [city, spots] of Object.entries(hotspotsDB)) {
             spots.forEach(s => {
@@ -225,16 +228,47 @@
         }
     }
 
+    // 修改版：支援聚合功能的 renderMarkers
     function renderMarkers(birds, isHighlight = false) {
-        if (markerCluster) markerCluster.clearMarkers();
-        markers.forEach(m => m.setMap(null)); markers = [];
+        // 清除舊的聚合器與標記
+        if (markerCluster) {
+            markerCluster.clearMarkers();
+            markerCluster = null;
+        }
+        markers.forEach(m => m.setMap(null)); 
+        markers = [];
+
         const locs = {};
-        birds.forEach(b => { const k = `${b.lat},${b.lng}`; if(!locs[k]) locs[k] = {lat:b.lat, lng:b.lng, name:b.locName, count:0}; locs[k].count++; });
+        birds.forEach(b => { 
+            const k = `${b.lat},${b.lng}`; 
+            if(!locs[k]) locs[k] = {lat:b.lat, lng:b.lng, name:b.locName, count:0}; 
+            locs[k].count++; 
+        });
+
+        // 建立標記 (注意：這裡不設定 map: map，讓 markerClusterer 接手)
         Object.values(locs).forEach(g => {
-            const m = new google.maps.Marker({ position:{lat:g.lat, lng:g.lng}, map, icon:{path:google.maps.SymbolPath.CIRCLE, scale:10, fillColor:isHighlight?"#d35400":"#FF5722", fillOpacity:0.9, strokeWeight:2, strokeColor:"white"}, label:{text:g.count.toString(), color:"white", fontSize:"12px"} });
+            const m = new google.maps.Marker({ 
+                position: {lat:g.lat, lng:g.lng}, 
+                icon: {
+                    path: google.maps.SymbolPath.CIRCLE, 
+                    scale: 10, 
+                    fillColor: isHighlight ? "#d35400" : "#FF5722", 
+                    fillOpacity: 0.9, 
+                    strokeWeight: 2, 
+                    strokeColor: "white"
+                }, 
+                label: {
+                    text: g.count.toString(), 
+                    color: "white", 
+                    fontSize: "12px"
+                } 
+            });
             m.addListener("click", () => openLocationDetail(g.name, g.lat, g.lng));
             markers.push(m);
         });
+
+        // 啟用聚合器
+        markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
     }
 
     function renderLocationList(birds) {
