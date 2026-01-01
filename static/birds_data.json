@@ -1,5 +1,5 @@
 {
-  "update_at": "2026-01-02 01:19:46",
+  "update_at": "2026-01-02 01:27:30",
   "recent": [
     {
       "id": "S291540948",
@@ -783,19 +783,6 @@
     },
     {
       "id": "S291519753",
-      "name": "亞洲輝椋鳥",
-      "sciName": "Aplonis panayensis",
-      "locName": "台北--社子島濕地(Taipei--Shezidao Wetlands)",
-      "lat": 25.1135025,
-      "lng": 121.4901853,
-      "date": "01/01 13:43",
-      "speciesCode": "asgsta1",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 亞洲輝椋鳥 的維基百科資料。"
-    },
-    {
-      "id": "S291519753",
       "name": "灰頭黑臉鵐",
       "sciName": "Emberiza spodocephala",
       "locName": "台北--社子島濕地(Taipei--Shezidao Wetlands)",
@@ -806,6 +793,19 @@
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
       "wikiDesc": "目前無法取得 灰頭黑臉鵐 的維基百科資料。"
+    },
+    {
+      "id": "S291519753",
+      "name": "亞洲輝椋鳥",
+      "sciName": "Aplonis panayensis",
+      "locName": "台北--社子島濕地(Taipei--Shezidao Wetlands)",
+      "lat": 25.1135025,
+      "lng": 121.4901853,
+      "date": "01/01 13:43",
+      "speciesCode": "asgsta1",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 亞洲輝椋鳥 的維基百科資料。"
     },
     {
       "id": "S291518169",
@@ -848,19 +848,6 @@
     },
     {
       "id": "S291518090",
-      "name": "家燕",
-      "sciName": "Hirundo rustica",
-      "locName": "台北--北投貴子坑大排(Taipei--Beitou Guizikeng Drainage Canal)",
-      "lat": 25.1293557,
-      "lng": 121.4884579,
-      "date": "01/01 13:34",
-      "speciesCode": "barswa",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 家燕 的維基百科資料。"
-    },
-    {
-      "id": "S291518090",
       "name": "斑文鳥",
       "sciName": "Lonchura punctulata",
       "locName": "台北--北投貴子坑大排(Taipei--Beitou Guizikeng Drainage Canal)",
@@ -871,6 +858,19 @@
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
       "wikiDesc": "目前無法取得 斑文鳥 的維基百科資料。"
+    },
+    {
+      "id": "S291518090",
+      "name": "家燕",
+      "sciName": "Hirundo rustica",
+      "locName": "台北--北投貴子坑大排(Taipei--Beitou Guizikeng Drainage Canal)",
+      "lat": 25.1293557,
+      "lng": 121.4884579,
+      "date": "01/01 13:34",
+      "speciesCode": "barswa",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 家燕 的維基百科資料。"
     },
     {
       "id": "S291515369",
@@ -887,19 +887,6 @@
     },
     {
       "id": "S291515027",
-      "name": "黑面琵鷺",
-      "sciName": "Platalea minor",
-      "locName": "台北華江IBA--華江雁鴨公園(華江橋至中興橋)(Huajiang IBA--Huajiang Wild Duck Nature Park (Huajiang to Zhongxing Bridge))",
-      "lat": 25.0385785,
-      "lng": 121.4910784,
-      "date": "01/01 12:49",
-      "speciesCode": "blfspo1",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 黑面琵鷺 的維基百科資料。"
-    },
-    {
-      "id": "S291515027",
       "name": "鸕鷀",
       "sciName": "Phalacrocorax carbo",
       "locName": "台北華江IBA--華江雁鴨公園(華江橋至中興橋)(Huajiang IBA--Huajiang Wild Duck Nature Park (Huajiang to Zhongxing Bridge))",
@@ -912,17 +899,17 @@
       "wikiDesc": "目前無法取得 鸕鷀 的維基百科資料。"
     },
     {
-      "id": "S291511292",
-      "name": "黑枕藍鶲",
-      "sciName": "Hypothymis azurea",
-      "locName": "懷恩隧道, 文山區 TW-臺北市 (24.9941,121.5515)",
-      "lat": 24.994078,
-      "lng": 121.551539,
-      "date": "01/01 11:47",
-      "speciesCode": "blnmon1",
+      "id": "S291515027",
+      "name": "黑面琵鷺",
+      "sciName": "Platalea minor",
+      "locName": "台北華江IBA--華江雁鴨公園(華江橋至中興橋)(Huajiang IBA--Huajiang Wild Duck Nature Park (Huajiang to Zhongxing Bridge))",
+      "lat": 25.0385785,
+      "lng": 121.4910784,
+      "date": "01/01 12:49",
+      "speciesCode": "blfspo1",
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 黑枕藍鶲 的維基百科資料。"
+      "wikiDesc": "目前無法取得 黑面琵鷺 的維基百科資料。"
     },
     {
       "id": "S291511292",
@@ -938,17 +925,30 @@
       "wikiDesc": "目前無法取得 紅尾伯勞 的維基百科資料。"
     },
     {
+      "id": "S291511292",
+      "name": "黑枕藍鶲",
+      "sciName": "Hypothymis azurea",
+      "locName": "懷恩隧道, 文山區 TW-臺北市 (24.9941,121.5515)",
+      "lat": 24.994078,
+      "lng": 121.551539,
+      "date": "01/01 11:47",
+      "speciesCode": "blnmon1",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 黑枕藍鶲 的維基百科資料。"
+    },
+    {
       "id": "S291518509",
-      "name": "大彎嘴",
-      "sciName": "Erythrogenys erythrocnemis",
+      "name": "東方蜂鷹",
+      "sciName": "Pernis ptilorhynchus",
       "locName": "台北--內湖內溝里(Taipei--Neihu Neigouli)[台北鳥會例行路線(WBST Birdwatching Route)]",
       "lat": 25.0820698,
       "lng": 121.6242501,
       "date": "01/01 11:30",
-      "speciesCode": "sbsbab2",
+      "speciesCode": "orihob2",
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 大彎嘴 的維基百科資料。"
+      "wikiDesc": "目前無法取得 東方蜂鷹 的維基百科資料。"
     },
     {
       "id": "S291518509",
@@ -965,16 +965,16 @@
     },
     {
       "id": "S291518509",
-      "name": "東方蜂鷹",
-      "sciName": "Pernis ptilorhynchus",
+      "name": "大彎嘴",
+      "sciName": "Erythrogenys erythrocnemis",
       "locName": "台北--內湖內溝里(Taipei--Neihu Neigouli)[台北鳥會例行路線(WBST Birdwatching Route)]",
       "lat": 25.0820698,
       "lng": 121.6242501,
       "date": "01/01 11:30",
-      "speciesCode": "orihob2",
+      "speciesCode": "sbsbab2",
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 東方蜂鷹 的維基百科資料。"
+      "wikiDesc": "目前無法取得 大彎嘴 的維基百科資料。"
     },
     {
       "id": "S291526254",
@@ -991,16 +991,16 @@
     },
     {
       "id": "S291520752",
-      "name": "黃腹鷚",
-      "sciName": "Anthus japonicus",
+      "name": "赤喉鷚",
+      "sciName": "Anthus cervinus",
       "locName": "台北--北投忠義小徑(Taipei--Beitou Zhongyi Trail)",
       "lat": 25.1280927,
       "lng": 121.477654,
       "date": "01/01 11:04",
-      "speciesCode": "sibpip1",
+      "speciesCode": "retpip",
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 黃腹鷚 的維基百科資料。"
+      "wikiDesc": "目前無法取得 赤喉鷚 的維基百科資料。"
     },
     {
       "id": "S291520752",
@@ -1017,19 +1017,6 @@
     },
     {
       "id": "S291520752",
-      "name": "赤喉鷚",
-      "sciName": "Anthus cervinus",
-      "locName": "台北--北投忠義小徑(Taipei--Beitou Zhongyi Trail)",
-      "lat": 25.1280927,
-      "lng": 121.477654,
-      "date": "01/01 11:04",
-      "speciesCode": "retpip",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 赤喉鷚 的維基百科資料。"
-    },
-    {
-      "id": "S291520752",
       "name": "黃頭扇尾鶯",
       "sciName": "Cisticola exilis",
       "locName": "台北--北投忠義小徑(Taipei--Beitou Zhongyi Trail)",
@@ -1040,19 +1027,6 @@
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
       "wikiDesc": "目前無法取得 黃頭扇尾鶯 的維基百科資料。"
-    },
-    {
-      "id": "S291520752",
-      "name": "黑翅鳶",
-      "sciName": "Elanus caeruleus",
-      "locName": "台北--北投忠義小徑(Taipei--Beitou Zhongyi Trail)",
-      "lat": 25.1280927,
-      "lng": 121.477654,
-      "date": "01/01 11:04",
-      "speciesCode": "bkskit1",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 黑翅鳶 的維基百科資料。"
     },
     {
       "id": "S291520752",
@@ -1079,6 +1053,32 @@
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
       "wikiDesc": "目前無法取得 東方鵟 的維基百科資料。"
+    },
+    {
+      "id": "S291520752",
+      "name": "黃腹鷚",
+      "sciName": "Anthus japonicus",
+      "locName": "台北--北投忠義小徑(Taipei--Beitou Zhongyi Trail)",
+      "lat": 25.1280927,
+      "lng": 121.477654,
+      "date": "01/01 11:04",
+      "speciesCode": "sibpip1",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 黃腹鷚 的維基百科資料。"
+    },
+    {
+      "id": "S291520752",
+      "name": "黑翅鳶",
+      "sciName": "Elanus caeruleus",
+      "locName": "台北--北投忠義小徑(Taipei--Beitou Zhongyi Trail)",
+      "lat": 25.1280927,
+      "lng": 121.477654,
+      "date": "01/01 11:04",
+      "speciesCode": "bkskit1",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 黑翅鳶 的維基百科資料。"
     },
     {
       "id": "S291505318",
@@ -1121,19 +1121,6 @@
     },
     {
       "id": "S291510504",
-      "name": "赤胸鵐",
-      "sciName": "Emberiza fucata",
-      "locName": "台北--番仔溝→貴子坑大排(Taipei--Fanzaigou to Guizikeng Drainage Canal)[台北鳥會例行路線(WBST Birdwatching Route)]",
-      "lat": 25.1333398,
-      "lng": 121.4942947,
-      "date": "01/01 09:56",
-      "speciesCode": "chebun2",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 赤胸鵐 的維基百科資料。"
-    },
-    {
-      "id": "S291510504",
       "name": "黑喉鴝",
       "sciName": "Saxicola stejnegeri",
       "locName": "台北--番仔溝→貴子坑大排(Taipei--Fanzaigou to Guizikeng Drainage Canal)[台北鳥會例行路線(WBST Birdwatching Route)]",
@@ -1144,6 +1131,19 @@
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
       "wikiDesc": "目前無法取得 黑喉鴝 的維基百科資料。"
+    },
+    {
+      "id": "S291510504",
+      "name": "赤胸鵐",
+      "sciName": "Emberiza fucata",
+      "locName": "台北--番仔溝→貴子坑大排(Taipei--Fanzaigou to Guizikeng Drainage Canal)[台北鳥會例行路線(WBST Birdwatching Route)]",
+      "lat": 25.1333398,
+      "lng": 121.4942947,
+      "date": "01/01 09:56",
+      "speciesCode": "chebun2",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 赤胸鵐 的維基百科資料。"
     },
     {
       "id": "S291503980",
@@ -1160,19 +1160,6 @@
     },
     {
       "id": "S291503980",
-      "name": "翠翼鳩",
-      "sciName": "Chalcophaps indica",
-      "locName": "關渡自然公園",
-      "lat": 25.1163,
-      "lng": 121.4725,
-      "date": "01/01 09:44",
-      "speciesCode": "emedov2",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 翠翼鳩 的維基百科資料。"
-    },
-    {
-      "id": "S291503980",
       "name": "池鷺",
       "sciName": "Ardeola bacchus",
       "locName": "關渡自然公園",
@@ -1183,6 +1170,19 @@
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
       "wikiDesc": "目前無法取得 池鷺 的維基百科資料。"
+    },
+    {
+      "id": "S291503980",
+      "name": "翠翼鳩",
+      "sciName": "Chalcophaps indica",
+      "locName": "關渡自然公園",
+      "lat": 25.1163,
+      "lng": 121.4725,
+      "date": "01/01 09:44",
+      "speciesCode": "emedov2",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 翠翼鳩 的維基百科資料。"
     },
     {
       "id": "S291511092",
@@ -1329,19 +1329,6 @@
     },
     {
       "id": "S291440350",
-      "name": "彩鷸",
-      "sciName": "Rostratula benghalensis",
-      "locName": "台北--北投忠義小徑(Taipei--Beitou Zhongyi Trail)",
-      "lat": 25.1280927,
-      "lng": 121.477654,
-      "date": "12/31 22:43",
-      "speciesCode": "grpsni1",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 彩鷸 的維基百科資料。"
-    },
-    {
-      "id": "S291440350",
       "name": "領角鴞",
       "sciName": "Otus lettia",
       "locName": "台北--北投忠義小徑(Taipei--Beitou Zhongyi Trail)",
@@ -1352,6 +1339,19 @@
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
       "wikiDesc": "目前無法取得 領角鴞 的維基百科資料。"
+    },
+    {
+      "id": "S291440350",
+      "name": "彩鷸",
+      "sciName": "Rostratula benghalensis",
+      "locName": "台北--北投忠義小徑(Taipei--Beitou Zhongyi Trail)",
+      "lat": 25.1280927,
+      "lng": 121.477654,
+      "date": "12/31 22:43",
+      "speciesCode": "grpsni1",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 彩鷸 的維基百科資料。"
     },
     {
       "id": "S291296583",
@@ -1550,19 +1550,6 @@
     },
     {
       "id": "S291002532",
-      "name": "繡眼畫眉",
-      "sciName": "Alcippe morrisonia",
-      "locName": "陽明山NP--冷水坑(Yangmingshan NP--Lengshuikeng)",
-      "lat": 25.165966,
-      "lng": 121.5645463,
-      "date": "12/29 10:00",
-      "speciesCode": "gycful1",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 繡眼畫眉 的維基百科資料。"
-    },
-    {
-      "id": "S291002532",
       "name": "冠羽畫眉",
       "sciName": "Yuhina brunneiceps",
       "locName": "陽明山NP--冷水坑(Yangmingshan NP--Lengshuikeng)",
@@ -1573,6 +1560,19 @@
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
       "wikiDesc": "目前無法取得 冠羽畫眉 的維基百科資料。"
+    },
+    {
+      "id": "S291002532",
+      "name": "繡眼畫眉",
+      "sciName": "Alcippe morrisonia",
+      "locName": "陽明山NP--冷水坑(Yangmingshan NP--Lengshuikeng)",
+      "lat": 25.165966,
+      "lng": 121.5645463,
+      "date": "12/29 10:00",
+      "speciesCode": "gycful1",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 繡眼畫眉 的維基百科資料。"
     },
     {
       "id": "S290906136",
@@ -1602,19 +1602,6 @@
     },
     {
       "id": "S290949045",
-      "name": "唐白鷺",
-      "sciName": "Egretta eulophotes",
-      "locName": "台北--番仔溝→貴子坑大排(Taipei--Fanzaigou to Guizikeng Drainage Canal)[台北鳥會例行路線(WBST Birdwatching Route)]",
-      "lat": 25.1333398,
-      "lng": 121.4942947,
-      "date": "12/29 06:25",
-      "speciesCode": "chiegr",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 唐白鷺 的維基百科資料。"
-    },
-    {
-      "id": "S290949045",
       "name": "灰澤鵟",
       "sciName": "Circus cyaneus",
       "locName": "台北--番仔溝→貴子坑大排(Taipei--Fanzaigou to Guizikeng Drainage Canal)[台北鳥會例行路線(WBST Birdwatching Route)]",
@@ -1625,6 +1612,19 @@
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
       "wikiDesc": "目前無法取得 灰澤鵟 的維基百科資料。"
+    },
+    {
+      "id": "S290949045",
+      "name": "唐白鷺",
+      "sciName": "Egretta eulophotes",
+      "locName": "台北--番仔溝→貴子坑大排(Taipei--Fanzaigou to Guizikeng Drainage Canal)[台北鳥會例行路線(WBST Birdwatching Route)]",
+      "lat": 25.1333398,
+      "lng": 121.4942947,
+      "date": "12/29 06:25",
+      "speciesCode": "chiegr",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 唐白鷺 的維基百科資料。"
     },
     {
       "id": "S290700466",
@@ -1836,19 +1836,6 @@
     },
     {
       "id": "S289924305",
-      "name": "灰椋鳥",
-      "sciName": "Spodiopsar cineraceus",
-      "locName": "台北--松山機場(Taipei--Songshan Airport)",
-      "lat": 25.0695845,
-      "lng": 121.5524769,
-      "date": "12/24 10:59",
-      "speciesCode": "whcsta1",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 灰椋鳥 的維基百科資料。"
-    },
-    {
-      "id": "S289924305",
       "name": "灰背椋鳥",
       "sciName": "Sturnia sinensis",
       "locName": "台北--松山機場(Taipei--Songshan Airport)",
@@ -1859,6 +1846,19 @@
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
       "wikiDesc": "目前無法取得 灰背椋鳥 的維基百科資料。"
+    },
+    {
+      "id": "S289924305",
+      "name": "灰椋鳥",
+      "sciName": "Spodiopsar cineraceus",
+      "locName": "台北--松山機場(Taipei--Songshan Airport)",
+      "lat": 25.0695845,
+      "lng": 121.5524769,
+      "date": "12/24 10:59",
+      "speciesCode": "whcsta1",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 灰椋鳥 的維基百科資料。"
     },
     {
       "id": "S289924305",
@@ -1875,19 +1875,6 @@
     },
     {
       "id": "S289944952",
-      "name": "鴻雁",
-      "sciName": "Anser cygnoides",
-      "locName": "Bailusishan Trail, Taipei",
-      "lat": 25.078491,
-      "lng": 121.60405,
-      "date": "12/24 09:06",
-      "speciesCode": "swagoo1",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 鴻雁 的維基百科資料。"
-    },
-    {
-      "id": "S289944952",
       "name": "短尾鶯",
       "sciName": "Urosphena squameiceps",
       "locName": "Bailusishan Trail, Taipei",
@@ -1898,6 +1885,19 @@
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
       "wikiDesc": "目前無法取得 短尾鶯 的維基百科資料。"
+    },
+    {
+      "id": "S289944952",
+      "name": "鴻雁",
+      "sciName": "Anser cygnoides",
+      "locName": "Bailusishan Trail, Taipei",
+      "lat": 25.078491,
+      "lng": 121.60405,
+      "date": "12/24 09:06",
+      "speciesCode": "swagoo1",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 鴻雁 的維基百科資料。"
     },
     {
       "id": "S289795978",
@@ -2174,16 +2174,29 @@
     },
     {
       "id": "S289150848",
-      "name": "朱鸝",
-      "sciName": "Oriolus traillii",
+      "name": "白耳畫眉",
+      "sciName": "Heterophasia auricularis",
       "locName": "阿柔洋產業道路, 文山區, 台北市, TW (24.971, 121.614)",
       "lat": 24.9706491,
       "lng": 121.614279,
       "date": "12/19 13:06",
-      "speciesCode": "marori2",
+      "speciesCode": "whesib1",
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 朱鸝 的維基百科資料。"
+      "wikiDesc": "目前無法取得 白耳畫眉 的維基百科資料。"
+    },
+    {
+      "id": "S289150848",
+      "name": "赤腹山雀",
+      "sciName": "Sittiparus castaneoventris",
+      "locName": "阿柔洋產業道路, 文山區, 台北市, TW (24.971, 121.614)",
+      "lat": 24.9706491,
+      "lng": 121.614279,
+      "date": "12/19 13:06",
+      "speciesCode": "vartit3",
+      "county": "TW-TPE",
+      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
+      "wikiDesc": "目前無法取得 赤腹山雀 的維基百科資料。"
     },
     {
       "id": "S289150848",
@@ -2213,29 +2226,16 @@
     },
     {
       "id": "S289150848",
-      "name": "日本歌鴝",
-      "sciName": "Larvivora akahige",
+      "name": "朱鸝",
+      "sciName": "Oriolus traillii",
       "locName": "阿柔洋產業道路, 文山區, 台北市, TW (24.971, 121.614)",
       "lat": 24.9706491,
       "lng": 121.614279,
       "date": "12/19 13:06",
-      "speciesCode": "japrob2",
-      "county": "TW-TPE",
-      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Japanese_Robin_9625.jpg/500px-Japanese_Robin_9625.jpg",
-      "wikiDesc": "日本歌鴝為鶲科鴝鳥屬的鳥類。分布於日本以及中國大陸的冬時經河北、江蘇、而在廣東、廣西、福建越冬、偶見於台灣、香港等地，在越冬時多見於混交林的潮濕下木間以及偶爾遇見於低地。"
-    },
-    {
-      "id": "S289150848",
-      "name": "赤腹山雀",
-      "sciName": "Sittiparus castaneoventris",
-      "locName": "阿柔洋產業道路, 文山區, 台北市, TW (24.971, 121.614)",
-      "lat": 24.9706491,
-      "lng": 121.614279,
-      "date": "12/19 13:06",
-      "speciesCode": "vartit3",
+      "speciesCode": "marori2",
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 赤腹山雀 的維基百科資料。"
+      "wikiDesc": "目前無法取得 朱鸝 的維基百科資料。"
     },
     {
       "id": "S289150848",
@@ -2252,16 +2252,16 @@
     },
     {
       "id": "S289150848",
-      "name": "白耳畫眉",
-      "sciName": "Heterophasia auricularis",
+      "name": "日本歌鴝",
+      "sciName": "Larvivora akahige",
       "locName": "阿柔洋產業道路, 文山區, 台北市, TW (24.971, 121.614)",
       "lat": 24.9706491,
       "lng": 121.614279,
       "date": "12/19 13:06",
-      "speciesCode": "whesib1",
+      "speciesCode": "japrob2",
       "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 白耳畫眉 的維基百科資料。"
+      "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Japanese_Robin_9625.jpg/500px-Japanese_Robin_9625.jpg",
+      "wikiDesc": "日本歌鴝為鶲科鴝鳥屬的鳥類。分布於日本以及中國大陸的冬時經河北、江蘇、而在廣東、廣西、福建越冬、偶見於台灣、香港等地，在越冬時多見於混交林的潮濕下木間以及偶爾遇見於低地。"
     },
     {
       "id": "S289143968",
@@ -2486,19 +2486,6 @@
     },
     {
       "id": "S288202416",
-      "name": "黑腹燕鷗",
-      "sciName": "Chlidonias hybrida",
-      "locName": "台北--北投忠義小徑(Taipei--Beitou Zhongyi Trail)",
-      "lat": 25.1280927,
-      "lng": 121.477654,
-      "date": "12/12 09:13",
-      "speciesCode": "whiter2",
-      "county": "TW-TPE",
-      "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 黑腹燕鷗 的維基百科資料。"
-    },
-    {
-      "id": "S288202416",
       "name": "毛足鵟",
       "sciName": "Buteo lagopus",
       "locName": "台北--北投忠義小徑(Taipei--Beitou Zhongyi Trail)",
@@ -2511,17 +2498,17 @@
       "wikiDesc": "目前無法取得 毛足鵟 的維基百科資料。"
     },
     {
-      "id": "S288094205",
-      "name": "松鴉",
-      "sciName": "Garrulus glandarius",
-      "locName": "台北--象山親山步道(Taipei--Xiangshan Hiking Trail)",
-      "lat": 25.0253397,
-      "lng": 121.5720034,
-      "date": "12/11 11:33",
-      "speciesCode": "eurjay1",
+      "id": "S288202416",
+      "name": "黑腹燕鷗",
+      "sciName": "Chlidonias hybrida",
+      "locName": "台北--北投忠義小徑(Taipei--Beitou Zhongyi Trail)",
+      "lat": 25.1280927,
+      "lng": 121.477654,
+      "date": "12/12 09:13",
+      "speciesCode": "whiter2",
       "county": "TW-TPE",
       "wikiImg": "https://via.placeholder.com/300x200?text=Bird+Image",
-      "wikiDesc": "目前無法取得 松鴉 的維基百科資料。"
+      "wikiDesc": "目前無法取得 黑腹燕鷗 的維基百科資料。"
     },
     {
       "id": "S291527884",
@@ -55327,7 +55314,7 @@
           "關渡",
           "Guandu"
         ],
-        "desc": "台北市最重要的水鳥保育區...",
+        "desc": "台北市最重要的水鳥保育區，擁有廣大的草澤與水塘。核心區不對外開放，但透過自然中心望遠鏡可觀察大量雁鴨與鷺科。",
         "potential": [
           {
             "name": "花嘴鴨",
@@ -55343,7 +55330,7 @@
           "大安森林",
           "Daan"
         ],
-        "desc": "都市之肺...",
+        "desc": "都市之肺，生態池中有穩定的鷺科與秧雞科棲息，樹林間則是五色鳥與各式過境陸鳥的熱點。",
         "potential": [
           {
             "name": "五色鳥",
@@ -55359,7 +55346,7 @@
           "植物園",
           "Botanical"
         ],
-        "desc": "歷史悠久...",
+        "desc": "歷史悠久的都會公園，荷花池與林區鳥況極佳，是北部拍攝翠鳥、紅冠水雞與鳳頭蒼鷹的入門聖地。",
         "potential": [
           {
             "name": "翠鳥",
@@ -55375,7 +55362,7 @@
           "大湖",
           "Dahu"
         ],
-        "desc": "內湖區著名的湖泊公園...",
+        "desc": "內湖區著名的湖泊公園，湖光山色倒影迷人。這裡是鷺科鳥類的聚集地，常見小白鷺、夜鷺在錦帶橋畔佇立。",
         "potential": [
           {
             "name": "大白鷺",
@@ -55391,7 +55378,7 @@
           "松山文創",
           "Songshan"
         ],
-        "desc": "信義區的生態跳島...",
+        "desc": "信義區的生態跳島，生態池雖小但生機盎然。是市區觀賞翠鳥捕魚、紅冠水雞築巢的熱門景點。",
         "potential": [
           {
             "name": "翠鳥",
@@ -55407,7 +55394,7 @@
           "芝山",
           "Zhishan"
         ],
-        "desc": "隆起的珊瑚礁地形...",
+        "desc": "隆起的珊瑚礁地形，擁有茂密林相。是觀察領角鴞、皮黃腹鶲等低海拔山鳥與猛禽的好去處。",
         "potential": [
           {
             "name": "領角鴞",
@@ -55426,7 +55413,7 @@
           "Jinshan",
           "清水"
         ],
-        "desc": "北海岸著名的候鳥驛站...",
+        "desc": "北海岸著名的候鳥驛站，曾有小白鶴長期停留。農田與水域環境適合鷸鴴科與大型水鳥停棲。",
         "potential": [
           {
             "name": "黑鳶",
@@ -55442,7 +55429,7 @@
           "野柳",
           "Yehliu"
         ],
-        "desc": "突出海岬地形...",
+        "desc": "突出海岬地形，是候鳥渡海來台的第一站。每年春秋過境期，岬角步道常充滿稀有過境鳥驚喜。",
         "potential": [
           {
             "name": "藍磯鶇",
@@ -55458,7 +55445,7 @@
           "田寮洋",
           "Tianliao"
         ],
-        "desc": "位於貢寮的隱密濕地...",
+        "desc": "位於貢寮的隱密濕地，擁有豐富的草澤環境。冬季常有猛禽巡弋，也是雁鴨科的重要度冬地。",
         "potential": [
           {
             "name": "魚鷹",
@@ -55475,7 +55462,7 @@
           "福山",
           "Wulai"
         ],
-        "desc": "低海拔闊葉林代表...",
+        "desc": "低海拔闊葉林代表，沿著桶後溪與南勢溪。可見鉛色水鶇、紫嘯鶇等溪流鳥類及多種畫眉科。",
         "potential": [
           {
             "name": "鉛色水鶇",
@@ -55493,7 +55480,7 @@
           "許厝港",
           "Xucuo"
         ],
-        "desc": "國家級重要濕地...",
+        "desc": "國家級重要濕地，擁有廣闊潮間帶與防風林。每年過境期鷸鴴科數量龐大，是北台灣海岸賞鳥首選。",
         "potential": [
           {
             "name": "唐白鷺",
@@ -55509,7 +55496,7 @@
           "大園",
           "Dayuan"
         ],
-        "desc": "廣大的水田區...",
+        "desc": "廣大的水田區，冬季休耕期注水後成為水鳥天堂，常有小天鵝、各種特殊鷸鴴科出沒。",
         "potential": [
           {
             "name": "小青足鷸",
@@ -55527,7 +55514,7 @@
           "金城湖",
           "Jincheng"
         ],
-        "desc": "香山濕地北端的淡水湖泊...",
+        "desc": "香山濕地北端的淡水湖泊，提供穩定水源。高蹺鴴、琵嘴鴨等水鳥群聚，且距離市區不遠，交通方便。",
         "potential": [
           {
             "name": "高蹺鴴",
@@ -55543,7 +55530,7 @@
           "香山",
           "Siangshan"
         ],
-        "desc": "廣達1700公頃的泥質灘地...",
+        "desc": "廣達1700公頃的泥質灘地，孕育大量底棲生物，吸引成千上萬的候鳥覓食，以鷸鴴科為大宗。",
         "potential": [
           {
             "name": "大杓鷸",
@@ -55561,7 +55548,7 @@
           "通霄",
           "Tongxiao"
         ],
-        "desc": "包含周邊防風林與海岸線...",
+        "desc": "包含周邊防風林與海岸線，是過境鳥類暫歇的熱點。稀有鳥種如戴勝、各種鵐科常在此被記錄。",
         "potential": [
           {
             "name": "戴勝",
@@ -55579,7 +55566,7 @@
           "高美",
           "Gaomei"
         ],
-        "desc": "著名的雲林莞草區...",
+        "desc": "著名的雲林莞草區，夕陽美景下也是水鳥樂園。黑嘴鷗等稀有海鳥常在此度冬。",
         "potential": [
           {
             "name": "黑嘴鷗",
@@ -55597,7 +55584,7 @@
           "23K",
           "23.5K"
         ],
-        "desc": "國際級賞鳥熱點...",
+        "desc": "國際級賞鳥熱點，中海拔山鳥精華區。藍腹鷴常在清晨路邊現身，吸引國內外賞鳥人潮。",
         "potential": [
           {
             "name": "藍腹鷴",
@@ -55615,7 +55602,7 @@
           "50K",
           "天池"
         ],
-        "desc": "高海拔針葉林區...",
+        "desc": "高海拔針葉林區，是帝雉、火冠戴菊、栗背林鴝等高山特有種的大本營。天池周邊鳥況亦佳。",
         "potential": [
           {
             "name": "帝雉",
@@ -55633,7 +55620,7 @@
           "合歡山",
           "Hehuan"
         ],
-        "desc": "台灣公路最高點...",
+        "desc": "台灣公路最高點，主要觀察岩鷚、酒紅朱雀、金翼白眉等高山鳥類。松雪樓附近極易觀察。",
         "potential": [
           {
             "name": "岩鷚",
@@ -55649,7 +55636,7 @@
           "塔塔加",
           "Tataka"
         ],
-        "desc": "玉山國家公園西北園區...",
+        "desc": "玉山國家公園西北園區，林相豐富。灰林鴞、星鴉等中高海拔鳥種常見，也是秋季觀察赤腹鷹過境的熱點。",
         "potential": [
           {
             "name": "星鴉",
@@ -55668,7 +55655,7 @@
           "Fubao",
           "漢寶"
         ],
-        "desc": "彰化沿海重要的漢寶/福寶濕地群...",
+        "desc": "彰化沿海重要的漢寶/福寶濕地群，人工營造的棲地吸引大量水鳥。彩鷸、高蹺鴴為此地常客。",
         "potential": [
           {
             "name": "彩鷸",
@@ -55687,7 +55674,7 @@
           "Huben",
           "八色鳥"
         ],
-        "desc": "以八色鳥繁殖地聞名...",
+        "desc": "以八色鳥繁殖地聞名，夏季時吸引大量鳥友前往朝聖這美麗的夏候鳥。",
         "potential": [
           {
             "name": "八色鳥",
@@ -55703,7 +55690,7 @@
           "成龍",
           "Chenglong"
         ],
-        "desc": "地層下陷形成的濕地...",
+        "desc": "地層下陷形成的濕地，現已演替為豐富生態系。常可見黑面琵鷺與大量雁鴨科。",
         "potential": [
           {
             "name": "赤頸鴨",
@@ -55721,7 +55708,7 @@
           "鰲鼓",
           "Aogu"
         ],
-        "desc": "台灣最大的人工濕地...",
+        "desc": "台灣最大的人工濕地之一，擁有多樣棲地型態。冬季候鳥數量極多，是中南部觀賞猛禽與水鳥的最佳地點。",
         "potential": [
           {
             "name": "鸕鶿",
@@ -55738,7 +55725,7 @@
           "Alishan",
           "沼平"
         ],
-        "desc": "觀賞中高海拔鳥類...",
+        "desc": "觀賞中高海拔鳥類如栗背林鴝、冠羽畫眉的經典路線。櫻花季時更是鳥語花香。",
         "potential": [
           {
             "name": "栗背林鴝",
@@ -55757,7 +55744,7 @@
           "Qigu",
           "黑面琵鷺"
         ],
-        "desc": "全球黑面琵鷺度冬數量最多的區域...",
+        "desc": "全球黑面琵鷺度冬數量最多的區域之一。設有數個賞鳥亭，能清楚觀察這瀕危物種的群聚行為。",
         "potential": [
           {
             "name": "黑面琵鷺",
@@ -55774,7 +55761,7 @@
           "Guantian",
           "水雉"
         ],
-        "desc": "凌波仙子—水雉的主要復育地...",
+        "desc": "凌波仙子—水雉的主要復育地。菱角田環境優美，夏季可見水雉繁殖育雛的精彩畫面。",
         "potential": [
           {
             "name": "水雉",
@@ -55792,7 +55779,7 @@
           "茄萣",
           "Qieding"
         ],
-        "desc": "原為鹽田，現為水鳥保護區...",
+        "desc": "原為鹽田，現為水鳥保護區。近年來黑面琵鷺度冬數量穩定增加，也是觀察反嘴鴴的好地方。",
         "potential": [
           {
             "name": "黑面琵鷺",
@@ -55808,7 +55795,7 @@
           "中寮山",
           "Zhongliao"
         ],
-        "desc": "南部著名的猛禽觀賞點...",
+        "desc": "南部著名的猛禽觀賞點，春季是赤腹鷹與灰面鵟鷹北返的必經之路。",
         "potential": [
           {
             "name": "灰面鵟鷹",
@@ -55826,7 +55813,7 @@
           "龍鑾潭",
           "Longluan"
         ],
-        "desc": "南台灣最大的淡水湖泊...",
+        "desc": "南台灣最大的淡水湖泊，設有高倍望遠鏡。冬季雁鴨科水鳥眾多，鳳頭潛鴨是這裡的招牌。",
         "potential": [
           {
             "name": "鳳頭潛鴨",
@@ -55844,7 +55831,7 @@
           "墾丁",
           "Kenting"
         ],
-        "desc": "恆春半島特有的珊瑚礁林地形...",
+        "desc": "恆春半島特有的珊瑚礁林地形。秋季九月是觀賞赤腹鷹過境的聖地，數量動輒數萬隻。",
         "potential": [
           {
             "name": "赤腹鷹",
@@ -55862,7 +55849,7 @@
           "無尾港",
           "Wuwei"
         ],
-        "desc": "位於蘇澳的國家級重要濕地，核心賞鳥平台...",
+        "desc": "位於蘇澳的國家級重要濕地，核心賞鳥平台視野極佳。冬季雁鴨科種類豐富，尤其是尖尾鴨與小水鴨群聚。",
         "potential": [
           {
             "name": "小水鴨",
@@ -55878,7 +55865,7 @@
           "五十二甲",
           "52jia"
         ],
-        "desc": "原始的蘆葦草澤濕地...",
+        "desc": "原始的蘆葦草澤濕地，冬候鳥數量可觀。也是全台少數能穩定觀察瀕危「黑頸鸊鷉」的地點之一。",
         "potential": [
           {
             "name": "黑頸鸊鷉",
@@ -55895,7 +55882,7 @@
           "Zhuangwei",
           "蘭陽溪"
         ],
-        "desc": "蘭陽溪口南岸的廣闊沙丘...",
+        "desc": "蘭陽溪口南岸的廣闊沙丘與防風林。是觀察燕鷗科、以及冬季稀有海鳥如短尾信天翁的潛力點。",
         "potential": [
           {
             "name": "小燕鷗",
@@ -55911,7 +55898,7 @@
           "太平山",
           "Taipingshan"
         ],
-        "desc": "潮濕多霧的中高海拔森林...",
+        "desc": "潮濕多霧的中高海拔森林。擁有完整的檜木林相，是金翼白眉、灰林鳩等山鳥的樂園。",
         "potential": [
           {
             "name": "金翼白眉",
@@ -55930,7 +55917,7 @@
           "Bulowan",
           "太魯閣"
         ],
-        "desc": "太魯閣國家公園內的台地...",
+        "desc": "太魯閣國家公園內的台地，植被豐富。春季吸引黃山雀、赤腹山雀等降遷覓食，鳥況極佳。",
         "potential": [
           {
             "name": "黃山雀",
@@ -55948,7 +55935,7 @@
           "知本",
           "Zhiben"
         ],
-        "desc": "台東市近郊的河口濕地...",
+        "desc": "台東市近郊的河口濕地，擁有沙洲與草澤。曾記錄到東方白鸛等珍稀迷鳥。",
         "potential": [
           {
             "name": "環頸雉",
@@ -55966,7 +55953,7 @@
           "慈湖",
           "Cihu"
         ],
-        "desc": "金門最大的鹹水湖...",
+        "desc": "金門最大的鹹水湖，冬季擁有龐大的鸕鶿度冬族群，黃昏時「黑軍壓境」歸巢場面極為壯觀。",
         "potential": [
           {
             "name": "鸕鶿",
@@ -55982,7 +55969,7 @@
           "青年農莊",
           "Youth Farm"
         ],
-        "desc": "位於金門東半島...",
+        "desc": "位於金門東半島，夏季色彩繽紛的栗喉蜂虎會在土坡挖洞繁殖，吸引眾多攝影師。",
         "potential": [
           {
             "name": "栗喉蜂虎",
@@ -56001,7 +55988,7 @@
           "Dongyin",
           "北海坑道"
         ],
-        "desc": "地形險峻的岩岸...",
+        "desc": "地形險峻的岩岸，是極危物種「神話之鳥」黑嘴端鳳頭燕鷗的夏季繁殖地。遊客可搭乘賞鳥船從海上近距離觀察燕鷗育雛。",
         "potential": [
           {
             "name": "黑嘴端鳳頭燕鷗",
@@ -56019,7 +56006,7 @@
           "介壽",
           "菜園"
         ],
-        "desc": "位於縣政府前方的蔬菜公園...",
+        "desc": "位於縣政府前方的蔬菜公園，是馬祖少見的開闊農地。春秋過境期常吸引田鵐、樹鷚等過境陸鳥停留補充體力。",
         "potential": [
           {
             "name": "田鵐",
