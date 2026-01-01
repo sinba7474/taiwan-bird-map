@@ -10,538 +10,399 @@
         body, html { margin: 0; padding: 0; height: 100%; font-family: "Microsoft JhengHei", sans-serif; overflow: hidden; background: #f0f2f5;}
         .container { display: flex; height: 100vh; position: relative; width: 100vw; }
         
-        /* === 左側欄位 (列表與資訊) === */
+        /* 左側欄位 */
         .sidebar-left { 
             width: 340px; background: white; display: flex; flex-direction: column; 
             border-right: 1px solid #ddd; z-index: 20; box-shadow: 2px 0 10px rgba(0,0,0,0.1); 
             height: 100%; flex-shrink: 0; position: relative; 
         }
         
-        /* 地圖容器 */
         #map { flex-grow: 1; height: 100%; z-index: 1; }
         
-        /* === 右側欄位 (鳥種搜尋網格) === */
+        /* 右側欄位 (搜尋) */
         .sidebar-right { 
-            width: 300px; background: #fff; border-left: 1px solid #ddd; 
-            display: flex; flex-direction: column; z-index: 20; height: 100%; flex-shrink: 0;
+            width: 340px; background: white; display: flex; flex-direction: column; 
+            border-left: 1px solid #ddd; z-index: 20; flex-shrink: 0; 
+            transition: transform 0.3s; height: 100%; 
         }
 
-        /* 頂部標題與 Tab */
-        .header { padding: 15px; background: #2c3e50; color: white; text-align: center; font-weight: bold; font-size: 1.2rem; }
-        .tabs { display: flex; background: #ecf0f1; border-bottom: 1px solid #ddd; }
-        .tab { flex: 1; padding: 12px; text-align: center; cursor: pointer; color: #7f8c8d; font-weight: bold; border-bottom: 3px solid transparent; transition: 0.3s; }
-        .tab.active { color: #2c3e50; border-bottom: 3px solid #2c3e50; background: #fff; }
+        /* 地圖控制按鈕 */
+        .map-ctrl-btn { 
+            position: absolute; top: 10px; z-index: 3000; 
+            background: #2c3e50; color: white; padding: 8px 15px; 
+            border-radius: 50px; cursor: pointer; font-weight: bold; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.2s; 
+            border: 2px solid white; display: flex; align-items: center; white-space: nowrap; 
+        }
+        .map-ctrl-btn:hover { background: #34495e; transform: scale(1.05); }
 
-        /* 列表容器 */
-        .list-container { flex: 1; overflow-y: auto; padding: 10px; scroll-behavior: smooth; }
+        /* 電腦版定位：在地圖左上方 (避開 sidebar 340px) */
+        .home-btn { left: 350px; }
+        .near-btn { left: 410px; background: #27ae60; } 
+
+        /* 手機版專用搜尋按鈕 */
+        .mobile-search-toggle { 
+            display: none; position: absolute; top: 10px; right: 10px; z-index: 3000; 
+            background: #ffc107; color: #333; padding: 8px 12px; 
+            border-radius: 50px; cursor: pointer; font-weight: bold; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid white; 
+            align-items: center; font-size: 0.9em;
+        }
+        .mobile-search-close { display: none; background: #eee; border: none; padding: 10px; text-align: center; font-weight: bold; color: #555; cursor: pointer; border-bottom: 1px solid #ddd; }
+
+        /* 列表與卡片樣式 */
+        .tab-group { display: flex; background: #f0f0f0; padding: 5px; gap: 5px; border-bottom: 1px solid #ddd; flex-shrink: 0;}
+        .tab-btn { flex: 1; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: bold; color: #555; background: transparent; transition: 0.2s; }
+        .tab-btn.active { background: #3498db; color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .location-list { flex-grow: 1; overflow-y: auto; padding: 10px; scroll-behavior: smooth; padding-bottom: 100px; }
+        .loc-card { padding: 15px; border-bottom: 1px solid #eee; cursor: pointer; transition: 0.2s; border-radius: 8px; margin-bottom: 5px; background: #fff; border-left: 5px solid #ddd;}
+        .loc-name { font-weight: bold; color: #333; margin-bottom: 5px; }
+        .hotspot-group-title { font-weight:bold; margin: 15px 0 5px 0; color: #555; border-bottom: 2px solid #eee; padding: 5px 5px 5px 0;}
         
-        /* 地點卡片樣式 (已優化顯示筆數) */
-        .loc-card { 
-            background: white; border-radius: 8px; padding: 12px; margin-bottom: 10px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer; border-left: 4px solid #3498db; 
-            transition: transform 0.2s;
-        }
-        .loc-card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .loc-name { font-weight: bold; font-size: 1rem; color: #2c3e50; margin-bottom: 5px; }
-        .loc-meta { font-size: 0.85rem; color: #7f8c8d; display: flex; justify-content: space-between; align-items: center; }
-        .count-badge { background: #e74c3c; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: bold; }
-        
-        /* 載入更多偵測點 */
-        #sentinel { height: 20px; }
+        /* 詳情頁 */
+        .loc-detail-view { padding: 0; display: none; flex-direction: column; height: 100%; overflow: hidden; }
+        .detail-scroll-wrapper { flex: 1; overflow-y: auto; padding: 15px; padding-bottom: 150px; -webkit-overflow-scrolling: touch; }
+        .back-btn { margin: 10px 15px 0 15px; flex-shrink: 0; cursor: pointer; background: #e0f7fa; border: none; color: #006064; font-weight: bold; padding: 10px; border-radius: 5px; }
 
-        /* 鳥種網格樣式 */
-        .bird-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 10px; overflow-y: auto; flex: 1; }
-        .bird-grid-item { 
-            display: flex; flex-direction: column; align-items: center; text-align: center; 
-            cursor: pointer; padding: 5px; border-radius: 6px; transition: 0.2s; border: 1px solid transparent; 
-        }
-        .bird-grid-item:hover { background: #f0f2f5; }
-        .bird-grid-item.active { background: #e8f6fd; border-color: #3498db; }
-        .bird-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; background: #eee; margin-bottom: 5px; }
-        .bird-name { font-size: 0.8rem; color: #333; line-height: 1.2; }
+        .weather-box { background: white; border: 1px solid #ddd; padding: 15px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        .temp-big { font-size: 2.2em; font-weight: bold; color: #2c3e50; display:flex; align-items:center; gap:10px;}
+        .weather-color-bar { display: flex; height: 12px; width: 100%; border-radius: 6px; overflow: hidden; margin-bottom: 8px; }
+        .weather-color-segment { flex: 1; height: 100%; }
 
-        /* RWD: 手機版調整 */
+        /* 鳥類列表行樣式 */
+        .bird-row { border-bottom: 1px solid #f0f0f0; background: white; border-radius: 5px; margin-bottom: 5px; overflow: hidden;}
+        .bird-header { display: flex; align-items: center; padding: 10px; cursor: pointer; }
+        .bird-thumb-small { width: 45px; height: 45px; border-radius: 5px; object-fit: contain; background: #eee; border: 1px solid #ddd;}
+        .bird-detail-content { display: none; padding: 10px; background: #f8f9fa; border-top: 1px solid #eee; }
+        .bird-detail-content.show { display: block; }
+        .large-bird-img { width: 100%; height: auto; max-height: 300px; border-radius: 8px; object-fit: contain; background: #f0f0f0; }
+
+        /* 搜尋網格 */
+        .search-header { background: #ffc107; padding: 15px; text-align: center; font-weight: bold; color: #333; }
+        .bird-grid { flex-grow: 1; overflow-y: auto; padding: 10px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; align-content: start;}
+        .bird-grid-item { position: relative; border-radius: 6px; overflow: hidden; cursor: pointer; background: #eee; height: 100px;}
+        .bird-grid-item img { width: 100%; height: 100%; object-fit: contain; }
+        .bird-name-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; background: rgba(0,0,0,0.6); opacity: 0; transition: 0.3s; font-size: 0.85em; text-align: center; }
+        .bird-grid-item:hover .bird-name-overlay { opacity: 1; }
+        .grid-badge { background: rgba(255, 193, 7, 0.9); color: #333; font-size: 0.7em; padding: 2px 6px; border-radius: 10px; margin-top: 5px;}
+
+        #loading { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.9); display: flex; justify-content: center; align-items: center; z-index: 9999; font-weight: bold; }
+
         @media (max-width: 768px) {
-            .container { flex-direction: column; }
-            .sidebar-right { display: none; /* 手機版預設隱藏右側搜尋 */ }
-            .sidebar-left { width: 100%; height: 60%; order: 2; border-right: none; border-top: 1px solid #ddd; }
-            #map { height: 40%; order: 1; }
-            
-            /* 手機版浮動按鈕 */
-            .mobile-float-btn {
-                position: absolute; top: 10px; right: 10px; z-index: 100;
-                background: white; padding: 8px 12px; border-radius: 20px;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.2); font-weight: bold; font-size: 0.9rem;
-                display: flex; align-items: center; gap: 5px;
-            }
+            .container { flex-direction: column; } 
+            #map { width: 100%; height: 30vh; order: 1; }
+            .sidebar-left { width: 100%; height: 70vh; order: 2; border-right: none; border-top: 1px solid #ddd; }
+            .home-btn { left: 10px; padding: 8px 12px; }
+            .near-btn { left: 75px; padding: 8px 12px; }
+            .mobile-search-toggle { display: flex; }
+            .mobile-search-close { display: block; }
+            .sidebar-right { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 4000; transform: translateX(100%); transition: transform 0.3s; }
+            .sidebar-right.active { transform: translateX(0); }
         }
-        
-        /* 資訊面板 (詳情頁) */
-        .detail-panel { 
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-            background: white; z-index: 30; display: none; flex-direction: column; 
-        }
-        .detail-header { padding: 10px 15px; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px; }
-        .back-btn { background: none; border: none; font-size: 1.2rem; cursor: pointer; padding: 5px; }
-        .detail-content { flex: 1; overflow-y: auto; padding: 15px; }
-        
-        /* 天氣小卡 */
-        .weather-widget { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); padding: 10px; border-radius: 8px; margin-bottom: 15px; color: #2c3e50; }
-        
-        /* 觀測紀錄條目 */
-        .obs-item { display: flex; gap: 10px; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .obs-img { width: 80px; height: 80px; border-radius: 6px; object-fit: cover; background: #eee; flex-shrink: 0; }
-        .obs-info { flex: 1; }
-        .obs-time { font-size: 0.8rem; color: #888; margin-bottom: 4px; }
-        .obs-bird { font-weight: bold; font-size: 1rem; color: #2c3e50; }
-        .obs-desc { font-size: 0.85rem; color: #555; margin-top: 4px; line-height: 1.4; }
-
     </style>
 </head>
 <body>
 
+<div id="loading">載入最新鳥況與熱點...</div>
+
+<div class="map-ctrl-btn home-btn" onclick="resetApp()" title="回到全覽模式">🏠</div>
+<div class="map-ctrl-btn near-btn" onclick="locateAndFindBirds()" title="搜尋附近鳥況">📍 附近鳥況</div>
+<div class="mobile-search-toggle" onclick="toggleMobileSearch(true)">🔍 鳥種</div>
+
 <div class="container">
+    <div class="sidebar-left">
+        <div class="tab-group">
+            <button class="tab-btn" onclick="switchTab('record')">紀錄地點</button>
+            <button class="tab-btn active" onclick="switchTab('hotspot')">台灣賞鳥熱點</button>
+        </div>
+        <div id="location-list-container" class="location-list" style="display:none;"></div>
+        <div id="hotspot-list-container" class="location-list"></div>
+        
+        <div id="location-detail-panel" class="loc-detail-view">
+            <button class="back-btn" onclick="goBackToPreviousState()">← 返回列表</button>
+            <div class="detail-scroll-wrapper">
+                <h2 id="detail-loc-name" style="margin:10px 0;">地點名稱</h2>
+                <div class="weather-box">
+                    <div id="weather-desc" style="font-weight:bold; color:#333; margin-bottom:5px;">--</div>
+                    <div class="temp-big"><span id="weather-icon-main">☁️</span><span id="weather-temp">--°C</span></div>
+                    <div class="weather-color-bar" id="weather-color-bar"></div>
+                    <input type="range" id="weather-slider" min="0" max="47" value="0" style="width:100%;">
+                    <div id="weather-time-display" style="text-align:center; font-size:0.85em; margin-top:5px; color:#3498db;">拖動滑桿查看預報</div>
+                </div>
+                <div id="detail-bird-list"></div>
+            </div>
+        </div>
+    </div>
+    
     <div id="map"></div>
     
-    <div class="mobile-float-btn" onclick="toggleMobileSearch()" id="mobile-search-btn" style="display:none;">
-        🔍 找鳥種
+    <div class="sidebar-right" id="mobile-search-panel">
+        <button class="mobile-search-close" onclick="toggleMobileSearch(false)">✕ 關閉搜尋</button>
+        <div class="search-header">🐦 搜尋鳥種</div>
+        <div id="bird-search-list" class="bird-grid"></div>
     </div>
-
-    <div class="sidebar-left">
-        <div class="header">🐦 台灣好鳥系統</div>
-        <div class="tabs">
-            <div class="tab active" onclick="switchTab('record')">近期紀錄</div>
-            <div class="tab" onclick="switchTab('hotspot')">賞鳥熱點</div>
-        </div>
-        
-        <div id="location-list-container" class="list-container">
-            </div>
-
-        <div id="hotspot-list-container" class="list-container" style="display:none;">
-            </div>
-        
-        <div id="location-detail-panel" class="detail-panel">
-            <div class="detail-header">
-                <button class="back-btn" onclick="closeDetail()">⬅</button>
-                <h3 id="detail-title" style="margin:0;">地點名稱</h3>
-            </div>
-            <div id="detail-body" class="detail-content"></div>
-        </div>
-    </div>
-
-    <div class="sidebar-right" id="sidebar-right">
-        <div style="padding:10px; border-bottom:1px solid #eee;">
-            <input type="text" id="bird-search" placeholder="搜尋鳥種名稱..." 
-                   style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px; box-sizing:border-box;"
-                   oninput="searchBirdGrid(this.value)">
-        </div>
-        <div id="bird-grid-container" class="bird-grid">
-            </div>
-        <div id="sentinel"></div> </div>
 </div>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU8mrNF6149G8L2fDAh1fsQIDQ25ZoGhw"></script>
+
 <script>
-    let map;
-    let markers = [];
-    let markerCluster;
-    let allBirdsData = {}; // 原始 JSON 資料
-    let allRecentList = []; // ★ 新增：拍平後的近期紀錄總表
-    let allHotspotsList = []; // ★ 新增：拍平後的熱點總表
-    
-    let currentTab = 'record';
-    let currentFilterSpeciesCode = null;
-    
-    // 初始化地圖
-    async function initMap() {
-        // 預設中心：台灣地理中心
-        const center = { lat: 23.9738, lng: 120.9820 };
-        map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 8,
-            center: center,
-            mapTypeControl: false,
-            streetViewControl: false,
-            fullscreenControl: false,
-            styles: [
-                { featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] }
-            ]
-        });
+    let map, allBirdsData = [], hotspotsDB = {}, markers = [], markerCluster = null, infoWindow, weatherDataHourly = {}; 
+    let currentTab = 'hotspot', displayedBirds = [], currentDisplayCount = 0;
+    const BATCH_SIZE = 30;
+    const BIRD_ICON_PATH = "M22.1,7c-0.8,0.4-1.6,0.6-2.5,0.7c0.9-0.6,1.6-1.4,2-2.5c-0.9,0.5-1.8,0.9-2.8,1.1c-0.8-0.9-2-1.4-3.2-1.4 c-2.4,0-4.4,2-4.4,4.4c0,0.3,0,0.7,0.1,1c-3.7-0.2-6.9-1.9-9.1-4.6c-0.4,0.7-0.6,1.5-0.6,2.2c0,1.5,0.8,2.9,1.9,3.7 c-0.7,0-1.4-0.2-2-0.6c0,0,0,0,0,0.1c0,2.1,1.5,3.9,3.5,4.3c-0.4,0.1-0.8,0.2-1.2,0.2c-0.3,0-0.6,0-0.9-0.1 c0.6,1.8,2.2,3,4.2,3.1c-1.5,1.2-3.4,1.9-5.4,1.9c-0.4,0-0.7,0-1.1-0.1c2,1.3,4.3,2,6.8,2c8.1,0,12.6-6.7,12.6-12.6 c0-0.2,0-0.4,0-0.6C20.7,8.6,21.5,7.9,22.1,7z";
+    const COUNTY_COLORS = { "基隆市": "#2c3e50", "台北市": "#e74c3c", "新北市": "#d35400", "桃園市": "#f1c40f", "新竹縣市": "#27ae60", "苗栗縣": "#16a085", "台中市": "#2980b9", "彰化縣": "#8e44ad", "南投縣": "#2c3e50", "雲林縣": "#e67e22", "嘉義縣市": "#c0392b", "台南市": "#f39c12", "高雄市": "#2ecc71", "屏東縣": "#3498db", "宜蘭縣": "#1abc9c", "花蓮縣": "#9b59b6", "台東縣": "#e74c3c", "離島": "#7f8c8d" };
+    const DEFAULT_IMG = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBmaWxsPSIjOTk5Ij48cGF0aCBkPSJNNDk2IDM4NEgxMjhWODBjMC04LjgtNy4yLTE2LTE2LTE2SDgwYy04LjggMC0xNiA3LjItMTYgMTZ2MzJjMCA4LjggNy4yIDE2IDE2IDE2aDQ4MGM4LjggMCAxNi03LjIgMTYtMTZ2LTMyYzAtOC44LTcuMi0xNi0xNi0xNnptMC0xNjBoLTgwYy04LjggMC0xNiA3LjItMTYgMTZ2MzJjMCA4LjggNy4yIDE2IDE2IDE2aDgwYzguOCAwIDE2LTcuMiAxNi0xNnYtMzJjMC04LjgtNy4yLTE2LTE2LTE2em0wLTE2MGgtODBjLTguOCAwLTE2IDcuMi0xNiAxNnYzMmMwIDguOCA3LjIzIDE2IDE2IDE2aDgwYzguOCAwIDE2LTcuMiAxNi0xNlY4MGMwLTguOC03LjItMTYtMTYtMTZ6Ii8+PC9zdmc+";
 
-        // 載入資料
-        await loadData();
+    function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), { center: { lat: 23.97, lng: 120.98 }, zoom: 8, mapTypeControl: false, streetViewControl: false });
+        infoWindow = new google.maps.InfoWindow();
+        fetchBirds();
+        document.getElementById('weather-slider').addEventListener('input', function() { updateWeatherDisplay(this.value); });
         
-        // 手機版按鈕顯示邏輯
-        if(window.innerWidth <= 768) {
-            document.getElementById('mobile-search-btn').style.display = 'flex';
-        }
-    }
-
-    // ★ 修正：資料載入與結構轉換
-    async function loadData() {
-        try {
-            const response = await fetch('static/birds_data.json?v=' + new Date().getTime());
-            allBirdsData = await response.json();
-            
-            // 1. 處理 Recent 資料 (Flattening)
-            // 兼容性檢查：如果是陣列(舊版)直接用，如果是物件(新版 update_data.py)則拍平
-            if (Array.isArray(allBirdsData.recent)) {
-                allRecentList = allBirdsData.recent;
-            } else {
-                // 將各縣市的 Array 合併成一個大 Array
-                allRecentList = Object.values(allBirdsData.recent).flat();
+        // 加強捲動監聽
+        document.getElementById('bird-search-list').addEventListener('scroll', function() {
+            if (this.scrollTop + this.clientHeight >= this.scrollHeight - 200) {
+                loadMoreBirds();
             }
-
-            // 2. 處理 Hotspots 資料 (Flattening)
-            allHotspotsList = Object.values(allBirdsData.hotspots).flat();
-
-            console.log(`✅ 資料載入完成：近期紀錄 ${allRecentList.length} 筆，熱點 ${allHotspotsList.length} 處`);
-
-            // 3. 初始渲染
-            renderBirdGrid(allRecentList);     // 右側鳥種網格
-            renderMarkers(allRecentList, false); // 地圖標記
-            renderLocationList(allRecentList);   // 左側列表
-
-        } catch (error) {
-            console.error("資料載入失敗:", error);
-            alert("資料載入失敗，請確認 birds_data.json 是否存在");
-        }
+        });
     }
 
-    // --- Tab 切換 ---
+    function locateAndFindBirds() {
+        if (!navigator.geolocation) return;
+        document.getElementById('loading').style.display = 'flex';
+        navigator.geolocation.getCurrentPosition(pos => {
+            const uLat = pos.coords.latitude, uLng = pos.coords.longitude;
+            map.setCenter({ lat: uLat, lng: uLng }); map.setZoom(13);
+            const nearby = allBirdsData.filter(b => Math.sqrt(Math.pow(b.lat-uLat,2)+Math.pow(b.lng-uLng,2)) < 0.09);
+            switchTab('record'); renderMarkers(nearby, true); renderLocationList(nearby);
+            document.getElementById('loading').style.display = 'none';
+        }, () => { document.getElementById('loading').style.display = 'none'; alert("定位失敗"); });
+    }
+
+    async function fetchBirds() {
+        try {
+            const res = await fetch('./static/birds_data.json');
+            const data = await res.json();
+            allBirdsData = data.recent || data;
+            hotspotsDB = data.hotspots || {};
+            document.getElementById('loading').style.display = 'none';
+            renderHotSpotsList(); switchTab('hotspot'); renderBirdSearchList(allBirdsData);
+        } catch (e) { document.getElementById('loading').innerText = "載入失敗"; }
+    }
+
     function switchTab(tab) {
         currentTab = tab;
-        document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
-        event.target.classList.add('active');
-        
-        document.getElementById('location-list-container').style.display = tab === 'record' ? 'block' : 'none';
-        document.getElementById('hotspot-list-container').style.display = tab === 'hotspot' ? 'block' : 'none';
-        
-        // 切換資料源
-        if (tab === 'record') {
-            renderMarkers(currentFilterSpeciesCode ? 
-                allRecentList.filter(b => b.speciesCode === currentFilterSpeciesCode) : 
-                allRecentList, false);
-            // 如果有篩選，保持篩選狀態的列表
-            if (currentFilterSpeciesCode) {
-                 const filtered = allRecentList.filter(b => b.speciesCode === currentFilterSpeciesCode);
-                 renderLocationList(filtered);
-            } else {
-                 renderLocationList(allRecentList);
-            }
-        } else {
-            // 熱點模式：顯示所有熱點
-            renderMarkers(allHotspotsList, true); 
-            renderHotspotList(allHotspotsList);
-        }
-        closeDetail();
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.innerText.includes(tab==='record'?'紀錄':'熱點')));
+        document.getElementById('location-list-container').style.display = tab==='record'?'block':'none';
+        document.getElementById('hotspot-list-container').style.display = tab==='hotspot'?'block':'none';
+        document.getElementById('location-detail-panel').style.display = 'none';
+        if(tab==='record') { renderLocationList(allBirdsData); renderMarkers(allBirdsData); } else renderHotSpotMapMarkers();
     }
 
-    // --- ★ 修正：渲染左側地點列表 (加入群組化統計) ---
-    function renderLocationList(data) {
-        const container = document.getElementById('location-list-container');
-        container.innerHTML = '';
-
-        // 1. 統計地點資料
-        const locStats = {};
-        data.forEach(obs => {
-            // 使用地點名稱作為 Key
-            if (!locStats[obs.locName]) {
-                locStats[obs.locName] = {
-                    count: 0,
-                    lat: obs.lat,
-                    lng: obs.lng,
-                    county: obs.county || "台灣", // 使用後端提供的縣市名
-                    obsList: [] // 暫存該地點的鳥資料 (可選)
-                };
-            }
-            locStats[obs.locName].count++;
-        });
-
-        // 2. 轉為陣列並排序 (筆數多 -> 少)
-        const sortedLocs = Object.entries(locStats).sort((a, b) => b[1].count - a[1].count);
-
-        // 3. 渲染卡片
-        if (sortedLocs.length === 0) {
-            container.innerHTML = '<div style="padding:20px; text-align:center; color:#888;">查無資料</div>';
-            return;
-        }
-
-        sortedLocs.forEach(([name, info]) => {
-            const div = document.createElement('div');
-            div.className = 'loc-card';
-            div.innerHTML = `
-                <div class="loc-name">${name}</div>
-                <div class="loc-meta">
-                    <span class="county-tag">${info.county}</span>
-                    <span class="count-badge">此地 ${info.count} 筆紀錄</span>
-                </div>
-            `;
-            // 點擊事件：移至地圖並打開詳情
-            div.onclick = () => {
-                map.setCenter({ lat: info.lat, lng: info.lng });
-                map.setZoom(15);
-                openLocationDetail(name, info.lat, info.lng);
-                // 手機版：點擊後自動收起地圖 (如果是在全螢幕模式) - 這裡維持原樣，不做額外操作
-            };
-            container.appendChild(div);
-        });
-    }
-
-    // 渲染熱點列表
-    function renderHotspotList(data) {
-        const container = document.getElementById('hotspot-list-container');
-        container.innerHTML = '';
-        
-        data.forEach(spot => {
-            const div = document.createElement('div');
-            div.className = 'loc-card';
-            div.style.borderLeftColor = '#27ae60'; // 熱點用綠色
-            div.innerHTML = `
-                <div class="loc-name">🌟 ${spot.name}</div>
-                <div class="loc-meta">
-                    <span>${spot.desc || '知名賞鳥點'}</span>
-                </div>
-            `;
-            div.onclick = () => {
-                map.setCenter({ lat: spot.lat, lng: spot.lng });
-                map.setZoom(14);
-                openHotspotDetail(spot);
-            };
-            container.appendChild(div);
-        });
-    }
-
-    // --- ★ 修正：鳥種過濾連動 (點擊右側網格) ---
-    function filterBirds(speciesCode) {
-        currentFilterSpeciesCode = speciesCode;
-        
-        // 1. 篩選資料 (從拍平後的列表找)
-        const filtered = allRecentList.filter(b => b.speciesCode === speciesCode);
-        
-        // 2. 更新地圖
-        renderMarkers(filtered, false);
-        
-        // 3. ★ 更新左側列表：顯示該鳥種出現的地點與次數
-        // 切換回紀錄 Tab
-        if (currentTab !== 'record') {
-            switchTab('record');
-        }
-        renderLocationList(filtered);
-
-        // 4. UI 高亮更新
-        document.querySelectorAll('.bird-grid-item').forEach(el => {
-            if (el.dataset.code === speciesCode) el.classList.add('active');
-            else el.classList.remove('active');
-        });
-        
-        // 手機版：點選後關閉搜尋面板
-        if (window.innerWidth <= 768) {
-            document.getElementById('sidebar-right').style.display = 'none';
-        }
-    }
-
-    // --- 渲染右側鳥種網格 ---
-    function renderBirdGrid(data) {
-        const container = document.getElementById('bird-grid-container');
-        const uniqueBirds = {};
-        
-        // 去重：同種鳥只顯示一次
-        data.forEach(b => {
-            if (!uniqueBirds[b.speciesCode]) {
-                uniqueBirds[b.speciesCode] = {
-                    name: b.name,
-                    code: b.speciesCode,
-                    img: b.wikiImg || 'https://via.placeholder.com/60?text=Bird'
-                };
-            }
-        });
-
-        const sortedBirds = Object.values(uniqueBirds); // 這裡可以加入排序邏輯
-        
-        let html = '';
-        // 加上「顯示全部」按鈕
-        html += `
-            <div class="bird-grid-item" onclick="resetFilter()">
-                <div class="bird-img" style="display:flex;align-items:center;justify-content:center;background:#ddd;">♾️</div>
-                <div class="bird-name">顯示全部</div>
-            </div>
-        `;
-
-        sortedBirds.forEach(b => {
-            html += `
-                <div class="bird-grid-item" data-code="${b.code}" onclick="filterBirds('${b.code}')">
-                    <img src="${b.img}" class="bird-img" loading="lazy" onerror="this.src='https://via.placeholder.com/60?text=Bird'">
-                    <div class="bird-name">${b.name}</div>
-                </div>
-            `;
-        });
-        
-        container.innerHTML = html;
-    }
-
-    function resetFilter() {
-        currentFilterSpeciesCode = null;
-        renderMarkers(allRecentList, false);
-        renderLocationList(allRecentList);
-        document.querySelectorAll('.bird-grid-item').forEach(el => el.classList.remove('active'));
-    }
-
-    // --- 地圖 Marker 邏輯 ---
-    function renderMarkers(data, isHotspotMode) {
-        // 清除舊 Marker
+    function renderHotSpotMapMarkers() {
         if (markerCluster) markerCluster.clearMarkers();
-        markers = [];
-
-        markers = data.map(item => {
-            const marker = new google.maps.Marker({
-                position: { lat: parseFloat(item.lat), lng: parseFloat(item.lng) },
-                title: item.name,
-                // 如果是熱點模式用綠色，否則預設紅色
-                icon: isHotspotMode ? 'http://maps.google.com/mapfiles/ms/icons/green-dot.png' : null 
+        markers.forEach(m => m.setMap(null)); markers = [];
+        for (const [city, spots] of Object.entries(hotspotsDB)) {
+            spots.forEach(s => {
+                const m = new google.maps.Marker({ position: {lat:s.lat, lng:s.lng}, icon: {path: BIRD_ICON_PATH, scale: 1.2, fillColor: COUNTY_COLORS[city]||"#2980b9", fillOpacity: 1, strokeWeight: 1, strokeColor: "white", anchor: new google.maps.Point(12, 12)} });
+                m.addListener("click", () => openLocationDetail(s.name, s.lat, s.lng, true));
+                markers.push(m);
             });
-
-            marker.addListener("click", () => {
-                if (isHotspotMode) openHotspotDetail(item);
-                else openLocationDetail(item.locName, item.lat, item.lng);
-            });
-            return marker;
-        });
-
+        }
         markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
     }
 
-    // --- 詳情頁邏輯 (包含天氣與維基百科) ---
-    async function openLocationDetail(locName, lat, lng) {
-        const panel = document.getElementById('location-detail-panel');
-        const title = document.getElementById('detail-title');
-        const body = document.getElementById('detail-body');
-        
-        panel.style.display = 'flex';
-        title.innerText = locName;
-        body.innerHTML = '<div style="text-align:center;padding:20px;">載入中...</div>';
-
-        // 1. 取得天氣 (Open-Meteo)
-        let weatherHtml = '';
-        try {
-            const wRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&hourly=temperature_2m,weathercode&timezone=auto&forecast_days=1`);
-            const wData = await wRes.json();
-            const now = new Date().getHours();
-            const temp = wData.hourly.temperature_2m[now];
-            const wCode = wData.hourly.weathercode[now];
-            // 簡單的天氣代碼轉換
-            const wDesc = wCode > 60 ? '🌧️ 有雨' : (wCode > 3 ? '☁️ 多雲' : '☀️ 晴朗');
-            
-            weatherHtml = `
-                <div class="weather-widget">
-                    <h4>🌤️ 當地天氣概況</h4>
-                    <div style="font-size:1.5rem; font-weight:bold;">${temp}°C ${wDesc}</div>
-                    <div style="font-size:0.9rem; margin-top:5px;">適宜賞鳥指數：${wCode > 60 ? '⭐⭐ (有雨)' : '⭐⭐⭐⭐'}</div>
-                </div>
-            `;
-        } catch(e) { console.warn("天氣載入失敗"); }
-
-        // 2. 篩選此地點的鳥類紀錄
-        const locBirds = allRecentList.filter(b => b.locName === locName);
-        
-        let birdsHtml = '<h4>👀 近期觀測紀錄</h4>';
-        locBirds.forEach(b => {
-            const timeStr = b.date ? b.date.substring(5, 16) : '未知時間';
-            birdsHtml += `
-                <div class="obs-item">
-                    <img src="${b.wikiImg || 'https://via.placeholder.com/80'}" class="obs-img" onerror="this.src='https://via.placeholder.com/80'">
-                    <div class="obs-info">
-                        <div class="obs-bird">${b.name}</div>
-                        <div class="obs-time">🕒 ${timeStr}</div>
-                        <div class="obs-desc">${b.wikiDesc ? b.wikiDesc.substring(0, 60)+'...' : '暫無簡介'}</div>
-                    </div>
-                </div>
-            `;
-        });
-
-        body.innerHTML = weatherHtml + birdsHtml;
-    }
-
-    function openHotspotDetail(spot) {
-        const panel = document.getElementById('location-detail-panel');
-        document.getElementById('detail-title').innerText = spot.name;
-        const body = document.getElementById('detail-body');
-        panel.style.display = 'flex';
-        
-        let html = `<div style="padding:10px; color:#555;">${spot.desc}</div>`;
-        html += '<h4>🌟 代表性 / 常駐鳥種</h4>';
-        
-        if (spot.potential && spot.potential.length > 0) {
-            spot.potential.forEach(b => {
-                 html += `
-                    <div class="obs-item">
-                        <img src="${b.wikiImg || 'https://via.placeholder.com/80'}" class="obs-img">
-                        <div class="obs-info">
-                            <div class="obs-bird">${b.name}</div>
-                            <div class="obs-desc">${b.wikiDesc || '暫無簡介'}</div>
-                        </div>
-                    </div>
-                `;
+    function renderHotSpotsList() {
+        const container = document.getElementById('hotspot-list-container');
+        container.innerHTML = '';
+        for (const [city, spots] of Object.entries(hotspotsDB)) {
+            const t = document.createElement('div'); t.className = 'hotspot-group-title'; t.style.borderLeft = `5px solid ${COUNTY_COLORS[city]}`; t.innerText = city; container.appendChild(t);
+            spots.forEach(s => {
+                const d = document.createElement('div'); d.className = 'loc-card'; d.innerHTML = `<div class="loc-name">${s.name}</div><div style="font-size:0.85em;color:#666;">${s.desc}</div>`;
+                d.onclick = () => { map.setCenter({lat:s.lat, lng:s.lng}); map.setZoom(16); openLocationDetail(s.name, s.lat, s.lng, true); };
+                container.appendChild(d);
             });
-        } else {
-            html += '<p>尚無詳細資料</p>';
         }
-        body.innerHTML = html;
     }
 
-    function closeDetail() {
-        document.getElementById('location-detail-panel').style.display = 'none';
+    function renderMarkers(birds, isHighlight = false) {
+        if (markerCluster) markerCluster.clearMarkers();
+        markers.forEach(m => m.setMap(null)); markers = [];
+        const locs = {};
+        birds.forEach(b => { const k = `${b.lat},${b.lng}`; if(!locs[k]) locs[k] = {lat:b.lat, lng:b.lng, name:b.locName, count:0}; locs[k].count++; });
+        Object.values(locs).forEach(g => {
+            const m = new google.maps.Marker({ position:{lat:g.lat, lng:g.lng}, map, icon:{path:google.maps.SymbolPath.CIRCLE, scale:10, fillColor:isHighlight?"#d35400":"#FF5722", fillOpacity:0.9, strokeWeight:2, strokeColor:"white"}, label:{text:g.count.toString(), color:"white", fontSize:"12px"} });
+            m.addListener("click", () => openLocationDetail(g.name, g.lat, g.lng));
+            markers.push(m);
+        });
+    }
+
+    function renderLocationList(birds) {
+        const container = document.getElementById('location-list-container'); container.innerHTML = '';
+        const grp = {}; birds.forEach(b => { if(!grp[b.locName]) grp[b.locName]={lat:b.lat, lng:b.lng, s:new Set()}; grp[b.locName].s.add(b.name); });
+        Object.entries(grp).sort((a,b)=>b[1].s.size-a[1].s.size).forEach(([n, d]) => {
+            const v = document.createElement('div'); v.className = 'loc-card'; v.innerHTML = `<div class="loc-name">${n}</div><div style="font-size:0.85em;color:#888;">${d.s.size} 種鳥類紀錄</div>`;
+            v.onclick = () => { map.setCenter({lat:d.lat, lng:d.lng}); map.setZoom(15); openLocationDetail(n, d.lat, d.lng); };
+            container.appendChild(v);
+        });
+    }
+
+    function openLocationDetail(name, lat, lng, isHot = false) {
+        document.getElementById('location-list-container').style.display = 'none';
+        document.getElementById('hotspot-list-container').style.display = 'none';
+        document.getElementById('location-detail-panel').style.display = 'flex';
+        document.getElementById('detail-loc-name').innerText = name;
+        fetchWeatherHourly(lat, lng);
+
+        const birdListDiv = document.getElementById('detail-bird-list');
+        birdListDiv.innerHTML = '';
+
+        const recentBirds = allBirdsData.filter(b => b.locName === name || (isHot && Math.abs(b.lat - lat) < 0.015));
+        
+        let potentialBirds = [];
+        if (isHot) {
+            for (let city in hotspotsDB) {
+                let found = hotspotsDB[city].find(s => s.name === name);
+                if (found && found.potential) { potentialBirds = found.potential; break; }
+            }
+        }
+
+        if (recentBirds.length > 0) {
+            const h = document.createElement('div'); h.innerHTML = "🟢 <b>近期 eBird 回報</b>";
+            h.style.cssText = "padding:10px 5px; color:#27ae60; border-bottom:1px solid #eee; font-size:0.9em;";
+            birdListDiv.appendChild(h);
+            renderAccordionBirdList(recentBirds, birdListDiv, false);
+        }
+
+        if (potentialBirds.length > 0) {
+            const h = document.createElement('div'); h.innerHTML = "🌟 <b>此地代表/常見鳥種</b>";
+            h.style.cssText = "padding:10px 5px; color:#d35400; border-bottom:1px solid #eee; font-size:0.9em; margin-top:15px;";
+            birdListDiv.appendChild(h);
+            const formatted = potentialBirds.map(p => ({ name:p.name, sciName:p.sci||"", date:"常年可見", wikiImg:p.wikiImg, wikiDesc:p.wikiDesc }));
+            renderAccordionBirdList(formatted, birdListDiv, true);
+        }
+        
+        if (recentBirds.length === 0 && potentialBirds.length === 0) {
+            birdListDiv.innerHTML = "<div style='padding:20px; text-align:center; color:#999;'>暫無資料</div>";
+        }
+    }
+
+    function renderAccordionBirdList(birds, container, isPot = false) {
+        const seen = new Set();
+        birds.forEach((b, i) => {
+            if(seen.has(b.name)) return; seen.add(b.name);
+            const row = document.createElement('div'); row.className = 'bird-row';
+            const cid = `c-${isPot?'p':'r'}-${i}-${Math.random().toString(36).substr(2,5)}`;
+            let tDisp = b.date || "近期回報";
+            if(tDisp.includes('T')) {
+                const d = new Date(tDisp);
+                tDisp = d.toLocaleString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit' });
+            }
+            row.innerHTML = `<div class="bird-header" onclick="document.getElementById('${cid}').classList.toggle('show')">
+                <img class="bird-thumb-small" src="${b.wikiImg||DEFAULT_IMG}">
+                <div style="flex-grow:1; margin-left:10px;"><div style="font-weight:bold;">${b.name}</div><div style="font-size:0.8em;color:#666;">${b.sciName}</div></div>
+                <div style="text-align:right; margin-right:5px;"><div style="font-size:0.75em;color:#888;">${tDisp}</div><div style="color:#ccc;">▼</div></div>
+            </div><div id="${cid}" class="bird-detail-content"><img class="large-bird-img" src="${b.wikiImg||DEFAULT_IMG}"><div style="padding:10px;font-size:0.9em;color:#555;">${b.wikiDesc||"暫無介紹"}</div></div>`;
+            container.appendChild(row);
+        });
+    }
+
+    async function fetchWeatherHourly(lat, lng) {
+        const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&hourly=temperature_2m,weathercode&forecast_days=2&timezone=auto`);
+        const data = await res.json(); weatherDataHourly = data.hourly;
+        const bar = document.getElementById('weather-color-bar'); bar.innerHTML = '';
+        for(let i=0; i<48; i++) { const s = document.createElement('div'); s.className = 'weather-color-segment'; s.style.backgroundColor = (weatherDataHourly.weathercode[i]===0)?'#ffa726':'#b0bec5'; bar.appendChild(s); }
+        updateWeatherDisplay(0);
+    }
+
+    function updateWeatherDisplay(i) {
+        if(!weatherDataHourly.time) return;
+        const code = weatherDataHourly.weathercode[i];
+        const codeMap = { 0:"晴朗", 1:"大致晴朗", 2:"多雲", 3:"陰天", 45:"霧", 48:"霧", 51:"毛毛雨", 61:"小雨", 63:"雨", 80:"陣雨", 95:"雷雨" };
+        document.getElementById('weather-temp').innerText = `${weatherDataHourly.temperature_2m[i]}°C`;
+        document.getElementById('weather-desc').innerText = codeMap[code] || "多雲";
+        document.getElementById('weather-time-display').innerText = `時間: ${new Date(weatherDataHourly.time[i]).toLocaleString('zh-TW', {month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit'})}`;
+    }
+
+    function renderBirdSearchList(birds) {
+        const stats = {}; birds.forEach(b => { if(!stats[b.name]) stats[b.name]={d:b, locations:new Set()}; stats[b.name].locations.add(b.locName); });
+        displayedBirds = Object.values(stats).sort((a,b)=>b.locations.size-a.locations.size);
+        loadMoreBirds();
+    }
+
+    function loadMoreBirds() {
+        const container = document.getElementById('bird-search-list');
+        const total = displayedBirds.length;
+        if (currentDisplayCount >= total) return; 
+
+        const nextBatch = displayedBirds.slice(currentDisplayCount, currentDisplayCount + BATCH_SIZE);
+        
+        nextBatch.forEach(item => {
+            const bird = item.d;
+            const locationCount = item.locations.size;
+            const div = document.createElement('div');
+            div.className = 'bird-grid-item';
+            
+            let imgSrc = (bird.wikiImg && bird.wikiImg !== "None" && bird.wikiImg !== "") ? bird.wikiImg : DEFAULT_IMG;
+
+            div.innerHTML = `
+                <img src="${imgSrc}" onerror="this.onerror=null; this.src='${DEFAULT_IMG}';">
+                <div class="bird-name-overlay">
+                    <div>${bird.name}</div>
+                    <div class="grid-badge">${locationCount}處出沒</div>
+                </div>`;
+                
+            div.onclick = () => { 
+                const birdRecords = allBirdsData.filter(b => b.name === bird.name);
+                switchTab('record'); 
+                renderMarkers(birdRecords, true); 
+                renderFilteredLocationList(birdRecords, bird.name);
+                if(window.innerWidth<=768) toggleMobileSearch(false);
+                const bounds = new google.maps.LatLngBounds();
+                birdRecords.forEach(b => bounds.extend({lat: b.lat, lng: b.lng}));
+                map.fitBounds(bounds);
+            };
+            container.appendChild(div);
+        });
+        currentDisplayCount += nextBatch.length;
+    }
+
+    function renderFilteredLocationList(birdRecords, birdName) {
+        const container = document.getElementById('location-list-container');
+        container.innerHTML = `<div style="padding:10px; background:#e3f2fd; font-weight:bold; color:#1976d2; border-radius:5px; margin-bottom:10px;">
+            🎯 曾出現「${birdName}」的地點：
+        </div>`;
+        const groups = {};
+        birdRecords.forEach(b => { if (!groups[b.locName]) { groups[b.locName] = { lat: b.lat, lng: b.lng, count: 0 }; } groups[b.locName].count++; });
+        Object.entries(groups).sort((a, b) => b[1].count - a[1].count).forEach(([name, data]) => {
+            const div = document.createElement('div'); div.className = 'loc-card';
+            div.innerHTML = `<div class="loc-name">${name}</div><div class="loc-meta"><span style="color:#d32f2f;">在此有 ${data.count} 筆紀錄</span></div>`;
+            div.onclick = () => { map.setCenter({ lat: data.lat, lng: data.lng }); map.setZoom(15); openLocationDetail(name, data.lat, data.lng); };
+            container.appendChild(div);
+        });
+    }
+
+    function resetApp() { 
+        document.querySelectorAll('.bird-grid-item').forEach(el => el.classList.remove('active'));
+        if (currentTab === 'record') renderMarkers(allBirdsData, false); 
+        else renderHotSpotMapMarkers();
+        map.setZoom(8); map.setCenter({lat:23.97, lng:120.98}); 
+        goBackToPreviousState(); 
     }
     
-    // RWD 手機版鳥種搜尋開關
-    function toggleMobileSearch() {
-        const sidebar = document.getElementById('sidebar-right');
-        if (sidebar.style.display === 'flex') {
-            sidebar.style.display = 'none';
+    function goBackToPreviousState() { 
+        document.getElementById('location-detail-panel').style.display='none'; 
+        if (currentTab === 'record') {
+            document.getElementById('location-list-container').style.display = 'block';
+            renderLocationList(allBirdsData);
         } else {
-            sidebar.style.display = 'flex';
-            sidebar.style.position = 'absolute';
-            sidebar.style.top = '0';
-            sidebar.style.right = '0';
-            sidebar.style.width = '80%';
-            sidebar.style.height = '100%';
-            sidebar.style.boxShadow = '-2px 0 10px rgba(0,0,0,0.2)';
+            document.getElementById('hotspot-list-container').style.display = 'block';
         }
     }
+    
+    function toggleMobileSearch(s) { document.getElementById('mobile-search-panel').classList.toggle('active', s); }
 
-    // 鳥種網格過濾 (輸入框)
-    function searchBirdGrid(keyword) {
-        const items = document.querySelectorAll('.bird-grid-item');
-        items.forEach(item => {
-            const name = item.querySelector('.bird-name').innerText;
-            if (name.includes(keyword) || keyword === '') {
-                item.style.display = 'flex';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    }
-
-    // Google Maps API Callback
-    function initApp() {
-        // 載入 Google Maps Script (請務必替換 YOUR_API_KEY)
-        // 由於這是純前端演示，通常會在 HTML head 中直接引入 script
-        // 這裡假設外部已經有 script src="...&callback=initMap"
-        if(typeof google === 'undefined') {
-            // 如果沒有 API Key，這裡只是防止報錯的假初始化
-            alert("請在 HTML 中填入正確的 Google Maps API Key 才能顯示地圖");
-        } else {
-            initMap();
-        }
-    }
-
-    // 啟動 (使用 window.onload 確保資源載入)
-    window.onload = function() {
-        // 如果 HTML head 已經有 callback=initMap，這行其實是多餘的，但為了保險起見
-        if(typeof google !== 'undefined') initMap(); 
-    };
-
+    window.onload = initMap;
 </script>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
-
 </body>
 </html>
