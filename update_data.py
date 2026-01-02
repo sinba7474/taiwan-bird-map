@@ -514,6 +514,4 @@ if __name__ == "__main__":
         main()
     except Exception as e:
         traceback.print_exc()
-    
-    # 防止視窗自動關閉
-    input("\n執行完畢，請按 Enter 鍵離開...")
+        # 雲端版不需要 input()，跑完就讓它自動結束，這樣 Action 才會顯示 "Success"
