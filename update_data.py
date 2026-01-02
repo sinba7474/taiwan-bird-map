@@ -16,11 +16,9 @@ EBIRD_API_KEY = '1mpok1sjosl5'
 WIKI_CACHE = {} 
 START_TIME = time.time()
 
-# 磁吸設定
 SNAP_RADIUS_KM = 2.0
 GEO_SEARCH_DIST_KM = 3
 
-# 檔案路徑
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TARGET_DIR = os.path.join(BASE_DIR, 'static')
 FILE_PATH = os.path.join(TARGET_DIR, 'birds_data.json')
@@ -35,70 +33,31 @@ TAIWAN_COUNTIES = [
 ]
 
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) TaiwanBirdMap/16.0',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) TaiwanBirdMap/16.1',
     'X-eBirdApiToken': EBIRD_API_KEY
 }
 
 # ==========================================
-# 2. 🛡️ 手動圖鑑庫 (生態習性優化 + 繁體中文)
+# 2. 🛡️ 手動圖鑑庫
 # ==========================================
 MANUAL_FIX_DB = {
-    "Anas zonorhyncha": {
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Spot-billed_Duck.jpg/600px-Spot-billed_Duck.jpg",
-        "desc": "花嘴鴨（普遍留鳥）。【生態習性】台灣唯一的留鳥鴨科，特徵是黑色嘴喙前端有鮮明的黃色斑塊。常成對或小群出現於濕地、水田及河口。主食水生植物的種子與嫩葉，也會吃螺類。"
-    },
-    "Pycnonotus sinensis": { 
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Light-vented_Bulbul_%28Pycnonotus_sinensis%29.jpg/600px-Light-vented_Bulbul_%28Pycnonotus_sinensis%29.jpg", 
-        "desc": "白頭翁（普遍留鳥）。【生態習性】頭頂後方有白色羽毛是其特徵。廣泛分布於平地至低海拔山區，適應力極強。常成群在城市公園喧鬧活動，雜食性，喜食漿果與昆蟲。" 
-    },
-    "Passer montanus": { 
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Passer_montanus_4_%28Marek_Szczepanek%29.jpg/600px-Passer_montanus_4_%28Marek_Szczepanek%29.jpg", 
-        "desc": "麻雀（普遍留鳥）。【生態習性】最親近人類的鳥類，臉頰上有明顯的黑斑。常在地面跳躍覓食草籽與穀物。晚上有集體停棲在樹上或屋簷喧鬧的習慣。" 
-    },
-    "Columba livia": { 
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Rock_Pigeon_Columba_livia.jpg/600px-Rock_Pigeon_Columba_livia.jpg", 
-        "desc": "原鴿（野鴿）。【生態習性】源自歐洲，現已成為全球都市常見鳥類。群聚性強，喜歡在廣場、公園地面覓食。築巢於建築物孔隙，對人類警戒心低。" 
-    },
-    "Streptopelia tranquebarica": { 
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Red_Turtle_Dove_Show_Love.jpg/600px-Red_Turtle_Dove_Show_Love.jpg", 
-        "desc": "紅鳩（普遍留鳥）。【生態習性】台灣最小型的鳩鴿科。雄鳥背部紅褐色，頸後有黑色頸環。常成群在農田、電線上休息。飛行速度快，翅膀拍擊聲明顯。" 
-    },
-    "Spilopelia chinensis": { 
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Spotted_Dove_-_Mata_Ayer.jpg/600px-Spotted_Dove_-_Mata_Ayer.jpg", 
-        "desc": "珠頸斑鳩（普遍留鳥）。【生態習性】後頸有布滿白點的黑色頸環，宛如珍珠項鍊。適應城鄉環境，叫聲為低沉的「咕-咕-咕」。求偶時會頻頻點頭。" 
-    },
-    "Aythya fuligula": { 
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Aythya_fuligula_3_%28Marek_Szczepanek%29.jpg/600px-Aythya_fuligula_3_%28Marek_Szczepanek%29.jpg", 
-        "desc": "鳳頭潛鴨（冬候鳥）。【生態習性】雄鳥頭部有下垂冠羽，腹部白色。善於潛水，常在開闊深水域活動。白天多在水面休息，晨昏時潛水捕食魚蝦及軟體動物。" 
-    },
-    "Egretta garzetta": {
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Egretta_garzetta_2_-_1.jpg/600px-Egretta_garzetta_2_-_1.jpg",
-        "desc": "小白鷺（普遍留鳥）。【生態習性】全身白色，嘴黑色，腳趾為黃色（黃襪子）。常在水田、溪流、河口單獨活動。會用腳擾動水底逼出魚蝦後啄食。" 
-    },
-    "Gorsachius melanolophus": {
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Malayan_Night-Heron_-_Taiwan_S4E8695_%2817320173361%29.jpg/500px-Malayan_Night-Heron_-_Taiwan_S4E8695_%2817320173361%29.jpg",
-        "desc": "黑冠麻鷺（留鳥）。【生態習性】常在都會公園草地上緩慢行走，捕食蚯蚓。受驚嚇時會伸長脖子擬態成樹枝。近年來適應都市環境，數量大增。"
-    },
-    "Milvus migrans": {
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Black_Kite_in_flight_1.jpg/600px-Black_Kite_in_flight_1.jpg",
-        "desc": "黑鳶（老鷹）。【生態習性】台灣最常見的猛禽，尾羽呈魚尾狀（剪刀尾）。常在港口或水域上方盤旋，撿食水面死魚或動物內臟。基隆港是著名觀賞點。"
-    },
-    "Urocissa caerulea": {
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Formosan_Magpie_2.jpg/600px-Formosan_Magpie_2.jpg",
-        "desc": "台灣藍鵲（特有種）。【生態習性】俗稱長尾山娘，身體藍色，嘴腳紅色。具有強烈的護巢行為與群居性。常成小群在低海拔樹林間排隊飛行。"
-    },
-    "Megalaima nuchalis": {
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Megalaima_nuchalis.jpg/600px-Megalaima_nuchalis.jpg",
-        "desc": "五色鳥（特有種）。【生態習性】身披五彩羽毛，叫聲像敲木魚「郭、郭、郭」。喜歡在枯木上啄洞築巢，廣泛分布於平地至中海拔森林與公園。"
-    },
-    "Spilornis cheela": {
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Crested_Serpent_Eagle_in_Taiwan.jpg/600px-Crested_Serpent_Eagle_in_Taiwan.jpg",
-        "desc": "大冠鷲（留鳥）。【生態習性】中低海拔山區最常見的猛禽。常乘熱氣流盤旋，發出「忽、忽、忽悠—」的叫聲。主食蛇類，又名蛇鵰。"
-    }
+    "Anas zonorhyncha": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Spot-billed_Duck.jpg/600px-Spot-billed_Duck.jpg", "desc": "花嘴鴨（普遍留鳥）。【生態習性】台灣唯一的留鳥鴨科，特徵是黑色嘴喙前端有鮮明的黃色斑塊。常成對或小群出現於濕地、水田及河口。" },
+    "Pycnonotus sinensis": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Light-vented_Bulbul_%28Pycnonotus_sinensis%29.jpg/600px-Light-vented_Bulbul_%28Pycnonotus_sinensis%29.jpg", "desc": "白頭翁（普遍留鳥）。【生態習性】頭頂後方有白色羽毛是其特徵。廣泛分布於平地至低海拔山區，適應力極強。常成群在城市公園喧鬧活動。" },
+    "Passer montanus": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Passer_montanus_4_%28Marek_Szczepanek%29.jpg/600px-Passer_montanus_4_%28Marek_Szczepanek%29.jpg", "desc": "麻雀（普遍留鳥）。【生態習性】最親近人類的鳥類，臉頰上有明顯的黑斑。常在地面跳躍覓食草籽與穀物。" },
+    "Columba livia": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Rock_Pigeon_Columba_livia.jpg/600px-Rock_Pigeon_Columba_livia.jpg", "desc": "原鴿（野鴿）。【生態習性】源自歐洲，現已成為全球都市常見鳥類。群聚性強，喜歡在廣場、公園地面覓食。" },
+    "Streptopelia tranquebarica": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Red_Turtle_Dove_Show_Love.jpg/600px-Red_Turtle_Dove_Show_Love.jpg", "desc": "紅鳩（普遍留鳥）。【生態習性】台灣最小型的鳩鴿科。雄鳥背部紅褐色，頸後有黑色頸環。常成群在農田、電線上休息。" },
+    "Spilopelia chinensis": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Spotted_Dove_-_Mata_Ayer.jpg/600px-Spotted_Dove_-_Mata_Ayer.jpg", "desc": "珠頸斑鳩（普遍留鳥）。【生態習性】後頸有布滿白點的黑色頸環，宛如珍珠項鍊。適應城鄉環境，叫聲為低沉的「咕-咕-咕」。" },
+    "Aythya fuligula": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Aythya_fuligula_3_%28Marek_Szczepanek%29.jpg/600px-Aythya_fuligula_3_%28Marek_Szczepanek%29.jpg", "desc": "鳳頭潛鴨（冬候鳥）。【生態習性】雄鳥頭部有下垂冠羽，腹部白色。善於潛水，常在開闊深水域活動。" },
+    "Egretta garzetta": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Egretta_garzetta_2_-_1.jpg/600px-Egretta_garzetta_2_-_1.jpg", "desc": "小白鷺（普遍留鳥）。【生態習性】全身白色，嘴黑色，腳趾為黃色（黃襪子）。常在水田、溪流、河口單獨活動。" },
+    "Gorsachius melanolophus": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Malayan_Night-Heron_-_Taiwan_S4E8695_%2817320173361%29.jpg/500px-Malayan_Night-Heron_-_Taiwan_S4E8695_%2817320173361%29.jpg", "desc": "黑冠麻鷺（留鳥）。【生態習性】常在都會公園草地上緩慢行走，捕食蚯蚓。受驚嚇時會伸長脖子擬態成樹枝。" },
+    "Milvus migrans": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Black_Kite_in_flight_1.jpg/600px-Black_Kite_in_flight_1.jpg", "desc": "黑鳶（老鷹）。【生態習性】台灣最常見的猛禽，尾羽呈魚尾狀（剪刀尾）。常在港口或水域上方盤旋，撿食水面死魚或動物內臟。" },
+    "Urocissa caerulea": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Formosan_Magpie_2.jpg/600px-Formosan_Magpie_2.jpg", "desc": "台灣藍鵲（特有種）。【生態習性】俗稱長尾山娘，身體藍色，嘴腳紅色。具有強烈的護巢行為與群居性。" },
+    "Megalaima nuchalis": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Megalaima_nuchalis.jpg/600px-Megalaima_nuchalis.jpg", "desc": "五色鳥（特有種）。【生態習性】身披五彩羽毛，叫聲像敲木魚「郭、郭、郭」。喜歡在枯木上啄洞築巢。" },
+    "Spilornis cheela": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Crested_Serpent_Eagle_in_Taiwan.jpg/600px-Crested_Serpent_Eagle_in_Taiwan.jpg", "desc": "大冠鷲（留鳥）。【生態習性】中低海拔山區最常見的猛禽。常乘熱氣流盤旋，發出「忽、忽、忽悠—」的叫聲。" }
 }
 
 # ==========================================
-# 3. 🌟 完整全台熱點資料 (V16.0 修正：描述與常見鳥種)
+# 3. 熱點資料 (V16.0 完整版)
 # ==========================================
 HOT_SPOTS_DATA = {
     "基隆市": [
@@ -307,7 +266,7 @@ def haversine(lat1, lon1, lat2, lon2):
 
 def get_wiki_data(sci_name, com_name):
     """
-    V16.0: 使用 Wikipedia API 抓取繁體中文資料，強制 3 個完整句子。
+    V16.1: 使用 Wikipedia API 抓取繁體中文資料，強制 3 個完整句子。
     """
     # 1. 優先查手動修復庫
     if com_name in MANUAL_FIX_DB:
@@ -404,7 +363,7 @@ def safe_print(msg):
         pass
 
 # ==========================================
-# 5. 主程式流程 (V16.0)
+# 5. 主程式流程 (V16.1 包含常見鳥種自動補圖)
 # ==========================================
 def main():
     if not os.path.exists(TARGET_DIR): os.makedirs(TARGET_DIR)
@@ -419,10 +378,9 @@ def main():
                 
                 # A. 預熱 Wiki 快取
                 for item in old_data.get('recent', []):
-                    # 檢查是否為簡體或殘缺資料，若是則不沿用
                     desc = item.get('wikiDesc', '')
                     if '鸟' in desc or '类' in desc or desc.endswith('...'):
-                        continue # 視為髒資料，強制重抓
+                        continue 
 
                     if item.get('sciName') and item.get('wikiImg'):
                         WIKI_CACHE[item['sciName']] = {
@@ -432,11 +390,9 @@ def main():
                         
                 # B. 建立舊資料索引
                 for item in old_data.get('recent', []):
-                    # 同樣檢查髒資料
                     desc = item.get('wikiDesc', '')
                     if '鸟' in desc or '类' in desc or desc.endswith('...'):
                         continue
-                    
                     existing_records[item['id']] = item
                         
             safe_print(f"📦 已載入 {len(WIKI_CACHE)} 筆高品質圖鑑快取")
@@ -445,7 +401,7 @@ def main():
         except Exception as e:
             safe_print(f"⚠️ 讀取舊檔失敗: {e}，將重新全量抓取")
 
-    safe_print(f"\n🚀 [1/3] 啟動 eBird 增量更新 (V16.0)...")
+    safe_print(f"\n🚀 [1/3] 啟動 eBird 增量更新 (V16.1)...")
     all_observations = []
     
     # --- 步驟 2: 抓取 eBird 最新清單 ---
@@ -530,8 +486,20 @@ def main():
             'wikiDesc': wiki['desc']
         })
 
-    # --- 步驟 4: 存檔 ---
-    safe_print(f"🚀 [3/3] 存檔中 (新資料: {new_data_count}, 沿用: {cached_data_count})...")
+    # --- 步驟 4: [V16.1 新增] 補全熱點常見鳥種圖鑑 ---
+    safe_print("🚀 [4.5/5] 補全熱點常見鳥種圖鑑...")
+    for county, spots in HOT_SPOTS_DATA.items():
+        for spot in spots:
+            if 'potential' in spot:
+                for bird in spot['potential']:
+                    # 如果已經有圖了(在快取裡)，就自動補上
+                    # 如果快取沒有，get_wiki_data 會去抓
+                    wiki, is_cache = get_wiki_data(bird.get('sci'), bird.get('name'))
+                    bird['wikiImg'] = wiki['img']
+                    bird['wikiDesc'] = wiki['desc']
+
+    # --- 步驟 5: 存檔 ---
+    safe_print(f"🚀 [5/5] 存檔中 (新資料: {new_data_count}, 沿用: {cached_data_count})...")
     tw_time = (datetime.utcnow() + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
     final_json = {"update_at": tw_time, "recent": final_bird_list, "hotspots": HOT_SPOTS_DATA}
     
