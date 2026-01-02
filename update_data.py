@@ -10,228 +10,384 @@ import re
 from datetime import datetime, timedelta
 
 # ==========================================
-# 1. 基本設定
+# 1. 系統設定
 # ==========================================
-EBIRD_API_KEY = '1mpok1sjosl5'
-WIKI_CACHE = {}
+EBIRD_API_KEY = '1mpok1sjosl5'  # 您的 eBird API Key
+WIKI_CACHE = {} # 記憶體快取
 START_TIME = time.time()
 
-# 磁吸設定
-SNAP_RADIUS_KM = 2.0  # 距離門檻
-GEO_SEARCH_DIST_KM = 3 # 補漏網之魚的搜尋半徑
+# 智慧磁吸設定
+SNAP_RADIUS_KM = 2.0  # 吸附半徑：2公里內才考慮
+GEO_SEARCH_DIST_KM = 3 # 定點掃描半徑：3公里
 
+# 檔案路徑設定
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+TARGET_DIR = os.path.join(BASE_DIR, 'static')
+FILE_PATH = os.path.join(TARGET_DIR, 'birds_data.json')
+
+# 確保輸出目錄存在
+if not os.path.exists(TARGET_DIR):
+    os.makedirs(TARGET_DIR)
+
+# 台灣所有縣市代碼
 TAIWAN_COUNTIES = [
     'TW-TPE', 'TW-NWT', 'TW-KLU', 'TW-TYU', 'TW-HSQ', 'TW-HSZ', 'TW-MIA', 
     'TW-TXG', 'TW-CWH', 'TW-NTO', 'TW-YUL', 'TW-CHY', 'TW-CYI', 'TW-TNN', 
     'TW-KHH', 'TW-PIF', 'TW-ILA', 'TW-HUA', 'TW-TTT', 'TW-PEN', 'TW-KIN', 'TW-LIE'
 ]
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-TARGET_DIR = os.path.join(BASE_DIR, 'static')
-FILE_PATH = os.path.join(TARGET_DIR, 'birds_data.json')
-
+# 偽裝瀏覽器 Header
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) TaiwanBirdMap/15.2',
     'X-eBirdApiToken': EBIRD_API_KEY
 }
 
 # ==========================================
-# 2. 🛡️ 手動修復資料庫 (保留 V12 的好設定)
+# 2. 🛡️ 手動圖鑑庫 (生態習性優化版)
 # ==========================================
 MANUAL_FIX_DB = {
-    "Pycnonotus sinensis": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Light-vented_Bulbul_%28Pycnonotus_sinensis%29.jpg/600px-Light-vented_Bulbul_%28Pycnonotus_sinensis%29.jpg", "desc": "白頭翁（學名：Pycnonotus sinensis），又名白頭鵯，是台灣非常常見的留鳥。特徵是頭頂後方的白色羽毛，叫聲嘹亮多變，常在城市公園與行道樹間活動。" },
-    "Passer montanus": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Passer_montanus_4_%28Marek_Szczepanek%29.jpg/600px-Passer_montanus_4_%28Marek_Szczepanek%29.jpg", "desc": "麻雀（學名：Passer montanus），是台灣最親近人類的鳥類之一。體型嬌小，頭頂為栗紅色，臉頰上有明顯的黑斑，喜歡成群在稻田或市區覓食。" },
-    "Columba livia": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Rock_Pigeon_Columba_livia.jpg/600px-Rock_Pigeon_Columba_livia.jpg", "desc": "原鴿（學名：Columba livia），即常見的野鴿。羽色多變，通常為灰藍色帶有兩條黑色翼帶。適應力極強，廣泛分布於城市廣場與公園。" },
-    "Streptopelia tranquebarica": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Red_Turtle_Dove_Show_Love.jpg/600px-Red_Turtle_Dove_Show_Love.jpg", "desc": "紅鳩（學名：Streptopelia tranquebarica），台灣最小型的鳩鴿科鳥類。雄鳥頭部鼠灰色，頸部有黑色頸環，背部為磚紅色，常見於電線或地面覓食。" },
-    "Spilopelia chinensis": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Spotted_Dove_-_Mata_Ayer.jpg/600px-Spotted_Dove_-_Mata_Ayer.jpg", "desc": "珠頸斑鳩（學名：Spilopelia chinensis），特徵是後頸有布滿白點的黑色頸環，宛如珍珠項鍊。叫聲為低沉的「咕-咕-咕」，是城市中極為常見的鳥類。" },
-    "Aythya fuligula": { "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Aythya_fuligula_3_%28Marek_Szczepanek%29.jpg/600px-Aythya_fuligula_3_%28Marek_Szczepanek%29.jpg", "desc": "鳳頭潛鴨（學名：Aythya fuligula），又名澤鳧。雄鳥頭部有明顯的下垂冠羽，身體黑色，腹部白色。是台灣冬季常見的候鳥，常成群在湖泊或魚塭潛水覓食。" }
+    "Pycnonotus sinensis": { 
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Light-vented_Bulbul_%28Pycnonotus_sinensis%29.jpg/600px-Light-vented_Bulbul_%28Pycnonotus_sinensis%29.jpg", 
+        "desc": "白頭翁（常見留鳥）。【生態習性】適應力強，廣泛分布於平地至低海拔山區。常成群在城市公園、行道樹間活動，喧鬧且活潑。雜食性，喜食漿果與昆蟲。" 
+    },
+    "Passer montanus": { 
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Passer_montanus_4_%28Marek_Szczepanek%29.jpg/600px-Passer_montanus_4_%28Marek_Szczepanek%29.jpg", 
+        "desc": "麻雀（常見留鳥）。【生態習性】最親近人類的鳥類，幾乎只在有人類居住的區域活動。常成小群在地面跳躍覓食，以草籽、穀物及昆蟲為食。晚上有集體停棲在樹上或屋簷的習慣。" 
+    },
+    "Columba livia": { 
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Rock_Pigeon_Columba_livia.jpg/600px-Rock_Pigeon_Columba_livia.jpg", 
+        "desc": "原鴿（野鴿）。【生態習性】源自歐洲，現已成為全球都市常見鳥類。群聚性強，喜歡在廣場、公園地面覓食。築巢於建築物孔隙，對人類警戒心低。" 
+    },
+    "Streptopelia tranquebarica": { 
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Red_Turtle_Dove_Show_Love.jpg/600px-Red_Turtle_Dove_Show_Love.jpg", 
+        "desc": "紅鳩（常見留鳥）。【生態習性】台灣最小型的鳩鴿科。雄鳥背部紅褐色，頸後有黑色頸環。常成群在農田、草地地面覓食種子。飛行速度快，翅膀拍擊聲明顯。" 
+    },
+    "Spilopelia chinensis": { 
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Spotted_Dove_-_Mata_Ayer.jpg/600px-Spotted_Dove_-_Mata_Ayer.jpg", 
+        "desc": "珠頸斑鳩（常見留鳥）。【生態習性】特徵是後頸黑色區域布滿白色斑點。適應城鄉環境，常單獨或成對活動。叫聲為低沉的「咕-咕-咕」，求偶時會頻頻點頭。" 
+    },
+    "Aythya fuligula": { 
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Aythya_fuligula_3_%28Marek_Szczepanek%29.jpg/600px-Aythya_fuligula_3_%28Marek_Szczepanek%29.jpg", 
+        "desc": "鳳頭潛鴨（冬候鳥）。【生態習性】雄鳥頭部有下垂冠羽，腹部白色。善於潛水，常在開闊深水域活動，如湖泊、魚塭。常大群聚集，白天休息，晨昏時潛水捕食魚蝦及軟體動物。" 
+    },
+    "Egretta garzetta": {
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Egretta_garzetta_2_-_1.jpg/600px-Egretta_garzetta_2_-_1.jpg",
+        "desc": "小白鷺（普遍留鳥）。【生態習性】全身白色，嘴黑色，腳黑色但腳趾為黃色（黃襪子）。常在水田、溪流、河口單獨活動。用腳擾動水底逼出魚蝦後啄食。" 
+    },
+    "Gorsachius melanolophus": {
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Malayan_Night-Heron_-_Taiwan_S4E8695_%2817320173361%29.jpg/500px-Malayan_Night-Heron_-_Taiwan_S4E8695_%2817320173361%29.jpg",
+        "desc": "黑冠麻鷺（留鳥）。【生態習性】俗稱大笨鳥。常在都會公園草地上緩慢行走，捕食蚯蚓。受驚嚇時會伸長脖子擬態成樹枝。近年來適應都市環境，數量大增。"
+    }
 }
 
 # ==========================================
-# 3. 🌟 完整全台熱點資料 (V13.3 座標校正版 + 關鍵字)
+# 3. 🌟 完整全台熱點資料 (V15.0 終極地毯式盤點版 - 22縣市)
 # ==========================================
 HOT_SPOTS_DATA = {
+    # === 北部地區 ===
+    "基隆市": [
+        {"name": "基隆港 (海洋廣場)", "lat": 25.1315, "lng": 121.7405, "keywords": ["基隆港", "Keelung Port", "海洋廣場"], "desc": "全台最容易近距離觀察黑鳶（老鷹）盤旋覓食的地點。冬季港內常有遊隼駐足高樓獵食。", "potential": [{"name": "黑鳶", "sci": "Milvus migrans"}]},
+        {"name": "和平島公園", "lat": 25.1605, "lng": 121.7635, "keywords": ["和平島", "Heping Island"], "desc": "擁有獨特的海蝕地形。春秋過境期，海岸礁岩常吸引在此休息的鷸鴴科與岩鷺。", "potential": [{"name": "岩鷺", "sci": "Egretta sacra"}]},
+        {"name": "潮境公園", "lat": 25.1425, "lng": 121.8025, "keywords": ["潮境", "Chaojing"], "desc": "開闊的海岸草地與懸崖。是尋找藍磯鶇、戴勝以及海面上過境燕鷗的絕佳位置。", "potential": [{"name": "藍磯鶇", "sci": "Monticola solitarius"}]},
+        {"name": "八斗子漁港", "lat": 25.1405, "lng": 121.7925, "keywords": ["八斗子", "Badouzi"], "desc": "漁港內避風，冬季常有鷿鷉與各種潛鴨躲避風浪，是觀察海鳥的穩定點。", "potential": [{"name": "黑頸鸊鷉", "sci": "Podiceps nigricollis"}]},
+        {"name": "情人湖公園", "lat": 25.1505, "lng": 121.7105, "keywords": ["情人湖", "Lovers Lake"], "desc": "山區湖泊，周邊林相良好。常見台灣藍鵲、五色鳥，冬季湖面偶有鴛鴦或潛鴨。", "potential": [{"name": "台灣藍鵲", "sci": "Urocissa caerulea"}]}
+    ],
     "台北市": [
         {"name": "關渡自然公園", "lat": 25.1163, "lng": 121.4725, "keywords": ["關渡", "Guandu"], "desc": "台北市最重要的水鳥保育區，擁有廣大的草澤與水塘。核心區不對外開放，但透過自然中心望遠鏡可觀察大量雁鴨與鷺科。", "potential": [{"name": "花嘴鴨", "sci": "Anas zonorhyncha"}]},
         {"name": "大安森林公園", "lat": 25.0326, "lng": 121.5345, "keywords": ["大安森林", "Daan"], "desc": "都市之肺，生態池中有穩定的鷺科與秧雞科棲息，樹林間則是五色鳥與各式過境陸鳥的熱點。", "potential": [{"name": "五色鳥", "sci": "Psilopogon nuchalis"}]},
         {"name": "植物園", "lat": 25.0335, "lng": 121.5095, "keywords": ["植物園", "Botanical"], "desc": "歷史悠久的都會公園，荷花池與林區鳥況極佳，是北部拍攝翠鳥、紅冠水雞與鳳頭蒼鷹的入門聖地。", "potential": [{"name": "翠鳥", "sci": "Alcedo atthis"}]},
-        {"name": "大湖公園", "lat": 25.0841, "lng": 121.6026, "keywords": ["大湖", "Dahu"], "desc": "內湖區著名的湖泊公園，湖光山色倒影迷人。這裡是鷺科鳥類的聚集地，常見小白鷺、夜鷺在錦帶橋畔佇立。", "potential": [{"name":"大白鷺", "sci":"Ardea alba"}]},
-        {"name": "松山文創園區", "lat": 25.0438, "lng": 121.5606, "keywords": ["松山文創", "Songshan"], "desc": "信義區的生態跳島，生態池雖小但生機盎然。是市區觀賞翠鳥捕魚、紅冠水雞築巢的熱門景點。", "potential": [{"name":"翠鳥", "sci":"Alcedo atthis"}]},
-        {"name": "芝山岩", "lat": 25.1038, "lng": 121.5305, "keywords": ["芝山", "Zhishan"], "desc": "隆起的珊瑚礁地形，擁有茂密林相。是觀察領角鴞、皮黃腹鶲等低海拔山鳥與猛禽的好去處。", "potential": [{"name": "領角鴞", "sci": "Otus lettia"}]}
+        {"name": "大湖公園", "lat": 25.0841, "lng": 121.6026, "keywords": ["大湖", "Dahu"], "desc": "內湖區著名的湖泊公園。這裡是鷺科鳥類的聚集地，常見小白鷺、夜鷺在錦帶橋畔佇立。", "potential": [{"name":"大白鷺", "sci":"Ardea alba"}]},
+        {"name": "華江雁鴨自然公園", "lat": 25.0285, "lng": 121.4915, "keywords": ["華江", "Huajiang"], "desc": "位於新店溪與大漢溪匯流處，廣大沙洲是冬季雁鴨科的重要棲地，尤以小水鴨數量最多。", "potential": [{"name": "小水鴨", "sci": "Anas crecca"}]},
+        {"name": "陽明山二子坪", "lat": 25.1855, "lng": 121.5245, "keywords": ["陽明山", "Yangmingshan", "二子坪"], "desc": "平緩易行的無障礙步道，兩側林相豐富。是觀察台灣藍鵲、竹雞以及夏季中高海拔鳥類降遷的好地點。", "potential": [{"name": "台灣藍鵲", "sci": "Urocissa caerulea"}]},
+        {"name": "台大校園", "lat": 25.0175, "lng": 121.5395, "keywords": ["台大", "NTU", "台灣大學"], "desc": "擁有醉月湖與實驗農場，是都市中觀察黑冠麻鷺、領角鴞以及鳳頭蒼鷹最容易的地點之一。", "potential": [{"name": "黑冠麻鷺", "sci": "Gorsachius melanolophus"}]},
+        {"name": "芝山岩", "lat": 25.1038, "lng": 121.5305, "keywords": ["芝山", "Zhishan"], "desc": "隆起的珊瑚礁地形，擁有茂密林相。是觀察領角鴞、皮黃腹鶲等低海拔山鳥與猛禽的好去處。", "potential": [{"name": "領角鴞", "sci": "Otus lettia"}]},
+        {"name": "南港公園", "lat": 25.0405, "lng": 121.5855, "keywords": ["南港公園", "Nangang Park"], "desc": "擁有寬闊的埤塘與樹林，翠鳥、蒼鷺常駐。是東區民眾近距離賞鳥的好去處。", "potential": [{"name": "翠鳥", "sci": "Alcedo atthis"}]}
     ],
     "新北市": [
         {"name": "金山清水濕地", "lat": 25.2285, "lng": 121.6285, "keywords": ["金山", "Jinshan", "清水"], "desc": "北海岸著名的候鳥驛站，曾有小白鶴長期停留。農田與水域環境適合鷸鴴科與大型水鳥停棲。", "potential": [{"name": "黑鳶", "sci": "Milvus migrans"}]},
         {"name": "萬里野柳地質公園", "lat": 25.2065, "lng": 121.6925, "keywords": ["野柳", "Yehliu"], "desc": "突出海岬地形，是候鳥渡海來台的第一站。每年春秋過境期，岬角步道常充滿稀有過境鳥驚喜。", "potential": [{"name": "藍磯鶇", "sci": "Monticola solitarius"}]},
         {"name": "田寮洋", "lat": 25.0185, "lng": 121.9385, "keywords": ["田寮洋", "Tianliao"], "desc": "位於貢寮的隱密濕地，擁有豐富的草澤環境。冬季常有猛禽巡弋，也是雁鴨科的重要度冬地。", "potential": [{"name": "魚鷹", "sci": "Pandion haliaetus"}]},
-        {"name": "烏來福山", "lat": 24.7855, "lng": 121.5055, "keywords": ["烏來", "福山", "Wulai"], "desc": "低海拔闊葉林代表，沿著桶後溪與南勢溪。可見鉛色水鶇、紫嘯鶇等溪流鳥類及多種畫眉科。", "potential": [{"name": "鉛色水鶇", "sci": "Phoenicurus fuliginosus"}]}
+        {"name": "烏來福山", "lat": 24.7855, "lng": 121.5055, "keywords": ["烏來", "福山", "Wulai"], "desc": "低海拔闊葉林代表，沿著桶後溪與南勢溪。可見鉛色水鶇、紫嘯鶇等溪流鳥類及多種畫眉科。", "potential": [{"name": "鉛色水鶇", "sci": "Phoenicurus fuliginosus"}]},
+        {"name": "五股濕地", "lat": 25.0955, "lng": 121.4555, "keywords": ["五股", "Wugu"], "desc": "淡水河畔的大片蘆葦叢，是著名的燕群聚集地（夏季黃昏）。冬季則有鵐科與秧雞科隱身其中。", "potential": [{"name": "家燕", "sci": "Hirundo rustica"}]},
+        {"name": "新店廣興", "lat": 24.9355, "lng": 121.5555, "keywords": ["廣興", "Guangxing"], "desc": "新店溪上游的屈尺壩水域，水流平緩。是拍攝魚鷹捕魚、黑鳶盤旋以及各種游禽的熱門點。", "potential": [{"name": "魚鷹", "sci": "Pandion haliaetus"}]},
+        {"name": "淡水金色水岸", "lat": 25.1685, "lng": 121.4425, "keywords": ["淡水", "Tamsui", "金色水岸"], "desc": "淡水河出海口右岸，退潮時露出泥灘地。適合在自行車道旁觀察濱鷸、鷺科與紅樹林生態。", "potential": [{"name": "磯鷸", "sci": "Actitis hypoleucos"}]},
+        {"name": "挖子尾自然保留區", "lat": 25.1585, "lng": 121.4155, "keywords": ["挖子尾", "Waziwei"], "desc": "位於八里左岸，擁有豐富的紅樹林與潮間帶。是觀察東方環頸鴴與唐白鷺的熱點。", "potential": [{"name": "唐白鷺", "sci": "Egretta eulophotes"}]}
     ],
     "桃園市": [
         {"name": "許厝港濕地", "lat": 25.0865, "lng": 121.1855, "keywords": ["許厝港", "Xucuo"], "desc": "國家級重要濕地，擁有廣闊潮間帶與防風林。每年過境期鷸鴴科數量龐大，是北台灣海岸賞鳥首選。", "potential": [{"name": "唐白鷺", "sci": "Egretta eulophotes"}]},
-        {"name": "大園水田", "lat": 25.0685, "lng": 121.2085, "keywords": ["大園", "Dayuan"], "desc": "廣大的水田區，冬季休耕期注水後成為水鳥天堂，常有小天鵝、各種特殊鷸鴴科出沒。", "potential": [{"name": "小青足鷸", "sci": "Tringa stagnatilis"}]}
+        {"name": "大園水田", "lat": 25.0685, "lng": 121.2085, "keywords": ["大園", "Dayuan"], "desc": "廣大的水田區，冬季休耕期注水後成為水鳥天堂，常有小天鵝、各種特殊鷸鴴科出沒。", "potential": [{"name": "小青足鷸", "sci": "Tringa stagnatilis"}]},
+        {"name": "八德埤塘自然生態公園", "lat": 24.9455, "lng": 121.3055, "keywords": ["八德", "Bade", "埤塘"], "desc": "桃園特有的埤塘地景，保留了豐富的水生植被。常見紅冠水雞、小鷿鷉與鴛鴦。", "potential": [{"name": "鴛鴦", "sci": "Aix galericulata"}]},
+        {"name": "石門水庫", "lat": 24.8155, "lng": 121.2455, "keywords": ["石門水庫", "Shimen"], "desc": "周邊變葉木林相優美，適合觀察山鳥。溪洲公園與槭林公園常見藍鵲、樹鵲與五色鳥。", "potential": [{"name": "樹鵲", "sci": "Dendrocitta formosae"}]},
+        {"name": "龍潭大池", "lat": 24.8655, "lng": 121.2155, "keywords": ["龍潭", "Longtan"], "desc": "大型人工湖泊，湖中人工島與周邊樹林吸引鷺科夜棲。冬季可見鳳頭潛鴨等雁鴨科。", "potential": [{"name": "夜鷺", "sci": "Nycticorax nycticorax"}]},
+        {"name": "大溪河濱公園", "lat": 24.8955, "lng": 121.2855, "keywords": ["大溪", "Daxi"], "desc": "大漢溪畔的綠地，擁有落羽松林。常見平原鳥類與溪流鳥類交匯，如夜鷺與翠鳥。", "potential": [{"name": "翠鳥", "sci": "Alcedo atthis"}]}
     ],
     "新竹市": [
-        {"name": "金城湖賞鳥區", "lat": 24.8105, "lng": 120.9035, "keywords": ["金城湖", "Jincheng"], "desc": "香山濕地北端的淡水湖泊，提供穩定水源。高蹺鴴、琵嘴鴨等水鳥群聚，且距離市區不遠，交通方便。", "potential": [{"name": "高蹺鴴", "sci": "Himantopus himantopus"}]},
-        {"name": "香山濕地", "lat": 24.7755, "lng": 120.9125, "keywords": ["香山", "Siangshan"], "desc": "廣達1700公頃的泥質灘地，孕育大量底棲生物，吸引成千上萬的候鳥覓食，以鷸鴴科為大宗。", "potential": [{"name": "大杓鷸", "sci": "Numenius arquata"}]}
+        {"name": "金城湖賞鳥區", "lat": 24.8105, "lng": 120.9035, "keywords": ["金城湖", "Jincheng"], "desc": "香山濕地北端的淡水湖泊，提供穩定水源。高蹺鴴、琵嘴鴨等水鳥群聚，且距離市區不遠。", "potential": [{"name": "高蹺鴴", "sci": "Himantopus himantopus"}]},
+        {"name": "香山濕地", "lat": 24.7755, "lng": 120.9125, "keywords": ["香山", "Siangshan"], "desc": "廣達1700公頃的泥質灘地，孕育大量底棲生物，吸引成千上萬的候鳥覓食，以鷸鴴科為大宗。", "potential": [{"name": "大杓鷸", "sci": "Numenius arquata"}]},
+        {"name": "新竹南寮漁港", "lat": 24.8485, "lng": 120.9255, "keywords": ["南寮", "Nanliao", "漁港"], "desc": "除了漁港風光，堤防外側與沙灘區是觀察鷗科與過境海鳥的好地方，偶有稀有海雀出現。", "potential": [{"name": "黑尾鷗", "sci": "Larus crassirostris"}]},
+        {"name": "十八尖山", "lat": 24.7955, "lng": 120.9855, "keywords": ["十八尖山", "18 Peaks"], "desc": "新竹市民的健行聖地，低海拔次生林保留完整。常見綠繡眼、白頭翁及過境的鶲科鳥類。", "potential": [{"name": "綠繡眼", "sci": "Zosterops simplex"}]},
+        {"name": "鳳山溪口", "lat": 24.8655, "lng": 120.9155, "keywords": ["鳳山溪", "Fengshan"], "desc": "河口沖積扇地形，退潮時有大片泥灘。是觀察鷸鴴科與大型水鳥（如蒼鷺、大白鷺）的熱點。", "potential": [{"name": "蒼鷺", "sci": "Ardea cinerea"}]}
     ],
+    "新竹縣": [
+        {"name": "新豐紅樹林", "lat": 24.9125, "lng": 120.9705, "keywords": ["新豐", "Xinfeng", "紅樹林"], "desc": "北台灣重要的水筆仔與海茄苳混生林。木棧道深入紅樹林，可觀察秧雞科與招潮蟹。", "potential": [{"name": "紅冠水雞", "sci": "Gallinula chloropus"}]},
+        {"name": "頭前溪豆腐岩", "lat": 24.8155, "lng": 121.0155, "keywords": ["頭前溪", "Touqian", "豆腐岩"], "desc": "寬闊的河床與草叢，吸引鶺鴒科與鷸鴴科停留。也是熱門的攝影與賞鳥點。", "potential": [{"name": "白鶺鴒", "sci": "Motacilla alba"}]},
+        {"name": "司馬庫斯", "lat": 24.5785, "lng": 121.3355, "keywords": ["司馬庫斯", "Smangus"], "desc": "上帝的部落，擁有壯麗的巨木群。是深山特有種鳥類如黃山雀、白尾鴝的世外桃源。", "potential": [{"name": "黃山雀", "sci": "Machlolophus holsti"}]},
+        {"name": "峨眉湖", "lat": 24.6755, "lng": 120.9855, "keywords": ["峨眉湖", "Emei"], "desc": "風景秀麗的湖泊，周邊步道完善。常見鸕鶿、魚鷹以及鷺科鳥類。", "potential": [{"name": "鸕鶿", "sci": "Phalacrocorax carbo"}]},
+        {"name": "觀霧國家森林", "lat": 24.5055, "lng": 121.1155, "keywords": ["觀霧", "Guanwu"], "desc": "終年雲霧繚繞，擁有中高海拔林相。是尋找台灣帝雉、黃山雀等特有種的熱點。", "potential": [{"name": "帝雉", "sci": "Syrmaticus mikado"}]}
+    ],
+
+    # === 中部地區 ===
     "苗栗縣": [
-        {"name": "通霄海水浴場", "lat": 24.4985, "lng": 120.6755, "keywords": ["通霄", "Tongxiao"], "desc": "包含周邊防風林與海岸線，是過境鳥類暫歇的熱點。稀有鳥種如戴勝、各種鵐科常在此被記錄。", "potential": [{"name": "戴勝", "sci": "Upupa epops"}]}
+        {"name": "通霄海水浴場", "lat": 24.4985, "lng": 120.6755, "keywords": ["通霄", "Tongxiao"], "desc": "包含周邊防風林與海岸線，是過境鳥類暫歇的熱點。稀有鳥種如戴勝、各種鵐科常在此被記錄。", "potential": [{"name": "戴勝", "sci": "Upupa epops"}]},
+        {"name": "雪見遊憩區", "lat": 24.4255, "lng": 121.0155, "keywords": ["雪見", "Xuejian"], "desc": "位於雪霸國家公園，林道平緩。冬季可見大型畫眉科與山雀科，是中海拔賞鳥秘境。", "potential": [{"name": "藪鳥", "sci": "Liocichla steereii"}]},
+        {"name": "後龍溪口", "lat": 24.6155, "lng": 120.7555, "keywords": ["後龍", "Houlong"], "desc": "典型的河口濕地，沙洲與農田交錯。冬季有大量鸕鶿與雁鴨科停棲，猛禽亦常巡弋。", "potential": [{"name": "鸕鶿", "sci": "Phalacrocorax carbo"}]},
+        {"name": "鯉魚潭水庫", "lat": 24.3355, "lng": 120.7755, "keywords": ["鯉魚潭", "Liyutan"], "desc": "群山環繞的水庫，環境清幽。常可見大冠鷲盤旋，湖面則有小鷿鷉與鷺科活動。", "potential": [{"name": "大冠鷲", "sci": "Spilornis cheela"}]},
+        {"name": "龍鳳漁港", "lat": 24.6985, "lng": 120.8585, "keywords": ["龍鳳", "Longfeng"], "desc": "海岸防風林與沙灘交界，春秋過境期常有驚喜，如過境的鶲科與鵐科。", "potential": [{"name": "藍磯鶇", "sci": "Monticola solitarius"}]},
+        {"name": "挑炭古道", "lat": 24.3985, "lng": 120.7855, "keywords": ["挑炭", "Taotan"], "desc": "位於三義，環境清幽的低海拔山徑。五月桐花季時，也是觀察畫眉科鳥類的好時機。", "potential": [{"name": "頭烏線", "sci": "Alcippe brunnea"}]}
     ],
     "台中市": [
         {"name": "高美濕地", "lat": 24.3125, "lng": 120.5495, "keywords": ["高美", "Gaomei"], "desc": "著名的雲林莞草區，夕陽美景下也是水鳥樂園。黑嘴鷗等稀有海鳥常在此度冬。", "potential": [{"name": "黑嘴鷗", "sci": "Saundersilarus saundersi"}]},
         {"name": "大雪山林道 23.5K", "lat": 24.2385, "lng": 120.9385, "keywords": ["大雪山", "Dasyueshan", "23K", "23.5K"], "desc": "國際級賞鳥熱點，中海拔山鳥精華區。藍腹鷴常在清晨路邊現身，吸引國內外賞鳥人潮。", "potential": [{"name": "藍腹鷴", "sci": "Lophura swinhoii"}]},
-        {"name": "大雪山林道 50K", "lat": 24.2755, "lng": 121.0085, "keywords": ["大雪山", "Dasyueshan", "50K", "天池"], "desc": "高海拔針葉林區，是帝雉、火冠戴菊、栗背林鴝等高山特有種的大本營。天池周邊鳥況亦佳。", "potential": [{"name": "帝雉", "sci": "Syrmaticus mikado"}]}
+        {"name": "大雪山林道 50K", "lat": 24.2755, "lng": 121.0085, "keywords": ["大雪山", "Dasyueshan", "50K", "天池"], "desc": "高海拔針葉林區，是帝雉、火冠戴菊、栗背林鴝等高山特有種的大本營。天池周邊鳥況亦佳。", "potential": [{"name": "帝雉", "sci": "Syrmaticus mikado"}]},
+        {"name": "台中都會公園", "lat": 24.2055, "lng": 120.5955, "keywords": ["都會公園", "Metropolitan Park"], "desc": "大肚台地上的廣闊綠地，擁有草原與次生林。適合觀察伯勞、小雲雀與平原性鳥類。", "potential": [{"name": "紅尾伯勞", "sci": "Lanius cristatus"}]},
+        {"name": "旱溪", "lat": 24.1255, "lng": 120.7055, "keywords": ["旱溪", "Hanxi"], "desc": "貫穿市區的河川，經過整治後生態豐富。常見燕鴴、環頸鴴以及各種溪流鳥類。", "potential": [{"name": "燕鴴", "sci": "Glareola maldivarum"}]},
+        {"name": "武陵農場", "lat": 24.3655, "lng": 121.3155, "keywords": ["武陵", "Wuling"], "desc": "群山環繞的谷地，櫻花鉤吻鮭的故鄉。溪流邊可見河烏、鉛色水鶇，林間則有紅頭山雀群。", "potential": [{"name": "紅頭山雀", "sci": "Aegithalos concinnus"}]},
+        {"name": "大肚溪口野生動物保護區", "lat": 24.1985, "lng": 120.4855, "keywords": ["大肚溪", "Dadu River"], "desc": "位於台中與彰化交界，廣闊的河口沙洲。是國際級的鷸鴴科水鳥中繼站。", "potential": [{"name": "大杓鷸", "sci": "Numenius arquata"}]}
+    ],
+    "彰化縣": [
+        {"name": "福寶濕地", "lat": 24.0355, "lng": 120.3655, "keywords": ["福寶", "Fubao", "漢寶"], "desc": "彰化沿海重要的漢寶/福寶濕地群，人工營造的棲地吸引大量水鳥。彩鷸、高蹺鴴為此地常客。", "potential": [{"name": "彩鷸", "sci": "Rostratula benghalensis"}]},
+        {"name": "八卦山", "lat": 24.0755, "lng": 120.5555, "keywords": ["八卦山", "Bagua"], "desc": "低海拔丘陵，每年三月春分前後，是灰面鵟鷹北返過境的必經之路，形成壯觀的「鷹柱」。", "potential": [{"name": "灰面鵟鷹", "sci": "Butastur indicus"}]},
+        {"name": "芳苑濕地", "lat": 23.9255, "lng": 120.3155, "keywords": ["芳苑", "Fangyuan"], "desc": "廣闊的潮間帶泥灘地，以海牛採蚵文化聞名。退潮時吸引大量杓鷸與濱鷸覓食。", "potential": [{"name": "大杓鷸", "sci": "Numenius arquata"}]},
+        {"name": "溪州公園", "lat": 23.8555, "lng": 120.4855, "keywords": ["溪州", "Xizhou"], "desc": "位於濁水溪畔的大型公園，樹林茂密。常見平原性鳥類如黑領椋鳥、戴勝。", "potential": [{"name": "黑領椋鳥", "sci": "Gracupica nigricollis"}]},
+        {"name": "伸港濕地", "lat": 24.1855, "lng": 120.4855, "keywords": ["伸港", "Shengang"], "desc": "大肚溪出海口南岸，廣大的泥灘地與招潮蟹。是水鳥在台灣中部重要的停棲站。", "potential": [{"name": "黑腹濱鷸", "sci": "Calidris alpina"}]}
     ],
     "南投縣": [
         {"name": "合歡山", "lat": 24.1385, "lng": 121.2755, "keywords": ["合歡山", "Hehuan"], "desc": "台灣公路最高點，主要觀察岩鷚、酒紅朱雀、金翼白眉等高山鳥類。松雪樓附近極易觀察。", "potential": [{"name": "岩鷚", "sci": "Prunella collaris"}]},
-        {"name": "塔塔加", "lat": 23.4875, "lng": 120.8845, "keywords": ["塔塔加", "Tataka"], "desc": "玉山國家公園西北園區，林相豐富。灰林鴞、星鴉等中高海拔鳥種常見，也是秋季觀察赤腹鷹過境的熱點。", "potential": [{"name": "星鴉", "sci": "Nucifraga caryocatactes"}]}
-    ],
-    "彰化縣": [
-        {"name": "福寶濕地", "lat": 24.0355, "lng": 120.3655, "keywords": ["福寶", "Fubao", "漢寶"], "desc": "彰化沿海重要的漢寶/福寶濕地群，人工營造的棲地吸引大量水鳥。彩鷸、高蹺鴴為此地常客。", "potential": [{"name": "彩鷸", "sci": "Rostratula benghalensis"}]}
+        {"name": "塔塔加", "lat": 23.4875, "lng": 120.8845, "keywords": ["塔塔加", "Tataka"], "desc": "玉山國家公園西北園區，林相豐富。灰林鴞、星鴉等中高海拔鳥種常見，也是秋季觀察赤腹鷹過境的熱點。", "potential": [{"name": "星鴉", "sci": "Nucifraga caryocatactes"}]},
+        {"name": "溪頭自然教育園區", "lat": 23.6755, "lng": 120.7955, "keywords": ["溪頭", "Xitou"], "desc": "著名的雲霧森林，人工柳杉林與天然林交錯。藪鳥、白耳畫眉數量眾多，且不怕人。", "potential": [{"name": "藪鳥", "sci": "Liocichla steereii"}]},
+        {"name": "日月潭", "lat": 23.8555, "lng": 120.9155, "keywords": ["日月潭", "Sun Moon Lake"], "desc": "湖光山色中，可於環湖步道觀察五色鳥、繡眼畫眉。冬季偶有鸕鶿與潛鴨光臨。", "potential": [{"name": "繡眼畫眉", "sci": "Alcippe morrisonia"}]},
+        {"name": "奧萬大", "lat": 23.9555, "lng": 121.1755, "keywords": ["奧萬大", "Aowanda"], "desc": "以楓紅聞名，同時也是鳥類天堂。擁有完整的森林生態，是台灣藍鵲與各種啄木鳥的棲地。", "potential": [{"name": "台灣藍鵲", "sci": "Urocissa caerulea"}]},
+        {"name": "鳳凰谷鳥園周邊", "lat": 23.7255, "lng": 120.7855, "keywords": ["鳳凰谷", "Fenghuang"], "desc": "除了園區內的鳥類，周邊天然林也是賞鳥熱點，常見竹雞與各種畫眉科。", "potential": [{"name": "台灣竹雞", "sci": "Bambusicola sonorivox"}]}
     ],
     "雲林縣": [
         {"name": "湖本村", "lat": 23.6885, "lng": 120.6185, "keywords": ["湖本", "Huben", "八色鳥"], "desc": "以八色鳥繁殖地聞名，夏季時吸引大量鳥友前往朝聖這美麗的夏候鳥。", "potential": [{"name": "八色鳥", "sci": "Pitta nympha"}]},
-        {"name": "成龍濕地", "lat": 23.5555, "lng": 120.1655, "keywords": ["成龍", "Chenglong"], "desc": "地層下陷形成的濕地，現已演替為豐富生態系。常可見黑面琵鷺與大量雁鴨科。", "potential": [{"name": "赤頸鴨", "sci": "Mareca penelope"}]}
+        {"name": "成龍濕地", "lat": 23.5555, "lng": 120.1655, "keywords": ["成龍", "Chenglong"], "desc": "地層下陷形成的濕地，現已演替為豐富生態系。常可見黑面琵鷺與大量雁鴨科。", "potential": [{"name": "赤頸鴨", "sci": "Mareca penelope"}]},
+        {"name": "椬梧滯洪池", "lat": 23.5355, "lng": 120.1755, "keywords": ["椬梧", "Yiwu"], "desc": "有「雲林版日月潭」之稱，水域開闊。冬季吸引大量潛鴨、鸕鶿與鷺科鳥類棲息。", "potential": [{"name": "鳳頭潛鴨", "sci": "Aythya fuligula"}]},
+        {"name": "林內龍過脈步道", "lat": 23.7555, "lng": 120.6155, "keywords": ["林內", "Linnei", "龍過脈"], "desc": "低海拔山林步道，生態豐富。除了八色鳥外，也是觀察大冠鷲、鳳頭蒼鷹等猛禽的好點。", "potential": [{"name": "黑枕藍鶲", "sci": "Hypothymis azurea"}]},
+        {"name": "濁水溪口", "lat": 23.8355, "lng": 120.2355, "keywords": ["濁水溪", "Zhuoshui"], "desc": "台灣最長河流的出海口，廣漠的沙洲是東方環頸鴴與燕鷗的重要繁殖與過境地。", "potential": [{"name": "東方環頸鴴", "sci": "Charadrius veredus"}]}
+    ],
+
+    # === 南部地區 ===
+    "嘉義市": [
+        {"name": "嘉義植物園", "lat": 23.4815, "lng": 120.4685, "keywords": ["植物園", "Botanical Garden"], "desc": "百年樹木林立，與嘉義公園相連。是都市中觀察五色鳥、小啄木及黑冠麻鷺的絕佳去處。", "potential": [{"name": "五色鳥", "sci": "Psilopogon nuchalis"}]},
+        {"name": "蘭潭水庫", "lat": 23.4685, "lng": 120.4855, "keywords": ["蘭潭", "Lantan"], "desc": "湖光山色，周邊步道生態良好。冬季湖面可見小鷿鷉與鷺科，林間則有畫眉科活動。", "potential": [{"name": "小鷿鷉", "sci": "Tachybaptus ruficollis"}]},
+        {"name": "八掌溪軍輝橋", "lat": 23.4585, "lng": 120.4625, "keywords": ["八掌溪", "Bazhang"], "desc": "每逢秋季甜根子草盛開，白茫茫一片。河床上常見斑文鳥、褐頭鷦鶯與水鳥棲息。", "potential": [{"name": "斑文鳥", "sci": "Lonchura punctulata"}]}
     ],
     "嘉義縣": [
         {"name": "鰲鼓濕地", "lat": 23.5045, "lng": 120.1385, "keywords": ["鰲鼓", "Aogu"], "desc": "台灣最大的人工濕地之一，擁有多樣棲地型態。冬季候鳥數量極多，是中南部觀賞猛禽與水鳥的最佳地點。", "potential": [{"name": "鸕鶿", "sci": "Phalacrocorax carbo"}]},
-        {"name": "阿里山沼平公園", "lat": 23.5135, "lng": 120.8085, "keywords": ["阿里山", "Alishan", "沼平"], "desc": "觀賞中高海拔鳥類如栗背林鴝、冠羽畫眉的經典路線。櫻花季時更是鳥語花香。", "potential": [{"name": "栗背林鴝", "sci": "Tarsiger johnstoniae"}]}
+        {"name": "阿里山沼平公園", "lat": 23.5135, "lng": 120.8085, "keywords": ["阿里山", "Alishan", "沼平"], "desc": "觀賞中高海拔鳥類如栗背林鴝、冠羽畫眉的經典路線。櫻花季時更是鳥語花香。", "potential": [{"name": "栗背林鴝", "sci": "Tarsiger johnstoniae"}]},
+        {"name": "布袋濕地", "lat": 23.3755, "lng": 120.1555, "keywords": ["布袋", "Budai"], "desc": "廢棄鹽田與魚塭區，是黑面琵鷺在嘉義的重要棲地。水位適當時，鷸鴴科數量驚人。", "potential": [{"name": "黑面琵鷺", "sci": "Platalea minor"}]},
+        {"name": "仁義潭水庫", "lat": 23.4655, "lng": 120.5255, "keywords": ["仁義潭", "Renyiitan"], "desc": "供應嘉義用水的水庫，湖面開闊。冬季常有鸕鶿群聚，大冠鷲亦常在周邊山區出現。", "potential": [{"name": "小鷿鷉", "sci": "Tachybaptus ruficollis"}]},
+        {"name": "朴子溪口", "lat": 23.4555, "lng": 120.1455, "keywords": ["朴子溪", "Puzi"], "desc": "擁有美麗的紅樹林綠色隧道。泥灘地生物豐富，吸引大量白鷺鷥與夜鷺營巢。", "potential": [{"name": "小白鷺", "sci": "Egretta garzetta"}]},
+        {"name": "觸口自然教育中心", "lat": 23.4425, "lng": 120.6055, "keywords": ["觸口", "Chukou"], "desc": "阿里山公路起點，低海拔森林環境優良。是觀察朱鸝、黑枕藍鶲的穩定點。", "potential": [{"name": "朱鸝", "sci": "Oriolus traillii"}]}
     ],
     "台南市": [
         {"name": "七股黑面琵鷺保護區", "lat": 23.0465, "lng": 120.0685, "keywords": ["七股", "Qigu", "黑面琵鷺"], "desc": "全球黑面琵鷺度冬數量最多的區域之一。設有數個賞鳥亭，能清楚觀察這瀕危物種的群聚行為。", "potential": [{"name": "黑面琵鷺", "sci": "Platalea minor"}]},
-        {"name": "官田水雉園區", "lat": 23.1785, "lng": 120.3155, "keywords": ["官田", "Guantian", "水雉"], "desc": "凌波仙子—水雉的主要復育地。菱角田環境優美，夏季可見水雉繁殖育雛的精彩畫面。", "potential": [{"name": "水雉", "sci": "Hydrophasianus chirurgus"}]}
+        {"name": "官田水雉園區", "lat": 23.1785, "lng": 120.3155, "keywords": ["官田", "Guantian", "水雉"], "desc": "凌波仙子—水雉的主要復育地。菱角田環境優美，夏季可見水雉繁殖育雛的精彩畫面。", "potential": [{"name": "水雉", "sci": "Hydrophasianus chirurgus"}]},
+        {"name": "四草野生動物保護區", "lat": 23.0155, "lng": 120.1355, "keywords": ["四草", "Sicao"], "desc": "包含鹽田與紅樹林，生態豐富。高蹺鴴、反嘴鴴常在此築巢繁殖，是極佳的水鳥觀察點。", "potential": [{"name": "反嘴鴴", "sci": "Recurvirostra avosetta"}]},
+        {"name": "將軍濕地", "lat": 23.2055, "lng": 120.0955, "keywords": ["將軍", "Jiangjun"], "desc": "廣大的鹽灘地，人為干擾少。是觀察國際瀕危鳥種如諾氏鷸、大濱鷸的重要據點。", "potential": [{"name": "紅胸濱鷸", "sci": "Calidris ruficollis"}]},
+        {"name": "巴克禮紀念公園", "lat": 22.9755, "lng": 120.2255, "keywords": ["巴克禮", "Barclay"], "desc": "台南市區的生態寶石，擁有自然式河道。雖然位於市區，卻能輕易觀察到翠鳥、紅冠水雞與五色鳥。", "potential": [{"name": "五色鳥", "sci": "Psilopogon nuchalis"}]},
+        {"name": "北門潟湖", "lat": 23.2655, "lng": 120.1155, "keywords": ["北門", "Beimen"], "desc": "以夕陽與候鳥聞名。黑腹燕鷗在黃昏時萬鳥歸巢的景象，是這裡的必看奇觀。", "potential": [{"name": "黑腹燕鷗", "sci": "Chlidonias hybrida"}]},
+        {"name": "學甲濕地生態園區", "lat": 23.2505, "lng": 120.1755, "keywords": ["學甲", "Xuejia"], "desc": "位於急水溪灘地，是黑面琵鷺的重要棲地之一。常見灰斑鴴與各種鷺科。", "potential": [{"name": "灰斑鴴", "sci": "Pluvialis squatarola"}]}
     ],
     "高雄市": [
         {"name": "茄萣濕地", "lat": 22.8955, "lng": 120.1855, "keywords": ["茄萣", "Qieding"], "desc": "原為鹽田，現為水鳥保護區。近年來黑面琵鷺度冬數量穩定增加，也是觀察反嘴鴴的好地方。", "potential": [{"name": "黑面琵鷺", "sci": "Platalea minor"}]},
-        {"name": "中寮山", "lat": 22.8255, "lng": 120.4185, "keywords": ["中寮山", "Zhongliao"], "desc": "南部著名的猛禽觀賞點，春季是赤腹鷹與灰面鵟鷹北返的必經之路。", "potential": [{"name": "灰面鵟鷹", "sci": "Butastur indicus"}]}
+        {"name": "中寮山", "lat": 22.8255, "lng": 120.4185, "keywords": ["中寮山", "Zhongliao"], "desc": "南部著名的猛禽觀賞點，春季是赤腹鷹與灰面鵟鷹北返的必經之路。", "potential": [{"name": "灰面鵟鷹", "sci": "Butastur indicus"}]},
+        {"name": "衛武營都會公園", "lat": 22.6255, "lng": 120.3455, "keywords": ["衛武營", "Weiwuying"], "desc": "由軍營改建的大型公園，保留了許多老樹。是觀察黃鸝、鳳頭蒼鷹等都會區較少見鳥類的熱點。", "potential": [{"name": "黃鸝", "sci": "Oriolus chinensis"}]},
+        {"name": "高屏溪舊鐵橋濕地", "lat": 22.6555, "lng": 120.4355, "keywords": ["高屏溪", "舊鐵橋"], "desc": "高屏溪畔的人工濕地，腹地廣大。蘆葦叢是褐頭鷦鶯、斑文鳥的家，水域則有水鳥棲息。", "potential": [{"name": "褐頭鷦鶯", "sci": "Priniainornata"}]},
+        {"name": "鳥松濕地", "lat": 22.6655, "lng": 120.3855, "keywords": ["鳥松", "Niaosong"], "desc": "台灣第一座濕地公園，雖然面積不大，但植被豐富。常見翠鳥、紅冠水雞，也是教學推廣的重鎮。", "potential": [{"name": "翠鳥", "sci": "Alcedo atthis"}]},
+        {"name": "美濃湖", "lat": 22.9055, "lng": 120.5555, "keywords": ["美濃", "Meinong"], "desc": "群山倒映的湖泊。除了水鳥，周邊農田與山區也是尋找珍稀的黃胸藪眉（黃胸藪鶥）的好地方。", "potential": [{"name": "水雉", "sci": "Hydrophasianus chirurgus"}]},
+        {"name": "援中港濕地", "lat": 22.7255, "lng": 120.2555, "keywords": ["援中港", "Yuanzhonggang"], "desc": "位於楠梓區，擁有紅樹林與草澤。是水雉在高雄的穩定繁殖地，也是水鳥的庇護所。", "potential": [{"name": "水雉", "sci": "Hydrophasianus chirurgus"}]},
+        {"name": "壽山國家自然公園", "lat": 22.6555, "lng": 120.2655, "keywords": ["壽山", "Shoushan", "柴山"], "desc": "珊瑚礁石灰岩地形，台灣獼猴眾多。密林中是台灣畫眉與各種山鳥的家。", "potential": [{"name": "台灣畫眉", "sci": "Garrulax taewanus"}]}
     ],
     "屏東縣": [
         {"name": "龍鑾潭自然中心", "lat": 21.9855, "lng": 120.7455, "keywords": ["龍鑾潭", "Longluan"], "desc": "南台灣最大的淡水湖泊，設有高倍望遠鏡。冬季雁鴨科水鳥眾多，鳳頭潛鴨是這裡的招牌。", "potential": [{"name": "鳳頭潛鴨", "sci": "Aythya fuligula"}]},
-        {"name": "社頂自然公園", "lat": 21.9565, "lng": 120.8255, "keywords": ["社頂", "Sheding", "墾丁", "Kenting"], "desc": "恆春半島特有的珊瑚礁林地形。秋季九月是觀賞赤腹鷹過境的聖地，數量動輒數萬隻。", "potential": [{"name": "赤腹鷹", "sci": "Accipiter soloensis"}]}
+        {"name": "社頂自然公園", "lat": 21.9565, "lng": 120.8255, "keywords": ["社頂", "Sheding", "墾丁", "Kenting"], "desc": "恆春半島特有的珊瑚礁林地形。秋季九月是觀賞赤腹鷹過境的聖地，數量動輒數萬隻。", "potential": [{"name": "赤腹鷹", "sci": "Accipiter soloensis"}]},
+        {"name": "大鵬灣國家風景區", "lat": 22.4455, "lng": 120.4755, "keywords": ["大鵬灣", "Dapeng"], "desc": "廣大的潟湖地形，周邊紅樹林復育良好。適合觀察招潮蟹以及捕食魚類的鷺科與燕鷗。", "potential": [{"name": "大白鷺", "sci": "Ardea alba"}]},
+        {"name": "穎達生態農場", "lat": 22.6155, "lng": 120.6155, "keywords": ["穎達", "Yingda"], "desc": "位於沿山公路旁，擁有次生林與草地。是觀察朱鸝、黑枕藍鶲等低海拔山鳥的絕佳私人景點。", "potential": [{"name": "朱鸝", "sci": "Oriolus traillii"}]},
+        {"name": "墾丁國家森林遊樂區", "lat": 21.9655, "lng": 120.8155, "keywords": ["墾丁森林", "Kenting Forest"], "desc": "熱帶植物園，林相茂密。可見台灣畫眉、五色鳥，秋季也是觀察灰面鵟鷹落鷹的好點。", "potential": [{"name": "台灣畫眉", "sci": "Garrulax taewanus"}]},
+        {"name": "雙流國家森林遊樂區", "lat": 22.2155, "lng": 120.8155, "keywords": ["雙流", "Shuangliu"], "desc": "擁有潔淨的溪流與瀑布。是觀察鉛色水鶇、紫嘯鶇以及各種森林鳥類的好去處。", "potential": [{"name": "鉛色水鶇", "sci": "Phoenicurus fuliginosus"}]},
+        {"name": "大漢山林道", "lat": 22.4055, "lng": 120.7555, "keywords": ["大漢山", "Dahanshan"], "desc": "南部最重要的中高海拔賞鳥路線。林道漫長，是尋找深山竹雞、藍腹鷴及各類畫眉的聖地。", "potential": [{"name": "深山竹雞", "sci": "Arborophila crudigularis"}]}
     ],
+
+    # === 東部地區 (完整補強版) ===
     "宜蘭縣": [
-        # ✅ 修正座標：使用無尾港核心區
+        {"name": "蘭陽溪口", "lat": 24.7155, "lng": 121.8355, "keywords": ["蘭陽溪", "Lanyang River", "東港"], "desc": "宜蘭最重要的河口濕地，沙洲遼闊。是觀察黑嘴鷗、各種燕鷗與過境水鳥的一級戰區。", "potential": [{"name": "黑嘴鷗", "sci": "Saundersilarus saundersi"}]},
         {"name": "無尾港水鳥保護區", "lat": 24.6153, "lng": 121.8557, "keywords": ["無尾港", "Wuwei"], "desc": "位於蘇澳的國家級重要濕地，核心賞鳥平台視野極佳。冬季雁鴨科種類豐富，尤其是尖尾鴨與小水鴨群聚。", "potential": [{"name": "小水鴨", "sci": "Anas crecca"}]},
         {"name": "五十二甲濕地", "lat": 24.6655, "lng": 121.8225, "keywords": ["五十二甲", "52jia"], "desc": "原始的蘆葦草澤濕地，冬候鳥數量可觀。也是全台少數能穩定觀察瀕危「黑頸鸊鷉」的地點之一。", "potential": [{"name": "黑頸鸊鷉", "sci": "Podiceps nigricollis"}]},
-        {"name": "壯圍沙丘", "lat": 24.7585, "lng": 121.8085, "keywords": ["壯圍", "Zhuangwei", "蘭陽溪"], "desc": "蘭陽溪口南岸的廣闊沙丘與防風林。是觀察燕鷗科、以及冬季稀有海鳥如短尾信天翁的潛力點。", "potential": [{"name": "小燕鷗", "sci": "Sternula albifrons"}]},
-        {"name": "太平山", "lat": 24.4955, "lng": 121.5355, "keywords": ["太平山", "Taipingshan"], "desc": "潮濕多霧的中高海拔森林。擁有完整的檜木林相，是金翼白眉、灰林鳩等山鳥的樂園。", "potential": [{"name": "金翼白眉", "sci": "Garrulax morrisonianus"}]}
+        {"name": "壯圍沙丘", "lat": 24.7585, "lng": 121.8085, "keywords": ["壯圍", "Zhuangwei"], "desc": "蘭陽溪口南岸的廣闊沙丘與防風林。是觀察燕鷗科、以及冬季稀有海鳥如短尾信天翁的潛力點。", "potential": [{"name": "小燕鷗", "sci": "Sternula albifrons"}]},
+        {"name": "太平山", "lat": 24.4955, "lng": 121.5355, "keywords": ["太平山", "Taipingshan"], "desc": "潮濕多霧的中高海拔森林。擁有完整的檜木林相，是金翼白眉、灰林鳩等山鳥的樂園。", "potential": [{"name": "金翼白眉", "sci": "Garrulax morrisonianus"}]},
+        {"name": "頭城烏石港", "lat": 24.8755, "lng": 121.8355, "keywords": ["烏石港", "Wushi", "頭城"], "desc": "除了是賞鯨船的起點，港區內外常有各種燕鷗與海鳥停棲。冬季東北季風強時，是尋找罕見海鳥的熱點。", "potential": [{"name": "鳳頭燕鷗", "sci": "Thalasseus bergii"}]},
+        {"name": "福山植物園", "lat": 24.7555, "lng": 121.5955, "keywords": ["福山植物園", "Fushan"], "desc": "限制入園人數，環境原始清幽。水生植物池有小鷿鷉、鴛鴦，林間山羌與獼猴隨處可見。", "potential": [{"name": "鴛鴦", "sci": "Aix galericulata"}]},
+        {"name": "羅東林業文化園區", "lat": 24.6855, "lng": 121.7755, "keywords": ["羅東林場", "Luodong Forestry"], "desc": "舊貯木池轉型的生態池，周邊大樹林立。常見翠鳥捕魚，也是市區民眾親近自然的好去處。", "potential": [{"name": "翠鳥", "sci": "Alcedo atthis"}]},
+        {"name": "冬山河生態綠舟", "lat": 24.6355, "lng": 121.7855, "keywords": ["冬山河", "Dongshan"], "desc": "位於冬山河流域，擁有廣大的草地與河岸。常見夜鷺、白腹秧雞與紅冠水雞。", "potential": [{"name": "白腹秧雞", "sci": "Amaurornis phoenicurus"}]},
+        {"name": "下埔濕地", "lat": 24.8355, "lng": 121.7955, "keywords": ["下埔", "Xiapu"], "desc": "位於頭城，原本是養殖漁塭。現已自然演替為濕地，是宜蘭觀察水鳥與田鳥的重要小而美熱點。", "potential": [{"name": "紫鷺", "sci": "Ardea purpurea"}]}
     ],
     "花蓮縣": [
-        {"name": "布洛灣", "lat": 24.1725, "lng": 121.5755, "keywords": ["布洛灣", "Bulowan", "太魯閣"], "desc": "太魯閣國家公園內的台地，植被豐富。春季吸引黃山雀、赤腹山雀等降遷覓食，鳥況極佳。", "potential": [{"name": "黃山雀", "sci": "Machlolophus holsti"}]}
+        {"name": "布洛灣", "lat": 24.1725, "lng": 121.5755, "keywords": ["布洛灣", "Bulowan", "太魯閣"], "desc": "太魯閣國家公園內的台地，植被豐富。春季吸引黃山雀、赤腹山雀等降遷覓食，鳥況極佳。", "potential": [{"name": "黃山雀", "sci": "Machlolophus holsti"}]},
+        {"name": "花蓮溪口", "lat": 23.9455, "lng": 121.6055, "keywords": ["花蓮溪", "Hualien River"], "desc": "國家級重要濕地，廣闊的河口沙洲。是東部水鳥的重要驛站，冬季可見大量鷸鴴科與鴨科。", "potential": [{"name": "花嘴鴨", "sci": "Anas zonorhyncha"}]},
+        {"name": "鯉魚潭", "lat": 23.9355, "lng": 121.5055, "keywords": ["鯉魚潭", "Liyu Lake"], "desc": "花蓮最大的內陸湖泊。湖面遼闊，周邊山林環繞。常見大冠鷲、五色鳥以及各種過境山鳥。", "potential": [{"name": "大冠鷲", "sci": "Spilornis cheela"}]},
+        {"name": "大農大富平地森林", "lat": 23.6155, "lng": 121.4155, "keywords": ["大農大富", "Danongdafu"], "desc": "花東縱谷中的廣大造林地。是全台最容易觀察環頸雉的地方之一，猛禽亦相當活躍。", "potential": [{"name": "環頸雉", "sci": "Phasianus colchicus"}]},
+        {"name": "南安遊客中心", "lat": 23.3255, "lng": 121.2855, "keywords": ["南安", "Nanan", "瓦拉米"], "desc": "玉山國家公園東部入口，八通關古道起點。低海拔闊葉林鳥況佳，常見冠羽畫眉與朱鸝。", "potential": [{"name": "冠羽畫眉", "sci": "Yuhina brunneiceps"}]},
+        {"name": "東華大學", "lat": 23.8955, "lng": 121.5455, "keywords": ["東華大學", "Donghua"], "desc": "校園廣闊且生態豐富，有「全台最美大學」之稱。草地上常可見到保育類的環頸雉悠閒漫步。", "potential": [{"name": "環頸雉", "sci": "Phasianus colchicus"}]},
+        {"name": "美崙山", "lat": 23.9955, "lng": 121.6155, "keywords": ["美崙山", "Meilun"], "desc": "花蓮市區的綠肺，低海拔森林。是市民晨間運動與觀察五色鳥、朱鸝的方便地點。", "potential": [{"name": "朱鸝", "sci": "Oriolus traillii"}]},
+        {"name": "富源國家森林遊樂區", "lat": 23.5855, "lng": 121.3555, "keywords": ["富源", "Fuyuan", "蝴蝶谷"], "desc": "擁有樟樹林與溪流環境。是觀察黃山雀、五色鳥以及各種溪流鳥類的好地方。", "potential": [{"name": "黃山雀", "sci": "Machlolophus holsti"}]}
     ],
     "台東縣": [
-        {"name": "知本濕地", "lat": 22.6855, "lng": 121.0555, "keywords": ["知本", "Zhiben"], "desc": "台東市近郊的河口濕地，擁有沙洲與草澤。曾記錄到東方白鸛等珍稀迷鳥。", "potential": [{"name": "環頸雉", "sci": "Phasianus colchicus"}]}
+        {"name": "知本濕地", "lat": 22.6855, "lng": 121.0555, "keywords": ["知本", "Zhiben"], "desc": "台東市近郊的河口濕地，擁有沙洲與草澤。曾記錄到東方白鸛等珍稀迷鳥。", "potential": [{"name": "環頸雉", "sci": "Phasianus colchicus"}]},
+        {"name": "台東森林公園", "lat": 22.7655, "lng": 121.1655, "keywords": ["台東森林", "Forest Park"], "desc": "包含琵琶湖、鷺鷥湖，木麻黃林相優美。水域環境穩定，是觀察紅冠水雞、小鷿鷉與鷺科的好地方。", "potential": [{"name": "小鷿鷉", "sci": "Tachybaptus ruficollis"}]},
+        {"name": "大坡池", "lat": 23.1155, "lng": 121.2255, "keywords": ["大坡池", "Dapo"], "desc": "池上鄉的天然湖泊，周邊稻田環繞。夏季荷花盛開，水雉與各種秧雞科鳥類在此繁衍。", "potential": [{"name": "花嘴鴨", "sci": "Anas zonorhyncha"}]},
+        {"name": "蘭嶼", "lat": 22.0555, "lng": 121.5555, "keywords": ["蘭嶼", "Lanyu", "Orchid Island"], "desc": "擁有獨特的島嶼生態，特有亞種眾多。蘭嶼角鴞、紅頭綠鳩是來此必訪的明星鳥種。", "potential": [{"name": "蘭嶼角鴞", "sci": "Otus elegans"}]},
+        {"name": "知本森林遊樂區", "lat": 22.6955, "lng": 121.0155, "keywords": ["知本森林", "Zhiben Forest"], "desc": "擁有巨大的白榕與豐富的熱帶季風林。是觀察朱鸝、黃山雀與多種畫眉科的極佳地點。", "potential": [{"name": "朱鸝", "sci": "Oriolus traillii"}]},
+        {"name": "利嘉林道", "lat": 22.8055, "lng": 121.0355, "keywords": ["利嘉", "Lijia"], "desc": "生態豐富的林道，夜間生態觀察（夜觀）的熱門路線。有機會發現鴞類與各種兩棲爬蟲。", "potential": [{"name": "領角鴞", "sci": "Otus lettia"}]},
+        {"name": "三仙台", "lat": 23.1255, "lng": 121.4155, "keywords": ["三仙台", "Sanxiantai"], "desc": "突出於海中的岬角，是海鳥重要的棲息地。常見岩鷺在礁岩活動，外海則有燕鷗飛翔。", "potential": [{"name": "岩鷺", "sci": "Egretta sacra"}]},
+        {"name": "卑南溪口", "lat": 22.7755, "lng": 121.1755, "keywords": ["卑南溪", "Beinan River"], "desc": "廣闊的河口沙洲，是水鳥在東部重要的驛站。小燕鷗常在此繁殖，冬季則有大量鷸鴴科。", "potential": [{"name": "小燕鷗", "sci": "Sternula albifrons"}]}
+    ],
+
+    # === 離島地區 ===
+    "澎湖縣": [
+        {"name": "青螺濕地", "lat": 23.5855, "lng": 119.6555, "keywords": ["青螺", "Qingluo"], "desc": "澎湖最大的紅樹林濕地。夏季是燕鷗繁殖季，冬季則吸引黑面琵鷺與大量水鳥停棲。", "potential": [{"name": "小燕鷗", "sci": "Sternula albifrons"}]},
+        {"name": "興仁水庫", "lat": 23.5455, "lng": 119.5955, "keywords": ["興仁水庫", "Xingren"], "desc": "淡水資源在離島極為珍貴。雙湖園與水庫區是觀察各種雁鴨科與過境陸鳥的好地方。", "potential": [{"name": "花嘴鴨", "sci": "Anas zonorhyncha"}]},
+        {"name": "林投公園", "lat": 23.5655, "lng": 119.6355, "keywords": ["林投", "Lintou"], "desc": "擁有長達3公里的沙灘與茂密樹林。春秋過境期，樹林間常充滿各種新奇的過境山鳥。", "potential": [{"name": "黃眉柳鶯", "sci": "Phylloscopus inornatus"}]},
+        {"name": "天台山 (望安)", "lat": 23.3755, "lng": 119.5055, "keywords": ["天台山", "Tiantai", "望安"], "desc": "望安島最高點，草原開闊。是觀察猛禽與過境伯勞的好地方。", "potential": [{"name": "紅尾伯勞", "sci": "Lanius cristatus"}]},
+        {"name": "菜園濕地", "lat": 23.5555, "lng": 119.5855, "keywords": ["菜園", "Caiyuan"], "desc": "澎湖國家風景區管理處旁，包含濕地與造林區。是觀察小鷿鷉與過境林鳥的熱點。", "potential": [{"name": "小鷿鷉", "sci": "Tachybaptus ruficollis"}]}
     ],
     "金門縣": [
         {"name": "慈湖", "lat": 24.4555, "lng": 118.3055, "keywords": ["慈湖", "Cihu"], "desc": "金門最大的鹹水湖，冬季擁有龐大的鸕鶿度冬族群，黃昏時「黑軍壓境」歸巢場面極為壯觀。", "potential": [{"name": "鸕鶿", "sci": "Phalacrocorax carbo"}]},
-        {"name": "青年農莊", "lat": 24.4655, "lng": 118.4355, "keywords": ["青年農莊", "Youth Farm"], "desc": "位於金門東半島，夏季色彩繽紛的栗喉蜂虎會在土坡挖洞繁殖，吸引眾多攝影師。", "potential": [{"name": "栗喉蜂虎", "sci": "Merops philippinus"}]}
+        {"name": "青年農莊", "lat": 24.4655, "lng": 118.4355, "keywords": ["青年農莊", "Youth Farm"], "desc": "位於金門東半島，夏季色彩繽紛的栗喉蜂虎會在土坡挖洞繁殖，吸引眾多攝影師。", "potential": [{"name": "栗喉蜂虎", "sci": "Merops philippinus"}]},
+        {"name": "浯江溪口", "lat": 24.4255, "lng": 118.3155, "keywords": ["浯江溪", "Wujiang"], "desc": "鄰近建功嶼，擁有廣闊的紅樹林與潮間帶。是近距離觀察鸕鶿、鷸鴴科以及活化石「鱟」的最佳地點。", "potential": [{"name": "中杓鷸", "sci": "Numenius phaeopus"}]},
+        {"name": "太湖遊憩區", "lat": 24.4355, "lng": 118.4255, "keywords": ["太湖", "Taihu"], "desc": "金門最大的人工淡水湖，水源穩定。水獺偶爾現蹤，冬季也是各種鴨科與鷺科的度冬地。", "potential": [{"name": "斑翡翠", "sci": "Ceryle rudis"}]},
+        {"name": "金門植物園", "lat": 24.4555, "lng": 118.3855, "keywords": ["金門植物園", "Botanical Garden"], "desc": "利用廢棄營區改建，植被茂密。是觀察戴勝、八哥以及各種過境陸鳥的絕佳場所。", "potential": [{"name": "戴勝", "sci": "Upupa epops"}]}
     ],
     "連江縣": [
         {"name": "馬祖東引北海坑道", "lat": 26.3755, "lng": 120.4855, "keywords": ["東引", "Dongyin", "北海坑道"], "desc": "地形險峻的岩岸，是極危物種「神話之鳥」黑嘴端鳳頭燕鷗的夏季繁殖地。遊客可搭乘賞鳥船從海上近距離觀察燕鷗育雛。", "potential": [{"name": "黑嘴端鳳頭燕鷗", "sci": "Thalasseus bernsteini"}]},
-        {"name": "南竿介壽菜園", "lat": 26.1539, "lng": 119.9497, "keywords": ["南竿", "Nangan", "介壽", "菜園"], "desc": "位於縣政府前方的蔬菜公園，是馬祖少見的開闊農地。春秋過境期常吸引田鵐、樹鷚等過境陸鳥停留補充體力。", "potential": [{"name": "田鵐", "sci": "Emberiza rustica"}]}
+        {"name": "南竿介壽菜園", "lat": 26.1539, "lng": 119.9497, "keywords": ["南竿", "Nangan", "介壽", "菜園"], "desc": "位於縣政府前方的蔬菜公園，是馬祖少見的開闊農地。春秋過境期常吸引田鵐、樹鷚等過境陸鳥停留補充體力。", "potential": [{"name": "田鵐", "sci": "Emberiza rustica"}]},
+        {"name": "勝利水庫", "lat": 26.1555, "lng": 119.9355, "keywords": ["勝利水庫", "Shengli"], "desc": "南竿的重要水源地，周邊林相完整。環境清幽，常有小鷿鷉、鷺科及過境的山鳥停留。", "potential": [{"name": "小鷿鷉", "sci": "Tachybaptus ruficollis"}]},
+        {"name": "北竿芹壁", "lat": 26.2255, "lng": 119.9855, "keywords": ["芹壁", "Chinbe"], "desc": "保存完整的閩東聚落，面海背山。屋簷下常見家燕築巢，海面上則可見燕鷗飛舞。", "potential": [{"name": "家燕", "sci": "Hirundo rustica"}]},
+        {"name": "西莒坤坵沙灘", "lat": 25.9755, "lng": 119.9355, "keywords": ["西莒", "Xiju", "坤坵"], "desc": "擁有世界級的方塊海奇景。退潮時，對面的蛇島是燕鷗保護區，可觀察數千隻燕鷗群舞。", "potential": [{"name": "大鳳頭燕鷗", "sci": "Thalasseus bergii"}]}
     ]
 }
 
 # ==========================================
-# 4. 工具函式 (恢復 V12 的 API 邏輯)
+# 4. 核心功能函式
 # ==========================================
-
-def format_obs_date(date_str):
+def haversine(lat1, lon1, lat2, lon2):
+    """計算經緯度距離 (km)"""
     try:
-        if len(date_str) > 10:
-            dt = datetime.strptime(date_str, "%Y-%m-%d %H:%M")
-            return dt.strftime("%m/%d %H:%M")
-        return date_str
-    except:
-        return date_str
-
-def calculate_distance(lat1, lng1, lat2, lng2):
-    """計算兩點經緯度的距離 (單位: 公里)"""
-    try:
-        R = 6371  # 地球半徑
-        dLat = math.radians(lat2 - lat1)
-        dLng = math.radians(lng2 - lng1)
-        a = math.sin(dLat/2) * math.sin(dLat/2) + \
+        R = 6371  
+        dlat = math.radians(lat2 - lat1)
+        dlon = math.radians(lon2 - lon1)
+        a = math.sin(dlat / 2) * math.sin(dlat / 2) + \
             math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * \
-            math.sin(dLng/2) * math.sin(dLng/2)
-        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+            math.sin(dlon / 2) * math.sin(dlon / 2)
+        c = 2 * math.atan2(math.sqrt(min(1, a)), math.sqrt(1 - min(1, a)))
         return R * c
     except:
         return 9999
 
-def get_wiki_data(sci_name, common_name):
-    """ 
-    ✅ 恢復 V12 邏輯: 使用 Wikipedia API (穩定可靠)
+def get_wiki_data(sci_name, com_name):
+    """
+    V15.2: 使用 Wikipedia API 抓取繁體中文資料。
+    優先順序：手動圖鑑庫 -> 快取 -> API
     """
     # 1. 優先查手動修復庫
-    if common_name in MANUAL_FIX_DB:
-        return MANUAL_FIX_DB[common_name], True
+    if com_name in MANUAL_FIX_DB:
+        return MANUAL_FIX_DB[com_name], True
 
     # 2. 查快取
     if sci_name in WIKI_CACHE: return WIKI_CACHE[sci_name], True
 
-    search_queries = [sci_name, common_name, f"{common_name} (鳥類)"]
-
-    for query in search_queries:
-        if not query: continue
+    # 3. 呼叫 Wikipedia API
+    queries = [sci_name, com_name, f"{com_name} (鳥類)"]
+    for q in queries:
+        if not q: continue
         try:
-            time.sleep(random.uniform(0.1, 0.3))
-            # 關鍵：使用 requests.get 呼叫 API，而不是爬 HTML
             params = {
-                "action": "query", "format": "json", "prop": "pageimages|extracts",
-                "titles": query, "pithumbsize": 400, 
-                "exintro": True, "explaintext": True, 
-                "variant": "zh-tw", "redirects": 1
+                "action": "query",
+                "format": "json",
+                "prop": "pageimages|extracts",
+                "titles": q,
+                "pithumbsize": 400,
+                "exintro": True,      # 只抓摘要
+                "explaintext": True,  # 純文字，不要 HTML
+                "variant": "zh-tw",   # 強制繁體中文
+                "redirects": 1
             }
-            resp = requests.get("https://zh.wikipedia.org/w/api.php", params=params, headers=HEADERS, timeout=5).json()
-            pages = resp.get("query", {}).get("pages", {})
+            # 隨機延遲避免被封
+            time.sleep(random.uniform(0.1, 0.3))
+            
+            resp = requests.get("https://zh.wikipedia.org/w/api.php", params=params, headers=HEADERS, timeout=5)
+            data = resp.json()
+            
+            pages = data.get("query", {}).get("pages", {})
             for k, v in pages.items():
-                if k != "-1":
-                    raw_desc = v.get("extract", "")
+                if k != "-1": # 找到了
+                    desc = v.get("extract", "")
+                    img = v.get("thumbnail", {}).get("source", "")
                     
-                    # 清除 (學名...) 或 （...）
-                    clean_desc = re.sub(r'[\(（].*?[\)）]', '', raw_desc)
-                    clean_desc = re.sub(r'\s+', ' ', clean_desc).strip()
-
-                    # 限制 200 字 + 找句號
-                    limit = 200
-                    if len(clean_desc) > limit:
-                        short_desc = clean_desc[:limit]
-                        last_period = max(short_desc.rfind('。'), short_desc.rfind('！'))
-                        
-                        if last_period != -1:
-                            final_desc = short_desc[:last_period+1]
-                        else:
-                            final_desc = short_desc + "..." 
-                    else:
-                        final_desc = clean_desc
-
-                    if len(final_desc) < 10: continue 
-
-                    data = {
-                        "img": v.get("thumbnail", {}).get("source", ""),
-                        "desc": final_desc
-                    }
-                    WIKI_CACHE[sci_name] = data
-                    return data, False
-        except Exception as e:
+                    # 簡單文字清洗
+                    desc = re.sub(r'\s+', ' ', desc).strip()
+                    # 截斷至 200 字並以句號結尾
+                    if len(desc) > 200:
+                        desc = desc[:200].rsplit('。', 1)[0] + '。'
+                    
+                    if not desc: desc = "暫無詳細介紹。"
+                    
+                    result = {"img": img, "desc": desc}
+                    WIKI_CACHE[sci_name] = result
+                    return result, False
+        except:
             pass
             
+    # 失敗回傳
     empty = {"img": "", "desc": "暫無詳細介紹"}
     WIKI_CACHE[sci_name] = empty
     return empty, False
 
-def get_ebird_data_by_geo(lat, lng):
-    """ 針對熱點座標進行半徑搜尋 """
+def format_obs_date(obs_dt):
     try:
-        url = f"https://api.ebird.org/v2/data/obs/geo/recent?lat={lat}&lng={lng}&dist={GEO_SEARCH_DIST_KM}&back=21&maxResults=2000&sppLocale=zh-TW"
-        r = requests.get(url, headers={'X-eBirdApiToken': EBIRD_API_KEY}, timeout=20)
-        if r.status_code == 200:
-            return r.json()
-        return []
+        dt = datetime.strptime(obs_dt, "%Y-%m-%d %H:%M")
+        return dt.strftime("%m/%d %H:%M")
     except:
-        return []
+        return obs_dt
 
-# 封裝 print 以避免 Windows 編碼錯誤
+def find_snap_hotspot(obs_lat, obs_lng, obs_loc_name):
+    """
+    智慧磁吸 V2: 
+    距離 < 2km 且 地點名稱包含關鍵字 -> 吸附
+    """
+    best_match = None
+    min_dist = SNAP_RADIUS_KM
+    if not obs_loc_name: obs_loc_name = ""
+    
+    for county, spots in HOT_SPOTS_DATA.items():
+        for spot in spots:
+            dist = haversine(obs_lat, obs_lng, spot['lat'], spot['lng'])
+            if dist < SNAP_RADIUS_KM:
+                # 檢查關鍵字
+                is_name_match = False
+                if spot['name'] in obs_loc_name: is_name_match = True
+                if not is_name_match and 'keywords' in spot:
+                    for kw in spot['keywords']:
+                        if kw in obs_loc_name:
+                            is_name_match = True
+                            break
+                
+                if is_name_match and dist < min_dist:
+                    min_dist = dist
+                    best_match = spot
+    return best_match
+
 def safe_print(msg):
     try:
         print(msg)
@@ -239,141 +395,119 @@ def safe_print(msg):
         pass
 
 # ==========================================
-# 5. 主程式
+# 5. 主程式流程 (V15.2 增量更新邏輯)
 # ==========================================
 def main():
     if not os.path.exists(TARGET_DIR): os.makedirs(TARGET_DIR)
     
-    # 載入舊快取
+    # --- 步驟 1: 建立「舊資料索引」 (增量更新的關鍵) ---
+    existing_records = {} # 用 id 當 key
+    
     if os.path.exists(FILE_PATH):
         try:
             with open(FILE_PATH, 'r', encoding='utf-8') as f:
                 old_data = json.load(f)
-                if 'hotspots' in old_data:
-                    for city, spots in old_data['hotspots'].items():
-                        for spot in spots:
-                            for p in spot.get('potential', []):
-                                if p.get('sci') and p.get('wikiImg'):
-                                    WIKI_CACHE[p['sci']] = {'img': p.get('wikiImg', ''), 'desc': p.get('wikiDesc', '')}
-                if 'recent' in old_data and isinstance(old_data['recent'], list):
-                    for b in old_data['recent']:
-                        if b.get('sciName') and b.get('wikiImg'):
-                            WIKI_CACHE[b['sciName']] = {'img': b.get('wikiImg', ''), 'desc': b.get('wikiDesc', '')}
-                safe_print(f"📦 已載入 {len(WIKI_CACHE)} 筆舊圖檔快取")
-        except: pass
+                
+                # A. 預熱 Wiki 快取 (不管日期，只要有圖就存)
+                for item in old_data.get('recent', []):
+                    if item.get('sciName') and item.get('wikiImg'):
+                        WIKI_CACHE[item['sciName']] = {
+                            'img': item.get('wikiImg'),
+                            'desc': item.get('wikiDesc')
+                        }
+                        
+                # B. 建立舊資料索引
+                # 我們只保留還在「21天有效期」內的舊資料，避免檔案無限膨脹
+                # 但為了程式穩定，這裡稍微寬鬆一點，只要有資料都先認列
+                for item in old_data.get('recent', []):
+                    existing_records[item['id']] = item
+                        
+            safe_print(f"📦 已載入 {len(WIKI_CACHE)} 筆圖鑑快取")
+            safe_print(f"♻️  保留 {len(existing_records)} 筆有效舊資料 (用於比對加速)")
+            
+        except Exception as e:
+            safe_print(f"⚠️ 讀取舊檔失敗: {e}，將重新全量抓取")
 
-    safe_print(f"\n🚀 [1/3] 啟動全台鳥況更新 (V13.4 穩定修復版)...")
+    safe_print(f"\n🚀 [1/3] 啟動 eBird 增量更新 (V15.2)...")
+    all_observations = []
     
-    all_unique_birds = {} 
-    start_time = time.time()
-
-    # --- 階段一：縣市大範圍掃描 ---
-    safe_print("   👉 階段一：縣市廣域掃描 (County Scan)")
-    for code in TAIWAN_COUNTIES:
+    # --- 步驟 2: 抓取 eBird 最新清單 (這步省不了，必須問 API 才知道有無新鳥) ---
+    for county_code in TAIWAN_COUNTIES:
+        url = f"https://api.ebird.org/v2/data/obs/{county_code}/recent"
+        params = {'back': 21, 'maxResults': 2000, 'sppLocale': 'zh-TW', 'detail': 'full'}
         try:
-            url = f"https://api.ebird.org/v2/data/obs/{code}/recent?back=21&maxResults=2000&detail=full&sppLocale=zh-TW"
-            r = requests.get(url, headers={'X-eBirdApiToken': EBIRD_API_KEY}, timeout=20)
+            r = requests.get(url, headers=HEADERS, params=params, timeout=10)
             if r.status_code == 200:
-                obs_list = r.json()
-                count = 0
-                for obs in obs_list:
-                    key = f"{obs.get('subId')}_{obs.get('speciesCode')}"
-                    if key not in all_unique_birds:
-                        all_unique_birds[key] = obs
-                        all_unique_birds[key]['_source_county'] = code 
-                        count += 1
-                safe_print(f"      - {code}: 獲得 {count} 筆")
+                data = r.json()
+                for d in data: d['_source_county'] = county_code
+                all_observations.extend(data)
+                safe_print(f"   - {county_code}: {len(data)} 筆")
             time.sleep(0.5)
         except: pass
 
-    # --- 階段二：熱點定點打擊 ---
-    safe_print("\n   👉 階段二：熱點定點打擊 (Hotspot Geo-Targeting)")
-    hotspot_list = []
-    for city, spots in HOT_SPOTS_DATA.items():
+    # 熱點補強
+    safe_print("   - 執行熱點定點掃描...")
+    extra_hotspots = []
+    for county, spots in HOT_SPOTS_DATA.items():
         for spot in spots:
-            hotspot_list.append(spot)
-    
-    total_hotspots = len(hotspot_list)
-    for i, spot in enumerate(hotspot_list):
-        # 簡單進度顯示
-        if i % 10 == 0:
-            safe_print(f"      - 掃描進度: {i}/{total_hotspots}")
-        
-        geo_birds = get_ebird_data_by_geo(spot['lat'], spot['lng'])
-        
-        for obs in geo_birds:
-            key = f"{obs.get('subId')}_{obs.get('speciesCode')}"
-            if key not in all_unique_birds:
-                all_unique_birds[key] = obs
-                all_unique_birds[key]['_source_county'] = 'GEO_ADDED' 
+            url = "https://api.ebird.org/v2/data/obs/geo/recent"
+            params = {'lat': spot['lat'], 'lng': spot['lng'], 'dist': GEO_SEARCH_DIST_KM, 'back': 21, 'sppLocale': 'zh-TW', 'maxResults': 500}
+            try:
+                r = requests.get(url, headers=HEADERS, params=params, timeout=5)
+                if r.status_code == 200:
+                    data = r.json()
+                    for d in data: d['_source_county'] = 'GEO_ADDED'
+                    extra_hotspots.extend(data)
+            except: pass
+            time.sleep(0.2)
             
-        time.sleep(0.2) 
-
-    # --- 階段三：智慧磁吸與資料處理 ---
-    safe_print(f"\n🚀 [2/3] 正在處理 {len(all_unique_birds)} 筆資料 (智慧磁吸 + Wiki)...")
+    # --- 步驟 3: 比對與整合 (Smart Merge) ---
+    unique_obs = {}
+    # 先合併 eBird 兩次抓取的資料
+    for obs in all_observations: unique_obs[obs['subId']] = obs
+    for obs in extra_hotspots: unique_obs[obs['subId']] = obs
     
+    safe_print(f"🚀 [2/3] 比對資料庫 (共 {len(unique_obs)} 筆)...")
     final_bird_list = []
     
-    flat_hotspots = []
-    for city, spots in HOT_SPOTS_DATA.items():
-        for s in spots:
-            flat_hotspots.append(s)
-
-    processed_count = 0
-    for key, obs in all_unique_birds.items():
-        processed_count += 1
-        if processed_count % 200 == 0:
-            safe_print(f"      進度: {processed_count}/{len(all_unique_birds)}")
-
+    new_data_count = 0
+    cached_data_count = 0
+    
+    for subId, obs in unique_obs.items():
+        if 'comName' not in obs or not obs['comName']: continue
+        
+        # 🔥 核心邏輯：如果這筆資料的 ID 已經在舊檔裡，就直接抄過來！
+        # (省下 Smart Snap 計算 和 Wiki API 呼叫的時間)
+        if subId in existing_records:
+            old_record = existing_records[subId]
+            # 確保舊資料也有圖片，如果沒有，還是試著抓一下
+            if not old_record.get('wikiImg'):
+                 # 舊資料沒圖，當作新資料處理
+                 pass 
+            else:
+                final_bird_list.append(old_record)
+                cached_data_count += 1
+                continue
+            
+        # --- 如果程式跑到這裡，代表是「新資料」或「需要補圖」 ---
+        new_data_count += 1
+        
         lat = obs.get('lat')
         lng = obs.get('lng')
-        locName = obs.get('locName', '') # 確保有字串
+        locName = obs.get('locName', '')
         
-        # 預設：保留原資料
-        final_lat = lat
-        final_lng = lng
-        final_locName = locName
-        
-        # 🌟 智慧磁吸邏輯 V2 (Smart Snap)
-        # 條件 1: 距離熱點 < SNAP_RADIUS_KM (2.0)
-        # 條件 2: 地點名稱 (locName) 包含 熱點關鍵字
-        
-        best_match_spot = None
-        min_dist = SNAP_RADIUS_KM
-        
-        for spot in flat_hotspots:
-            dist = calculate_distance(lat, lng, spot['lat'], spot['lng'])
-            
-            if dist <= SNAP_RADIUS_KM:
-                # 檢查關鍵字匹配
-                is_name_match = False
-                
-                # A. 檢查熱點全名
-                if spot['name'] in locName:
-                    is_name_match = True
-                
-                # B. 檢查關鍵字列表 (如果有設定)
-                if not is_name_match and 'keywords' in spot:
-                    for kw in spot['keywords']:
-                        if kw in locName:
-                            is_name_match = True
-                            break
-                
-                # 只有當「距離夠近」且「名稱相關」才吸附
-                if is_name_match:
-                    if dist < min_dist:
-                        min_dist = dist
-                        best_match_spot = spot
+        # 1. 智慧磁吸
+        target_spot = find_snap_hotspot(lat, lng, locName)
+        if target_spot:
+            final_lat = target_spot['lat']
+            final_lng = target_spot['lng']
+            final_locName = target_spot['name']
+        else:
+            final_lat, final_lng, final_locName = lat, lng, locName
 
-        if best_match_spot:
-            final_lat = best_match_spot['lat']
-            final_lng = best_match_spot['lng']
-            final_locName = best_match_spot['name'] # 統一使用熱點標準名稱
-
-        # 抓 Wiki (使用修復後的 API 邏輯)
+        # 2. 抓取 Wiki (因為 WIKI_CACHE 已經預熱過，常見鳥也會很快)
         wiki, is_cache = get_wiki_data(obs.get('sciName'), obs.get('comName'))
-        fmt_date = format_obs_date(obs.get('obsDt'))
-
+        
         final_bird_list.append({
             'id': obs.get('subId'),
             'name': obs.get('comName'),
@@ -381,33 +515,29 @@ def main():
             'locName': final_locName,
             'lat': final_lat,
             'lng': final_lng,
-            'date': fmt_date,
+            'date': format_obs_date(obs.get('obsDt')),
             'speciesCode': obs.get('speciesCode'),
             'county': obs.get('_source_county', 'UNKNOWN'),
             'wikiImg': wiki['img'],
             'wikiDesc': wiki['desc']
         })
 
-    safe_print(f"\n🚀 [3/3] 存檔中...")
-    
+    # --- 步驟 4: 存檔 ---
+    safe_print(f"🚀 [3/3] 存檔中 (新資料: {new_data_count}, 沿用舊資料: {cached_data_count})...")
     tw_time = (datetime.utcnow() + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
-    final_json = {
-        "update_at": tw_time,
-        "recent": final_bird_list,
-        "hotspots": HOT_SPOTS_DATA
-    }
+    final_json = {"update_at": tw_time, "recent": final_bird_list, "hotspots": HOT_SPOTS_DATA}
     
     with open(FILE_PATH, 'w', encoding='utf-8') as f:
         json.dump(final_json, f, ensure_ascii=False, indent=2)
     
-    total_time = time.time() - start_time
-    safe_print(f"\n🎉 V13.4 更新完成！")
-    safe_print(f"   - 總資料筆數: {len(final_bird_list)}")
-    safe_print(f"   - 總耗時: {total_time:.1f} 秒")
-    safe_print(f"   - 時間: {tw_time}")
+    total_time = time.time() - START_TIME
+    safe_print(f"✅ 完成！耗時 {total_time:.2f} 秒。")
 
 if __name__ == "__main__":
     try:
         main()
-    except:
+    except Exception as e:
         traceback.print_exc()
+    
+    # 防止視窗自動關閉
+    input("\n執行完畢，請按 Enter 鍵離開...")
