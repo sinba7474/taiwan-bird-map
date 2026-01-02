@@ -1,5 +1,5 @@
 {
-  "update_at": "2026-01-02 18:46:21",
+  "update_at": "2026-01-02 19:00:53",
   "recent": [
     {
       "id": "S291790857",
@@ -30034,11 +30034,15 @@
         "potential": [
           {
             "name": "黑鳶",
-            "sci": "Milvus migrans"
+            "sci": "Milvus migrans",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Milvus_migrans_back%28ThKraft%29.jpg/500px-Milvus_migrans_back%28ThKraft%29.jpg",
+            "wikiDesc": "黑鳶（學名：Milvus migrans），俗稱老鷹、老鳶或雞屎鷹，粵語稱麻鷹（粵拼：maa4 jing1），閩南語作萊葉、獵鴞、鶆鴞（台羅：lāi-hio̍h），客語稱鷂婆（yeu-phò），是鷹形目鷹科鳶屬下的一種猛禽，廣泛分布於歐亞大陸和澳大利亞等地。此鳥種最明顯的特徵是其棕黑的羽色和些微分岔的尾羽。和多數鷹科猛禽不同的是，黑鳶雖然也會主動打獵，但以食腐為主，且非繁殖季會成群生活。"
           },
           {
             "name": "遊隼",
-            "sci": "Falco peregrinus"
+            "sci": "Falco peregrinus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Falco_peregrinus_-_01.jpg/500px-Falco_peregrinus_-_01.jpg",
+            "wikiDesc": "遊隼（學名：Falco peregrinus)，是隼屬中較大的一種，又名花梨隼、鴨虎，在北美洲歷史上被稱為鴨鷹，是一種分布廣泛的猛禽（猛禽科），屬於隼科（Falconidae）。它體型較大，約與鴉屬鳥類相當，背部呈藍灰色，腹部為白色帶條紋，頭部為黑色。遊隼以其速度著稱。"
           }
         ]
       },
@@ -30054,11 +30058,15 @@
         "potential": [
           {
             "name": "岩鷺",
-            "sci": "Egretta sacra"
+            "sci": "Egretta sacra",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Eastern_Reef_Egret.jpg/500px-Eastern_Reef_Egret.jpg",
+            "wikiDesc": "岩鷺（學名：Egretta sacra）為鷺科白鷺屬的鳥類。是一種分布於南部亞洲和大洋洲的鷺。它有兩種顏色型態，分別是板岩灰或純白色羽毛。"
           },
           {
             "name": "藍磯鶇",
-            "sci": "Monticola solitarius"
+            "sci": "Monticola solitarius",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Monticola_solitarius%2C_Spain_1.jpg/500px-Monticola_solitarius%2C_Spain_1.jpg",
+            "wikiDesc": "藍磯鶇（學名：Monticola solitarius）為鶲科磯鶇屬的鳥類，俗名亞東藍石鶇、水嘴、麻石青。這種類似鶇科的舊世界鶲科，曾經被歸類於鶇科家族。它在南歐、西北非以及從中亞到中國北部和馬來西亞繁殖。"
           }
         ]
       },
@@ -30074,11 +30082,15 @@
         "potential": [
           {
             "name": "藍磯鶇",
-            "sci": "Monticola solitarius"
+            "sci": "Monticola solitarius",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Monticola_solitarius%2C_Spain_1.jpg/500px-Monticola_solitarius%2C_Spain_1.jpg",
+            "wikiDesc": "藍磯鶇（學名：Monticola solitarius）為鶲科磯鶇屬的鳥類，俗名亞東藍石鶇、水嘴、麻石青。這種類似鶇科的舊世界鶲科，曾經被歸類於鶇科家族。它在南歐、西北非以及從中亞到中國北部和馬來西亞繁殖。"
           },
           {
             "name": "戴勝",
-            "sci": "Upupa epops"
+            "sci": "Upupa epops",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Common_hoopoe_%28Upupa_epops_epops%29_Udaipur.jpg/500px-Common_hoopoe_%28Upupa_epops_epops%29_Udaipur.jpg",
+            "wikiDesc": "戴勝（學名：Upupa epops，英語：Eurasian hoopoe），俗稱臭姑姑、墓崆雞、塚崆鳥、香香雞，是犀鳥目戴勝科戴勝屬的一種鳥類。戴勝頭有冠，五色如方勝，故而得名。戴勝有許多異名，如：戴任﹑戴紝、墓壙鳥（金門話：bōng-khòng-tsiáu）、鶝、鴔鵖、鵖鴔等。"
           }
         ]
       },
@@ -30094,11 +30106,15 @@
         "potential": [
           {
             "name": "黑頸鸊鷉",
-            "sci": "Podiceps nigricollis"
+            "sci": "Podiceps nigricollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Podiceps_nigricollis_1_%28Bohu%C5%A1_%C4%8C%C3%AD%C4%8Del%29.jpg/500px-Podiceps_nigricollis_1_%28Bohu%C5%A1_%C4%8C%C3%AD%C4%8Del%29.jpg",
+            "wikiDesc": "黑頸鷿鷈（學名：Podiceps nigricollis）是鷿鷈科水鳥中的一員。目前有三個公認的亞種，包括指名亞種。它的繁殖羽具有獨特的赭石色羽毛，延伸到眼睛後面和耳蓋上。"
           },
           {
             "name": "蒼鷺",
-            "sci": "Ardea cinerea"
+            "sci": "Ardea cinerea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ardea_cinerea_7_%28Marek_Szczepanek%29.jpg/500px-Ardea_cinerea_7_%28Marek_Szczepanek%29.jpg",
+            "wikiDesc": "蒼鷺（學名：Ardea cinerea）又稱灰鷺，為鷺科蒼鷺屬的一種涉禽，也是蒼鷺屬的模式種。是歐亞大陸與非洲大陸的濕地中極為常見的水鳥。"
           }
         ]
       },
@@ -30114,11 +30130,15 @@
         "potential": [
           {
             "name": "台灣藍鵲",
-            "sci": "Urocissa caerulea"
+            "sci": "Urocissa caerulea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Urocissa_caerulea.jpg/500px-Urocissa_caerulea.jpg",
+            "wikiDesc": "臺灣藍鵲（學名：Urocissa caerulea，英語：Taiwan Blue Magpie 或 Formosan blue magpie），又稱臺灣暗藍鵲、紅嘴山鵲、長尾山娘（臺灣話：tn̂g boé soaⁿ niû）或長尾陣仔等，為臺灣特有種鳥類。該物種最初於約1862年經斯文豪等引介，被約翰·古爾德進行物種命名，並正式展開相關學術研究工作。 臺灣藍鵲主要分布在中、低海拔闊葉林裡，除繁殖季外多成群行動，且有非常明顯的保護領域傾向，以及伴隨而來的驅趕行為（在繁殖季時特別明顯）。"
           },
           {
             "name": "五色鳥",
-            "sci": "Psilopogon nuchalis"
+            "sci": "Psilopogon nuchalis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Taiwan_barbet.jpg/500px-Taiwan_barbet.jpg",
+            "wikiDesc": "五色鳥（學名：Psilopogon nuchalis，中國大陸、香港作台灣擬啄木鳥，臺灣話：花仔和尚、花褂鳥），又作臺灣擬啄木、台灣擬啄木，是鴷形目鬚鴷科擬啄木屬下的一種鳥類。這個物種是臺灣特有的鳥類，主要以果實為食，曾一度被視為黑眉擬啄木的亞種，但在2006年後拆分為獨立物種。 五色鳥的體長約20—22公分，其身體大部分為翠綠色，而頭部則有藍、黃、紅、黑四色，故得名「五色鳥」；另因其叫聲為單調而響亮的「嘓嘓嘓……」，類似於敲木魚的聲音，而有著「花和尚」的別稱。"
           }
         ]
       },
@@ -30134,11 +30154,15 @@
         "potential": [
           {
             "name": "赤腹鷹",
-            "sci": "Accipiter soloensis"
+            "sci": "Accipiter soloensis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/AccipiterSoloensisKeulemans.jpg/500px-AccipiterSoloensisKeulemans.jpg",
+            "wikiDesc": "赤腹鷹（學名：Accipiter soloensis）為鷹科鷹屬的猛禽。成鳥背部為灰色，胸口有紫紅色或橙紅色的斑塊，翅膀內側為淺色，末端為深色。亞成鳥背部為深褐色，腹部和胸部均有斑紋。"
           },
           {
             "name": "大冠鷲",
-            "sci": "Spilornis cheela"
+            "sci": "Spilornis cheela",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg/500px-Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg",
+            "wikiDesc": "大冠鷲（學名：Spilornis cheela）（西拉雅語：Akakul）又名冠蛇鵰、冕蛇鵰、食蛇鵰，粵語俗稱食蛇鷹，是一種中大型猛禽，屬於鷹科一員。分布於熱帶亞洲的森林棲地中。在它廣泛分布的印度次大陸、東南亞和東亞範圍內，存在顯著的變異，一些權威機構更傾向於將其數個亞種視為完全獨立的物種。"
           }
         ]
       }
@@ -30156,11 +30180,15 @@
         "potential": [
           {
             "name": "花嘴鴨",
-            "sci": "Anas zonorhyncha"
+            "sci": "Anas zonorhyncha",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anas_zonorhyncha_swimming.jpg/500px-Anas_zonorhyncha_swimming.jpg",
+            "wikiDesc": "花嘴鴨（中國大陸作斑嘴鴨，香港作中華斑嘴鴨）（學名：Anas zonorhyncha），別名東方花嘴鴨、谷鴨、黃嘴尖鴨、火燎鴨，是屬於鴨科鴨屬的一種鳥類。分佈於東亞，共有80-160萬隻，數量有下跌的趨勢。這個物種以前被認為是印度斑嘴鴨的亞種，兩者都被稱為斑嘴鴨（A. poecilorhyncha）。"
           },
           {
             "name": "高蹺鴴",
-            "sci": "Himantopus himantopus"
+            "sci": "Himantopus himantopus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Himantopus_himantopus%2C_S%C3%A8te_cf26.jpg/500px-Himantopus_himantopus%2C_S%C3%A8te_cf26.jpg",
+            "wikiDesc": "高蹺鴴（學名：Himantopus himantopus，中國大陸作黑翅長腳鷸），又名長腳鷸、紅腿娘子，為長腳鷸科長腳鷸屬下的一個種。"
           }
         ]
       },
@@ -30176,11 +30204,15 @@
         "potential": [
           {
             "name": "五色鳥",
-            "sci": "Psilopogon nuchalis"
+            "sci": "Psilopogon nuchalis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Taiwan_barbet.jpg/500px-Taiwan_barbet.jpg",
+            "wikiDesc": "五色鳥（學名：Psilopogon nuchalis，中國大陸、香港作台灣擬啄木鳥，臺灣話：花仔和尚、花褂鳥），又作臺灣擬啄木、台灣擬啄木，是鴷形目鬚鴷科擬啄木屬下的一種鳥類。這個物種是臺灣特有的鳥類，主要以果實為食，曾一度被視為黑眉擬啄木的亞種，但在2006年後拆分為獨立物種。 五色鳥的體長約20—22公分，其身體大部分為翠綠色，而頭部則有藍、黃、紅、黑四色，故得名「五色鳥」；另因其叫聲為單調而響亮的「嘓嘓嘓……」，類似於敲木魚的聲音，而有著「花和尚」的別稱。"
           },
           {
             "name": "鳳頭蒼鷹",
-            "sci": "Accipiter trivirgatus"
+            "sci": "Accipiter trivirgatus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Accipiter_trivirgatus_PA273291.jpg/500px-Accipiter_trivirgatus_PA273291.jpg",
+            "wikiDesc": "鳳頭蒼鷹（學名：Lophospiza trivirgata，中國大陸、香港作鳳頭鷹），又名鳳頭雀鷹、粉鳥鷹（臺灣話：hún-tsiáu-ing）、打鳥鷹或斑鳩鷹仔（臺灣話：pan-kah-ing-á），是鷹形目鷹科Lophospiza屬下的一種中型猛禽。本物種的分布範圍相當廣泛，遍及東亞、東南亞至南亞等地的低海拔樹林，在各地有不同外觀及體型大小的變化，目前共有11種亞種。 鳳頭蒼鷹的特徵為其頭部的短冠羽，前頸處的寬黑中央條紋，胸前縱紋及腹部橫紋，及深淺交錯的尾部條紋。"
           }
         ]
       },
@@ -30196,11 +30228,15 @@
         "potential": [
           {
             "name": "翠鳥",
-            "sci": "Alcedo atthis"
+            "sci": "Alcedo atthis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Alcedo_Atthis.jpg/500px-Alcedo_Atthis.jpg",
+            "wikiDesc": "翠鳥（學名：Alcedo atthis，中國大陸、香港稱普通翠鳥，英語：Common kingfisher、Eurasian kingfisher、River kingfisher），又稱鴗、魚狗、魚獅、魚虎、翡翠鳥、釣魚翁，是佛法僧目翠鳥科翠鳥屬下的其中一種鳥類。這個物種由瑞典博物學家卡爾·林奈於1758年命名，分佈於歐亞非三塊大陸上的水域邊，主要以魚類為食。目前翠鳥共有7個亞種，是世界上最小，也是最為人所知的翠鳥科成員之一。"
           },
           {
             "name": "紅冠水雞",
-            "sci": "Gallinula chloropus"
+            "sci": "Gallinula chloropus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg/500px-Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg",
+            "wikiDesc": "紅冠水雞（學名：Gallinula chloropus）為秧雞科黑水雞屬的鳥類，又名黑水雞、水鵁鴒（臺灣話：tsuí-ka-līng）、烏水雞（臺灣話：oo-tsuí-ke）、田雞仔（臺灣話：tshân-ke-á）。分佈在古北界的許多地區，從非洲到歐洲和亞洲。該物種遍布世界各地，模式產地在英格蘭。"
           }
         ]
       },
@@ -30216,11 +30252,15 @@
         "potential": [
           {
             "name": "大白鷺",
-            "sci": "Ardea alba"
+            "sci": "Ardea alba",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Great_Egret_%28Egretta_alba%29%2C_Skala_Kallonis%2C_Lesvos%2C_Greece%2C_19.04.2015_%2817449816992%29.jpg/500px-Great_Egret_%28Egretta_alba%29%2C_Skala_Kallonis%2C_Lesvos%2C_Greece%2C_19.04.2015_%2817449816992%29.jpg",
+            "wikiDesc": "大白鷺（學名：Ardea alba），別名白鷺鷥、鷺鷥、風漂公子、白漂鳥、冬莊。鷺科蒼鷺屬的一種。其種加詞「alba」意為「白色的」。"
           },
           {
             "name": "夜鷺",
-            "sci": "Nycticorax nycticorax"
+            "sci": "Nycticorax nycticorax",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Black-crowned_Night_Heron_--_Nycticorax_nycticorax.jpg/500px-Black-crowned_Night_Heron_--_Nycticorax_nycticorax.jpg",
+            "wikiDesc": "夜鷺（學名：Nycticorax nycticorax）又稱黑頂夜鷺，俗稱灰窪子、夜窪子、星雁、暗光鳥仔，是鷺科夜鷺屬的一種。"
           }
         ]
       },
@@ -30236,11 +30276,15 @@
         "potential": [
           {
             "name": "小水鴨",
-            "sci": "Anas crecca"
+            "sci": "Anas crecca",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Flickr_-_Rainbirder_-_EurasianTeal_in_flight_%28cropped%29.jpg/500px-Flickr_-_Rainbirder_-_EurasianTeal_in_flight_%28cropped%29.jpg",
+            "wikiDesc": "小水鴨（中國大陸作綠翅鴨，香港作綠翅鴨）（學名：Anas crecca），又名小鳧、小麻鴨、小蜆鴨、小食鴨。"
           },
           {
             "name": "蒼鷺",
-            "sci": "Ardea cinerea"
+            "sci": "Ardea cinerea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ardea_cinerea_7_%28Marek_Szczepanek%29.jpg/500px-Ardea_cinerea_7_%28Marek_Szczepanek%29.jpg",
+            "wikiDesc": "蒼鷺（學名：Ardea cinerea）又稱灰鷺，為鷺科蒼鷺屬的一種涉禽，也是蒼鷺屬的模式種。是歐亞大陸與非洲大陸的濕地中極為常見的水鳥。"
           }
         ]
       },
@@ -30257,11 +30301,15 @@
         "potential": [
           {
             "name": "台灣藍鵲",
-            "sci": "Urocissa caerulea"
+            "sci": "Urocissa caerulea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Urocissa_caerulea.jpg/500px-Urocissa_caerulea.jpg",
+            "wikiDesc": "臺灣藍鵲（學名：Urocissa caerulea，英語：Taiwan Blue Magpie 或 Formosan blue magpie），又稱臺灣暗藍鵲、紅嘴山鵲、長尾山娘（臺灣話：tn̂g boé soaⁿ niû）或長尾陣仔等，為臺灣特有種鳥類。該物種最初於約1862年經斯文豪等引介，被約翰·古爾德進行物種命名，並正式展開相關學術研究工作。 臺灣藍鵲主要分布在中、低海拔闊葉林裡，除繁殖季外多成群行動，且有非常明顯的保護領域傾向，以及伴隨而來的驅趕行為（在繁殖季時特別明顯）。"
           },
           {
             "name": "台灣竹雞",
-            "sci": "Bambusicola sonorivox"
+            "sci": "Bambusicola sonorivox",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Bambusicola_thoracicus_-Yangmingshan_National_Park%2C_Taiwan-8.jpg/500px-Bambusicola_thoracicus_-Yangmingshan_National_Park%2C_Taiwan-8.jpg",
+            "wikiDesc": "臺灣竹雞（學名：Bambusicola sonorivox）棲息於臺灣中低海拔的樹林裡。曾被歸類為灰胸竹雞，為臺灣特有種鳥類之一。"
           }
         ]
       },
@@ -30278,11 +30326,15 @@
         "potential": [
           {
             "name": "黑冠麻鷺",
-            "sci": "Gorsachius melanolophus"
+            "sci": "Gorsachius melanolophus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Malayan_Night-Heron_-_Taiwan_S4E8695_%2817320173361%29.jpg/500px-Malayan_Night-Heron_-_Taiwan_S4E8695_%2817320173361%29.jpg",
+            "wikiDesc": "黑冠麻鷺（中國大陸作黑冠鳽，香港作黑冠鳽），又作黑冠虎斑鳽，因常在校園、公園被發現故被暱稱地瓜鳥、大笨鳥。臺灣話稱山暗光（臺羅：suann-àm-kong）。是中型的鷺科鳥類，主要分布於東南亞、南亞及東亞南部，其中大部分地區的族群是不普遍留鳥，只有臺灣的族群在近年成為常見的留鳥，另有部分族群會在中國華南、斯里蘭卡與海洋東南亞之間遷徙。"
           },
           {
             "name": "領角鴞",
-            "sci": "Otus lettia"
+            "sci": "Otus lettia",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Collared_Scops_Owl%28Otus_lettia%29_by_Jack_Walf_.jpg/500px-Collared_Scops_Owl%28Otus_lettia%29_by_Jack_Walf_.jpg",
+            "wikiDesc": "領角鴞（學名：Otus lettia、英語：Collared scops owl），角鴞屬的其中一種。領角鴞以前被認為是現在被分離為印度領角鴞（Otus bakkamoena）的亞種。"
           }
         ]
       },
@@ -30298,11 +30350,15 @@
         "potential": [
           {
             "name": "領角鴞",
-            "sci": "Otus lettia"
+            "sci": "Otus lettia",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Collared_Scops_Owl%28Otus_lettia%29_by_Jack_Walf_.jpg/500px-Collared_Scops_Owl%28Otus_lettia%29_by_Jack_Walf_.jpg",
+            "wikiDesc": "領角鴞（學名：Otus lettia、英語：Collared scops owl），角鴞屬的其中一種。領角鴞以前被認為是現在被分離為印度領角鴞（Otus bakkamoena）的亞種。"
           },
           {
             "name": "鳳頭蒼鷹",
-            "sci": "Accipiter trivirgatus"
+            "sci": "Accipiter trivirgatus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Accipiter_trivirgatus_PA273291.jpg/500px-Accipiter_trivirgatus_PA273291.jpg",
+            "wikiDesc": "鳳頭蒼鷹（學名：Lophospiza trivirgata，中國大陸、香港作鳳頭鷹），又名鳳頭雀鷹、粉鳥鷹（臺灣話：hún-tsiáu-ing）、打鳥鷹或斑鳩鷹仔（臺灣話：pan-kah-ing-á），是鷹形目鷹科Lophospiza屬下的一種中型猛禽。本物種的分布範圍相當廣泛，遍及東亞、東南亞至南亞等地的低海拔樹林，在各地有不同外觀及體型大小的變化，目前共有11種亞種。 鳳頭蒼鷹的特徵為其頭部的短冠羽，前頸處的寬黑中央條紋，胸前縱紋及腹部橫紋，及深淺交錯的尾部條紋。"
           }
         ]
       },
@@ -30318,11 +30374,15 @@
         "potential": [
           {
             "name": "翠鳥",
-            "sci": "Alcedo atthis"
+            "sci": "Alcedo atthis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Alcedo_Atthis.jpg/500px-Alcedo_Atthis.jpg",
+            "wikiDesc": "翠鳥（學名：Alcedo atthis，中國大陸、香港稱普通翠鳥，英語：Common kingfisher、Eurasian kingfisher、River kingfisher），又稱鴗、魚狗、魚獅、魚虎、翡翠鳥、釣魚翁，是佛法僧目翠鳥科翠鳥屬下的其中一種鳥類。這個物種由瑞典博物學家卡爾·林奈於1758年命名，分佈於歐亞非三塊大陸上的水域邊，主要以魚類為食。目前翠鳥共有7個亞種，是世界上最小，也是最為人所知的翠鳥科成員之一。"
           },
           {
             "name": "蒼鷺",
-            "sci": "Ardea cinerea"
+            "sci": "Ardea cinerea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ardea_cinerea_7_%28Marek_Szczepanek%29.jpg/500px-Ardea_cinerea_7_%28Marek_Szczepanek%29.jpg",
+            "wikiDesc": "蒼鷺（學名：Ardea cinerea）又稱灰鷺，為鷺科蒼鷺屬的一種涉禽，也是蒼鷺屬的模式種。是歐亞大陸與非洲大陸的濕地中極為常見的水鳥。"
           }
         ]
       }
@@ -30341,11 +30401,15 @@
         "potential": [
           {
             "name": "黑鳶",
-            "sci": "Milvus migrans"
+            "sci": "Milvus migrans",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Milvus_migrans_back%28ThKraft%29.jpg/500px-Milvus_migrans_back%28ThKraft%29.jpg",
+            "wikiDesc": "黑鳶（學名：Milvus migrans），俗稱老鷹、老鳶或雞屎鷹，粵語稱麻鷹（粵拼：maa4 jing1），閩南語作萊葉、獵鴞、鶆鴞（台羅：lāi-hio̍h），客語稱鷂婆（yeu-phò），是鷹形目鷹科鳶屬下的一種猛禽，廣泛分布於歐亞大陸和澳大利亞等地。此鳥種最明顯的特徵是其棕黑的羽色和些微分岔的尾羽。和多數鷹科猛禽不同的是，黑鳶雖然也會主動打獵，但以食腐為主，且非繁殖季會成群生活。"
           },
           {
             "name": "高蹺鴴",
-            "sci": "Himantopus himantopus"
+            "sci": "Himantopus himantopus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Himantopus_himantopus%2C_S%C3%A8te_cf26.jpg/500px-Himantopus_himantopus%2C_S%C3%A8te_cf26.jpg",
+            "wikiDesc": "高蹺鴴（學名：Himantopus himantopus，中國大陸作黑翅長腳鷸），又名長腳鷸、紅腿娘子，為長腳鷸科長腳鷸屬下的一個種。"
           }
         ]
       },
@@ -30361,11 +30425,15 @@
         "potential": [
           {
             "name": "藍磯鶇",
-            "sci": "Monticola solitarius"
+            "sci": "Monticola solitarius",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Monticola_solitarius%2C_Spain_1.jpg/500px-Monticola_solitarius%2C_Spain_1.jpg",
+            "wikiDesc": "藍磯鶇（學名：Monticola solitarius）為鶲科磯鶇屬的鳥類，俗名亞東藍石鶇、水嘴、麻石青。這種類似鶇科的舊世界鶲科，曾經被歸類於鶇科家族。它在南歐、西北非以及從中亞到中國北部和馬來西亞繁殖。"
           },
           {
             "name": "白腹鶇",
-            "sci": "Turdus pallidus"
+            "sci": "Turdus pallidus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Pale_Thrush_%E3%82%B7%E3%83%AD%E3%83%8F%E3%83%A9_%28198496777%29.jpeg/500px-Pale_Thrush_%E3%82%B7%E3%83%AD%E3%83%8F%E3%83%A9_%28198496777%29.jpeg",
+            "wikiDesc": "白腹鶇（學名：Turdus pallidus）屬於鶇科鶇屬，是廣泛分布於東亞和北亞的一種雀鳥。其近緣物種為白眉鶇與灰背鶇。"
           }
         ]
       },
@@ -30381,11 +30449,15 @@
         "potential": [
           {
             "name": "魚鷹",
-            "sci": "Pandion haliaetus"
+            "sci": "Pandion haliaetus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/2010-kabini-osprey.jpg/500px-2010-kabini-osprey.jpg",
+            "wikiDesc": "魚鷹（學名：Pandion haliaetus）又名䲹、鶚、王鴡、雎鳩、西部魚鷹，是一種晝行、善於捕魚的猛禽，廣泛分布於世界各地。其體型較大，長約60厘米，翼展達180厘米。上身呈棕色，頭部及下身主要呈灰色。"
           },
           {
             "name": "大冠鷲",
-            "sci": "Spilornis cheela"
+            "sci": "Spilornis cheela",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg/500px-Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg",
+            "wikiDesc": "大冠鷲（學名：Spilornis cheela）（西拉雅語：Akakul）又名冠蛇鵰、冕蛇鵰、食蛇鵰，粵語俗稱食蛇鷹，是一種中大型猛禽，屬於鷹科一員。分布於熱帶亞洲的森林棲地中。在它廣泛分布的印度次大陸、東南亞和東亞範圍內，存在顯著的變異，一些權威機構更傾向於將其數個亞種視為完全獨立的物種。"
           }
         ]
       },
@@ -30402,11 +30474,15 @@
         "potential": [
           {
             "name": "鉛色水鶇",
-            "sci": "Phoenicurus fuliginosus"
+            "sci": "Phoenicurus fuliginosus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Plumbeous_Water_Redstart_%28male%29.JPG/500px-Plumbeous_Water_Redstart_%28male%29.JPG",
+            "wikiDesc": "鉛色水鶇（學名：Phoenicurus fuliginosus），又名紅尾水鴝、鉛色水鴝，臺灣話稱石青仔（臺羅：tsio̍h-tshenn-á/tsio̍h-tshinn-á），為鶲科紅尾鴝屬下的一個種。分布於南亞、東南亞和中國。雄鳥為灰藍色，雌鳥則為灰色。"
           },
           {
             "name": "紫嘯鶇",
-            "sci": "Myophonus insularis"
+            "sci": "Myophonus insularis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Formosan_Whistling-Thrush_-_Taiwan_S4E6052_%2817047153068%29.jpg/500px-Formosan_Whistling-Thrush_-_Taiwan_S4E6052_%2817047153068%29.jpg",
+            "wikiDesc": "臺灣紫嘯鶇（學名：Myophonus insularis），又稱琉璃鳥、烏磯（臺灣話：Oo-ki）、紫嘯鶇，是雀形目鶲科嘯鶇屬下的一種鳥類。牠們棲息於中低海拔的森林中及溪澗旁，是僅分佈於臺灣的特有種之一。為肉食性，主要以昆蟲等無脊椎動物為食。"
           }
         ]
       },
@@ -30422,11 +30498,15 @@
         "potential": [
           {
             "name": "家燕",
-            "sci": "Hirundo rustica"
+            "sci": "Hirundo rustica",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BB%D0%B0%D1%81%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%28Hirundo_rustica%29%2C_%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE.jpg/500px-%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BB%D0%B0%D1%81%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%28Hirundo_rustica%29%2C_%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE.jpg",
+            "wikiDesc": "家燕（學名：Hirundo rustica）是燕科燕屬的一種鳥類，是全球分布最廣泛的燕類，出現在所有大陸，主要是候鳥，繁殖於全北界，過冬於新、舊熱帶界和東洋界，在南極洲有迷鳥記錄。 家燕是一種外形獨特的雀形目鳥類，具有藍色的上半身和長而深深分叉的尾巴。在英語世界的歐洲地區，家燕通常僅稱為swallow；而在北歐，它是唯一被稱為「swallow」而非「martin」的燕科成員。"
           },
           {
             "name": "埃及聖鹮",
-            "sci": "Threskiornis aethiopicus"
+            "sci": "Threskiornis aethiopicus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Threskiornis_aethiopicus_-Mida_Creek_mud_flats%2C_Kenya-8.jpg/500px-Threskiornis_aethiopicus_-Mida_Creek_mud_flats%2C_Kenya-8.jpg",
+            "wikiDesc": "埃及聖䴉（ㄒㄩㄢˊ）（學名：Threskiornis aethiopicus），又名埃及聖朱鷺、埃及聖鷺、聖䴉、巫婆鳥，是分布於撒哈拉以南非洲與伊拉克東南部的一種朱鷺。牠們在古埃及備受尊敬，經常被製成木乃伊當做智慧之神托特的象徵。如今牠們也被引入到法國、義大利、西班牙、美國與臺灣，且在這些地區已成為強勢的入侵種。"
           }
         ]
       },
@@ -30442,11 +30522,15 @@
         "potential": [
           {
             "name": "魚鷹",
-            "sci": "Pandion haliaetus"
+            "sci": "Pandion haliaetus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/2010-kabini-osprey.jpg/500px-2010-kabini-osprey.jpg",
+            "wikiDesc": "魚鷹（學名：Pandion haliaetus）又名䲹、鶚、王鴡、雎鳩、西部魚鷹，是一種晝行、善於捕魚的猛禽，廣泛分布於世界各地。其體型較大，長約60厘米，翼展達180厘米。上身呈棕色，頭部及下身主要呈灰色。"
           },
           {
             "name": "黑鳶",
-            "sci": "Milvus migrans"
+            "sci": "Milvus migrans",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Milvus_migrans_back%28ThKraft%29.jpg/500px-Milvus_migrans_back%28ThKraft%29.jpg",
+            "wikiDesc": "黑鳶（學名：Milvus migrans），俗稱老鷹、老鳶或雞屎鷹，粵語稱麻鷹（粵拼：maa4 jing1），閩南語作萊葉、獵鴞、鶆鴞（台羅：lāi-hio̍h），客語稱鷂婆（yeu-phò），是鷹形目鷹科鳶屬下的一種猛禽，廣泛分布於歐亞大陸和澳大利亞等地。此鳥種最明顯的特徵是其棕黑的羽色和些微分岔的尾羽。和多數鷹科猛禽不同的是，黑鳶雖然也會主動打獵，但以食腐為主，且非繁殖季會成群生活。"
           }
         ]
       },
@@ -30463,11 +30547,15 @@
         "potential": [
           {
             "name": "磯鷸",
-            "sci": "Actitis hypoleucos"
+            "sci": "Actitis hypoleucos",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Actitis_hypoleucos_-_Laem_Pak_Bia.jpg/500px-Actitis_hypoleucos_-_Laem_Pak_Bia.jpg",
+            "wikiDesc": "磯鷸（學名：Actitis hypoleucos），是鷸科的一種。是一種小型古北區涉禽。這種鳥與其美洲的姊妹物種斑腹磯鷸（A. macularia）一起組成了磯鷸屬（Actitis）。"
           },
           {
             "name": "小白鷺",
-            "sci": "Egretta garzetta"
+            "sci": "Egretta garzetta",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Egretta_garzetta_EM1B0094_%2847336068462%29.jpg/500px-Egretta_garzetta_EM1B0094_%2847336068462%29.jpg",
+            "wikiDesc": "小白鷺（學名：Egretta garzetta），又稱白鷺，是鷺科中的一種小型鷺。牠是一種白色的鳥，具有細長的黑色喙、長黑腿，以及在西部種群中有黃色的腳。作為一種水鳥，牠在淺水和陸地上覓食，食用各種小型生物。"
           }
         ]
       },
@@ -30483,11 +30571,15 @@
         "potential": [
           {
             "name": "唐白鷺",
-            "sci": "Egretta eulophotes"
+            "sci": "Egretta eulophotes",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Zengwen_River_Mouth_Wetlands_Yi-Cheng%2C_Chen_555594020_-_9.jpg/500px-Zengwen_River_Mouth_Wetlands_Yi-Cheng%2C_Chen_555594020_-_9.jpg",
+            "wikiDesc": "唐白鷺（學名：Egretta eulophotes）又名黃嘴白鷺，是一種罕見的鷺科白鷺屬鳥類，一般於俄羅斯、朝鮮、南韓和中國大陸繁殖，然後向南遷徙，途經日本、台灣、菲律賓、馬來西亞、新加坡和印度尼西亞，主要在東維薩亞斯（萊特島、保和和宿霧）一帶度冬。 唐白鷺屬於易危物種，最大的威脅是棲息地的喪失。目前估計共有2,600到3,400隻。"
           },
           {
             "name": "東方環頸鴴",
-            "sci": "Charadrius alexandrinus"
+            "sci": "Charadrius alexandrinus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Kentish_plover_%28Charadrius_alexandrinus%29_Photograph_by_Shantanu_Kuveskar.jpg/500px-Kentish_plover_%28Charadrius_alexandrinus%29_Photograph_by_Shantanu_Kuveskar.jpg",
+            "wikiDesc": "東方環頸鴴（學名：Anarhynchus alexandrinus）為鴴科彎嘴鴴屬的鳥類，又名環頸鴴，曾被分類在鴴屬。該物種的模式產地在埃及。 東方環頸鴴是一種小型涉禽 （40—44 g（1.4—1.6 oz）），屬於鴴科，主要在鹽湖、潟湖和海岸繁殖，並棲息於沙丘、沼澤、半乾旱沙漠和苔原。"
           }
         ]
       },
@@ -30503,11 +30595,15 @@
         "potential": [
           {
             "name": "紅冠水雞",
-            "sci": "Gallinula chloropus"
+            "sci": "Gallinula chloropus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg/500px-Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg",
+            "wikiDesc": "紅冠水雞（學名：Gallinula chloropus）為秧雞科黑水雞屬的鳥類，又名黑水雞、水鵁鴒（臺灣話：tsuí-ka-līng）、烏水雞（臺灣話：oo-tsuí-ke）、田雞仔（臺灣話：tshân-ke-á）。分佈在古北界的許多地區，從非洲到歐洲和亞洲。該物種遍布世界各地，模式產地在英格蘭。"
           },
           {
             "name": "小鷿鷉",
-            "sci": "Tachybaptus ruficollis"
+            "sci": "Tachybaptus ruficollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Litle_Grebe_-_Tachybaptus_ruficollis.jpg/500px-Litle_Grebe_-_Tachybaptus_ruficollis.jpg",
+            "wikiDesc": "小鸊鷉（學名：Tachybaptus ruficollis），又作小鷿鷈、小鸊鷈，俗稱水葫蘆、王八鴨子、油葫蘆、油鴨、水避仔（臺灣話：tsúi-pī-á），是鸊鷉科小鸊鷉屬下的一種鳥類。牠們分佈在歐洲、亞洲和非洲的濕地、沼澤、湖泊和水塘等水域環境中。牠們相當善於潛入水中覓食，主要食用水生昆蟲、蝌蚪、小魚和甲殼類等水中生物。"
           }
         ]
       }
@@ -30525,11 +30621,15 @@
         "potential": [
           {
             "name": "唐白鷺",
-            "sci": "Egretta eulophotes"
+            "sci": "Egretta eulophotes",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Zengwen_River_Mouth_Wetlands_Yi-Cheng%2C_Chen_555594020_-_9.jpg/500px-Zengwen_River_Mouth_Wetlands_Yi-Cheng%2C_Chen_555594020_-_9.jpg",
+            "wikiDesc": "唐白鷺（學名：Egretta eulophotes）又名黃嘴白鷺，是一種罕見的鷺科白鷺屬鳥類，一般於俄羅斯、朝鮮、南韓和中國大陸繁殖，然後向南遷徙，途經日本、台灣、菲律賓、馬來西亞、新加坡和印度尼西亞，主要在東維薩亞斯（萊特島、保和和宿霧）一帶度冬。 唐白鷺屬於易危物種，最大的威脅是棲息地的喪失。目前估計共有2,600到3,400隻。"
           },
           {
             "name": "東方環頸鴴",
-            "sci": "Charadrius alexandrinus"
+            "sci": "Charadrius alexandrinus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Kentish_plover_%28Charadrius_alexandrinus%29_Photograph_by_Shantanu_Kuveskar.jpg/500px-Kentish_plover_%28Charadrius_alexandrinus%29_Photograph_by_Shantanu_Kuveskar.jpg",
+            "wikiDesc": "東方環頸鴴（學名：Anarhynchus alexandrinus）為鴴科彎嘴鴴屬的鳥類，又名環頸鴴，曾被分類在鴴屬。該物種的模式產地在埃及。 東方環頸鴴是一種小型涉禽 （40—44 g（1.4—1.6 oz）），屬於鴴科，主要在鹽湖、潟湖和海岸繁殖，並棲息於沙丘、沼澤、半乾旱沙漠和苔原。"
           }
         ]
       },
@@ -30545,11 +30645,15 @@
         "potential": [
           {
             "name": "小青足鷸",
-            "sci": "Tringa stagnatilis"
+            "sci": "Tringa stagnatilis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Tringa_stagnatilis_2_-_Laem_Pak_Bia.jpg/500px-Tringa_stagnatilis_2_-_Laem_Pak_Bia.jpg",
+            "wikiDesc": "小青足鷸（學名：Tringa stagnatilis）又名澤鷸，為鷸科鷸屬的鳥類。是一種小型涉禽。它是一種相當小的鷸，在從東歐到俄羅斯遠東地區的開闊草原地帶和針葉林濕地中繁殖。"
           },
           {
             "name": "鷹斑鷸",
-            "sci": "Tringa glareola"
+            "sci": "Tringa glareola",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Wood_Sandpiper_Safari_Park.jpg/500px-Wood_Sandpiper_Safari_Park.jpg",
+            "wikiDesc": "鷹斑鷸（學名：Tringa glareola）又名林鷸，為鷸科鷸屬的鳥類。是一種小型涉禽。這是一種歐亞物種，是shanks（長腿鷸）中體型最小的，它們是一種中等大小、腿部較長的涉禽，主要棲息在淡水和濕地環境中，與其他類似物種的海洋或沿海棲地不同。"
           }
         ]
       },
@@ -30566,11 +30670,15 @@
         "potential": [
           {
             "name": "鴛鴦",
-            "sci": "Aix galericulata"
+            "sci": "Aix galericulata",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Pair_of_mandarin_ducks.jpg/500px-Pair_of_mandarin_ducks.jpg",
+            "wikiDesc": "鴛鴦（學名：Aix galericulata），本名鸂（ㄒㄧ）鶒（ㄔˋ），又稱匹鳥、鄧木鳥或紫鴛鴦，是雁形目雁鴨科鴛鴦屬的一種水鳥。亦經常出現在中國古代文學作品和神話傳説中。其中鴛指雄鳥，鴦指雌鳥。"
           },
           {
             "name": "紅冠水雞",
-            "sci": "Gallinula chloropus"
+            "sci": "Gallinula chloropus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg/500px-Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg",
+            "wikiDesc": "紅冠水雞（學名：Gallinula chloropus）為秧雞科黑水雞屬的鳥類，又名黑水雞、水鵁鴒（臺灣話：tsuí-ka-līng）、烏水雞（臺灣話：oo-tsuí-ke）、田雞仔（臺灣話：tshân-ke-á）。分佈在古北界的許多地區，從非洲到歐洲和亞洲。該物種遍布世界各地，模式產地在英格蘭。"
           }
         ]
       },
@@ -30586,11 +30694,15 @@
         "potential": [
           {
             "name": "樹鵲",
-            "sci": "Dendrocitta formosae"
+            "sci": "Dendrocitta formosae",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Dendrocitta_formosae_formosae_1.jpg/431px-Dendrocitta_formosae_formosae_1.jpg",
+            "wikiDesc": "樹鵲（學名：Dendrocitta formosae），又名灰樹鵲，俗稱山八哥，鴉科樹鵲屬，是亞洲的一種樹鵲，屬於中型且尾巴較長的鴉科鳥類。此物種由羅伯特·斯文豪於1863年首次描述。牠們廣泛分布於喜馬拉雅山脈山麓地區，橫跨印度次大陸，並延伸至中南半島、中國南部及台灣。"
           },
           {
             "name": "五色鳥",
-            "sci": "Psilopogon nuchalis"
+            "sci": "Psilopogon nuchalis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Taiwan_barbet.jpg/500px-Taiwan_barbet.jpg",
+            "wikiDesc": "五色鳥（學名：Psilopogon nuchalis，中國大陸、香港作台灣擬啄木鳥，臺灣話：花仔和尚、花褂鳥），又作臺灣擬啄木、台灣擬啄木，是鴷形目鬚鴷科擬啄木屬下的一種鳥類。這個物種是臺灣特有的鳥類，主要以果實為食，曾一度被視為黑眉擬啄木的亞種，但在2006年後拆分為獨立物種。 五色鳥的體長約20—22公分，其身體大部分為翠綠色，而頭部則有藍、黃、紅、黑四色，故得名「五色鳥」；另因其叫聲為單調而響亮的「嘓嘓嘓……」，類似於敲木魚的聲音，而有著「花和尚」的別稱。"
           }
         ]
       },
@@ -30606,11 +30718,15 @@
         "potential": [
           {
             "name": "夜鷺",
-            "sci": "Nycticorax nycticorax"
+            "sci": "Nycticorax nycticorax",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Black-crowned_Night_Heron_--_Nycticorax_nycticorax.jpg/500px-Black-crowned_Night_Heron_--_Nycticorax_nycticorax.jpg",
+            "wikiDesc": "夜鷺（學名：Nycticorax nycticorax）又稱黑頂夜鷺，俗稱灰窪子、夜窪子、星雁、暗光鳥仔，是鷺科夜鷺屬的一種。"
           },
           {
             "name": "鳳頭潛鴨",
-            "sci": "Aythya fuligula"
+            "sci": "Aythya fuligula",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Tufted-Duck-male-female.jpg/500px-Tufted-Duck-male-female.jpg",
+            "wikiDesc": "鳳頭潛鴨（Tufted Duck，學名：Aythya fuligula）是一種中等大小的潛鴨，又名澤鳧、鳳頭鴨子、黑頭四鴨。"
           }
         ]
       },
@@ -30626,11 +30742,15 @@
         "potential": [
           {
             "name": "翠鳥",
-            "sci": "Alcedo atthis"
+            "sci": "Alcedo atthis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Alcedo_Atthis.jpg/500px-Alcedo_Atthis.jpg",
+            "wikiDesc": "翠鳥（學名：Alcedo atthis，中國大陸、香港稱普通翠鳥，英語：Common kingfisher、Eurasian kingfisher、River kingfisher），又稱鴗、魚狗、魚獅、魚虎、翡翠鳥、釣魚翁，是佛法僧目翠鳥科翠鳥屬下的其中一種鳥類。這個物種由瑞典博物學家卡爾·林奈於1758年命名，分佈於歐亞非三塊大陸上的水域邊，主要以魚類為食。目前翠鳥共有7個亞種，是世界上最小，也是最為人所知的翠鳥科成員之一。"
           },
           {
             "name": "夜鷺",
-            "sci": "Nycticorax nycticorax"
+            "sci": "Nycticorax nycticorax",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Black-crowned_Night_Heron_--_Nycticorax_nycticorax.jpg/500px-Black-crowned_Night_Heron_--_Nycticorax_nycticorax.jpg",
+            "wikiDesc": "夜鷺（學名：Nycticorax nycticorax）又稱黑頂夜鷺，俗稱灰窪子、夜窪子、星雁、暗光鳥仔，是鷺科夜鷺屬的一種。"
           }
         ]
       }
@@ -30648,11 +30768,15 @@
         "potential": [
           {
             "name": "高蹺鴴",
-            "sci": "Himantopus himantopus"
+            "sci": "Himantopus himantopus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Himantopus_himantopus%2C_S%C3%A8te_cf26.jpg/500px-Himantopus_himantopus%2C_S%C3%A8te_cf26.jpg",
+            "wikiDesc": "高蹺鴴（學名：Himantopus himantopus，中國大陸作黑翅長腳鷸），又名長腳鷸、紅腿娘子，為長腳鷸科長腳鷸屬下的一個種。"
           },
           {
             "name": "琵嘴鴨",
-            "sci": "Spatula clypeata"
+            "sci": "Spatula clypeata",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Northern_shoveler_Steve_Sinclair_outreach_use_only_%2819838806616%29.jpg/500px-Northern_shoveler_Steve_Sinclair_outreach_use_only_%2819838806616%29.jpg",
+            "wikiDesc": "琵嘴鴨（學名：Spatula clypeata），又名琵琶嘴鴨、鏟土鴨、杯鑿、廣味鳧。"
           }
         ]
       },
@@ -30668,11 +30792,15 @@
         "potential": [
           {
             "name": "大杓鷸",
-            "sci": "Numenius arquata"
+            "sci": "Numenius arquata",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Eurasian_Curlew.jpg/500px-Eurasian_Curlew.jpg",
+            "wikiDesc": "大杓鷸（學名：Numenius arquata）又名白腰杓鷸，為鷸科杓鷸屬的鳥類。是一種非常大型的涉禽，隸屬於鷸科（Scolopacidae）。它是最廣泛分佈的杓鷸之一，繁殖範圍遍及溫帶的歐洲和亞洲。"
           },
           {
             "name": "黑腹濱鷸",
-            "sci": "Calidris alpina"
+            "sci": "Calidris alpina",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Calidris-alpina-001_edit.jpg/500px-Calidris-alpina-001_edit.jpg",
+            "wikiDesc": "黑腹濱鷸（學名：Calidris alpina）為鷸科濱鷸屬的鳥類。該物種的模式產地在拉普蘭省。 英文名稱「dunlin」是「dunling」的方言形式，首次記錄於1531年至1532年間。"
           }
         ]
       },
@@ -30689,11 +30817,15 @@
         "potential": [
           {
             "name": "黑尾鷗",
-            "sci": "Larus crassirostris"
+            "sci": "Larus crassirostris",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Laridae_in_Beijing_Zoo.JPG/500px-Laridae_in_Beijing_Zoo.JPG",
+            "wikiDesc": "黑尾鷗（學名：Larus crassirostris）是一種中型海鷗，身長大概45公分，翼展大概126至128公分。這種雀鳥聚居於東亞地區，當中包括中國大陸、台灣、日本和韓國，也會到阿拉斯加至北美洲東北部分一帶漂泊。"
           },
           {
             "name": "紅嘴鷗",
-            "sci": "Chroicocephalus ridibundus"
+            "sci": "Chroicocephalus ridibundus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Fmc.nikon.d40_-_Seagull_%28by-sa%29.jpg/500px-Fmc.nikon.d40_-_Seagull_%28by-sa%29.jpg",
+            "wikiDesc": "紅嘴鷗（學名：Chroicocephalus ridibundus）是一種鷗科棕頭鷗屬的鳥類，俗稱水鴿子，體形和毛色都與鴿子相若。是一種小型的鷗，在包括歐洲在內的大部分古北界地區繁殖，並且在加拿大東部的沿海地區也有繁殖。大部分的紅嘴鷗是遷徙性的，會在冬季遷往更南方的地區，但一些鳥則居住在歐洲最西部的氣候較為溫和的地區。"
           }
         ]
       },
@@ -30709,11 +30841,15 @@
         "potential": [
           {
             "name": "綠繡眼",
-            "sci": "Zosterops simplex"
+            "sci": "Zosterops simplex",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Resting_Zosterops_japonicus.jpg/500px-Resting_Zosterops_japonicus.jpg",
+            "wikiDesc": "斯氏繡眼 （學名：Zosterops simplex），台灣俗稱綠繡眼，香港俗稱相思，是雀形目繡眼鳥科的一種鳥類。主要分布於中國東部、台灣、越南北部、馬來半島、蘇門答臘及婆羅洲。該物種已被引入至南加州各地。"
           },
           {
             "name": "黑枕藍鶲",
-            "sci": "Hypothymis azurea"
+            "sci": "Hypothymis azurea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Black-naped_Monarch_-_Thailand_S4E7277_%2819449130711%29.jpg/500px-Black-naped_Monarch_-_Thailand_S4E7277_%2819449130711%29.jpg",
+            "wikiDesc": "黑枕藍鶲（中國大陸、香港作黑枕王鶲，學名：Hypothymis azurea），為王鶲科王鶲屬的鳥類。主要分布於熱帶亞洲，模式產地位於菲律賓呂宋島。 黑枕藍鶲是一種纖細敏捷的雀形目鳥類，隸屬於南亞及東南亞的王鶲科。"
           }
         ]
       },
@@ -30729,11 +30865,15 @@
         "potential": [
           {
             "name": "蒼鷺",
-            "sci": "Ardea cinerea"
+            "sci": "Ardea cinerea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ardea_cinerea_7_%28Marek_Szczepanek%29.jpg/500px-Ardea_cinerea_7_%28Marek_Szczepanek%29.jpg",
+            "wikiDesc": "蒼鷺（學名：Ardea cinerea）又稱灰鷺，為鷺科蒼鷺屬的一種涉禽，也是蒼鷺屬的模式種。是歐亞大陸與非洲大陸的濕地中極為常見的水鳥。"
           },
           {
             "name": "大白鷺",
-            "sci": "Ardea alba"
+            "sci": "Ardea alba",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Great_Egret_%28Egretta_alba%29%2C_Skala_Kallonis%2C_Lesvos%2C_Greece%2C_19.04.2015_%2817449816992%29.jpg/500px-Great_Egret_%28Egretta_alba%29%2C_Skala_Kallonis%2C_Lesvos%2C_Greece%2C_19.04.2015_%2817449816992%29.jpg",
+            "wikiDesc": "大白鷺（學名：Ardea alba），別名白鷺鷥、鷺鷥、風漂公子、白漂鳥、冬莊。鷺科蒼鷺屬的一種。其種加詞「alba」意為「白色的」。"
           }
         ]
       }
@@ -30752,11 +30892,15 @@
         "potential": [
           {
             "name": "紅冠水雞",
-            "sci": "Gallinula chloropus"
+            "sci": "Gallinula chloropus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg/500px-Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg",
+            "wikiDesc": "紅冠水雞（學名：Gallinula chloropus）為秧雞科黑水雞屬的鳥類，又名黑水雞、水鵁鴒（臺灣話：tsuí-ka-līng）、烏水雞（臺灣話：oo-tsuí-ke）、田雞仔（臺灣話：tshân-ke-á）。分佈在古北界的許多地區，從非洲到歐洲和亞洲。該物種遍布世界各地，模式產地在英格蘭。"
           },
           {
             "name": "夜鷺",
-            "sci": "Nycticorax nycticorax"
+            "sci": "Nycticorax nycticorax",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Black-crowned_Night_Heron_--_Nycticorax_nycticorax.jpg/500px-Black-crowned_Night_Heron_--_Nycticorax_nycticorax.jpg",
+            "wikiDesc": "夜鷺（學名：Nycticorax nycticorax）又稱黑頂夜鷺，俗稱灰窪子、夜窪子、星雁、暗光鳥仔，是鷺科夜鷺屬的一種。"
           }
         ]
       },
@@ -30773,11 +30917,15 @@
         "potential": [
           {
             "name": "白鶺鴒",
-            "sci": "Motacilla alba"
+            "sci": "Motacilla alba",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/White_wagtail-_%28Non-breeding-_leucopsis_race%29_at_Kolkata_I_IMG_9947.jpg/500px-White_wagtail-_%28Non-breeding-_leucopsis_race%29_at_Kolkata_I_IMG_9947.jpg",
+            "wikiDesc": "白鶺鴒（學名：Motacilla alba），是一種鶺鴒科鶺鴒屬的一種小型鳥類，該物種主要分布於古北界的大部分歐洲、亞洲地區以及部分北非地區；在阿拉斯加西部也有少量繁殖。牠在棲息範圍內的溫暖地區定居，但在其他地方會遷徙至非洲。總共有9至11個M. alba的亞種；在愛爾蘭與大不列顛，黑背的亞種被稱為斑鶺鴒 \"pied wagtail\" （M. a."
           },
           {
             "name": "磯鷸",
-            "sci": "Actitis hypoleucos"
+            "sci": "Actitis hypoleucos",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Actitis_hypoleucos_-_Laem_Pak_Bia.jpg/500px-Actitis_hypoleucos_-_Laem_Pak_Bia.jpg",
+            "wikiDesc": "磯鷸（學名：Actitis hypoleucos），是鷸科的一種。是一種小型古北區涉禽。這種鳥與其美洲的姊妹物種斑腹磯鷸（A. macularia）一起組成了磯鷸屬（Actitis）。"
           }
         ]
       },
@@ -30793,11 +30941,15 @@
         "potential": [
           {
             "name": "黃山雀",
-            "sci": "Machlolophus holsti"
+            "sci": "Machlolophus holsti",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Taiwan_tit.jpg/500px-Taiwan_tit.jpg",
+            "wikiDesc": "黃山雀（學名：Machlolophus holsti），又名台灣黃山雀、台灣四十雀，俗稱師公鳥，是一種棲息於中低海拔山區的雀鳥。台灣特有種，也是稀有的留鳥。 在溪頭其族群量較多，喜歡棲息於海拔2,000公尺以下之闊葉林，以海拔1,500公尺左右山區較常見，冬季時會遷移至海拔700公尺附近的低山區，甚至出現在森林邊緣之住家大樹上。"
           },
           {
             "name": "白尾鴝",
-            "sci": "Myiomela leucura"
+            "sci": "Myiomela leucura",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Myiomela_leucura_-_Mae_Wong.jpg/500px-Myiomela_leucura_-_Mae_Wong.jpg",
+            "wikiDesc": "白尾鴝（學名：Myiomela leucura）又名白尾藍地鴝，為鶲科地鴝屬的鳥類，俗名白尾藍歐鴝、白尾斑地鴝。分布於巴基斯坦、印度、孟加拉、緬甸、泰國、柬埔寨、寮國、越南、馬來西亞、台灣以及中國大陸的甘肅、陝西、湖北、四川、貴州、雲南、廣西、海南等地，多見於灌叢及林中、或在林下的陰暗處及較潮濕的地方、或棲於溝谷林中、或溝谷近旁、多在地上活動以及有時也在矮枝上。該物種的模式產地在尼泊爾。"
           }
         ]
       },
@@ -30813,11 +30965,15 @@
         "potential": [
           {
             "name": "鸕鶿",
-            "sci": "Phalacrocorax carbo"
+            "sci": "Phalacrocorax carbo",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Phalacrocorax_carbo_Vic.jpg/500px-Phalacrocorax_carbo_Vic.jpg",
+            "wikiDesc": "鸕鶿（學名：Phalacrocorax carbo），別名鷺鶿、川鵜、水老鴉、魚鷹、鷧（ㄧˋ）、烏鬼，是一種廣泛分佈的鸕鶿屬海鳥。 鸕鶿主要生活在舊大陸和北美洲東海岸，一般在懸崖上或樹上作窩，但是越來越多地也在內陸生活。在海草和嫩枝達成的窩裏一次下3至4枚蛋。"
           },
           {
             "name": "魚鷹",
-            "sci": "Pandion haliaetus"
+            "sci": "Pandion haliaetus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/2010-kabini-osprey.jpg/500px-2010-kabini-osprey.jpg",
+            "wikiDesc": "魚鷹（學名：Pandion haliaetus）又名䲹、鶚、王鴡、雎鳩、西部魚鷹，是一種晝行、善於捕魚的猛禽，廣泛分布於世界各地。其體型較大，長約60厘米，翼展達180厘米。上身呈棕色，頭部及下身主要呈灰色。"
           }
         ]
       },
@@ -30833,11 +30989,15 @@
         "potential": [
           {
             "name": "帝雉",
-            "sci": "Syrmaticus mikado"
+            "sci": "Syrmaticus mikado",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Mikado_Pheasant_398.jpg/500px-Mikado_Pheasant_398.jpg",
+            "wikiDesc": "黑長尾雉（學名：Syrmaticus mikado），常稱帝雉，臺灣帝雉、海雉及烏雉是為另稱，臺灣特有的長尾雉屬鳥類，分布於臺灣的中、高海拔山區，最高曾見於3850公尺附近，是臺灣的雉科鳥類中棲息於最高海拔者。帝雉曾被列為世界近危鳥類，與藍腹鷴同為名列國際自然保護聯盟瀕危物種紅色名錄中。帝雉的形象被用在新臺幣1000元紙鈔的背面，以及中華航空於2016年所引進新型客機空中巴士A350的機身彩繪，曾為2007年臺灣永續生態協會、臺灣國際觀鳥協會與立委推動的非官方「國鳥選拔」中被提名的鳥種之一。"
           },
           {
             "name": "藪鳥",
-            "sci": "Liocichla steereii"
+            "sci": "Liocichla steereii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Steere%27s_Liocichla_-_Taiwan_S4E6694_%2819301823680%29.jpg/500px-Steere%27s_Liocichla_-_Taiwan_S4E6694_%2819301823680%29.jpg",
+            "wikiDesc": "黃胸藪眉（學名：Liocichla steerii），又名藪鳥、黃痣藪鶥，俗稱媒婆鳥、老鼠鳥、美人痣、蕃藷仔鳥、蕃藷鳥仔（閩南語）、溪頭老鼠，是畫眉科藪鶥屬的一種，為台灣特有種，分布於海拔約 1000 至 2800 公尺的山區。種名是來自美國密西根大學教授鳥類學家史蒂瑞（Joseph Beal Steere），史蒂瑞於1873年10月至1874年3月來臺調查半年之久，率先發現藪鳥。第一次記錄到這種鳥類就是出自於他的觀察。"
           }
         ]
       }
@@ -30855,11 +31015,15 @@
         "potential": [
           {
             "name": "戴勝",
-            "sci": "Upupa epops"
+            "sci": "Upupa epops",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Common_hoopoe_%28Upupa_epops_epops%29_Udaipur.jpg/500px-Common_hoopoe_%28Upupa_epops_epops%29_Udaipur.jpg",
+            "wikiDesc": "戴勝（學名：Upupa epops，英語：Eurasian hoopoe），俗稱臭姑姑、墓崆雞、塚崆鳥、香香雞，是犀鳥目戴勝科戴勝屬的一種鳥類。戴勝頭有冠，五色如方勝，故而得名。戴勝有許多異名，如：戴任﹑戴紝、墓壙鳥（金門話：bōng-khòng-tsiáu）、鶝、鴔鵖、鵖鴔等。"
           },
           {
             "name": "紅尾伯勞",
-            "sci": "Lanius cristatus"
+            "sci": "Lanius cristatus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Lanius_cristatus_-_Surin.jpg/500px-Lanius_cristatus_-_Surin.jpg",
+            "wikiDesc": "紅尾伯勞（學名：Lanius cristatus）為伯勞科伯勞屬的一種，俗名褐伯勞。主要分布於亞洲。牠與紅背伯勞（L. collurio）和荒漠伯勞（L. isabellinus）關係密切。"
           }
         ]
       },
@@ -30875,11 +31039,15 @@
         "potential": [
           {
             "name": "藪鳥",
-            "sci": "Liocichla steereii"
+            "sci": "Liocichla steereii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Steere%27s_Liocichla_-_Taiwan_S4E6694_%2819301823680%29.jpg/500px-Steere%27s_Liocichla_-_Taiwan_S4E6694_%2819301823680%29.jpg",
+            "wikiDesc": "黃胸藪眉（學名：Liocichla steerii），又名藪鳥、黃痣藪鶥，俗稱媒婆鳥、老鼠鳥、美人痣、蕃藷仔鳥、蕃藷鳥仔（閩南語）、溪頭老鼠，是畫眉科藪鶥屬的一種，為台灣特有種，分布於海拔約 1000 至 2800 公尺的山區。種名是來自美國密西根大學教授鳥類學家史蒂瑞（Joseph Beal Steere），史蒂瑞於1873年10月至1874年3月來臺調查半年之久，率先發現藪鳥。第一次記錄到這種鳥類就是出自於他的觀察。"
           },
           {
             "name": "紅頭山雀",
-            "sci": "Aegithalos concinnus"
+            "sci": "Aegithalos concinnus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Black-throated_Tit_%28Aegithalos_concinnus%29_-on_branch.jpg/500px-Black-throated_Tit_%28Aegithalos_concinnus%29_-on_branch.jpg",
+            "wikiDesc": "紅頭山雀（學名：Aegithalos concinnus）為長尾山雀科長尾山雀屬的雀形目鳥類，又名紅頭長尾山雀或紅頂山雀、俗稱小老虎、紅寶寶兒、紅白面只，常見於東亞、南亞等地區中低海拔山區，分布於巴基斯坦、尼泊爾、錫金、不丹、印度、孟加拉、緬甸、寮國、越南、台灣以及中國的自西藏、長江流域從四川東抵江蘇沿海地帶、北至甘肅、陝西、河南等省南部、南抵雲南、貴州、廣西、廣東、福建等地，一般棲息於灌叢或喬木間。該物種的模式產地在浙江舟山。紅頭山雀經常與山雀科和畫眉科的鳥類混淆。"
           }
         ]
       },
@@ -30895,11 +31063,15 @@
         "potential": [
           {
             "name": "鸕鶿",
-            "sci": "Phalacrocorax carbo"
+            "sci": "Phalacrocorax carbo",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Phalacrocorax_carbo_Vic.jpg/500px-Phalacrocorax_carbo_Vic.jpg",
+            "wikiDesc": "鸕鶿（學名：Phalacrocorax carbo），別名鷺鶿、川鵜、水老鴉、魚鷹、鷧（ㄧˋ）、烏鬼，是一種廣泛分佈的鸕鶿屬海鳥。 鸕鶿主要生活在舊大陸和北美洲東海岸，一般在懸崖上或樹上作窩，但是越來越多地也在內陸生活。在海草和嫩枝達成的窩裏一次下3至4枚蛋。"
           },
           {
             "name": "小水鴨",
-            "sci": "Anas crecca"
+            "sci": "Anas crecca",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Flickr_-_Rainbirder_-_EurasianTeal_in_flight_%28cropped%29.jpg/500px-Flickr_-_Rainbirder_-_EurasianTeal_in_flight_%28cropped%29.jpg",
+            "wikiDesc": "小水鴨（中國大陸作綠翅鴨，香港作綠翅鴨）（學名：Anas crecca），又名小鳧、小麻鴨、小蜆鴨、小食鴨。"
           }
         ]
       },
@@ -30915,11 +31087,15 @@
         "potential": [
           {
             "name": "大冠鷲",
-            "sci": "Spilornis cheela"
+            "sci": "Spilornis cheela",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg/500px-Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg",
+            "wikiDesc": "大冠鷲（學名：Spilornis cheela）（西拉雅語：Akakul）又名冠蛇鵰、冕蛇鵰、食蛇鵰，粵語俗稱食蛇鷹，是一種中大型猛禽，屬於鷹科一員。分布於熱帶亞洲的森林棲地中。在它廣泛分布的印度次大陸、東南亞和東亞範圍內，存在顯著的變異，一些權威機構更傾向於將其數個亞種視為完全獨立的物種。"
           },
           {
             "name": "小鷿鷉",
-            "sci": "Tachybaptus ruficollis"
+            "sci": "Tachybaptus ruficollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Litle_Grebe_-_Tachybaptus_ruficollis.jpg/500px-Litle_Grebe_-_Tachybaptus_ruficollis.jpg",
+            "wikiDesc": "小鸊鷉（學名：Tachybaptus ruficollis），又作小鷿鷈、小鸊鷈，俗稱水葫蘆、王八鴨子、油葫蘆、油鴨、水避仔（臺灣話：tsúi-pī-á），是鸊鷉科小鸊鷉屬下的一種鳥類。牠們分佈在歐洲、亞洲和非洲的濕地、沼澤、湖泊和水塘等水域環境中。牠們相當善於潛入水中覓食，主要食用水生昆蟲、蝌蚪、小魚和甲殼類等水中生物。"
           }
         ]
       },
@@ -30935,11 +31111,15 @@
         "potential": [
           {
             "name": "藍磯鶇",
-            "sci": "Monticola solitarius"
+            "sci": "Monticola solitarius",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Monticola_solitarius%2C_Spain_1.jpg/500px-Monticola_solitarius%2C_Spain_1.jpg",
+            "wikiDesc": "藍磯鶇（學名：Monticola solitarius）為鶲科磯鶇屬的鳥類，俗名亞東藍石鶇、水嘴、麻石青。這種類似鶇科的舊世界鶲科，曾經被歸類於鶇科家族。它在南歐、西北非以及從中亞到中國北部和馬來西亞繁殖。"
           },
           {
             "name": "黃尾鴝",
-            "sci": "Phoenicurus auroreus"
+            "sci": "Phoenicurus auroreus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Daurian_redstart_at_Daisen_Park_in_Osaka%2C_January_2016.jpg/500px-Daurian_redstart_at_Daisen_Park_in_Osaka%2C_January_2016.jpg",
+            "wikiDesc": "黃尾鴝（學名：Phoenicurus auroreus）為鶲科紅尾鴝屬下的一個種。俗名灰頂茶鴝、紅尾溜，大陸稱北紅尾鴝。全長14至15公分，是中等體型而色彩艷麗的紅尾鴝屬鳥類。"
           }
         ]
       },
@@ -30955,11 +31135,15 @@
         "potential": [
           {
             "name": "頭烏線",
-            "sci": "Alcippe brunnea"
+            "sci": "Alcippe brunnea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Gould%27s_Fulvetta_3057.jpg/500px-Gould%27s_Fulvetta_3057.jpg",
+            "wikiDesc": "頭烏線（學名：Schoeniparus brunneus），又名褐頂雀鶥，是雀眉科的一種，分布於台灣和中國大陸。該物種的保護狀況被評為無危。 頭烏線的平均體重約為16.0克。"
           },
           {
             "name": "小彎嘴",
-            "sci": "Pomatorhinus musicus"
+            "sci": "Pomatorhinus musicus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Streak-breasted_Scimitar_Babbler_6585.jpg/500px-Streak-breasted_Scimitar_Babbler_6585.jpg",
+            "wikiDesc": "小彎嘴（學名：Pomatorhinus musicus），又名臺灣棕頸鉤嘴鶥、小彎嘴鶥或小彎嘴畫眉，是臺灣特有的畫眉科彎嘴鶥屬鳥類。該物種的保護狀況被評為無危。小彎嘴的棲息地包括亞熱帶或熱帶的濕潤低地林和亞熱帶或熱帶的濕潤山地林。"
           }
         ]
       }
@@ -30977,11 +31161,15 @@
         "potential": [
           {
             "name": "黑嘴鷗",
-            "sci": "Saundersilarus saundersi"
+            "sci": "Saundersilarus saundersi",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Saunders%27s_Gull_-_Hong_Kong_2.jpg/500px-Saunders%27s_Gull_-_Hong_Kong_2.jpg",
+            "wikiDesc": "黑嘴鷗（學名Saundersilarus saundersi），是黑嘴鷗屬的一種。這種鷗主要分佈於中國、日本、北韓、南韓、澳門、俄羅斯、台灣和越南。 它的自然棲地為河口水域和潮間帶沼澤。"
           },
           {
             "name": "大白鷺",
-            "sci": "Ardea alba"
+            "sci": "Ardea alba",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Great_Egret_%28Egretta_alba%29%2C_Skala_Kallonis%2C_Lesvos%2C_Greece%2C_19.04.2015_%2817449816992%29.jpg/500px-Great_Egret_%28Egretta_alba%29%2C_Skala_Kallonis%2C_Lesvos%2C_Greece%2C_19.04.2015_%2817449816992%29.jpg",
+            "wikiDesc": "大白鷺（學名：Ardea alba），別名白鷺鷥、鷺鷥、風漂公子、白漂鳥、冬莊。鷺科蒼鷺屬的一種。其種加詞「alba」意為「白色的」。"
           }
         ]
       },
@@ -30999,11 +31187,15 @@
         "potential": [
           {
             "name": "藍腹鷴",
-            "sci": "Lophura swinhoii"
+            "sci": "Lophura swinhoii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Swinhoe%27s_Pheasant_0673.jpg/500px-Swinhoe%27s_Pheasant_0673.jpg",
+            "wikiDesc": "藍腹鷴（學名：Lophura swinhoii），別名藍鷴、山雞，俗稱臺灣山雞，為臺灣特有種，第二級珍貴稀有保育類，雉科鷴屬，雄鳥軀體幾乎皆為藍色，因而得名。阿里山鄒族稱「toevosʉ」。"
           },
           {
             "name": "白耳畫眉",
-            "sci": "Heterophasia auricularis"
+            "sci": "Heterophasia auricularis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/White-eared_Sibia_-_Taiwan_S4E8153_%2819547305835%29.jpg/500px-White-eared_Sibia_-_Taiwan_S4E8153_%2819547305835%29.jpg",
+            "wikiDesc": "白耳畫眉（學名：Heterophasia auricularis）是畫眉科奇鶥屬的一種，生活於台灣溫帶森林和亞熱帶或熱帶的濕潤山地林，為台灣特有種。 有時這個物種會被歸類到單型屬Malacias。它最早於1864年由羅伯特·斯文豪進行物種描述。"
           }
         ]
       },
@@ -31021,11 +31213,15 @@
         "potential": [
           {
             "name": "帝雉",
-            "sci": "Syrmaticus mikado"
+            "sci": "Syrmaticus mikado",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Mikado_Pheasant_398.jpg/500px-Mikado_Pheasant_398.jpg",
+            "wikiDesc": "黑長尾雉（學名：Syrmaticus mikado），常稱帝雉，臺灣帝雉、海雉及烏雉是為另稱，臺灣特有的長尾雉屬鳥類，分布於臺灣的中、高海拔山區，最高曾見於3850公尺附近，是臺灣的雉科鳥類中棲息於最高海拔者。帝雉曾被列為世界近危鳥類，與藍腹鷴同為名列國際自然保護聯盟瀕危物種紅色名錄中。帝雉的形象被用在新臺幣1000元紙鈔的背面，以及中華航空於2016年所引進新型客機空中巴士A350的機身彩繪，曾為2007年臺灣永續生態協會、臺灣國際觀鳥協會與立委推動的非官方「國鳥選拔」中被提名的鳥種之一。"
           },
           {
             "name": "火冠戴菊",
-            "sci": "Regulus goodfellowi"
+            "sci": "Regulus goodfellowi",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/RegulusGoodfellowiLodge.jpg/500px-RegulusGoodfellowiLodge.jpg",
+            "wikiDesc": "火冠戴菊鳥（學名：Regulus goodfellowi），又名台灣戴菊，臺灣話稱杉仔鳥(sam-á-tsiáu)，為戴菊科戴菊屬的鳥類，是台灣的特有種。分布於台灣等地。該物種的模式產地在台灣。"
           }
         ]
       },
@@ -31041,11 +31237,15 @@
         "potential": [
           {
             "name": "紅尾伯勞",
-            "sci": "Lanius cristatus"
+            "sci": "Lanius cristatus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Lanius_cristatus_-_Surin.jpg/500px-Lanius_cristatus_-_Surin.jpg",
+            "wikiDesc": "紅尾伯勞（學名：Lanius cristatus）為伯勞科伯勞屬的一種，俗名褐伯勞。主要分布於亞洲。牠與紅背伯勞（L. collurio）和荒漠伯勞（L. isabellinus）關係密切。"
           },
           {
             "name": "小雲雀",
-            "sci": "Alauda gulgula"
+            "sci": "Alauda gulgula",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Oriental_Skylark_%28Alauda_gulgula%29_in_AP_W_IMG_4084.jpg/500px-Oriental_Skylark_%28Alauda_gulgula%29_in_AP_W_IMG_4084.jpg",
+            "wikiDesc": "小雲雀（學名：Alauda gulgula），屬於百靈科雲雀屬，俗名朝天柱、百靈、阿蘭、天鷚、阿鷚、告天鳥、大鷚。分布於前蘇聯、伊朗、阿富汗、巴基斯坦、尼泊爾、印度、緬甸、越南、斯里蘭卡、菲律賓、台灣以及中國大陸的青海、甘肅、寧夏、陝西、西藏、四川、貴州、湖南、江西、廣西、海南、福建等地，一般棲息於與雲雀相似，在離水近的草地原。該物種的模式產地在印度加爾各答和瓦拉納西之間。"
           }
         ]
       },
@@ -31061,11 +31261,15 @@
         "potential": [
           {
             "name": "燕鴴",
-            "sci": "Glareola maldivarum"
+            "sci": "Glareola maldivarum",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Oriental_Pratincole.jpg/500px-Oriental_Pratincole.jpg",
+            "wikiDesc": "普通燕鴴（學名：Glareola maldivarum）一般稱燕鴴，為燕鴴科燕鴴屬的鳥類。"
           },
           {
             "name": "環頸鴴",
-            "sci": "Charadrius alexandrinus"
+            "sci": "Charadrius alexandrinus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Kentish_plover_%28Charadrius_alexandrinus%29_Photograph_by_Shantanu_Kuveskar.jpg/500px-Kentish_plover_%28Charadrius_alexandrinus%29_Photograph_by_Shantanu_Kuveskar.jpg",
+            "wikiDesc": "東方環頸鴴（學名：Anarhynchus alexandrinus）為鴴科彎嘴鴴屬的鳥類，又名環頸鴴，曾被分類在鴴屬。該物種的模式產地在埃及。 東方環頸鴴是一種小型涉禽 （40—44 g（1.4—1.6 oz）），屬於鴴科，主要在鹽湖、潟湖和海岸繁殖，並棲息於沙丘、沼澤、半乾旱沙漠和苔原。"
           }
         ]
       },
@@ -31081,11 +31285,15 @@
         "potential": [
           {
             "name": "紅頭山雀",
-            "sci": "Aegithalos concinnus"
+            "sci": "Aegithalos concinnus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Black-throated_Tit_%28Aegithalos_concinnus%29_-on_branch.jpg/500px-Black-throated_Tit_%28Aegithalos_concinnus%29_-on_branch.jpg",
+            "wikiDesc": "紅頭山雀（學名：Aegithalos concinnus）為長尾山雀科長尾山雀屬的雀形目鳥類，又名紅頭長尾山雀或紅頂山雀、俗稱小老虎、紅寶寶兒、紅白面只，常見於東亞、南亞等地區中低海拔山區，分布於巴基斯坦、尼泊爾、錫金、不丹、印度、孟加拉、緬甸、寮國、越南、台灣以及中國的自西藏、長江流域從四川東抵江蘇沿海地帶、北至甘肅、陝西、河南等省南部、南抵雲南、貴州、廣西、廣東、福建等地，一般棲息於灌叢或喬木間。該物種的模式產地在浙江舟山。紅頭山雀經常與山雀科和畫眉科的鳥類混淆。"
           },
           {
             "name": "鉛色水鶇",
-            "sci": "Phoenicurus fuliginosus"
+            "sci": "Phoenicurus fuliginosus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Plumbeous_Water_Redstart_%28male%29.JPG/500px-Plumbeous_Water_Redstart_%28male%29.JPG",
+            "wikiDesc": "鉛色水鶇（學名：Phoenicurus fuliginosus），又名紅尾水鴝、鉛色水鴝，臺灣話稱石青仔（臺羅：tsio̍h-tshenn-á/tsio̍h-tshinn-á），為鶲科紅尾鴝屬下的一個種。分布於南亞、東南亞和中國。雄鳥為灰藍色，雌鳥則為灰色。"
           }
         ]
       },
@@ -31101,11 +31309,15 @@
         "potential": [
           {
             "name": "大杓鷸",
-            "sci": "Numenius arquata"
+            "sci": "Numenius arquata",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Eurasian_Curlew.jpg/500px-Eurasian_Curlew.jpg",
+            "wikiDesc": "大杓鷸（學名：Numenius arquata）又名白腰杓鷸，為鷸科杓鷸屬的鳥類。是一種非常大型的涉禽，隸屬於鷸科（Scolopacidae）。它是最廣泛分佈的杓鷸之一，繁殖範圍遍及溫帶的歐洲和亞洲。"
           },
           {
             "name": "黑腹濱鷸",
-            "sci": "Calidris alpina"
+            "sci": "Calidris alpina",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Calidris-alpina-001_edit.jpg/500px-Calidris-alpina-001_edit.jpg",
+            "wikiDesc": "黑腹濱鷸（學名：Calidris alpina）為鷸科濱鷸屬的鳥類。該物種的模式產地在拉普蘭省。 英文名稱「dunlin」是「dunling」的方言形式，首次記錄於1531年至1532年間。"
           }
         ]
       }
@@ -31124,11 +31336,15 @@
         "potential": [
           {
             "name": "彩鷸",
-            "sci": "Rostratula benghalensis"
+            "sci": "Rostratula benghalensis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Greater_Painted-snipe_%28Male%29_I2_IMG_9477.jpg/481px-Greater_Painted-snipe_%28Male%29_I2_IMG_9477.jpg",
+            "wikiDesc": "彩鷸（學名：Rostratula benghalensis）是一種涉禽，為彩鷸科彩鷸屬的鳥類。牠廣泛分布於非洲和南亞，在各種濕地棲地中都能找到，包括沼澤以及較大水體如湖泊和河流的邊緣。這個物種具有明顯的性別二型性，雌鳥比雄鳥更大且顏色更鮮艷。"
           },
           {
             "name": "高蹺鴴",
-            "sci": "Himantopus himantopus"
+            "sci": "Himantopus himantopus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Himantopus_himantopus%2C_S%C3%A8te_cf26.jpg/500px-Himantopus_himantopus%2C_S%C3%A8te_cf26.jpg",
+            "wikiDesc": "高蹺鴴（學名：Himantopus himantopus，中國大陸作黑翅長腳鷸），又名長腳鷸、紅腿娘子，為長腳鷸科長腳鷸屬下的一個種。"
           }
         ]
       },
@@ -31144,11 +31360,15 @@
         "potential": [
           {
             "name": "灰面鵟鷹",
-            "sci": "Butastur indicus"
+            "sci": "Butastur indicus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Butastur_indicus.jpg/500px-Butastur_indicus.jpg",
+            "wikiDesc": "灰面鵟鷹（中國大陸、香港作灰臉鵟鷹，學名：Butastur indicus），又稱灰面鷲，是鷹科鵟鷹屬的猛禽，臺灣彰化一帶稱為南路鷹（臺灣話：lâm-lōo-ing），臺灣屏東滿州當地稱為山後鳥（臺灣話：suann-āu-tsiáu），而在臺灣屏東小琉球則叫做飛烏鳥（臺灣話：pue-oo-tsiáu）。灰面鵟鷹於每年10月10日前後約5日，自北至南過冬，其中重要過境停棲點為臺灣的八卦臺地及恆春半島。因10月10日為中華民國國慶日，而又有國慶鳥之稱。"
           },
           {
             "name": "大冠鷲",
-            "sci": "Spilornis cheela"
+            "sci": "Spilornis cheela",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg/500px-Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg",
+            "wikiDesc": "大冠鷲（學名：Spilornis cheela）（西拉雅語：Akakul）又名冠蛇鵰、冕蛇鵰、食蛇鵰，粵語俗稱食蛇鷹，是一種中大型猛禽，屬於鷹科一員。分布於熱帶亞洲的森林棲地中。在它廣泛分布的印度次大陸、東南亞和東亞範圍內，存在顯著的變異，一些權威機構更傾向於將其數個亞種視為完全獨立的物種。"
           }
         ]
       },
@@ -31164,11 +31384,15 @@
         "potential": [
           {
             "name": "大杓鷸",
-            "sci": "Numenius arquata"
+            "sci": "Numenius arquata",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Eurasian_Curlew.jpg/500px-Eurasian_Curlew.jpg",
+            "wikiDesc": "大杓鷸（學名：Numenius arquata）又名白腰杓鷸，為鷸科杓鷸屬的鳥類。是一種非常大型的涉禽，隸屬於鷸科（Scolopacidae）。它是最廣泛分佈的杓鷸之一，繁殖範圍遍及溫帶的歐洲和亞洲。"
           },
           {
             "name": "東方環頸鴴",
-            "sci": "Charadrius alexandrinus"
+            "sci": "Charadrius alexandrinus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Kentish_plover_%28Charadrius_alexandrinus%29_Photograph_by_Shantanu_Kuveskar.jpg/500px-Kentish_plover_%28Charadrius_alexandrinus%29_Photograph_by_Shantanu_Kuveskar.jpg",
+            "wikiDesc": "東方環頸鴴（學名：Anarhynchus alexandrinus）為鴴科彎嘴鴴屬的鳥類，又名環頸鴴，曾被分類在鴴屬。該物種的模式產地在埃及。 東方環頸鴴是一種小型涉禽 （40—44 g（1.4—1.6 oz）），屬於鴴科，主要在鹽湖、潟湖和海岸繁殖，並棲息於沙丘、沼澤、半乾旱沙漠和苔原。"
           }
         ]
       },
@@ -31184,11 +31408,15 @@
         "potential": [
           {
             "name": "黑領椋鳥",
-            "sci": "Gracupica nigricollis"
+            "sci": "Gracupica nigricollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/A_bird_in_Shenzhen.jpg/500px-A_bird_in_Shenzhen.jpg",
+            "wikiDesc": "烏領椋鳥（學名：Gracupica nigricollis）為椋鳥科斑椋鳥屬的鳥類，又名黑領椋鳥，俗名黑脖八哥、白頭椋鳥。牠的羽毛為黑白相間，並有一個黑色的領圈。這種鳥分布於中國南部及大部分的東南亞大陸地區，並已引入台灣、馬來西亞和新加坡。"
           },
           {
             "name": "戴勝",
-            "sci": "Upupa epops"
+            "sci": "Upupa epops",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Common_hoopoe_%28Upupa_epops_epops%29_Udaipur.jpg/500px-Common_hoopoe_%28Upupa_epops_epops%29_Udaipur.jpg",
+            "wikiDesc": "戴勝（學名：Upupa epops，英語：Eurasian hoopoe），俗稱臭姑姑、墓崆雞、塚崆鳥、香香雞，是犀鳥目戴勝科戴勝屬的一種鳥類。戴勝頭有冠，五色如方勝，故而得名。戴勝有許多異名，如：戴任﹑戴紝、墓壙鳥（金門話：bōng-khòng-tsiáu）、鶝、鴔鵖、鵖鴔等。"
           }
         ]
       },
@@ -31204,11 +31432,15 @@
         "potential": [
           {
             "name": "黑腹濱鷸",
-            "sci": "Calidris alpina"
+            "sci": "Calidris alpina",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Calidris-alpina-001_edit.jpg/500px-Calidris-alpina-001_edit.jpg",
+            "wikiDesc": "黑腹濱鷸（學名：Calidris alpina）為鷸科濱鷸屬的鳥類。該物種的模式產地在拉普蘭省。 英文名稱「dunlin」是「dunling」的方言形式，首次記錄於1531年至1532年間。"
           },
           {
             "name": "東方環頸鴴",
-            "sci": "Charadrius alexandrinus"
+            "sci": "Charadrius alexandrinus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Kentish_plover_%28Charadrius_alexandrinus%29_Photograph_by_Shantanu_Kuveskar.jpg/500px-Kentish_plover_%28Charadrius_alexandrinus%29_Photograph_by_Shantanu_Kuveskar.jpg",
+            "wikiDesc": "東方環頸鴴（學名：Anarhynchus alexandrinus）為鴴科彎嘴鴴屬的鳥類，又名環頸鴴，曾被分類在鴴屬。該物種的模式產地在埃及。 東方環頸鴴是一種小型涉禽 （40—44 g（1.4—1.6 oz）），屬於鴴科，主要在鹽湖、潟湖和海岸繁殖，並棲息於沙丘、沼澤、半乾旱沙漠和苔原。"
           }
         ]
       }
@@ -31226,11 +31458,15 @@
         "potential": [
           {
             "name": "岩鷚",
-            "sci": "Prunella collaris"
+            "sci": "Prunella collaris",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Alpenbraunelle_Prunella_collaris.jpg/500px-Alpenbraunelle_Prunella_collaris.jpg",
+            "wikiDesc": "岩鷚（學名：Prunella collaris）又名領岩鷚，為岩鷚科岩鷚屬的鳥類。原生於歐亞大陸和北非。"
           },
           {
             "name": "酒紅朱雀",
-            "sci": "Carpodacus vinaceus"
+            "sci": "Carpodacus vinaceus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Vinaceous_Rosefinch.jpg/500px-Vinaceous_Rosefinch.jpg",
+            "wikiDesc": "酒紅朱雀（學名：Carpodacus vinaceus）為雀科朱雀屬的鳥類。分布於印度、緬甸以及中國大陸的寧夏、甘肅、陝西、湖北、貴州、四川、雲南、西藏等地，多棲息於海拔1000m 以上的山林、活動於灌叢和竹叢中、也常棲於亞熱帶常綠闊葉林和針闊混交林中以及有時也到高山針葉林中。該物種的模式產地在四川寶興。"
           }
         ]
       },
@@ -31246,11 +31482,15 @@
         "potential": [
           {
             "name": "星鴉",
-            "sci": "Nucifraga caryocatactes"
+            "sci": "Nucifraga caryocatactes",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Spotted_Nutcracker.jpg/500px-Spotted_Nutcracker.jpg",
+            "wikiDesc": "星鴉（學名：Nucifraga caryocatactes）為鴉科星鴉屬下的一個種。牠的體型略大於松鴉，但喙更大，且頭部較為纖細，沒有冠羽。身體的羽毛主要為巧克力色，帶有明顯的白色斑點和條紋。"
           },
           {
             "name": "金翼白眉",
-            "sci": "Garrulax morrisonianus"
+            "sci": "Garrulax morrisonianus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Garrulax_morrisonianus_-Taiwan-8.jpg/500px-Garrulax_morrisonianus_-Taiwan-8.jpg",
+            "wikiDesc": "金翼白眉（學名：Trochalopteron morrisonianum），又名玉山噪鶥或臺灣噪眉，臺灣話稱四眉（sì-bâi），是圓翅噪鶥屬的一種，分布於臺灣。該物種的保護狀況被評為無危。 金翼白眉的模式產地位於玉山，這也是其種名「morrisonianum」的由來。"
           }
         ]
       },
@@ -31266,11 +31506,15 @@
         "potential": [
           {
             "name": "藪鳥",
-            "sci": "Liocichla steereii"
+            "sci": "Liocichla steereii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Steere%27s_Liocichla_-_Taiwan_S4E6694_%2819301823680%29.jpg/500px-Steere%27s_Liocichla_-_Taiwan_S4E6694_%2819301823680%29.jpg",
+            "wikiDesc": "黃胸藪眉（學名：Liocichla steerii），又名藪鳥、黃痣藪鶥，俗稱媒婆鳥、老鼠鳥、美人痣、蕃藷仔鳥、蕃藷鳥仔（閩南語）、溪頭老鼠，是畫眉科藪鶥屬的一種，為台灣特有種，分布於海拔約 1000 至 2800 公尺的山區。種名是來自美國密西根大學教授鳥類學家史蒂瑞（Joseph Beal Steere），史蒂瑞於1873年10月至1874年3月來臺調查半年之久，率先發現藪鳥。第一次記錄到這種鳥類就是出自於他的觀察。"
           },
           {
             "name": "白耳畫眉",
-            "sci": "Heterophasia auricularis"
+            "sci": "Heterophasia auricularis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/White-eared_Sibia_-_Taiwan_S4E8153_%2819547305835%29.jpg/500px-White-eared_Sibia_-_Taiwan_S4E8153_%2819547305835%29.jpg",
+            "wikiDesc": "白耳畫眉（學名：Heterophasia auricularis）是畫眉科奇鶥屬的一種，生活於台灣溫帶森林和亞熱帶或熱帶的濕潤山地林，為台灣特有種。 有時這個物種會被歸類到單型屬Malacias。它最早於1864年由羅伯特·斯文豪進行物種描述。"
           }
         ]
       },
@@ -31286,11 +31530,15 @@
         "potential": [
           {
             "name": "繡眼畫眉",
-            "sci": "Alcippe morrisonia"
+            "sci": "Alcippe morrisonia",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Alcippe_morrisonia.jpg/500px-Alcippe_morrisonia.jpg",
+            "wikiDesc": "繡眼畫眉（學名：Alcippe morrisonia，中國大陸、香港作台灣雀鶥），曾稱灰眶雀鶥、繡眼雀鶥、白眶雀鶥，臺灣話稱大目箍仔（臺羅：tuā-ba̍k-khoo-á），是臺灣特有的雀形目雀鶥科雀鶥屬鳥類，以灰頭、白眼眶和褐黃腹部而明顯有別於臺灣其他鳥類，同時亦以鳴聲多樣著稱。其棲地涵蓋平原至高山，在臺灣相當常見，又喜群居，常與其他小型雀鳥混群，且常是混群中的主要鳥種。 繡眼畫眉與亞洲大陸的大衛氏雀鶥、灰眶雀鶥等物種十分相似，但分子生物學研究表明它們是不同的物種。"
           },
           {
             "name": "五色鳥",
-            "sci": "Psilopogon nuchalis"
+            "sci": "Psilopogon nuchalis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Taiwan_barbet.jpg/500px-Taiwan_barbet.jpg",
+            "wikiDesc": "五色鳥（學名：Psilopogon nuchalis，中國大陸、香港作台灣擬啄木鳥，臺灣話：花仔和尚、花褂鳥），又作臺灣擬啄木、台灣擬啄木，是鴷形目鬚鴷科擬啄木屬下的一種鳥類。這個物種是臺灣特有的鳥類，主要以果實為食，曾一度被視為黑眉擬啄木的亞種，但在2006年後拆分為獨立物種。 五色鳥的體長約20—22公分，其身體大部分為翠綠色，而頭部則有藍、黃、紅、黑四色，故得名「五色鳥」；另因其叫聲為單調而響亮的「嘓嘓嘓……」，類似於敲木魚的聲音，而有著「花和尚」的別稱。"
           }
         ]
       },
@@ -31306,11 +31554,15 @@
         "potential": [
           {
             "name": "台灣藍鵲",
-            "sci": "Urocissa caerulea"
+            "sci": "Urocissa caerulea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Urocissa_caerulea.jpg/500px-Urocissa_caerulea.jpg",
+            "wikiDesc": "臺灣藍鵲（學名：Urocissa caerulea，英語：Taiwan Blue Magpie 或 Formosan blue magpie），又稱臺灣暗藍鵲、紅嘴山鵲、長尾山娘（臺灣話：tn̂g boé soaⁿ niû）或長尾陣仔等，為臺灣特有種鳥類。該物種最初於約1862年經斯文豪等引介，被約翰·古爾德進行物種命名，並正式展開相關學術研究工作。 臺灣藍鵲主要分布在中、低海拔闊葉林裡，除繁殖季外多成群行動，且有非常明顯的保護領域傾向，以及伴隨而來的驅趕行為（在繁殖季時特別明顯）。"
           },
           {
             "name": "冠羽畫眉",
-            "sci": "Yuhina brunneiceps"
+            "sci": "Yuhina brunneiceps",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Taiwan_Yuhina_-_Taiwan_S4E8280_%2818926478463%29.jpg/500px-Taiwan_Yuhina_-_Taiwan_S4E8280_%2818926478463%29.jpg",
+            "wikiDesc": "冠羽畫眉（學名：Yuhina brunneiceps），又名冠羽鳳眉，為繡眼科鳳鶥屬的鳥類，是台灣特有種，僅見於本島的五大山脈（惟海岸山脈少有紀錄）。其種名來自拉丁文的 brunneus（褐色的）和 ceps（頭部），模式產地位於今玉山國家公園內的樂樂溪上游流域一帶。"
           }
         ]
       },
@@ -31326,11 +31578,15 @@
         "potential": [
           {
             "name": "台灣竹雞",
-            "sci": "Bambusicola sonorivox"
+            "sci": "Bambusicola sonorivox",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Bambusicola_thoracicus_-Yangmingshan_National_Park%2C_Taiwan-8.jpg/500px-Bambusicola_thoracicus_-Yangmingshan_National_Park%2C_Taiwan-8.jpg",
+            "wikiDesc": "臺灣竹雞（學名：Bambusicola sonorivox）棲息於臺灣中低海拔的樹林裡。曾被歸類為灰胸竹雞，為臺灣特有種鳥類之一。"
           },
           {
             "name": "大冠鷲",
-            "sci": "Spilornis cheela"
+            "sci": "Spilornis cheela",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg/500px-Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg",
+            "wikiDesc": "大冠鷲（學名：Spilornis cheela）（西拉雅語：Akakul）又名冠蛇鵰、冕蛇鵰、食蛇鵰，粵語俗稱食蛇鷹，是一種中大型猛禽，屬於鷹科一員。分布於熱帶亞洲的森林棲地中。在它廣泛分布的印度次大陸、東南亞和東亞範圍內，存在顯著的變異，一些權威機構更傾向於將其數個亞種視為完全獨立的物種。"
           }
         ]
       }
@@ -31349,11 +31605,15 @@
         "potential": [
           {
             "name": "八色鳥",
-            "sci": "Pitta nympha"
+            "sci": "Pitta nympha",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Fairy_Pitta_3952.jpg/500px-Fairy_Pitta_3952.jpg",
+            "wikiDesc": "八色鳥（學名：Pitta nympha），又名仙八色鶇，是八色鶇科八色鳥屬的一種，是全面遷徙的候鳥，分布於香港、韓國、日本、汶萊、中國大陸、印度尼西亞、台灣、馬來西亞、越南和朝鮮。全球活動範圍約為1,170,000平方公里。 八色鳥平均體重約為90.2克。"
           },
           {
             "name": "黑枕藍鶲",
-            "sci": "Hypothymis azurea"
+            "sci": "Hypothymis azurea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Black-naped_Monarch_-_Thailand_S4E7277_%2819449130711%29.jpg/500px-Black-naped_Monarch_-_Thailand_S4E7277_%2819449130711%29.jpg",
+            "wikiDesc": "黑枕藍鶲（中國大陸、香港作黑枕王鶲，學名：Hypothymis azurea），為王鶲科王鶲屬的鳥類。主要分布於熱帶亞洲，模式產地位於菲律賓呂宋島。 黑枕藍鶲是一種纖細敏捷的雀形目鳥類，隸屬於南亞及東南亞的王鶲科。"
           }
         ]
       },
@@ -31369,11 +31629,15 @@
         "potential": [
           {
             "name": "赤頸鴨",
-            "sci": "Mareca penelope"
+            "sci": "Mareca penelope",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Anas_penelope_beijing.jpg/500px-Anas_penelope_beijing.jpg",
+            "wikiDesc": "赤頸鴨，學名Mareca penelope，又名赤頸鳧、鵝子鴨、紅鴨。"
           },
           {
             "name": "黑面琵鷺",
-            "sci": "Platalea minor"
+            "sci": "Platalea minor",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Black_faced_spoonbill_at_Niigata.JPG/500px-Black_faced_spoonbill_at_Niigata.JPG",
+            "wikiDesc": "黑面琵鷺（學名：Platalea minor），又名黑臉琵鷺、小琵鷺、黑面鷺、黑琵鷺、琵琶嘴鷺，俗稱飯匙鳥 ，台語稱作「烏面抐桮 （頁面存檔備份，存於網際網路檔案館）」 台灣賞鳥人士則俗稱為「黑琵」。因其扁平如湯匙狀的長嘴，與中國樂器中的琵琶極為相似，因而得名；亦因其姿態優雅，又有 「黑面舞者」的雅稱；屬於鸛形目、䴉科、琵鷺亞科，琵鷺亞科的鳥類全世界共六種，其中以黑面琵鷺數量最為稀少（已知六種琵鷺當中唯黑面琵鷺屬瀕危物種），屬全球瀕危物種類別之一，因此當黑面琵鷺在每年一月至三月度冬時，東南亞觀鳥者會在多地觀測關注其過冬狀況並統計數量。黑面琵鷺現時只分布於東亞及東南亞地區。"
           }
         ]
       },
@@ -31389,11 +31653,15 @@
         "potential": [
           {
             "name": "鳳頭潛鴨",
-            "sci": "Aythya fuligula"
+            "sci": "Aythya fuligula",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Tufted-Duck-male-female.jpg/500px-Tufted-Duck-male-female.jpg",
+            "wikiDesc": "鳳頭潛鴨（Tufted Duck，學名：Aythya fuligula）是一種中等大小的潛鴨，又名澤鳧、鳳頭鴨子、黑頭四鴨。"
           },
           {
             "name": "鸕鶿",
-            "sci": "Phalacrocorax carbo"
+            "sci": "Phalacrocorax carbo",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Phalacrocorax_carbo_Vic.jpg/500px-Phalacrocorax_carbo_Vic.jpg",
+            "wikiDesc": "鸕鶿（學名：Phalacrocorax carbo），別名鷺鶿、川鵜、水老鴉、魚鷹、鷧（ㄧˋ）、烏鬼，是一種廣泛分佈的鸕鶿屬海鳥。 鸕鶿主要生活在舊大陸和北美洲東海岸，一般在懸崖上或樹上作窩，但是越來越多地也在內陸生活。在海草和嫩枝達成的窩裏一次下3至4枚蛋。"
           }
         ]
       },
@@ -31410,11 +31678,15 @@
         "potential": [
           {
             "name": "黑枕藍鶲",
-            "sci": "Hypothymis azurea"
+            "sci": "Hypothymis azurea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Black-naped_Monarch_-_Thailand_S4E7277_%2819449130711%29.jpg/500px-Black-naped_Monarch_-_Thailand_S4E7277_%2819449130711%29.jpg",
+            "wikiDesc": "黑枕藍鶲（中國大陸、香港作黑枕王鶲，學名：Hypothymis azurea），為王鶲科王鶲屬的鳥類。主要分布於熱帶亞洲，模式產地位於菲律賓呂宋島。 黑枕藍鶲是一種纖細敏捷的雀形目鳥類，隸屬於南亞及東南亞的王鶲科。"
           },
           {
             "name": "大冠鷲",
-            "sci": "Spilornis cheela"
+            "sci": "Spilornis cheela",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg/500px-Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg",
+            "wikiDesc": "大冠鷲（學名：Spilornis cheela）（西拉雅語：Akakul）又名冠蛇鵰、冕蛇鵰、食蛇鵰，粵語俗稱食蛇鷹，是一種中大型猛禽，屬於鷹科一員。分布於熱帶亞洲的森林棲地中。在它廣泛分布的印度次大陸、東南亞和東亞範圍內，存在顯著的變異，一些權威機構更傾向於將其數個亞種視為完全獨立的物種。"
           }
         ]
       },
@@ -31430,11 +31702,15 @@
         "potential": [
           {
             "name": "東方環頸鴴",
-            "sci": "Charadrius veredus"
+            "sci": "Charadrius veredus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Charadrius_veredus_West_Timor_0.jpg/500px-Charadrius_veredus_West_Timor_0.jpg",
+            "wikiDesc": "東方鴴（學名：Anarhynchus veredus），又名東方紅胸鴴，為鴴科鴴屬的鳥類。在中國大陸，分布於內蒙古、遼寧、東部沿海、南至廣東和廣西、西至四川等地。該物種的模式產地在澳大利亞。"
           },
           {
             "name": "小燕鷗",
-            "sci": "Sternula albifrons"
+            "sci": "Sternula albifrons",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D0%BC%D0%B0%D0%BB%D0%B8%D0%B9.jpg/500px-%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D0%BC%D0%B0%D0%BB%D0%B8%D0%B9.jpg",
+            "wikiDesc": "小燕鷗（學名：Sternula albifrons），又名白額燕鷗，為鷗科小燕鷗屬的鳥類。該物種的模式產地在荷蘭。"
           }
         ]
       }
@@ -31452,11 +31728,15 @@
         "potential": [
           {
             "name": "五色鳥",
-            "sci": "Psilopogon nuchalis"
+            "sci": "Psilopogon nuchalis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Taiwan_barbet.jpg/500px-Taiwan_barbet.jpg",
+            "wikiDesc": "五色鳥（學名：Psilopogon nuchalis，中國大陸、香港作台灣擬啄木鳥，臺灣話：花仔和尚、花褂鳥），又作臺灣擬啄木、台灣擬啄木，是鴷形目鬚鴷科擬啄木屬下的一種鳥類。這個物種是臺灣特有的鳥類，主要以果實為食，曾一度被視為黑眉擬啄木的亞種，但在2006年後拆分為獨立物種。 五色鳥的體長約20—22公分，其身體大部分為翠綠色，而頭部則有藍、黃、紅、黑四色，故得名「五色鳥」；另因其叫聲為單調而響亮的「嘓嘓嘓……」，類似於敲木魚的聲音，而有著「花和尚」的別稱。"
           },
           {
             "name": "小啄木",
-            "sci": "Yungipicus canicapillus"
+            "sci": "Yungipicus canicapillus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Grey-capped_Pygmy_Woodpecker_%28Dendrocopus_canicapillus%29_at_Jayanti%2C_Duars%2C_West_Bengal_W_IMG_5275.jpg/500px-Grey-capped_Pygmy_Woodpecker_%28Dendrocopus_canicapillus%29_at_Jayanti%2C_Duars%2C_West_Bengal_W_IMG_5275.jpg",
+            "wikiDesc": "小啄木（學名：Yungipicus canicapillus）為啄木鳥科啄木鳥屬的鳥類。該物種的模式產地在緬甸。是一種亞洲的鳥類物種，一些分類學權威仍將此物種歸類於啄木鳥屬（Dendrocopos）或Picoides。"
           }
         ]
       },
@@ -31472,11 +31752,15 @@
         "potential": [
           {
             "name": "小鷿鷉",
-            "sci": "Tachybaptus ruficollis"
+            "sci": "Tachybaptus ruficollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Litle_Grebe_-_Tachybaptus_ruficollis.jpg/500px-Litle_Grebe_-_Tachybaptus_ruficollis.jpg",
+            "wikiDesc": "小鸊鷉（學名：Tachybaptus ruficollis），又作小鷿鷈、小鸊鷈，俗稱水葫蘆、王八鴨子、油葫蘆、油鴨、水避仔（臺灣話：tsúi-pī-á），是鸊鷉科小鸊鷉屬下的一種鳥類。牠們分佈在歐洲、亞洲和非洲的濕地、沼澤、湖泊和水塘等水域環境中。牠們相當善於潛入水中覓食，主要食用水生昆蟲、蝌蚪、小魚和甲殼類等水中生物。"
           },
           {
             "name": "大冠鷲",
-            "sci": "Spilornis cheela"
+            "sci": "Spilornis cheela",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg/500px-Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg",
+            "wikiDesc": "大冠鷲（學名：Spilornis cheela）（西拉雅語：Akakul）又名冠蛇鵰、冕蛇鵰、食蛇鵰，粵語俗稱食蛇鷹，是一種中大型猛禽，屬於鷹科一員。分布於熱帶亞洲的森林棲地中。在它廣泛分布的印度次大陸、東南亞和東亞範圍內，存在顯著的變異，一些權威機構更傾向於將其數個亞種視為完全獨立的物種。"
           }
         ]
       },
@@ -31492,11 +31776,15 @@
         "potential": [
           {
             "name": "斑文鳥",
-            "sci": "Lonchura punctulata"
+            "sci": "Lonchura punctulata",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Scaly_breasted_munia_-kannur%40kattampally_birds_-_5.jpg/500px-Scaly_breasted_munia_-kannur%40kattampally_birds_-_5.jpg",
+            "wikiDesc": "斑文鳥（學名：Lonchura punctulata），俗名鱗胸文鳥、魚鱗沉香算命鳥、小紡織鳥、烏合畢、烏嘴（喙）畢仔、禾嗶仔（客語）、蓽雀，是一種原產於熱帶亞洲的雀形目梅花雀，體型與麻雀相當。此物種屬於文鳥屬，於1758年由卡爾·林奈正式物種描述和命名。它的名字源自胸部和腹部獨特的鱗片狀羽毛圖案。"
           },
           {
             "name": "褐頭鷦鶯",
-            "sci": "Priniainornata"
+            "sci": "Priniainornata",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Plain_prinia_%28Prinia_inornata_inornata%29.jpg/500px-Plain_prinia_%28Prinia_inornata_inornata%29.jpg",
+            "wikiDesc": "褐頭鷦鶯（學名：Prinia inornata），也稱純色山鷦鶯或純色鷦鶯，為扇尾鶯科鷦鶯屬的鳥類。該物種的模式產地位於印度德干高原。分布於東南亞，從巴基斯坦和印度到中國南部及東南亞的地區皆為留鳥繁殖。"
           }
         ]
       }
@@ -31514,11 +31802,15 @@
         "potential": [
           {
             "name": "鸕鶿",
-            "sci": "Phalacrocorax carbo"
+            "sci": "Phalacrocorax carbo",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Phalacrocorax_carbo_Vic.jpg/500px-Phalacrocorax_carbo_Vic.jpg",
+            "wikiDesc": "鸕鶿（學名：Phalacrocorax carbo），別名鷺鶿、川鵜、水老鴉、魚鷹、鷧（ㄧˋ）、烏鬼，是一種廣泛分佈的鸕鶿屬海鳥。 鸕鶿主要生活在舊大陸和北美洲東海岸，一般在懸崖上或樹上作窩，但是越來越多地也在內陸生活。在海草和嫩枝達成的窩裏一次下3至4枚蛋。"
           },
           {
             "name": "琵嘴鴨",
-            "sci": "Spatula clypeata"
+            "sci": "Spatula clypeata",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Northern_shoveler_Steve_Sinclair_outreach_use_only_%2819838806616%29.jpg/500px-Northern_shoveler_Steve_Sinclair_outreach_use_only_%2819838806616%29.jpg",
+            "wikiDesc": "琵嘴鴨（學名：Spatula clypeata），又名琵琶嘴鴨、鏟土鴨、杯鑿、廣味鳧。"
           }
         ]
       },
@@ -31535,11 +31827,15 @@
         "potential": [
           {
             "name": "栗背林鴝",
-            "sci": "Tarsiger johnstoniae"
+            "sci": "Tarsiger johnstoniae",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Collared_Bush_Robin.jpg/500px-Collared_Bush_Robin.jpg",
+            "wikiDesc": "栗背林鴝（學名：Tarsiger johnstoniae）為鶲科林鴝屬的鳥類，別名阿里山鴝，是台灣的特有物種。分布於台灣本島，一般生活於山區海拔2200－3500米間的林下底叢中，常出現於林邊小徑的路上或灌木的頂枝上，罕見於開曠的地區。該物種的模式產地在台灣玉山。"
           },
           {
             "name": "冠羽畫眉",
-            "sci": "Yuhina brunneiceps"
+            "sci": "Yuhina brunneiceps",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Taiwan_Yuhina_-_Taiwan_S4E8280_%2818926478463%29.jpg/500px-Taiwan_Yuhina_-_Taiwan_S4E8280_%2818926478463%29.jpg",
+            "wikiDesc": "冠羽畫眉（學名：Yuhina brunneiceps），又名冠羽鳳眉，為繡眼科鳳鶥屬的鳥類，是台灣特有種，僅見於本島的五大山脈（惟海岸山脈少有紀錄）。其種名來自拉丁文的 brunneus（褐色的）和 ceps（頭部），模式產地位於今玉山國家公園內的樂樂溪上游流域一帶。"
           }
         ]
       },
@@ -31555,11 +31851,15 @@
         "potential": [
           {
             "name": "黑面琵鷺",
-            "sci": "Platalea minor"
+            "sci": "Platalea minor",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Black_faced_spoonbill_at_Niigata.JPG/500px-Black_faced_spoonbill_at_Niigata.JPG",
+            "wikiDesc": "黑面琵鷺（學名：Platalea minor），又名黑臉琵鷺、小琵鷺、黑面鷺、黑琵鷺、琵琶嘴鷺，俗稱飯匙鳥 ，台語稱作「烏面抐桮 （頁面存檔備份，存於網際網路檔案館）」 台灣賞鳥人士則俗稱為「黑琵」。因其扁平如湯匙狀的長嘴，與中國樂器中的琵琶極為相似，因而得名；亦因其姿態優雅，又有 「黑面舞者」的雅稱；屬於鸛形目、䴉科、琵鷺亞科，琵鷺亞科的鳥類全世界共六種，其中以黑面琵鷺數量最為稀少（已知六種琵鷺當中唯黑面琵鷺屬瀕危物種），屬全球瀕危物種類別之一，因此當黑面琵鷺在每年一月至三月度冬時，東南亞觀鳥者會在多地觀測關注其過冬狀況並統計數量。黑面琵鷺現時只分布於東亞及東南亞地區。"
           },
           {
             "name": "反嘴鴴",
-            "sci": "Recurvirostra avosetta"
+            "sci": "Recurvirostra avosetta",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Recurvirostra_avosetta_-_Zoo_Frankfurt_4.jpg/500px-Recurvirostra_avosetta_-_Zoo_Frankfurt_4.jpg",
+            "wikiDesc": "反嘴鷸（ㄩˋ）（學名：Recurvirostra avosetta），又稱反嘴鴴（ㄏㄥˊ）、反嘴長腳鷸，為反嘴鷸科反嘴鷸屬的鳥類。這物種分布在歐洲，西亞和中亞的溫帶地區。這是一個遷徙物種，大部分冬季遷徙至非洲或亞洲南部。"
           }
         ]
       },
@@ -31575,11 +31875,15 @@
         "potential": [
           {
             "name": "小鷿鷉",
-            "sci": "Tachybaptus ruficollis"
+            "sci": "Tachybaptus ruficollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Litle_Grebe_-_Tachybaptus_ruficollis.jpg/500px-Litle_Grebe_-_Tachybaptus_ruficollis.jpg",
+            "wikiDesc": "小鸊鷉（學名：Tachybaptus ruficollis），又作小鷿鷈、小鸊鷈，俗稱水葫蘆、王八鴨子、油葫蘆、油鴨、水避仔（臺灣話：tsúi-pī-á），是鸊鷉科小鸊鷉屬下的一種鳥類。牠們分佈在歐洲、亞洲和非洲的濕地、沼澤、湖泊和水塘等水域環境中。牠們相當善於潛入水中覓食，主要食用水生昆蟲、蝌蚪、小魚和甲殼類等水中生物。"
           },
           {
             "name": "鸕鶿",
-            "sci": "Phalacrocorax carbo"
+            "sci": "Phalacrocorax carbo",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Phalacrocorax_carbo_Vic.jpg/500px-Phalacrocorax_carbo_Vic.jpg",
+            "wikiDesc": "鸕鶿（學名：Phalacrocorax carbo），別名鷺鶿、川鵜、水老鴉、魚鷹、鷧（ㄧˋ）、烏鬼，是一種廣泛分佈的鸕鶿屬海鳥。 鸕鶿主要生活在舊大陸和北美洲東海岸，一般在懸崖上或樹上作窩，但是越來越多地也在內陸生活。在海草和嫩枝達成的窩裏一次下3至4枚蛋。"
           }
         ]
       },
@@ -31595,11 +31899,15 @@
         "potential": [
           {
             "name": "小白鷺",
-            "sci": "Egretta garzetta"
+            "sci": "Egretta garzetta",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Egretta_garzetta_EM1B0094_%2847336068462%29.jpg/500px-Egretta_garzetta_EM1B0094_%2847336068462%29.jpg",
+            "wikiDesc": "小白鷺（學名：Egretta garzetta），又稱白鷺，是鷺科中的一種小型鷺。牠是一種白色的鳥，具有細長的黑色喙、長黑腿，以及在西部種群中有黃色的腳。作為一種水鳥，牠在淺水和陸地上覓食，食用各種小型生物。"
           },
           {
             "name": "夜鷺",
-            "sci": "Nycticorax nycticorax"
+            "sci": "Nycticorax nycticorax",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Black-crowned_Night_Heron_--_Nycticorax_nycticorax.jpg/500px-Black-crowned_Night_Heron_--_Nycticorax_nycticorax.jpg",
+            "wikiDesc": "夜鷺（學名：Nycticorax nycticorax）又稱黑頂夜鷺，俗稱灰窪子、夜窪子、星雁、暗光鳥仔，是鷺科夜鷺屬的一種。"
           }
         ]
       },
@@ -31615,11 +31923,15 @@
         "potential": [
           {
             "name": "朱鸝",
-            "sci": "Oriolus traillii"
+            "sci": "Oriolus traillii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Maroon_Oriole_at_Sikkim%2C_India.jpg/500px-Maroon_Oriole_at_Sikkim%2C_India.jpg",
+            "wikiDesc": "朱鸝（學名：Oriolus traillii），俗稱大緋鳥，是黃鸝科黃鸝屬的鳥類，主要分布於東南亞地區，臺灣話俗稱紅鶯(âng-ing)，該鳥亦為花蓮縣縣鳥。"
           },
           {
             "name": "黑枕藍鶲",
-            "sci": "Hypothymis azurea"
+            "sci": "Hypothymis azurea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Black-naped_Monarch_-_Thailand_S4E7277_%2819449130711%29.jpg/500px-Black-naped_Monarch_-_Thailand_S4E7277_%2819449130711%29.jpg",
+            "wikiDesc": "黑枕藍鶲（中國大陸、香港作黑枕王鶲，學名：Hypothymis azurea），為王鶲科王鶲屬的鳥類。主要分布於熱帶亞洲，模式產地位於菲律賓呂宋島。 黑枕藍鶲是一種纖細敏捷的雀形目鳥類，隸屬於南亞及東南亞的王鶲科。"
           }
         ]
       }
@@ -31638,11 +31950,15 @@
         "potential": [
           {
             "name": "黑面琵鷺",
-            "sci": "Platalea minor"
+            "sci": "Platalea minor",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Black_faced_spoonbill_at_Niigata.JPG/500px-Black_faced_spoonbill_at_Niigata.JPG",
+            "wikiDesc": "黑面琵鷺（學名：Platalea minor），又名黑臉琵鷺、小琵鷺、黑面鷺、黑琵鷺、琵琶嘴鷺，俗稱飯匙鳥 ，台語稱作「烏面抐桮 （頁面存檔備份，存於網際網路檔案館）」 台灣賞鳥人士則俗稱為「黑琵」。因其扁平如湯匙狀的長嘴，與中國樂器中的琵琶極為相似，因而得名；亦因其姿態優雅，又有 「黑面舞者」的雅稱；屬於鸛形目、䴉科、琵鷺亞科，琵鷺亞科的鳥類全世界共六種，其中以黑面琵鷺數量最為稀少（已知六種琵鷺當中唯黑面琵鷺屬瀕危物種），屬全球瀕危物種類別之一，因此當黑面琵鷺在每年一月至三月度冬時，東南亞觀鳥者會在多地觀測關注其過冬狀況並統計數量。黑面琵鷺現時只分布於東亞及東南亞地區。"
           },
           {
             "name": "大白鷺",
-            "sci": "Ardea alba"
+            "sci": "Ardea alba",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Great_Egret_%28Egretta_alba%29%2C_Skala_Kallonis%2C_Lesvos%2C_Greece%2C_19.04.2015_%2817449816992%29.jpg/500px-Great_Egret_%28Egretta_alba%29%2C_Skala_Kallonis%2C_Lesvos%2C_Greece%2C_19.04.2015_%2817449816992%29.jpg",
+            "wikiDesc": "大白鷺（學名：Ardea alba），別名白鷺鷥、鷺鷥、風漂公子、白漂鳥、冬莊。鷺科蒼鷺屬的一種。其種加詞「alba」意為「白色的」。"
           }
         ]
       },
@@ -31659,11 +31975,15 @@
         "potential": [
           {
             "name": "水雉",
-            "sci": "Hydrophasianus chirurgus"
+            "sci": "Hydrophasianus chirurgus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Pheasant-tailed_Jacana_Bangalore.jpg/500px-Pheasant-tailed_Jacana_Bangalore.jpg",
+            "wikiDesc": "水雉（學名：Hydrophasianus chirurgus），又名雉尾水雉（英語：Pheasant-tailed Jacana）、長尾水雉等，俗稱菱角鳥，是一個生物學分類上屬於水雉科的物種。該物種的一般分佈地區包括印度次大陸、中國大陸、臺灣島、中南半島、菲律賓群島、婆羅洲等，在冬季時包括泰國地區、馬來半島、印度尼西亞群島和澳大利亞大陸北部等。 該物種是臺灣唯一的水雉科物種，有許多個體棲息於臺灣本島（西南部）之菱角種植地。"
           },
           {
             "name": "紅冠水雞",
-            "sci": "Gallinula chloropus"
+            "sci": "Gallinula chloropus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg/500px-Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg",
+            "wikiDesc": "紅冠水雞（學名：Gallinula chloropus）為秧雞科黑水雞屬的鳥類，又名黑水雞、水鵁鴒（臺灣話：tsuí-ka-līng）、烏水雞（臺灣話：oo-tsuí-ke）、田雞仔（臺灣話：tshân-ke-á）。分佈在古北界的許多地區，從非洲到歐洲和亞洲。該物種遍布世界各地，模式產地在英格蘭。"
           }
         ]
       },
@@ -31679,11 +31999,15 @@
         "potential": [
           {
             "name": "反嘴鴴",
-            "sci": "Recurvirostra avosetta"
+            "sci": "Recurvirostra avosetta",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Recurvirostra_avosetta_-_Zoo_Frankfurt_4.jpg/500px-Recurvirostra_avosetta_-_Zoo_Frankfurt_4.jpg",
+            "wikiDesc": "反嘴鷸（ㄩˋ）（學名：Recurvirostra avosetta），又稱反嘴鴴（ㄏㄥˊ）、反嘴長腳鷸，為反嘴鷸科反嘴鷸屬的鳥類。這物種分布在歐洲，西亞和中亞的溫帶地區。這是一個遷徙物種，大部分冬季遷徙至非洲或亞洲南部。"
           },
           {
             "name": "高蹺鴴",
-            "sci": "Himantopus himantopus"
+            "sci": "Himantopus himantopus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Himantopus_himantopus%2C_S%C3%A8te_cf26.jpg/500px-Himantopus_himantopus%2C_S%C3%A8te_cf26.jpg",
+            "wikiDesc": "高蹺鴴（學名：Himantopus himantopus，中國大陸作黑翅長腳鷸），又名長腳鷸、紅腿娘子，為長腳鷸科長腳鷸屬下的一個種。"
           }
         ]
       },
@@ -31699,11 +32023,15 @@
         "potential": [
           {
             "name": "紅胸濱鷸",
-            "sci": "Calidris ruficollis"
+            "sci": "Calidris ruficollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Calidris_ruficollis_-_Marion_Bay.jpg/500px-Calidris_ruficollis_-_Marion_Bay.jpg",
+            "wikiDesc": "紅胸濱鷸（學名：Calidris ruficollis）又名紅頸濱鷸，為鷸科濱鷸屬的一種鳥類。在中國大陸，分布於內蒙古、華東、西至青海等地。該物種的模式產地在西伯利亞。"
           },
           {
             "name": "黑腹濱鷸",
-            "sci": "Calidris alpina"
+            "sci": "Calidris alpina",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Calidris-alpina-001_edit.jpg/500px-Calidris-alpina-001_edit.jpg",
+            "wikiDesc": "黑腹濱鷸（學名：Calidris alpina）為鷸科濱鷸屬的鳥類。該物種的模式產地在拉普蘭省。 英文名稱「dunlin」是「dunling」的方言形式，首次記錄於1531年至1532年間。"
           }
         ]
       },
@@ -31719,11 +32047,15 @@
         "potential": [
           {
             "name": "五色鳥",
-            "sci": "Psilopogon nuchalis"
+            "sci": "Psilopogon nuchalis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Taiwan_barbet.jpg/500px-Taiwan_barbet.jpg",
+            "wikiDesc": "五色鳥（學名：Psilopogon nuchalis，中國大陸、香港作台灣擬啄木鳥，臺灣話：花仔和尚、花褂鳥），又作臺灣擬啄木、台灣擬啄木，是鴷形目鬚鴷科擬啄木屬下的一種鳥類。這個物種是臺灣特有的鳥類，主要以果實為食，曾一度被視為黑眉擬啄木的亞種，但在2006年後拆分為獨立物種。 五色鳥的體長約20—22公分，其身體大部分為翠綠色，而頭部則有藍、黃、紅、黑四色，故得名「五色鳥」；另因其叫聲為單調而響亮的「嘓嘓嘓……」，類似於敲木魚的聲音，而有著「花和尚」的別稱。"
           },
           {
             "name": "翠鳥",
-            "sci": "Alcedo atthis"
+            "sci": "Alcedo atthis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Alcedo_Atthis.jpg/500px-Alcedo_Atthis.jpg",
+            "wikiDesc": "翠鳥（學名：Alcedo atthis，中國大陸、香港稱普通翠鳥，英語：Common kingfisher、Eurasian kingfisher、River kingfisher），又稱鴗、魚狗、魚獅、魚虎、翡翠鳥、釣魚翁，是佛法僧目翠鳥科翠鳥屬下的其中一種鳥類。這個物種由瑞典博物學家卡爾·林奈於1758年命名，分佈於歐亞非三塊大陸上的水域邊，主要以魚類為食。目前翠鳥共有7個亞種，是世界上最小，也是最為人所知的翠鳥科成員之一。"
           }
         ]
       },
@@ -31739,11 +32071,15 @@
         "potential": [
           {
             "name": "黑腹燕鷗",
-            "sci": "Chlidonias hybrida"
+            "sci": "Chlidonias hybrida",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Whiskered_tern_%28Chlidonias_hybrida_delalandii%29.jpg/500px-Whiskered_tern_%28Chlidonias_hybrida_delalandii%29.jpg",
+            "wikiDesc": "黑腹燕鷗（學名：Chlidonias hybrida），又名鬚浮鷗、黑腹浮鷗、灰翅浮鷗，為鷗科浮鷗屬的鳥類。該物種的模式產地在俄羅斯。"
           },
           {
             "name": "大白鷺",
-            "sci": "Ardea alba"
+            "sci": "Ardea alba",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Great_Egret_%28Egretta_alba%29%2C_Skala_Kallonis%2C_Lesvos%2C_Greece%2C_19.04.2015_%2817449816992%29.jpg/500px-Great_Egret_%28Egretta_alba%29%2C_Skala_Kallonis%2C_Lesvos%2C_Greece%2C_19.04.2015_%2817449816992%29.jpg",
+            "wikiDesc": "大白鷺（學名：Ardea alba），別名白鷺鷥、鷺鷥、風漂公子、白漂鳥、冬莊。鷺科蒼鷺屬的一種。其種加詞「alba」意為「白色的」。"
           }
         ]
       },
@@ -31759,11 +32095,15 @@
         "potential": [
           {
             "name": "灰斑鴴",
-            "sci": "Pluvialis squatarola"
+            "sci": "Pluvialis squatarola",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Pluvialis_squatarola_%28summer_plumage%29.jpg/500px-Pluvialis_squatarola_%28summer_plumage%29.jpg",
+            "wikiDesc": "灰斑鴴（學名：Pluvialis squatarola）為鴴形目鴴科斑鴴屬的一種鳥類。是一種在北極地區繁殖的大型鴴。牠是長距離的遷徙鳥，在非繁殖季節幾乎遍佈全球海岸地區。"
           },
           {
             "name": "黑面琵鷺",
-            "sci": "Platalea minor"
+            "sci": "Platalea minor",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Black_faced_spoonbill_at_Niigata.JPG/500px-Black_faced_spoonbill_at_Niigata.JPG",
+            "wikiDesc": "黑面琵鷺（學名：Platalea minor），又名黑臉琵鷺、小琵鷺、黑面鷺、黑琵鷺、琵琶嘴鷺，俗稱飯匙鳥 ，台語稱作「烏面抐桮 （頁面存檔備份，存於網際網路檔案館）」 台灣賞鳥人士則俗稱為「黑琵」。因其扁平如湯匙狀的長嘴，與中國樂器中的琵琶極為相似，因而得名；亦因其姿態優雅，又有 「黑面舞者」的雅稱；屬於鸛形目、䴉科、琵鷺亞科，琵鷺亞科的鳥類全世界共六種，其中以黑面琵鷺數量最為稀少（已知六種琵鷺當中唯黑面琵鷺屬瀕危物種），屬全球瀕危物種類別之一，因此當黑面琵鷺在每年一月至三月度冬時，東南亞觀鳥者會在多地觀測關注其過冬狀況並統計數量。黑面琵鷺現時只分布於東亞及東南亞地區。"
           }
         ]
       }
@@ -31781,11 +32121,15 @@
         "potential": [
           {
             "name": "黑面琵鷺",
-            "sci": "Platalea minor"
+            "sci": "Platalea minor",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Black_faced_spoonbill_at_Niigata.JPG/500px-Black_faced_spoonbill_at_Niigata.JPG",
+            "wikiDesc": "黑面琵鷺（學名：Platalea minor），又名黑臉琵鷺、小琵鷺、黑面鷺、黑琵鷺、琵琶嘴鷺，俗稱飯匙鳥 ，台語稱作「烏面抐桮 （頁面存檔備份，存於網際網路檔案館）」 台灣賞鳥人士則俗稱為「黑琵」。因其扁平如湯匙狀的長嘴，與中國樂器中的琵琶極為相似，因而得名；亦因其姿態優雅，又有 「黑面舞者」的雅稱；屬於鸛形目、䴉科、琵鷺亞科，琵鷺亞科的鳥類全世界共六種，其中以黑面琵鷺數量最為稀少（已知六種琵鷺當中唯黑面琵鷺屬瀕危物種），屬全球瀕危物種類別之一，因此當黑面琵鷺在每年一月至三月度冬時，東南亞觀鳥者會在多地觀測關注其過冬狀況並統計數量。黑面琵鷺現時只分布於東亞及東南亞地區。"
           },
           {
             "name": "赤頸鴨",
-            "sci": "Mareca penelope"
+            "sci": "Mareca penelope",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Anas_penelope_beijing.jpg/500px-Anas_penelope_beijing.jpg",
+            "wikiDesc": "赤頸鴨，學名Mareca penelope，又名赤頸鳧、鵝子鴨、紅鴨。"
           }
         ]
       },
@@ -31801,11 +32145,15 @@
         "potential": [
           {
             "name": "灰面鵟鷹",
-            "sci": "Butastur indicus"
+            "sci": "Butastur indicus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Butastur_indicus.jpg/500px-Butastur_indicus.jpg",
+            "wikiDesc": "灰面鵟鷹（中國大陸、香港作灰臉鵟鷹，學名：Butastur indicus），又稱灰面鷲，是鷹科鵟鷹屬的猛禽，臺灣彰化一帶稱為南路鷹（臺灣話：lâm-lōo-ing），臺灣屏東滿州當地稱為山後鳥（臺灣話：suann-āu-tsiáu），而在臺灣屏東小琉球則叫做飛烏鳥（臺灣話：pue-oo-tsiáu）。灰面鵟鷹於每年10月10日前後約5日，自北至南過冬，其中重要過境停棲點為臺灣的八卦臺地及恆春半島。因10月10日為中華民國國慶日，而又有國慶鳥之稱。"
           },
           {
             "name": "赤腹鷹",
-            "sci": "Accipiter soloensis"
+            "sci": "Accipiter soloensis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/AccipiterSoloensisKeulemans.jpg/500px-AccipiterSoloensisKeulemans.jpg",
+            "wikiDesc": "赤腹鷹（學名：Accipiter soloensis）為鷹科鷹屬的猛禽。成鳥背部為灰色，胸口有紫紅色或橙紅色的斑塊，翅膀內側為淺色，末端為深色。亞成鳥背部為深褐色，腹部和胸部均有斑紋。"
           }
         ]
       },
@@ -31821,11 +32169,15 @@
         "potential": [
           {
             "name": "黃鸝",
-            "sci": "Oriolus chinensis"
+            "sci": "Oriolus chinensis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Black-naped_Oriole.jpg/500px-Black-naped_Oriole.jpg",
+            "wikiDesc": "黃鸝（學名：Oriolus chinensis）又名黑枕黃鸝、倉庚（也作鶬鶊、倉鶊），俗稱黃鶯、黃鳥或金衣公子，是屬於雀形目黃鸝科的中型鳥類，分布於季風亞洲，包含俄羅斯西伯利亞、鴨綠江黑龍江流域、中國東北至華南一帶、朝鮮半島、台灣、菲律賓、中南半島、印度西高止山脈與東北地區、孟加拉、斯里蘭卡西南部、巽他群島部分島嶼以及安達曼-尼科巴群島，分布範圍約2,110萬平方公里。"
           },
           {
             "name": "鳳頭蒼鷹",
-            "sci": "Accipiter trivirgatus"
+            "sci": "Accipiter trivirgatus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Accipiter_trivirgatus_PA273291.jpg/500px-Accipiter_trivirgatus_PA273291.jpg",
+            "wikiDesc": "鳳頭蒼鷹（學名：Lophospiza trivirgata，中國大陸、香港作鳳頭鷹），又名鳳頭雀鷹、粉鳥鷹（臺灣話：hún-tsiáu-ing）、打鳥鷹或斑鳩鷹仔（臺灣話：pan-kah-ing-á），是鷹形目鷹科Lophospiza屬下的一種中型猛禽。本物種的分布範圍相當廣泛，遍及東亞、東南亞至南亞等地的低海拔樹林，在各地有不同外觀及體型大小的變化，目前共有11種亞種。 鳳頭蒼鷹的特徵為其頭部的短冠羽，前頸處的寬黑中央條紋，胸前縱紋及腹部橫紋，及深淺交錯的尾部條紋。"
           }
         ]
       },
@@ -31841,11 +32193,15 @@
         "potential": [
           {
             "name": "褐頭鷦鶯",
-            "sci": "Priniainornata"
+            "sci": "Priniainornata",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Plain_prinia_%28Prinia_inornata_inornata%29.jpg/500px-Plain_prinia_%28Prinia_inornata_inornata%29.jpg",
+            "wikiDesc": "褐頭鷦鶯（學名：Prinia inornata），也稱純色山鷦鶯或純色鷦鶯，為扇尾鶯科鷦鶯屬的鳥類。該物種的模式產地位於印度德干高原。分布於東南亞，從巴基斯坦和印度到中國南部及東南亞的地區皆為留鳥繁殖。"
           },
           {
             "name": "斑文鳥",
-            "sci": "Lonchura punctulata"
+            "sci": "Lonchura punctulata",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Scaly_breasted_munia_-kannur%40kattampally_birds_-_5.jpg/500px-Scaly_breasted_munia_-kannur%40kattampally_birds_-_5.jpg",
+            "wikiDesc": "斑文鳥（學名：Lonchura punctulata），俗名鱗胸文鳥、魚鱗沉香算命鳥、小紡織鳥、烏合畢、烏嘴（喙）畢仔、禾嗶仔（客語）、蓽雀，是一種原產於熱帶亞洲的雀形目梅花雀，體型與麻雀相當。此物種屬於文鳥屬，於1758年由卡爾·林奈正式物種描述和命名。它的名字源自胸部和腹部獨特的鱗片狀羽毛圖案。"
           }
         ]
       },
@@ -31861,11 +32217,15 @@
         "potential": [
           {
             "name": "翠鳥",
-            "sci": "Alcedo atthis"
+            "sci": "Alcedo atthis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Alcedo_Atthis.jpg/500px-Alcedo_Atthis.jpg",
+            "wikiDesc": "翠鳥（學名：Alcedo atthis，中國大陸、香港稱普通翠鳥，英語：Common kingfisher、Eurasian kingfisher、River kingfisher），又稱鴗、魚狗、魚獅、魚虎、翡翠鳥、釣魚翁，是佛法僧目翠鳥科翠鳥屬下的其中一種鳥類。這個物種由瑞典博物學家卡爾·林奈於1758年命名，分佈於歐亞非三塊大陸上的水域邊，主要以魚類為食。目前翠鳥共有7個亞種，是世界上最小，也是最為人所知的翠鳥科成員之一。"
           },
           {
             "name": "紅冠水雞",
-            "sci": "Gallinula chloropus"
+            "sci": "Gallinula chloropus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg/500px-Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg",
+            "wikiDesc": "紅冠水雞（學名：Gallinula chloropus）為秧雞科黑水雞屬的鳥類，又名黑水雞、水鵁鴒（臺灣話：tsuí-ka-līng）、烏水雞（臺灣話：oo-tsuí-ke）、田雞仔（臺灣話：tshân-ke-á）。分佈在古北界的許多地區，從非洲到歐洲和亞洲。該物種遍布世界各地，模式產地在英格蘭。"
           }
         ]
       },
@@ -31881,11 +32241,15 @@
         "potential": [
           {
             "name": "水雉",
-            "sci": "Hydrophasianus chirurgus"
+            "sci": "Hydrophasianus chirurgus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Pheasant-tailed_Jacana_Bangalore.jpg/500px-Pheasant-tailed_Jacana_Bangalore.jpg",
+            "wikiDesc": "水雉（學名：Hydrophasianus chirurgus），又名雉尾水雉（英語：Pheasant-tailed Jacana）、長尾水雉等，俗稱菱角鳥，是一個生物學分類上屬於水雉科的物種。該物種的一般分佈地區包括印度次大陸、中國大陸、臺灣島、中南半島、菲律賓群島、婆羅洲等，在冬季時包括泰國地區、馬來半島、印度尼西亞群島和澳大利亞大陸北部等。 該物種是臺灣唯一的水雉科物種，有許多個體棲息於臺灣本島（西南部）之菱角種植地。"
           },
           {
             "name": "黃胸藪鶥",
-            "sci": "Liocichla steereii"
+            "sci": "Liocichla steereii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Steere%27s_Liocichla_-_Taiwan_S4E6694_%2819301823680%29.jpg/500px-Steere%27s_Liocichla_-_Taiwan_S4E6694_%2819301823680%29.jpg",
+            "wikiDesc": "黃胸藪眉（學名：Liocichla steerii），又名藪鳥、黃痣藪鶥，俗稱媒婆鳥、老鼠鳥、美人痣、蕃藷仔鳥、蕃藷鳥仔（閩南語）、溪頭老鼠，是畫眉科藪鶥屬的一種，為台灣特有種，分布於海拔約 1000 至 2800 公尺的山區。種名是來自美國密西根大學教授鳥類學家史蒂瑞（Joseph Beal Steere），史蒂瑞於1873年10月至1874年3月來臺調查半年之久，率先發現藪鳥。第一次記錄到這種鳥類就是出自於他的觀察。"
           }
         ]
       },
@@ -31901,11 +32265,15 @@
         "potential": [
           {
             "name": "水雉",
-            "sci": "Hydrophasianus chirurgus"
+            "sci": "Hydrophasianus chirurgus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Pheasant-tailed_Jacana_Bangalore.jpg/500px-Pheasant-tailed_Jacana_Bangalore.jpg",
+            "wikiDesc": "水雉（學名：Hydrophasianus chirurgus），又名雉尾水雉（英語：Pheasant-tailed Jacana）、長尾水雉等，俗稱菱角鳥，是一個生物學分類上屬於水雉科的物種。該物種的一般分佈地區包括印度次大陸、中國大陸、臺灣島、中南半島、菲律賓群島、婆羅洲等，在冬季時包括泰國地區、馬來半島、印度尼西亞群島和澳大利亞大陸北部等。 該物種是臺灣唯一的水雉科物種，有許多個體棲息於臺灣本島（西南部）之菱角種植地。"
           },
           {
             "name": "高蹺鴴",
-            "sci": "Himantopus himantopus"
+            "sci": "Himantopus himantopus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Himantopus_himantopus%2C_S%C3%A8te_cf26.jpg/500px-Himantopus_himantopus%2C_S%C3%A8te_cf26.jpg",
+            "wikiDesc": "高蹺鴴（學名：Himantopus himantopus，中國大陸作黑翅長腳鷸），又名長腳鷸、紅腿娘子，為長腳鷸科長腳鷸屬下的一個種。"
           }
         ]
       },
@@ -31922,11 +32290,15 @@
         "potential": [
           {
             "name": "台灣畫眉",
-            "sci": "Garrulax taewanus"
+            "sci": "Garrulax taewanus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Garrulax_taewanus%2C_Taipei_2.jpg/500px-Garrulax_taewanus%2C_Taipei_2.jpg",
+            "wikiDesc": "臺灣畫眉（學名：Garrulax taewanus），臺灣話與其他畫眉統稱花眉仔（臺羅：hue-bî-á/hua-bî-á），雀形目噪鶥科噪鶥屬鳥類，是台灣特有種，曾被認為是畫眉（Leucodioptron canorum）的亞種，但現已被視為獨立物種，基於粒線體DNA和細胞色素b基因的研究指出，兩者早在上新世前期至更新世中期（最大推測年代跨度為460萬至120萬年前）便已分化為兩個不同的物種。"
           },
           {
             "name": "五色鳥",
-            "sci": "Psilopogon nuchalis"
+            "sci": "Psilopogon nuchalis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Taiwan_barbet.jpg/500px-Taiwan_barbet.jpg",
+            "wikiDesc": "五色鳥（學名：Psilopogon nuchalis，中國大陸、香港作台灣擬啄木鳥，臺灣話：花仔和尚、花褂鳥），又作臺灣擬啄木、台灣擬啄木，是鴷形目鬚鴷科擬啄木屬下的一種鳥類。這個物種是臺灣特有的鳥類，主要以果實為食，曾一度被視為黑眉擬啄木的亞種，但在2006年後拆分為獨立物種。 五色鳥的體長約20—22公分，其身體大部分為翠綠色，而頭部則有藍、黃、紅、黑四色，故得名「五色鳥」；另因其叫聲為單調而響亮的「嘓嘓嘓……」，類似於敲木魚的聲音，而有著「花和尚」的別稱。"
           }
         ]
       }
@@ -31944,11 +32316,15 @@
         "potential": [
           {
             "name": "鳳頭潛鴨",
-            "sci": "Aythya fuligula"
+            "sci": "Aythya fuligula",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Tufted-Duck-male-female.jpg/500px-Tufted-Duck-male-female.jpg",
+            "wikiDesc": "鳳頭潛鴨（Tufted Duck，學名：Aythya fuligula）是一種中等大小的潛鴨，又名澤鳧、鳳頭鴨子、黑頭四鴨。"
           },
           {
             "name": "澤鳧",
-            "sci": "Aythya fuligula"
+            "sci": "Aythya fuligula",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Tufted-Duck-male-female.jpg/500px-Tufted-Duck-male-female.jpg",
+            "wikiDesc": "鳳頭潛鴨（Tufted Duck，學名：Aythya fuligula）是一種中等大小的潛鴨，又名澤鳧、鳳頭鴨子、黑頭四鴨。"
           }
         ]
       },
@@ -31966,11 +32342,15 @@
         "potential": [
           {
             "name": "赤腹鷹",
-            "sci": "Accipiter soloensis"
+            "sci": "Accipiter soloensis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/AccipiterSoloensisKeulemans.jpg/500px-AccipiterSoloensisKeulemans.jpg",
+            "wikiDesc": "赤腹鷹（學名：Accipiter soloensis）為鷹科鷹屬的猛禽。成鳥背部為灰色，胸口有紫紅色或橙紅色的斑塊，翅膀內側為淺色，末端為深色。亞成鳥背部為深褐色，腹部和胸部均有斑紋。"
           },
           {
             "name": "灰面鵟鷹",
-            "sci": "Butastur indicus"
+            "sci": "Butastur indicus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Butastur_indicus.jpg/500px-Butastur_indicus.jpg",
+            "wikiDesc": "灰面鵟鷹（中國大陸、香港作灰臉鵟鷹，學名：Butastur indicus），又稱灰面鷲，是鷹科鵟鷹屬的猛禽，臺灣彰化一帶稱為南路鷹（臺灣話：lâm-lōo-ing），臺灣屏東滿州當地稱為山後鳥（臺灣話：suann-āu-tsiáu），而在臺灣屏東小琉球則叫做飛烏鳥（臺灣話：pue-oo-tsiáu）。灰面鵟鷹於每年10月10日前後約5日，自北至南過冬，其中重要過境停棲點為臺灣的八卦臺地及恆春半島。因10月10日為中華民國國慶日，而又有國慶鳥之稱。"
           }
         ]
       },
@@ -31986,11 +32366,15 @@
         "potential": [
           {
             "name": "大白鷺",
-            "sci": "Ardea alba"
+            "sci": "Ardea alba",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Great_Egret_%28Egretta_alba%29%2C_Skala_Kallonis%2C_Lesvos%2C_Greece%2C_19.04.2015_%2817449816992%29.jpg/500px-Great_Egret_%28Egretta_alba%29%2C_Skala_Kallonis%2C_Lesvos%2C_Greece%2C_19.04.2015_%2817449816992%29.jpg",
+            "wikiDesc": "大白鷺（學名：Ardea alba），別名白鷺鷥、鷺鷥、風漂公子、白漂鳥、冬莊。鷺科蒼鷺屬的一種。其種加詞「alba」意為「白色的」。"
           },
           {
             "name": "黃小鷺",
-            "sci": "Ixobrychus sinensis"
+            "sci": "Ixobrychus sinensis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Yellow_Bittern_hunting.jpg/500px-Yellow_Bittern_hunting.jpg",
+            "wikiDesc": "黃小鷺（學名：Ixobrychus sinensis）又名黃葦鳽或黃葦鷺，俗稱水駱駝或小老等，閩南語又稱田缺了或田缺仔，為鷺科葦鷺屬的鳥類。分布於日本、印度、巽他群島、菲律賓群島、臺灣、香港,以及中國廣東、海南、黑龍江、吉林、遼寧、河北、河南、湖北、浙江、陝西、甘肅、四川、雲南、江蘇等地，多棲息於湖泊、水庫附近的稻田、蘆葦叢、沼澤草地及灘涂中以及營巢於水邊的葦叢或灌叢。該物種的模式產地在中國。"
           }
         ]
       },
@@ -32006,11 +32390,15 @@
         "potential": [
           {
             "name": "朱鸝",
-            "sci": "Oriolus traillii"
+            "sci": "Oriolus traillii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Maroon_Oriole_at_Sikkim%2C_India.jpg/500px-Maroon_Oriole_at_Sikkim%2C_India.jpg",
+            "wikiDesc": "朱鸝（學名：Oriolus traillii），俗稱大緋鳥，是黃鸝科黃鸝屬的鳥類，主要分布於東南亞地區，臺灣話俗稱紅鶯(âng-ing)，該鳥亦為花蓮縣縣鳥。"
           },
           {
             "name": "黑枕藍鶲",
-            "sci": "Hypothymis azurea"
+            "sci": "Hypothymis azurea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Black-naped_Monarch_-_Thailand_S4E7277_%2819449130711%29.jpg/500px-Black-naped_Monarch_-_Thailand_S4E7277_%2819449130711%29.jpg",
+            "wikiDesc": "黑枕藍鶲（中國大陸、香港作黑枕王鶲，學名：Hypothymis azurea），為王鶲科王鶲屬的鳥類。主要分布於熱帶亞洲，模式產地位於菲律賓呂宋島。 黑枕藍鶲是一種纖細敏捷的雀形目鳥類，隸屬於南亞及東南亞的王鶲科。"
           }
         ]
       },
@@ -32026,11 +32414,15 @@
         "potential": [
           {
             "name": "台灣畫眉",
-            "sci": "Garrulax taewanus"
+            "sci": "Garrulax taewanus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Garrulax_taewanus%2C_Taipei_2.jpg/500px-Garrulax_taewanus%2C_Taipei_2.jpg",
+            "wikiDesc": "臺灣畫眉（學名：Garrulax taewanus），臺灣話與其他畫眉統稱花眉仔（臺羅：hue-bî-á/hua-bî-á），雀形目噪鶥科噪鶥屬鳥類，是台灣特有種，曾被認為是畫眉（Leucodioptron canorum）的亞種，但現已被視為獨立物種，基於粒線體DNA和細胞色素b基因的研究指出，兩者早在上新世前期至更新世中期（最大推測年代跨度為460萬至120萬年前）便已分化為兩個不同的物種。"
           },
           {
             "name": "五色鳥",
-            "sci": "Psilopogon nuchalis"
+            "sci": "Psilopogon nuchalis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Taiwan_barbet.jpg/500px-Taiwan_barbet.jpg",
+            "wikiDesc": "五色鳥（學名：Psilopogon nuchalis，中國大陸、香港作台灣擬啄木鳥，臺灣話：花仔和尚、花褂鳥），又作臺灣擬啄木、台灣擬啄木，是鴷形目鬚鴷科擬啄木屬下的一種鳥類。這個物種是臺灣特有的鳥類，主要以果實為食，曾一度被視為黑眉擬啄木的亞種，但在2006年後拆分為獨立物種。 五色鳥的體長約20—22公分，其身體大部分為翠綠色，而頭部則有藍、黃、紅、黑四色，故得名「五色鳥」；另因其叫聲為單調而響亮的「嘓嘓嘓……」，類似於敲木魚的聲音，而有著「花和尚」的別稱。"
           }
         ]
       },
@@ -32046,11 +32438,15 @@
         "potential": [
           {
             "name": "鉛色水鶇",
-            "sci": "Phoenicurus fuliginosus"
+            "sci": "Phoenicurus fuliginosus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Plumbeous_Water_Redstart_%28male%29.JPG/500px-Plumbeous_Water_Redstart_%28male%29.JPG",
+            "wikiDesc": "鉛色水鶇（學名：Phoenicurus fuliginosus），又名紅尾水鴝、鉛色水鴝，臺灣話稱石青仔（臺羅：tsio̍h-tshenn-á/tsio̍h-tshinn-á），為鶲科紅尾鴝屬下的一個種。分布於南亞、東南亞和中國。雄鳥為灰藍色，雌鳥則為灰色。"
           },
           {
             "name": "紫嘯鶇",
-            "sci": "Myophonus insularis"
+            "sci": "Myophonus insularis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Formosan_Whistling-Thrush_-_Taiwan_S4E6052_%2817047153068%29.jpg/500px-Formosan_Whistling-Thrush_-_Taiwan_S4E6052_%2817047153068%29.jpg",
+            "wikiDesc": "臺灣紫嘯鶇（學名：Myophonus insularis），又稱琉璃鳥、烏磯（臺灣話：Oo-ki）、紫嘯鶇，是雀形目鶲科嘯鶇屬下的一種鳥類。牠們棲息於中低海拔的森林中及溪澗旁，是僅分佈於臺灣的特有種之一。為肉食性，主要以昆蟲等無脊椎動物為食。"
           }
         ]
       },
@@ -32066,11 +32462,15 @@
         "potential": [
           {
             "name": "深山竹雞",
-            "sci": "Arborophila crudigularis"
+            "sci": "Arborophila crudigularis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Taiwan_partridge_%28Arborophila_crudigularis%29.jpg/500px-Taiwan_partridge_%28Arborophila_crudigularis%29.jpg",
+            "wikiDesc": "臺灣山鷓鴣（學名：Arborophila crudigularis），俗稱深山竹雞或紅腳竹雞，是臺灣特有，也是唯一的雉科山鷓鴣屬鳥類，它僅分佈於台灣。其黑白分明的面紋明顯有別於其他臺灣的雉雞。性隱蔽而機警，棲息於中低海拔的原生闊葉林底層，常三五成群活動。"
           },
           {
             "name": "藍腹鷴",
-            "sci": "Lophura swinhoii"
+            "sci": "Lophura swinhoii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Swinhoe%27s_Pheasant_0673.jpg/500px-Swinhoe%27s_Pheasant_0673.jpg",
+            "wikiDesc": "藍腹鷴（學名：Lophura swinhoii），別名藍鷴、山雞，俗稱臺灣山雞，為臺灣特有種，第二級珍貴稀有保育類，雉科鷴屬，雄鳥軀體幾乎皆為藍色，因而得名。阿里山鄒族稱「toevosʉ」。"
           }
         ]
       }
@@ -32089,11 +32489,15 @@
         "potential": [
           {
             "name": "黑嘴鷗",
-            "sci": "Saundersilarus saundersi"
+            "sci": "Saundersilarus saundersi",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Saunders%27s_Gull_-_Hong_Kong_2.jpg/500px-Saunders%27s_Gull_-_Hong_Kong_2.jpg",
+            "wikiDesc": "黑嘴鷗（學名Saundersilarus saundersi），是黑嘴鷗屬的一種。這種鷗主要分佈於中國、日本、北韓、南韓、澳門、俄羅斯、台灣和越南。 它的自然棲地為河口水域和潮間帶沼澤。"
           },
           {
             "name": "小燕鷗",
-            "sci": "Sternula albifrons"
+            "sci": "Sternula albifrons",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D0%BC%D0%B0%D0%BB%D0%B8%D0%B9.jpg/500px-%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D0%BC%D0%B0%D0%BB%D0%B8%D0%B9.jpg",
+            "wikiDesc": "小燕鷗（學名：Sternula albifrons），又名白額燕鷗，為鷗科小燕鷗屬的鳥類。該物種的模式產地在荷蘭。"
           }
         ]
       },
@@ -32109,11 +32513,15 @@
         "potential": [
           {
             "name": "小水鴨",
-            "sci": "Anas crecca"
+            "sci": "Anas crecca",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Flickr_-_Rainbirder_-_EurasianTeal_in_flight_%28cropped%29.jpg/500px-Flickr_-_Rainbirder_-_EurasianTeal_in_flight_%28cropped%29.jpg",
+            "wikiDesc": "小水鴨（中國大陸作綠翅鴨，香港作綠翅鴨）（學名：Anas crecca），又名小鳧、小麻鴨、小蜆鴨、小食鴨。"
           },
           {
             "name": "尖尾鴨",
-            "sci": "Anas acuta"
+            "sci": "Anas acuta",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Northern_Pintails_%28Male_%26_Female%29_I_IMG_0911.jpg/500px-Northern_Pintails_%28Male_%26_Female%29_I_IMG_0911.jpg",
+            "wikiDesc": "尖尾鴨（學名：Anas acuta）又名針尾鴨、長尾鳧、長鬧、拖槍鴨、中鴨，是一種廣泛分佈於北半球的大型鴨屬生物，因其雄鳥有針狀的細長尾羽而得名。與很多分佈廣泛的鳥類不同，尖尾鴨沒有亞種。"
           }
         ]
       },
@@ -32129,11 +32537,15 @@
         "potential": [
           {
             "name": "黑頸鸊鷉",
-            "sci": "Podiceps nigricollis"
+            "sci": "Podiceps nigricollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Podiceps_nigricollis_1_%28Bohu%C5%A1_%C4%8C%C3%AD%C4%8Del%29.jpg/500px-Podiceps_nigricollis_1_%28Bohu%C5%A1_%C4%8C%C3%AD%C4%8Del%29.jpg",
+            "wikiDesc": "黑頸鷿鷈（學名：Podiceps nigricollis）是鷿鷈科水鳥中的一員。目前有三個公認的亞種，包括指名亞種。它的繁殖羽具有獨特的赭石色羽毛，延伸到眼睛後面和耳蓋上。"
           },
           {
             "name": "紅冠水雞",
-            "sci": "Gallinula chloropus"
+            "sci": "Gallinula chloropus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg/500px-Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg",
+            "wikiDesc": "紅冠水雞（學名：Gallinula chloropus）為秧雞科黑水雞屬的鳥類，又名黑水雞、水鵁鴒（臺灣話：tsuí-ka-līng）、烏水雞（臺灣話：oo-tsuí-ke）、田雞仔（臺灣話：tshân-ke-á）。分佈在古北界的許多地區，從非洲到歐洲和亞洲。該物種遍布世界各地，模式產地在英格蘭。"
           }
         ]
       },
@@ -32149,11 +32561,15 @@
         "potential": [
           {
             "name": "小燕鷗",
-            "sci": "Sternula albifrons"
+            "sci": "Sternula albifrons",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D0%BC%D0%B0%D0%BB%D0%B8%D0%B9.jpg/500px-%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D0%BC%D0%B0%D0%BB%D0%B8%D0%B9.jpg",
+            "wikiDesc": "小燕鷗（學名：Sternula albifrons），又名白額燕鷗，為鷗科小燕鷗屬的鳥類。該物種的模式產地在荷蘭。"
           },
           {
             "name": "鳳頭燕鷗",
-            "sci": "Thalasseus bergii"
+            "sci": "Thalasseus bergii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Crested_Tern_breeding_plumage.jpg/500px-Crested_Tern_breeding_plumage.jpg",
+            "wikiDesc": "鳳頭燕鷗（學名：Thalasseus bergii），又名大鳳頭燕鷗，具羽冠的燕鷗，為燕鷗科鳳頭燕鷗屬的鳥類。在熱帶和亞熱帶舊大陸的海岸線和島嶼上密集成群地築巢，遍及印度洋到中太平洋，以及波斯灣，馬祖、基隆、宜蘭亦有分布。其五個亞種在南非到印度洋周圍，直至中部太平洋和澳大利亞地區繁殖，所有的族群在繁殖後廣泛遷徙於繁殖區之外。"
           }
         ]
       },
@@ -32169,11 +32585,15 @@
         "potential": [
           {
             "name": "金翼白眉",
-            "sci": "Garrulax morrisonianus"
+            "sci": "Garrulax morrisonianus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Garrulax_morrisonianus_-Taiwan-8.jpg/500px-Garrulax_morrisonianus_-Taiwan-8.jpg",
+            "wikiDesc": "金翼白眉（學名：Trochalopteron morrisonianum），又名玉山噪鶥或臺灣噪眉，臺灣話稱四眉（sì-bâi），是圓翅噪鶥屬的一種，分布於臺灣。該物種的保護狀況被評為無危。 金翼白眉的模式產地位於玉山，這也是其種名「morrisonianum」的由來。"
           },
           {
             "name": "灰林鳩",
-            "sci": "Columba pulchricollis"
+            "sci": "Columba pulchricollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Ashy_Wood_Pigeon_Kedarnath_Musk_Deer_Sanctuary_Chamoli_Uttarakhand_India_25.11.2015.jpg/500px-Ashy_Wood_Pigeon_Kedarnath_Musk_Deer_Sanctuary_Chamoli_Uttarakhand_India_25.11.2015.jpg",
+            "wikiDesc": "灰林鴿（學名：Columba pulchricollis）為鳩鴿科鴿屬的鳥類。"
           }
         ]
       },
@@ -32190,11 +32610,15 @@
         "potential": [
           {
             "name": "鳳頭燕鷗",
-            "sci": "Thalasseus bergii"
+            "sci": "Thalasseus bergii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Crested_Tern_breeding_plumage.jpg/500px-Crested_Tern_breeding_plumage.jpg",
+            "wikiDesc": "鳳頭燕鷗（學名：Thalasseus bergii），又名大鳳頭燕鷗，具羽冠的燕鷗，為燕鷗科鳳頭燕鷗屬的鳥類。在熱帶和亞熱帶舊大陸的海岸線和島嶼上密集成群地築巢，遍及印度洋到中太平洋，以及波斯灣，馬祖、基隆、宜蘭亦有分布。其五個亞種在南非到印度洋周圍，直至中部太平洋和澳大利亞地區繁殖，所有的族群在繁殖後廣泛遷徙於繁殖區之外。"
           },
           {
             "name": "岩鷺",
-            "sci": "Egretta sacra"
+            "sci": "Egretta sacra",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Eastern_Reef_Egret.jpg/500px-Eastern_Reef_Egret.jpg",
+            "wikiDesc": "岩鷺（學名：Egretta sacra）為鷺科白鷺屬的鳥類。是一種分布於南部亞洲和大洋洲的鷺。它有兩種顏色型態，分別是板岩灰或純白色羽毛。"
           }
         ]
       },
@@ -32210,11 +32634,15 @@
         "potential": [
           {
             "name": "鴛鴦",
-            "sci": "Aix galericulata"
+            "sci": "Aix galericulata",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Pair_of_mandarin_ducks.jpg/500px-Pair_of_mandarin_ducks.jpg",
+            "wikiDesc": "鴛鴦（學名：Aix galericulata），本名鸂（ㄒㄧ）鶒（ㄔˋ），又稱匹鳥、鄧木鳥或紫鴛鴦，是雁形目雁鴨科鴛鴦屬的一種水鳥。亦經常出現在中國古代文學作品和神話傳説中。其中鴛指雄鳥，鴦指雌鳥。"
           },
           {
             "name": "小鷿鷉",
-            "sci": "Tachybaptus ruficollis"
+            "sci": "Tachybaptus ruficollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Litle_Grebe_-_Tachybaptus_ruficollis.jpg/500px-Litle_Grebe_-_Tachybaptus_ruficollis.jpg",
+            "wikiDesc": "小鸊鷉（學名：Tachybaptus ruficollis），又作小鷿鷈、小鸊鷈，俗稱水葫蘆、王八鴨子、油葫蘆、油鴨、水避仔（臺灣話：tsúi-pī-á），是鸊鷉科小鸊鷉屬下的一種鳥類。牠們分佈在歐洲、亞洲和非洲的濕地、沼澤、湖泊和水塘等水域環境中。牠們相當善於潛入水中覓食，主要食用水生昆蟲、蝌蚪、小魚和甲殼類等水中生物。"
           }
         ]
       },
@@ -32230,11 +32658,15 @@
         "potential": [
           {
             "name": "翠鳥",
-            "sci": "Alcedo atthis"
+            "sci": "Alcedo atthis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Alcedo_Atthis.jpg/500px-Alcedo_Atthis.jpg",
+            "wikiDesc": "翠鳥（學名：Alcedo atthis，中國大陸、香港稱普通翠鳥，英語：Common kingfisher、Eurasian kingfisher、River kingfisher），又稱鴗、魚狗、魚獅、魚虎、翡翠鳥、釣魚翁，是佛法僧目翠鳥科翠鳥屬下的其中一種鳥類。這個物種由瑞典博物學家卡爾·林奈於1758年命名，分佈於歐亞非三塊大陸上的水域邊，主要以魚類為食。目前翠鳥共有7個亞種，是世界上最小，也是最為人所知的翠鳥科成員之一。"
           },
           {
             "name": "蒼鷺",
-            "sci": "Ardea cinerea"
+            "sci": "Ardea cinerea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ardea_cinerea_7_%28Marek_Szczepanek%29.jpg/500px-Ardea_cinerea_7_%28Marek_Szczepanek%29.jpg",
+            "wikiDesc": "蒼鷺（學名：Ardea cinerea）又稱灰鷺，為鷺科蒼鷺屬的一種涉禽，也是蒼鷺屬的模式種。是歐亞大陸與非洲大陸的濕地中極為常見的水鳥。"
           }
         ]
       },
@@ -32250,11 +32682,15 @@
         "potential": [
           {
             "name": "白腹秧雞",
-            "sci": "Amaurornis phoenicurus"
+            "sci": "Amaurornis phoenicurus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Amaurornis_phoenicurus_-_Singapore_Botanic_Gardens.jpg/500px-Amaurornis_phoenicurus_-_Singapore_Botanic_Gardens.jpg",
+            "wikiDesc": "白腹秧雞（學名：Amaurornis phoenicurus），又名白胸苦惡鳥、苦雞母（臺灣話：khóo-ke-bó）、田雞仔（臺灣話：tshân-ke-á）、紅尻川仔（臺灣話：âng-kha-tshng-á）、白面仔（臺灣話：pe̍h-bīn-á）、補鑊鳥（臺灣客家語四縣腔：buˋ vog diauˊ），是秧雞科苦惡鳥屬中的一種水鳥，該物種的模式產地在斯里蘭卡。繁殖棲息於亞洲南部的沼澤、池塘、溝渠和河岸，從印度、斯里蘭卡橫跨到中國南部和印度尼西亞，身長約32公分，在上述地區皆為留鳥，築巢在沼澤植被的乾燥地點，一巢約6至7個蛋。"
           },
           {
             "name": "夜鷺",
-            "sci": "Nycticorax nycticorax"
+            "sci": "Nycticorax nycticorax",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Black-crowned_Night_Heron_--_Nycticorax_nycticorax.jpg/500px-Black-crowned_Night_Heron_--_Nycticorax_nycticorax.jpg",
+            "wikiDesc": "夜鷺（學名：Nycticorax nycticorax）又稱黑頂夜鷺，俗稱灰窪子、夜窪子、星雁、暗光鳥仔，是鷺科夜鷺屬的一種。"
           }
         ]
       },
@@ -32270,11 +32706,15 @@
         "potential": [
           {
             "name": "紫鷺",
-            "sci": "Ardea purpurea"
+            "sci": "Ardea purpurea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Ardea_purpurea_%28Nagarhole%2C_2010%29.jpg/500px-Ardea_purpurea_%28Nagarhole%2C_2010%29.jpg",
+            "wikiDesc": "紫鷺（學名：Ardea purpurea）為鷺科蒼鷺屬的鳥類，又名草鷺，俗稱花窖馬、柴鷺或長脖佬。是一種分布廣泛的鷺。牠們在非洲、歐洲中部和南部，以及古北界南部和東部繁殖。"
           },
           {
             "name": "花嘴鴨",
-            "sci": "Anas zonorhyncha"
+            "sci": "Anas zonorhyncha",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anas_zonorhyncha_swimming.jpg/500px-Anas_zonorhyncha_swimming.jpg",
+            "wikiDesc": "花嘴鴨（中國大陸作斑嘴鴨，香港作中華斑嘴鴨）（學名：Anas zonorhyncha），別名東方花嘴鴨、谷鴨、黃嘴尖鴨、火燎鴨，是屬於鴨科鴨屬的一種鳥類。分佈於東亞，共有80-160萬隻，數量有下跌的趨勢。這個物種以前被認為是印度斑嘴鴨的亞種，兩者都被稱為斑嘴鴨（A. poecilorhyncha）。"
           }
         ]
       }
@@ -32293,11 +32733,15 @@
         "potential": [
           {
             "name": "黃山雀",
-            "sci": "Machlolophus holsti"
+            "sci": "Machlolophus holsti",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Taiwan_tit.jpg/500px-Taiwan_tit.jpg",
+            "wikiDesc": "黃山雀（學名：Machlolophus holsti），又名台灣黃山雀、台灣四十雀，俗稱師公鳥，是一種棲息於中低海拔山區的雀鳥。台灣特有種，也是稀有的留鳥。 在溪頭其族群量較多，喜歡棲息於海拔2,000公尺以下之闊葉林，以海拔1,500公尺左右山區較常見，冬季時會遷移至海拔700公尺附近的低山區，甚至出現在森林邊緣之住家大樹上。"
           },
           {
             "name": "赤腹山雀",
-            "sci": "Sittiparus castaneoventris"
+            "sci": "Sittiparus castaneoventris",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Sittiparus_castaneoventris%2C_Taiwan_1.jpg/500px-Sittiparus_castaneoventris%2C_Taiwan_1.jpg",
+            "wikiDesc": "赤腹山雀（中國大陸作台灣雜色山雀）（學名：Sittiparus castaneoventris）是山雀科的一種小型鳥類，為台灣特有種。 最初由英國鳥類學家約翰·古爾德( John Gould)於1863年首次描述，並定其學名為Parus castaneoventris. 以前被認為是雜色山雀的亞種，但在2014年種系發生學研究發表後被提升為新物種。"
           }
         ]
       },
@@ -32313,11 +32757,15 @@
         "potential": [
           {
             "name": "花嘴鴨",
-            "sci": "Anas zonorhyncha"
+            "sci": "Anas zonorhyncha",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anas_zonorhyncha_swimming.jpg/500px-Anas_zonorhyncha_swimming.jpg",
+            "wikiDesc": "花嘴鴨（中國大陸作斑嘴鴨，香港作中華斑嘴鴨）（學名：Anas zonorhyncha），別名東方花嘴鴨、谷鴨、黃嘴尖鴨、火燎鴨，是屬於鴨科鴨屬的一種鳥類。分佈於東亞，共有80-160萬隻，數量有下跌的趨勢。這個物種以前被認為是印度斑嘴鴨的亞種，兩者都被稱為斑嘴鴨（A. poecilorhyncha）。"
           },
           {
             "name": "小環頸鴴",
-            "sci": "Charadrius dubius"
+            "sci": "Charadrius dubius",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Charadrius_dubius_-_Little_ringed_plover_05.jpg/500px-Charadrius_dubius_-_Little_ringed_plover_05.jpg",
+            "wikiDesc": "小環頸鴴（學名：Charadrius dubius，英語：Little Ringed Plover，中國大陸、香港作金眶鴴），是鴴形目鴴科鴴屬下的一種鳥類。這種鳥類是一種涉禽，以昆蟲及小型無脊椎動物為食。牠們廣泛分佈於歐亞非三洲的海岸、河流、湖泊或潟湖邊，部分個體視季節會遷徙，自歐洲移動至非洲或印度過冬，春季時再返回；但也有個體是全年留鳥。"
           }
         ]
       },
@@ -32333,11 +32781,15 @@
         "potential": [
           {
             "name": "大冠鷲",
-            "sci": "Spilornis cheela"
+            "sci": "Spilornis cheela",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg/500px-Crested_Serpant_Eagle_%28Spilornis_cheela%29_%2815263160313%29.jpg",
+            "wikiDesc": "大冠鷲（學名：Spilornis cheela）（西拉雅語：Akakul）又名冠蛇鵰、冕蛇鵰、食蛇鵰，粵語俗稱食蛇鷹，是一種中大型猛禽，屬於鷹科一員。分布於熱帶亞洲的森林棲地中。在它廣泛分布的印度次大陸、東南亞和東亞範圍內，存在顯著的變異，一些權威機構更傾向於將其數個亞種視為完全獨立的物種。"
           },
           {
             "name": "五色鳥",
-            "sci": "Psilopogon nuchalis"
+            "sci": "Psilopogon nuchalis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Taiwan_barbet.jpg/500px-Taiwan_barbet.jpg",
+            "wikiDesc": "五色鳥（學名：Psilopogon nuchalis，中國大陸、香港作台灣擬啄木鳥，臺灣話：花仔和尚、花褂鳥），又作臺灣擬啄木、台灣擬啄木，是鴷形目鬚鴷科擬啄木屬下的一種鳥類。這個物種是臺灣特有的鳥類，主要以果實為食，曾一度被視為黑眉擬啄木的亞種，但在2006年後拆分為獨立物種。 五色鳥的體長約20—22公分，其身體大部分為翠綠色，而頭部則有藍、黃、紅、黑四色，故得名「五色鳥」；另因其叫聲為單調而響亮的「嘓嘓嘓……」，類似於敲木魚的聲音，而有著「花和尚」的別稱。"
           }
         ]
       },
@@ -32353,11 +32805,15 @@
         "potential": [
           {
             "name": "環頸雉",
-            "sci": "Phasianus colchicus"
+            "sci": "Phasianus colchicus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pheasant.jpg/500px-Pheasant.jpg",
+            "wikiDesc": "環頸雉（學名：Phasianus colchicus）又名雉雞，俗稱野雞、華蟲，是雉科雉屬的鳥類。雄性環頸雉的羽毛非常多樣，從幾乎白色到幾乎黑色都有，這是由於馴化及與綠雉雜交，加上放生不同的亞種雜交的結果；雌鳥則維持棕色、灰色的樣子，在各個大陸的外貌差別不大。目前的地球上，在東亞、歐洲、北美、澳洲均有環頸雉的大量分佈，並且經常混血，所以沒有一個特定的分類。"
           },
           {
             "name": "朱鸝",
-            "sci": "Oriolus traillii"
+            "sci": "Oriolus traillii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Maroon_Oriole_at_Sikkim%2C_India.jpg/500px-Maroon_Oriole_at_Sikkim%2C_India.jpg",
+            "wikiDesc": "朱鸝（學名：Oriolus traillii），俗稱大緋鳥，是黃鸝科黃鸝屬的鳥類，主要分布於東南亞地區，臺灣話俗稱紅鶯(âng-ing)，該鳥亦為花蓮縣縣鳥。"
           }
         ]
       },
@@ -32374,11 +32830,15 @@
         "potential": [
           {
             "name": "冠羽畫眉",
-            "sci": "Yuhina brunneiceps"
+            "sci": "Yuhina brunneiceps",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Taiwan_Yuhina_-_Taiwan_S4E8280_%2818926478463%29.jpg/500px-Taiwan_Yuhina_-_Taiwan_S4E8280_%2818926478463%29.jpg",
+            "wikiDesc": "冠羽畫眉（學名：Yuhina brunneiceps），又名冠羽鳳眉，為繡眼科鳳鶥屬的鳥類，是台灣特有種，僅見於本島的五大山脈（惟海岸山脈少有紀錄）。其種名來自拉丁文的 brunneus（褐色的）和 ceps（頭部），模式產地位於今玉山國家公園內的樂樂溪上游流域一帶。"
           },
           {
             "name": "朱鸝",
-            "sci": "Oriolus traillii"
+            "sci": "Oriolus traillii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Maroon_Oriole_at_Sikkim%2C_India.jpg/500px-Maroon_Oriole_at_Sikkim%2C_India.jpg",
+            "wikiDesc": "朱鸝（學名：Oriolus traillii），俗稱大緋鳥，是黃鸝科黃鸝屬的鳥類，主要分布於東南亞地區，臺灣話俗稱紅鶯(âng-ing)，該鳥亦為花蓮縣縣鳥。"
           }
         ]
       },
@@ -32394,11 +32854,15 @@
         "potential": [
           {
             "name": "環頸雉",
-            "sci": "Phasianus colchicus"
+            "sci": "Phasianus colchicus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pheasant.jpg/500px-Pheasant.jpg",
+            "wikiDesc": "環頸雉（學名：Phasianus colchicus）又名雉雞，俗稱野雞、華蟲，是雉科雉屬的鳥類。雄性環頸雉的羽毛非常多樣，從幾乎白色到幾乎黑色都有，這是由於馴化及與綠雉雜交，加上放生不同的亞種雜交的結果；雌鳥則維持棕色、灰色的樣子，在各個大陸的外貌差別不大。目前的地球上，在東亞、歐洲、北美、澳洲均有環頸雉的大量分佈，並且經常混血，所以沒有一個特定的分類。"
           },
           {
             "name": "紅尾伯勞",
-            "sci": "Lanius cristatus"
+            "sci": "Lanius cristatus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Lanius_cristatus_-_Surin.jpg/500px-Lanius_cristatus_-_Surin.jpg",
+            "wikiDesc": "紅尾伯勞（學名：Lanius cristatus）為伯勞科伯勞屬的一種，俗名褐伯勞。主要分布於亞洲。牠與紅背伯勞（L. collurio）和荒漠伯勞（L. isabellinus）關係密切。"
           }
         ]
       },
@@ -32414,11 +32878,15 @@
         "potential": [
           {
             "name": "朱鸝",
-            "sci": "Oriolus traillii"
+            "sci": "Oriolus traillii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Maroon_Oriole_at_Sikkim%2C_India.jpg/500px-Maroon_Oriole_at_Sikkim%2C_India.jpg",
+            "wikiDesc": "朱鸝（學名：Oriolus traillii），俗稱大緋鳥，是黃鸝科黃鸝屬的鳥類，主要分布於東南亞地區，臺灣話俗稱紅鶯(âng-ing)，該鳥亦為花蓮縣縣鳥。"
           },
           {
             "name": "黑枕藍鶲",
-            "sci": "Hypothymis azurea"
+            "sci": "Hypothymis azurea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Black-naped_Monarch_-_Thailand_S4E7277_%2819449130711%29.jpg/500px-Black-naped_Monarch_-_Thailand_S4E7277_%2819449130711%29.jpg",
+            "wikiDesc": "黑枕藍鶲（中國大陸、香港作黑枕王鶲，學名：Hypothymis azurea），為王鶲科王鶲屬的鳥類。主要分布於熱帶亞洲，模式產地位於菲律賓呂宋島。 黑枕藍鶲是一種纖細敏捷的雀形目鳥類，隸屬於南亞及東南亞的王鶲科。"
           }
         ]
       },
@@ -32435,11 +32903,15 @@
         "potential": [
           {
             "name": "黃山雀",
-            "sci": "Machlolophus holsti"
+            "sci": "Machlolophus holsti",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Taiwan_tit.jpg/500px-Taiwan_tit.jpg",
+            "wikiDesc": "黃山雀（學名：Machlolophus holsti），又名台灣黃山雀、台灣四十雀，俗稱師公鳥，是一種棲息於中低海拔山區的雀鳥。台灣特有種，也是稀有的留鳥。 在溪頭其族群量較多，喜歡棲息於海拔2,000公尺以下之闊葉林，以海拔1,500公尺左右山區較常見，冬季時會遷移至海拔700公尺附近的低山區，甚至出現在森林邊緣之住家大樹上。"
           },
           {
             "name": "鉛色水鶇",
-            "sci": "Phoenicurus fuliginosus"
+            "sci": "Phoenicurus fuliginosus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Plumbeous_Water_Redstart_%28male%29.JPG/500px-Plumbeous_Water_Redstart_%28male%29.JPG",
+            "wikiDesc": "鉛色水鶇（學名：Phoenicurus fuliginosus），又名紅尾水鴝、鉛色水鴝，臺灣話稱石青仔（臺羅：tsio̍h-tshenn-á/tsio̍h-tshinn-á），為鶲科紅尾鴝屬下的一個種。分布於南亞、東南亞和中國。雄鳥為灰藍色，雌鳥則為灰色。"
           }
         ]
       }
@@ -32457,11 +32929,15 @@
         "potential": [
           {
             "name": "環頸雉",
-            "sci": "Phasianus colchicus"
+            "sci": "Phasianus colchicus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pheasant.jpg/500px-Pheasant.jpg",
+            "wikiDesc": "環頸雉（學名：Phasianus colchicus）又名雉雞，俗稱野雞、華蟲，是雉科雉屬的鳥類。雄性環頸雉的羽毛非常多樣，從幾乎白色到幾乎黑色都有，這是由於馴化及與綠雉雜交，加上放生不同的亞種雜交的結果；雌鳥則維持棕色、灰色的樣子，在各個大陸的外貌差別不大。目前的地球上，在東亞、歐洲、北美、澳洲均有環頸雉的大量分佈，並且經常混血，所以沒有一個特定的分類。"
           },
           {
             "name": "黃鸝",
-            "sci": "Oriolus chinensis"
+            "sci": "Oriolus chinensis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Black-naped_Oriole.jpg/500px-Black-naped_Oriole.jpg",
+            "wikiDesc": "黃鸝（學名：Oriolus chinensis）又名黑枕黃鸝、倉庚（也作鶬鶊、倉鶊），俗稱黃鶯、黃鳥或金衣公子，是屬於雀形目黃鸝科的中型鳥類，分布於季風亞洲，包含俄羅斯西伯利亞、鴨綠江黑龍江流域、中國東北至華南一帶、朝鮮半島、台灣、菲律賓、中南半島、印度西高止山脈與東北地區、孟加拉、斯里蘭卡西南部、巽他群島部分島嶼以及安達曼-尼科巴群島，分布範圍約2,110萬平方公里。"
           }
         ]
       },
@@ -32477,11 +32953,15 @@
         "potential": [
           {
             "name": "小鷿鷉",
-            "sci": "Tachybaptus ruficollis"
+            "sci": "Tachybaptus ruficollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Litle_Grebe_-_Tachybaptus_ruficollis.jpg/500px-Litle_Grebe_-_Tachybaptus_ruficollis.jpg",
+            "wikiDesc": "小鸊鷉（學名：Tachybaptus ruficollis），又作小鷿鷈、小鸊鷈，俗稱水葫蘆、王八鴨子、油葫蘆、油鴨、水避仔（臺灣話：tsúi-pī-á），是鸊鷉科小鸊鷉屬下的一種鳥類。牠們分佈在歐洲、亞洲和非洲的濕地、沼澤、湖泊和水塘等水域環境中。牠們相當善於潛入水中覓食，主要食用水生昆蟲、蝌蚪、小魚和甲殼類等水中生物。"
           },
           {
             "name": "紅冠水雞",
-            "sci": "Gallinula chloropus"
+            "sci": "Gallinula chloropus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg/500px-Gallinula_chloropus_-Westerpark_-Amsterdam-8.jpg",
+            "wikiDesc": "紅冠水雞（學名：Gallinula chloropus）為秧雞科黑水雞屬的鳥類，又名黑水雞、水鵁鴒（臺灣話：tsuí-ka-līng）、烏水雞（臺灣話：oo-tsuí-ke）、田雞仔（臺灣話：tshân-ke-á）。分佈在古北界的許多地區，從非洲到歐洲和亞洲。該物種遍布世界各地，模式產地在英格蘭。"
           }
         ]
       },
@@ -32497,11 +32977,15 @@
         "potential": [
           {
             "name": "花嘴鴨",
-            "sci": "Anas zonorhyncha"
+            "sci": "Anas zonorhyncha",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anas_zonorhyncha_swimming.jpg/500px-Anas_zonorhyncha_swimming.jpg",
+            "wikiDesc": "花嘴鴨（中國大陸作斑嘴鴨，香港作中華斑嘴鴨）（學名：Anas zonorhyncha），別名東方花嘴鴨、谷鴨、黃嘴尖鴨、火燎鴨，是屬於鴨科鴨屬的一種鳥類。分佈於東亞，共有80-160萬隻，數量有下跌的趨勢。這個物種以前被認為是印度斑嘴鴨的亞種，兩者都被稱為斑嘴鴨（A. poecilorhyncha）。"
           },
           {
             "name": "水雉",
-            "sci": "Hydrophasianus chirurgus"
+            "sci": "Hydrophasianus chirurgus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Pheasant-tailed_Jacana_Bangalore.jpg/500px-Pheasant-tailed_Jacana_Bangalore.jpg",
+            "wikiDesc": "水雉（學名：Hydrophasianus chirurgus），又名雉尾水雉（英語：Pheasant-tailed Jacana）、長尾水雉等，俗稱菱角鳥，是一個生物學分類上屬於水雉科的物種。該物種的一般分佈地區包括印度次大陸、中國大陸、臺灣島、中南半島、菲律賓群島、婆羅洲等，在冬季時包括泰國地區、馬來半島、印度尼西亞群島和澳大利亞大陸北部等。 該物種是臺灣唯一的水雉科物種，有許多個體棲息於臺灣本島（西南部）之菱角種植地。"
           }
         ]
       },
@@ -32518,11 +33002,15 @@
         "potential": [
           {
             "name": "蘭嶼角鴞",
-            "sci": "Otus elegans"
+            "sci": "Otus elegans",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Otus_elegans_from_iNaturalist_photo_587759870_%28cropped%29.jpg/500px-Otus_elegans_from_iNaturalist_photo_587759870_%28cropped%29.jpg",
+            "wikiDesc": "蘭嶼角鴞(Otus elegans botelensis)為一領域性鳥類，由於角鴞類的嘴喙無法啄鑿出樹洞，主要是利用樹木自然腐朽行成的樹洞或是其他動物製造的洞作為巢穴，偶爾也可在人工建築如排水孔、馬桶水箱發現蹤跡。主要食物來源為螽蟴、蛾、馬陸等無脊椎動物，但也偶見捕食壁虎、蜥蜴甚至綠繡眼等小型脊椎動物。"
           },
           {
             "name": "紅頭綠鳩",
-            "sci": "Treron formosae"
+            "sci": "Treron formosae",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/2014-04-02_Treron_formosae_formosae_%28Whistling_Green_Pigeon%29_male_01.jpg/500px-2014-04-02_Treron_formosae_formosae_%28Whistling_Green_Pigeon%29_male_01.jpg",
+            "wikiDesc": "紅頭綠鳩（學名：Treron formosae）又名紅頂綠鳩，為鳩鴿科綠鳩屬的鳥類。該物種於1863年由羅伯特·斯文豪首次描述。分布於臺灣島、綠島、蘭嶼，以及巴丹群島與巴布煙群島的部分島嶼，主要生活於濃密的原始闊葉林中，亦見於2000公尺左右的山區。"
           }
         ]
       },
@@ -32538,11 +33026,15 @@
         "potential": [
           {
             "name": "朱鸝",
-            "sci": "Oriolus traillii"
+            "sci": "Oriolus traillii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Maroon_Oriole_at_Sikkim%2C_India.jpg/500px-Maroon_Oriole_at_Sikkim%2C_India.jpg",
+            "wikiDesc": "朱鸝（學名：Oriolus traillii），俗稱大緋鳥，是黃鸝科黃鸝屬的鳥類，主要分布於東南亞地區，臺灣話俗稱紅鶯(âng-ing)，該鳥亦為花蓮縣縣鳥。"
           },
           {
             "name": "黃山雀",
-            "sci": "Machlolophus holsti"
+            "sci": "Machlolophus holsti",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Taiwan_tit.jpg/500px-Taiwan_tit.jpg",
+            "wikiDesc": "黃山雀（學名：Machlolophus holsti），又名台灣黃山雀、台灣四十雀，俗稱師公鳥，是一種棲息於中低海拔山區的雀鳥。台灣特有種，也是稀有的留鳥。 在溪頭其族群量較多，喜歡棲息於海拔2,000公尺以下之闊葉林，以海拔1,500公尺左右山區較常見，冬季時會遷移至海拔700公尺附近的低山區，甚至出現在森林邊緣之住家大樹上。"
           }
         ]
       },
@@ -32558,11 +33050,15 @@
         "potential": [
           {
             "name": "領角鴞",
-            "sci": "Otus lettia"
+            "sci": "Otus lettia",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Collared_Scops_Owl%28Otus_lettia%29_by_Jack_Walf_.jpg/500px-Collared_Scops_Owl%28Otus_lettia%29_by_Jack_Walf_.jpg",
+            "wikiDesc": "領角鴞（學名：Otus lettia、英語：Collared scops owl），角鴞屬的其中一種。領角鴞以前被認為是現在被分離為印度領角鴞（Otus bakkamoena）的亞種。"
           },
           {
             "name": "黃嘴角鴞",
-            "sci": "Otus spilocephalus"
+            "sci": "Otus spilocephalus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mountain_Scops_Owl%281%29.jpg/500px-Mountain_Scops_Owl%281%29.jpg",
+            "wikiDesc": "黃嘴角鴞（學名：Otus spilocephalus）為鴟鴞科角鴞屬的鳥類。分布於印度、尼泊爾、孟加拉、緬甸、越南、寮國、泰國、馬來西亞、印度尼西亞、台灣以及中國的福建、廣東、海南、廣西等地，主要生活於海拔1000-3000公尺的高山常綠林中。該物種的模式產地在印度大吉嶺。"
           }
         ]
       },
@@ -32578,11 +33074,15 @@
         "potential": [
           {
             "name": "岩鷺",
-            "sci": "Egretta sacra"
+            "sci": "Egretta sacra",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Eastern_Reef_Egret.jpg/500px-Eastern_Reef_Egret.jpg",
+            "wikiDesc": "岩鷺（學名：Egretta sacra）為鷺科白鷺屬的鳥類。是一種分布於南部亞洲和大洋洲的鷺。它有兩種顏色型態，分別是板岩灰或純白色羽毛。"
           },
           {
             "name": "藍磯鶇",
-            "sci": "Monticola solitarius"
+            "sci": "Monticola solitarius",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Monticola_solitarius%2C_Spain_1.jpg/500px-Monticola_solitarius%2C_Spain_1.jpg",
+            "wikiDesc": "藍磯鶇（學名：Monticola solitarius）為鶲科磯鶇屬的鳥類，俗名亞東藍石鶇、水嘴、麻石青。這種類似鶇科的舊世界鶲科，曾經被歸類於鶇科家族。它在南歐、西北非以及從中亞到中國北部和馬來西亞繁殖。"
           }
         ]
       },
@@ -32598,11 +33098,15 @@
         "potential": [
           {
             "name": "小燕鷗",
-            "sci": "Sternula albifrons"
+            "sci": "Sternula albifrons",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D0%BC%D0%B0%D0%BB%D0%B8%D0%B9.jpg/500px-%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D0%BC%D0%B0%D0%BB%D0%B8%D0%B9.jpg",
+            "wikiDesc": "小燕鷗（學名：Sternula albifrons），又名白額燕鷗，為鷗科小燕鷗屬的鳥類。該物種的模式產地在荷蘭。"
           },
           {
             "name": "燕鴴",
-            "sci": "Glareola maldivarum"
+            "sci": "Glareola maldivarum",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Oriental_Pratincole.jpg/500px-Oriental_Pratincole.jpg",
+            "wikiDesc": "普通燕鴴（學名：Glareola maldivarum）一般稱燕鴴，為燕鴴科燕鴴屬的鳥類。"
           }
         ]
       }
@@ -32620,11 +33124,15 @@
         "potential": [
           {
             "name": "小燕鷗",
-            "sci": "Sternula albifrons"
+            "sci": "Sternula albifrons",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D0%BC%D0%B0%D0%BB%D0%B8%D0%B9.jpg/500px-%D0%9A%D1%80%D1%8F%D1%87%D0%BE%D0%BA_%D0%BC%D0%B0%D0%BB%D0%B8%D0%B9.jpg",
+            "wikiDesc": "小燕鷗（學名：Sternula albifrons），又名白額燕鷗，為鷗科小燕鷗屬的鳥類。該物種的模式產地在荷蘭。"
           },
           {
             "name": "岩鷺",
-            "sci": "Egretta sacra"
+            "sci": "Egretta sacra",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Eastern_Reef_Egret.jpg/500px-Eastern_Reef_Egret.jpg",
+            "wikiDesc": "岩鷺（學名：Egretta sacra）為鷺科白鷺屬的鳥類。是一種分布於南部亞洲和大洋洲的鷺。它有兩種顏色型態，分別是板岩灰或純白色羽毛。"
           }
         ]
       },
@@ -32640,11 +33148,15 @@
         "potential": [
           {
             "name": "花嘴鴨",
-            "sci": "Anas zonorhyncha"
+            "sci": "Anas zonorhyncha",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anas_zonorhyncha_swimming.jpg/500px-Anas_zonorhyncha_swimming.jpg",
+            "wikiDesc": "花嘴鴨（中國大陸作斑嘴鴨，香港作中華斑嘴鴨）（學名：Anas zonorhyncha），別名東方花嘴鴨、谷鴨、黃嘴尖鴨、火燎鴨，是屬於鴨科鴨屬的一種鳥類。分佈於東亞，共有80-160萬隻，數量有下跌的趨勢。這個物種以前被認為是印度斑嘴鴨的亞種，兩者都被稱為斑嘴鴨（A. poecilorhyncha）。"
           },
           {
             "name": "小鷿鷉",
-            "sci": "Tachybaptus ruficollis"
+            "sci": "Tachybaptus ruficollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Litle_Grebe_-_Tachybaptus_ruficollis.jpg/500px-Litle_Grebe_-_Tachybaptus_ruficollis.jpg",
+            "wikiDesc": "小鸊鷉（學名：Tachybaptus ruficollis），又作小鷿鷈、小鸊鷈，俗稱水葫蘆、王八鴨子、油葫蘆、油鴨、水避仔（臺灣話：tsúi-pī-á），是鸊鷉科小鸊鷉屬下的一種鳥類。牠們分佈在歐洲、亞洲和非洲的濕地、沼澤、湖泊和水塘等水域環境中。牠們相當善於潛入水中覓食，主要食用水生昆蟲、蝌蚪、小魚和甲殼類等水中生物。"
           }
         ]
       },
@@ -32660,11 +33172,15 @@
         "potential": [
           {
             "name": "黃眉柳鶯",
-            "sci": "Phylloscopus inornatus"
+            "sci": "Phylloscopus inornatus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Phylloscopus_inornatus_%28Yellow-browed_Warbler%29.jpg/500px-Phylloscopus_inornatus_%28Yellow-browed_Warbler%29.jpg",
+            "wikiDesc": "黃眉柳鶯（學名：Phylloscopus inornatus）為柳鶯科柳鶯屬的鳥類。繁殖於東古北界。這種柳鶯有著強烈的遷徙性，主要在熱帶南亞和東南亞過冬，但也有少量出現在西歐洲。"
           },
           {
             "name": "極北柳鶯",
-            "sci": "Phylloscopus borealis"
+            "sci": "Phylloscopus borealis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Arctic_Warbler_4683b.jpg/500px-Arctic_Warbler_4683b.jpg",
+            "wikiDesc": "極北柳鶯（學名：Phylloscopus borealis）為柳鶯科柳鶯屬的鳥類。是一種廣泛分佈的柳鶯，繁殖於芬諾斯堪底亞及古北界北部的白樺或混合白樺森林，通常靠近水域。它在北美建立了一定的棲地，並在阿拉斯加繁殖。"
           }
         ]
       },
@@ -32681,11 +33197,15 @@
         "potential": [
           {
             "name": "紅尾伯勞",
-            "sci": "Lanius cristatus"
+            "sci": "Lanius cristatus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Lanius_cristatus_-_Surin.jpg/500px-Lanius_cristatus_-_Surin.jpg",
+            "wikiDesc": "紅尾伯勞（學名：Lanius cristatus）為伯勞科伯勞屬的一種，俗名褐伯勞。主要分布於亞洲。牠與紅背伯勞（L. collurio）和荒漠伯勞（L. isabellinus）關係密切。"
           },
           {
             "name": "藍磯鶇",
-            "sci": "Monticola solitarius"
+            "sci": "Monticola solitarius",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Monticola_solitarius%2C_Spain_1.jpg/500px-Monticola_solitarius%2C_Spain_1.jpg",
+            "wikiDesc": "藍磯鶇（學名：Monticola solitarius）為鶲科磯鶇屬的鳥類，俗名亞東藍石鶇、水嘴、麻石青。這種類似鶇科的舊世界鶲科，曾經被歸類於鶇科家族。它在南歐、西北非以及從中亞到中國北部和馬來西亞繁殖。"
           }
         ]
       },
@@ -32701,11 +33221,15 @@
         "potential": [
           {
             "name": "小鷿鷉",
-            "sci": "Tachybaptus ruficollis"
+            "sci": "Tachybaptus ruficollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Litle_Grebe_-_Tachybaptus_ruficollis.jpg/500px-Litle_Grebe_-_Tachybaptus_ruficollis.jpg",
+            "wikiDesc": "小鸊鷉（學名：Tachybaptus ruficollis），又作小鷿鷈、小鸊鷈，俗稱水葫蘆、王八鴨子、油葫蘆、油鴨、水避仔（臺灣話：tsúi-pī-á），是鸊鷉科小鸊鷉屬下的一種鳥類。牠們分佈在歐洲、亞洲和非洲的濕地、沼澤、湖泊和水塘等水域環境中。牠們相當善於潛入水中覓食，主要食用水生昆蟲、蝌蚪、小魚和甲殼類等水中生物。"
           },
           {
             "name": "斑文鳥",
-            "sci": "Lonchura punctulata"
+            "sci": "Lonchura punctulata",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Scaly_breasted_munia_-kannur%40kattampally_birds_-_5.jpg/500px-Scaly_breasted_munia_-kannur%40kattampally_birds_-_5.jpg",
+            "wikiDesc": "斑文鳥（學名：Lonchura punctulata），俗名鱗胸文鳥、魚鱗沉香算命鳥、小紡織鳥、烏合畢、烏嘴（喙）畢仔、禾嗶仔（客語）、蓽雀，是一種原產於熱帶亞洲的雀形目梅花雀，體型與麻雀相當。此物種屬於文鳥屬，於1758年由卡爾·林奈正式物種描述和命名。它的名字源自胸部和腹部獨特的鱗片狀羽毛圖案。"
           }
         ]
       }
@@ -32723,11 +33247,15 @@
         "potential": [
           {
             "name": "鸕鶿",
-            "sci": "Phalacrocorax carbo"
+            "sci": "Phalacrocorax carbo",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Phalacrocorax_carbo_Vic.jpg/500px-Phalacrocorax_carbo_Vic.jpg",
+            "wikiDesc": "鸕鶿（學名：Phalacrocorax carbo），別名鷺鶿、川鵜、水老鴉、魚鷹、鷧（ㄧˋ）、烏鬼，是一種廣泛分佈的鸕鶿屬海鳥。 鸕鶿主要生活在舊大陸和北美洲東海岸，一般在懸崖上或樹上作窩，但是越來越多地也在內陸生活。在海草和嫩枝達成的窩裏一次下3至4枚蛋。"
           },
           {
             "name": "斑翡翠",
-            "sci": "Ceryle rudis"
+            "sci": "Ceryle rudis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ceryle_rudis_%28male%29.jpg/500px-Ceryle_rudis_%28male%29.jpg",
+            "wikiDesc": "斑魚狗（學名：Ceryle rudis）為翠鳥科魚狗屬的唯一物種。以高超的捕魚技術聞名, 能夠懸停於空中。在非洲、 中東和東南亞地區廣泛分布。"
           }
         ]
       },
@@ -32743,11 +33271,15 @@
         "potential": [
           {
             "name": "栗喉蜂虎",
-            "sci": "Merops philippinus"
+            "sci": "Merops philippinus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Blue-tailed_bee-eater_%28Merops_philippinus%29_Yala.jpg/500px-Blue-tailed_bee-eater_%28Merops_philippinus%29_Yala.jpg",
+            "wikiDesc": "栗喉蜂虎（學名：Merops philippinus，閩南語：棋盤鳥）是佛法僧目蜂虎科蜂虎屬下的一種鳥類。這個物種主要以飛行昆蟲為食，是分佈於東亞、東南亞及南亞之間的遷徙性侯鳥。 栗喉蜂虎體長約25至28公分之間，羽毛顏色豐富：頭頂和頸部呈綠色，喉部呈現栗色，背部和翅膀則帶有綠色和藍色的羽毛，鳥喙黑色，兩性基本外觀相似。"
           },
           {
             "name": "戴勝",
-            "sci": "Upupa epops"
+            "sci": "Upupa epops",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Common_hoopoe_%28Upupa_epops_epops%29_Udaipur.jpg/500px-Common_hoopoe_%28Upupa_epops_epops%29_Udaipur.jpg",
+            "wikiDesc": "戴勝（學名：Upupa epops，英語：Eurasian hoopoe），俗稱臭姑姑、墓崆雞、塚崆鳥、香香雞，是犀鳥目戴勝科戴勝屬的一種鳥類。戴勝頭有冠，五色如方勝，故而得名。戴勝有許多異名，如：戴任﹑戴紝、墓壙鳥（金門話：bōng-khòng-tsiáu）、鶝、鴔鵖、鵖鴔等。"
           }
         ]
       },
@@ -32763,11 +33295,15 @@
         "potential": [
           {
             "name": "中杓鷸",
-            "sci": "Numenius phaeopus"
+            "sci": "Numenius phaeopus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Numenius_phaeopus1.jpg/500px-Numenius_phaeopus1.jpg",
+            "wikiDesc": "中杓鷸（學名：Numenius phaeopus）為鷸科杓鷸屬的鳥類。是一種屬於鷸科（Scolopacidae）的大型涉禽。牠是分布最廣的杓鷸之一，繁殖範圍覆蓋了大部分亞洲和歐洲的亞北極區，最南可達蘇格蘭。"
           },
           {
             "name": "翻石鷸",
-            "sci": "Arenaria interpres"
+            "sci": "Arenaria interpres",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Arenaria_interpres_%28habitus%29.jpg/500px-Arenaria_interpres_%28habitus%29.jpg",
+            "wikiDesc": "翻石鷸（學名：Arenaria interpres）是一種小型的遍佈全球的涉禽，屬於鷸科（Scolopacidae）的兩種翻石鷸之一，屬於翻石鷸屬（Arenaria）。該物種的模式產地在瑞典。 現在翻石鷸被分類在鷸科，但以前有時被歸類於鴴科（Charadriidae）。"
           }
         ]
       },
@@ -32783,11 +33319,15 @@
         "potential": [
           {
             "name": "斑翡翠",
-            "sci": "Ceryle rudis"
+            "sci": "Ceryle rudis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ceryle_rudis_%28male%29.jpg/500px-Ceryle_rudis_%28male%29.jpg",
+            "wikiDesc": "斑魚狗（學名：Ceryle rudis）為翠鳥科魚狗屬的唯一物種。以高超的捕魚技術聞名, 能夠懸停於空中。在非洲、 中東和東南亞地區廣泛分布。"
           },
           {
             "name": "白胸苦惡鳥",
-            "sci": "Amaurornis phoenicurus"
+            "sci": "Amaurornis phoenicurus",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Amaurornis_phoenicurus_-_Singapore_Botanic_Gardens.jpg/500px-Amaurornis_phoenicurus_-_Singapore_Botanic_Gardens.jpg",
+            "wikiDesc": "白腹秧雞（學名：Amaurornis phoenicurus），又名白胸苦惡鳥、苦雞母（臺灣話：khóo-ke-bó）、田雞仔（臺灣話：tshân-ke-á）、紅尻川仔（臺灣話：âng-kha-tshng-á）、白面仔（臺灣話：pe̍h-bīn-á）、補鑊鳥（臺灣客家語四縣腔：buˋ vog diauˊ），是秧雞科苦惡鳥屬中的一種水鳥，該物種的模式產地在斯里蘭卡。繁殖棲息於亞洲南部的沼澤、池塘、溝渠和河岸，從印度、斯里蘭卡橫跨到中國南部和印度尼西亞，身長約32公分，在上述地區皆為留鳥，築巢在沼澤植被的乾燥地點，一巢約6至7個蛋。"
           }
         ]
       },
@@ -32803,11 +33343,15 @@
         "potential": [
           {
             "name": "戴勝",
-            "sci": "Upupa epops"
+            "sci": "Upupa epops",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Common_hoopoe_%28Upupa_epops_epops%29_Udaipur.jpg/500px-Common_hoopoe_%28Upupa_epops_epops%29_Udaipur.jpg",
+            "wikiDesc": "戴勝（學名：Upupa epops，英語：Eurasian hoopoe），俗稱臭姑姑、墓崆雞、塚崆鳥、香香雞，是犀鳥目戴勝科戴勝屬的一種鳥類。戴勝頭有冠，五色如方勝，故而得名。戴勝有許多異名，如：戴任﹑戴紝、墓壙鳥（金門話：bōng-khòng-tsiáu）、鶝、鴔鵖、鵖鴔等。"
           },
           {
             "name": "黑領椋鳥",
-            "sci": "Gracupica nigricollis"
+            "sci": "Gracupica nigricollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/A_bird_in_Shenzhen.jpg/500px-A_bird_in_Shenzhen.jpg",
+            "wikiDesc": "烏領椋鳥（學名：Gracupica nigricollis）為椋鳥科斑椋鳥屬的鳥類，又名黑領椋鳥，俗名黑脖八哥、白頭椋鳥。牠的羽毛為黑白相間，並有一個黑色的領圈。這種鳥分布於中國南部及大部分的東南亞大陸地區，並已引入台灣、馬來西亞和新加坡。"
           }
         ]
       }
@@ -32826,11 +33370,15 @@
         "potential": [
           {
             "name": "黑嘴端鳳頭燕鷗",
-            "sci": "Thalasseus bernsteini"
+            "sci": "Thalasseus bernsteini",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Chinese_crested_tern_colony.jpg/500px-Chinese_crested_tern_colony.jpg",
+            "wikiDesc": "黑嘴端鳳頭燕鷗（中國大陸、香港作中華鳳頭燕鷗，學名：Thalasseus bernsteini） ，也稱作黑嘴鳳頭燕鷗，是燕鷗科的一種海鳥，種名來自德國動物學家 Heinrich Agathon Bernstein；模式標本編號 RMNH 87602。"
           },
           {
             "name": "黑尾鷗",
-            "sci": "Larus crassirostris"
+            "sci": "Larus crassirostris",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Laridae_in_Beijing_Zoo.JPG/500px-Laridae_in_Beijing_Zoo.JPG",
+            "wikiDesc": "黑尾鷗（學名：Larus crassirostris）是一種中型海鷗，身長大概45公分，翼展大概126至128公分。這種雀鳥聚居於東亞地區，當中包括中國大陸、台灣、日本和韓國，也會到阿拉斯加至北美洲東北部分一帶漂泊。"
           }
         ]
       },
@@ -32848,11 +33396,15 @@
         "potential": [
           {
             "name": "田鵐",
-            "sci": "Emberiza rustica"
+            "sci": "Emberiza rustica",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Emberiza_rustica_latifascia.JPG/500px-Emberiza_rustica_latifascia.JPG",
+            "wikiDesc": "田鵐（學名：Emberiza rustica）為鵐科鵐屬的鳥類，俗名花九兒、花嗉兒、田雀、花眉子、白眉兒。鵐科現代大多數作者將此群體與 雀科分開。"
           },
           {
             "name": "樹鷚",
-            "sci": "Anthus hodgsoni"
+            "sci": "Anthus hodgsoni",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Anthus_hodgsoni_4.jpg/500px-Anthus_hodgsoni_4.jpg",
+            "wikiDesc": "樹鷚（學名：Anthus hodgsoni）為鶺鴒科鷚屬的鳥類，俗名樹魯、木鷚、麥加藍兒。繁殖範圍遍及亞洲南部、北中部和東部，以及歐洲俄羅斯的東北部。它是一種長途遷徙的候鳥，冬季會遷徙至南亞和印尼。"
           }
         ]
       },
@@ -32868,11 +33420,15 @@
         "potential": [
           {
             "name": "小鷿鷉",
-            "sci": "Tachybaptus ruficollis"
+            "sci": "Tachybaptus ruficollis",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Litle_Grebe_-_Tachybaptus_ruficollis.jpg/500px-Litle_Grebe_-_Tachybaptus_ruficollis.jpg",
+            "wikiDesc": "小鸊鷉（學名：Tachybaptus ruficollis），又作小鷿鷈、小鸊鷈，俗稱水葫蘆、王八鴨子、油葫蘆、油鴨、水避仔（臺灣話：tsúi-pī-á），是鸊鷉科小鸊鷉屬下的一種鳥類。牠們分佈在歐洲、亞洲和非洲的濕地、沼澤、湖泊和水塘等水域環境中。牠們相當善於潛入水中覓食，主要食用水生昆蟲、蝌蚪、小魚和甲殼類等水中生物。"
           },
           {
             "name": "蒼鷺",
-            "sci": "Ardea cinerea"
+            "sci": "Ardea cinerea",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Ardea_cinerea_7_%28Marek_Szczepanek%29.jpg/500px-Ardea_cinerea_7_%28Marek_Szczepanek%29.jpg",
+            "wikiDesc": "蒼鷺（學名：Ardea cinerea）又稱灰鷺，為鷺科蒼鷺屬的一種涉禽，也是蒼鷺屬的模式種。是歐亞大陸與非洲大陸的濕地中極為常見的水鳥。"
           }
         ]
       },
@@ -32888,11 +33444,15 @@
         "potential": [
           {
             "name": "家燕",
-            "sci": "Hirundo rustica"
+            "sci": "Hirundo rustica",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BB%D0%B0%D1%81%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%28Hirundo_rustica%29%2C_%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE.jpg/500px-%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BB%D0%B0%D1%81%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%28Hirundo_rustica%29%2C_%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE.jpg",
+            "wikiDesc": "家燕（學名：Hirundo rustica）是燕科燕屬的一種鳥類，是全球分布最廣泛的燕類，出現在所有大陸，主要是候鳥，繁殖於全北界，過冬於新、舊熱帶界和東洋界，在南極洲有迷鳥記錄。 家燕是一種外形獨特的雀形目鳥類，具有藍色的上半身和長而深深分叉的尾巴。在英語世界的歐洲地區，家燕通常僅稱為swallow；而在北歐，它是唯一被稱為「swallow」而非「martin」的燕科成員。"
           },
           {
             "name": "大鳳頭燕鷗",
-            "sci": "Thalasseus bergii"
+            "sci": "Thalasseus bergii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Crested_Tern_breeding_plumage.jpg/500px-Crested_Tern_breeding_plumage.jpg",
+            "wikiDesc": "鳳頭燕鷗（學名：Thalasseus bergii），又名大鳳頭燕鷗，具羽冠的燕鷗，為燕鷗科鳳頭燕鷗屬的鳥類。在熱帶和亞熱帶舊大陸的海岸線和島嶼上密集成群地築巢，遍及印度洋到中太平洋，以及波斯灣，馬祖、基隆、宜蘭亦有分布。其五個亞種在南非到印度洋周圍，直至中部太平洋和澳大利亞地區繁殖，所有的族群在繁殖後廣泛遷徙於繁殖區之外。"
           }
         ]
       },
@@ -32909,11 +33469,15 @@
         "potential": [
           {
             "name": "大鳳頭燕鷗",
-            "sci": "Thalasseus bergii"
+            "sci": "Thalasseus bergii",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Crested_Tern_breeding_plumage.jpg/500px-Crested_Tern_breeding_plumage.jpg",
+            "wikiDesc": "鳳頭燕鷗（學名：Thalasseus bergii），又名大鳳頭燕鷗，具羽冠的燕鷗，為燕鷗科鳳頭燕鷗屬的鳥類。在熱帶和亞熱帶舊大陸的海岸線和島嶼上密集成群地築巢，遍及印度洋到中太平洋，以及波斯灣，馬祖、基隆、宜蘭亦有分布。其五個亞種在南非到印度洋周圍，直至中部太平洋和澳大利亞地區繁殖，所有的族群在繁殖後廣泛遷徙於繁殖區之外。"
           },
           {
             "name": "蒼燕鷗",
-            "sci": "Sterna sumatrana"
+            "sci": "Sterna sumatrana",
+            "wikiImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Black-naped_Tern_LEI.JPG/500px-Black-naped_Tern_LEI.JPG",
+            "wikiDesc": "蒼燕鷗（學名：Sterna sumatrana）又名黑枕燕鷗，為鷗科燕鷗屬的鳥類。是一種海洋性燕鷗，主要分佈於太平洋和印度洋的熱帶和亞熱帶地區，很少見於內陸地區。該物種的模式產地在蘇門答臘島。"
           }
         ]
       }
